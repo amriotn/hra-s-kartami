@@ -1,23 +1,223 @@
-[gd_scene load_steps=10 format=3 uid="uid://bckbgvxul5a5t"]
+[gd_scene load_steps=13 format=3 uid="uid://bckbgvxul5a5t"]
 
 [ext_resource type="Script" path="res://DiceNumber.gd" id="1_etkmo"]
-[ext_resource type="Texture2D" uid="uid://jcq6b7k0tesd" path="res://tile.png" id="2_4rg58"]
-[ext_resource type="Script" path="res://Route1.gd" id="2_6u0gt"]
+[ext_resource type="Texture2D" uid="uid://bh8i5dlbqpq0m" path="res://Z pohadky do pohádky  (6).png" id="1_w84ph"]
+[ext_resource type="Texture2D" uid="uid://1ukke8nausj1" path="res://Z pohadky do pohádky  (7).png" id="2_3w0w7"]
+[ext_resource type="Texture2D" uid="uid://bmni3on41pgb" path="res://Z pohadky do pohádky  (8).png" id="3_faouc"]
 [ext_resource type="Texture2D" uid="uid://etq7tq5jmrvk" path="res://icon.svg" id="3_lvpw0"]
-[ext_resource type="Script" path="res://TileMap.gd" id="3_ne5h4"]
-[ext_resource type="Texture2D" uid="uid://ufs1y2wk0sgq" path="res://dirt_low_N.png" id="3_wy10t"]
 [ext_resource type="Script" path="res://player1.gd" id="4_75peq"]
+[ext_resource type="Texture2D" uid="uid://jcq6b7k0tesd" path="res://tile.png" id="6_vwxio"]
+[ext_resource type="Script" path="res://Highlight.gd" id="8_qsr7g"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x8q2e"]
-texture = ExtResource("3_wy10t")
-margins = Vector2i(0, 70)
-texture_region_size = Vector2i(256, 280)
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nuybm"]
+texture = ExtResource("1_w84ph")
+margins = Vector2i(172, 50)
+texture_region_size = Vector2i(175, 100)
 0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+0:8/0 = 0
+1:8/0 = 0
+2:8/0 = 0
+3:8/0 = 0
+4:8/0 = 0
+5:8/0 = 0
 
-[sub_resource type="TileSet" id="TileSet_f5tb1"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ana62"]
+texture = ExtResource("2_3w0w7")
+texture_region_size = Vector2i(175, 100)
+0:0/0 = 0
+1:0/0 = 0
+3:0/0 = 0
+6:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+1:2/0 = 0
+3:2/0 = 0
+6:2/0 = 0
+8:2/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+1:4/0 = 0
+6:4/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+1:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+8:5/0 = 0
+9:5/0 = 0
+10:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+9:6/0 = 0
+10:6/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+9:7/0 = 0
+2:8/0 = 0
+3:8/0 = 0
+4:8/0 = 0
+6:8/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w2pf2"]
+texture = ExtResource("3_faouc")
+margins = Vector2i(173, 0)
+texture_region_size = Vector2i(173, 100)
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+0:2/0 = 0
+2:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+8:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+8:7/0 = 0
+0:8/0 = 0
+1:8/0 = 0
+2:8/0 = 0
+3:8/0 = 0
+4:8/0 = 0
+5:8/0 = 0
+6:8/0 = 0
+7:8/0 = 0
+8:8/0 = 0
+0:9/0 = 0
+1:9/0 = 0
+2:9/0 = 0
+3:9/0 = 0
+4:9/0 = 0
+5:9/0 = 0
+6:9/0 = 0
+7:9/0 = 0
+8:9/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_qdxuc"]
 tile_shape = 1
-tile_size = Vector2i(200, 100)
-sources/0 = SubResource("TileSetAtlasSource_x8q2e")
+tile_size = Vector2i(173, 100)
+sources/0 = SubResource("TileSetAtlasSource_nuybm")
+sources/1 = SubResource("TileSetAtlasSource_ana62")
+sources/2 = SubResource("TileSetAtlasSource_w2pf2")
 
 [node name="Node2D" type="Node2D"]
 
@@ -26,86 +226,12 @@ offset_left = -287.0
 offset_top = -78.0
 offset_right = 3961.0
 offset_bottom = 2582.0
-color = Color(0.729412, 0.580392, 0.309804, 0.576471)
-
-[node name="Route1" type="Sprite2D" parent="."]
-visible = false
-texture_filter = 1
-position = Vector2(206, 201)
-scale = Vector2(0.52, 0.52)
-texture = ExtResource("2_4rg58")
-script = ExtResource("2_6u0gt")
-
-[node name="Tile" type="Sprite2D" parent="Route1"]
-position = Vector2(99, 49)
-texture = ExtResource("2_4rg58")
-
-[node name="Tile2" type="Sprite2D" parent="Route1"]
-position = Vector2(198, 98)
-texture = ExtResource("2_4rg58")
-
-[node name="Tile3" type="Sprite2D" parent="Route1"]
-position = Vector2(297, 147)
-texture = ExtResource("2_4rg58")
-
-[node name="Tile4" type="Sprite2D" parent="Route1"]
-position = Vector2(396, 196)
-texture = ExtResource("2_4rg58")
-
-[node name="Tile5" type="Sprite2D" parent="Route1"]
-position = Vector2(495, 245)
-texture = ExtResource("2_4rg58")
-
-[node name="Tile6" type="Sprite2D" parent="Route1"]
-position = Vector2(594, 294)
-texture = ExtResource("2_4rg58")
-
-[node name="Tile7" type="Sprite2D" parent="Route1"]
-position = Vector2(693, 343)
-texture = ExtResource("2_4rg58")
-
-[node name="Tile8" type="Sprite2D" parent="Route1"]
-position = Vector2(792, 392)
-texture = ExtResource("2_4rg58")
-
-[node name="Tile9" type="Sprite2D" parent="Route1"]
-position = Vector2(891, 441)
-texture = ExtResource("2_4rg58")
-
-[node name="Tile10" type="Sprite2D" parent="Route1"]
-position = Vector2(990, 490)
-texture = ExtResource("2_4rg58")
-
-[node name="Tile11" type="Sprite2D" parent="Route1"]
-position = Vector2(1089, 539)
-texture = ExtResource("2_4rg58")
-
-[node name="Tile12" type="Sprite2D" parent="Route1"]
-position = Vector2(1188, 588)
-texture = ExtResource("2_4rg58")
-
-[node name="Tile13" type="Sprite2D" parent="Route1"]
-position = Vector2(1287, 637)
-texture = ExtResource("2_4rg58")
-
-[node name="Tile14" type="Sprite2D" parent="Route1"]
-position = Vector2(1386, 686)
-texture = ExtResource("2_4rg58")
-
-[node name="Tile15" type="Sprite2D" parent="Route1"]
-position = Vector2(1485, 735)
-texture = ExtResource("2_4rg58")
-
-[node name="Tile16" type="Sprite2D" parent="Route1"]
-position = Vector2(1584, 784)
-texture = ExtResource("2_4rg58")
+color = Color(0.862745, 0.862745, 0.862745, 1)
 
 [node name="TileMap" type="TileMap" parent="."]
-tile_set = SubResource("TileSet_f5tb1")
+tile_set = SubResource("TileSet_qdxuc")
 format = 2
-layer_0/y_sort_enabled = true
-layer_0/tile_data = PackedInt32Array(720900, 0, 0, 786437, 0, 0, 851973, 0, 0, 917510, 0, 0, 983046, 0, 0, 1114119, 0, 0, 1048583, 0, 0, 1179656, 0, 0, 1245192, 0, 0, 1310729, 0, 0, 1376265, 0, 0, 1441802, 0, 0, 1507338, 0, 0, 1572875, 0, 0, 1638411, 0, 0, 1703948, 0, 0, 1769484, 0, 0, 1835021, 0, 0, 1900557, 0, 0, 1966094, 0, 0, 2031630, 0, 0, 2097167, 0, 0, 2162703, 0, 0)
-script = ExtResource("3_ne5h4")
+layer_0/tile_data = PackedInt32Array(851974, 262146, 6, 917511, 65537, 6, 983047, 65537, 6, 1048584, 65537, 6, 1114120, 65537, 6, 786438, 65537, 3, 1179657, 524290, 6, 1245193, 196609, 3, 1114121, 196609, 2, 1179658, 327682, 7, 1114122, 2, 6, 1048587, 2, 6, 983051, 196609, 6, 1048588, 589825, 6, 1114124, 196609, 3, 983052, 393217, 2, 1048589, 327682, 7, 983053, 262145, 7, 917517, 2, 6, 851980, 2, 6, 786444, 2, 6, 720907, 196609, 6, 786443, 2, 6, 851978, 2, 6, 917514, 196609, 8, 786441, 2, 6, 851977, 2, 6, 720904, 2, 6, 655368, 524290, 4, 655367, 327682, 5, 720903, 65537, 2, 589831, 65537, 1, 720902, 458754, 5, 786439, 131073, 3)
 
 [node name="player1" type="Sprite2D" parent="."]
 texture_filter = 1
@@ -113,6 +239,10 @@ position = Vector2(1540, 554)
 texture = ExtResource("3_lvpw0")
 offset = Vector2(0, -60)
 script = ExtResource("4_75peq")
+
+[node name="Marker2D" type="Marker2D" parent="player1"]
+visible = false
+position = Vector2(100, 50)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(1837, 702)
@@ -151,6 +281,18 @@ text = "0"
 horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("1_etkmo")
+
+[node name="Tile" type="Sprite2D" parent="Camera2D"]
+modulate = Color(1, 0, 1, 0.501961)
+position = Vector2(-211, -98)
+texture = ExtResource("6_vwxio")
+script = ExtResource("8_qsr7g")
+
+[node name="Area2D" type="Area2D" parent="Camera2D/Tile"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Camera2D/Tile/Area2D"]
+modulate = Color(0, 1, 0, 1)
+polygon = PackedVector2Array(100, 0, 0, 50, -100, 0, 0, -50)
 
 [connection signal="pressed" from="Camera2D/RollDice_button" to="player1" method="_on_roll_dice_button_pressed"]
 [connection signal="pressed" from="Camera2D/RollDice_button" to="Camera2D/DiceNumber" method="_on_roll_dice_button_pressed"]
