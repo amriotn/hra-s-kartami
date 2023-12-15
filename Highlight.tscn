@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://cfus6p747cr68"]
+
+[ext_resource type="Texture2D" uid="uid://jcq6b7k0tesd" path="res://tile.png" id="1_qv1tr"]
+[ext_resource type="Script" path="res://Highlight.gd" id="2_jwjai"]
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("2_jwjai")
+metadata/_edit_group_ = true
+
+[node name="Tile" type="Sprite2D" parent="."]
+modulate = Color(1, 0, 1, 0.501961)
+texture = ExtResource("1_qv1tr")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+modulate = Color(0, 1, 0, 1)
+polygon = PackedVector2Array(100, 0, 0, 50, -100, 0, 0, -50)
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
