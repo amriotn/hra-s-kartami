@@ -342,5 +342,4 @@ script = ExtResource("10_5347o")
 [node name="Highlight" parent="." instance=ExtResource("7_ffnu3")]
 position = Vector2(1762, 547)
 
-[connection signal="pressed" from="Camera2D/RollDice_button" to="." method="_on_roll_dice_button_pressed"]
 [connection signal="pressed" from="Camera2D/RollDice_button" to="Camera2D/DiceNumber" method="_on_roll_dice_button_pressed"]

@@ -21,25 +21,30 @@ func _ready():
 	print(position)
 	print(markers)
 
-
-func when_dice_button_pressed():
+"""
+#func _on_roll_dice_button_pressed():
+func dice_rolled():
 	#var markers = [get_node("NorthMarker"), get_node("SouthMarker"), get_node("EastMarker"), get_node("WestMarker")]
 	print("rolled " + str(dice_number))
 	var tile_node = self.get_parent().get_node("TileMap")
 	check_surrond_tiles_existence()
-	"""for direction in markers:
+	
+	for direction in markers:
 		if tile_node.get_cell_source_id(1, direction.position):
 			
 		
 			var highlight = highlight_scene.instantiate()
 			add_child(highlight)
-			highlight.position = get_node("EastMarker").position"""
-	
-
+			highlight.position = get_node("EastMarker").position
+"""
 
 func _on_dice_number_send_dice_number(number):
 	print("sent number")
 	dice_number += number
+	
+	print("rolled " + str(dice_number))
+	var tile_node = self.get_parent().get_node("TileMap")
+	check_surrond_tiles_existence()
 
 
 func check_surrond_tiles_existence():
@@ -50,4 +55,6 @@ func check_surrond_tiles_existence():
 	var surrounds = tilemap_node.get_surrounding_cells(self.position)
 	print(surrounds)
 	for tile in surrounds:
-		print(tilemap_node.get_cell_source_id(5, tile))
+		tile = tilemap_node.local_to_map(tile)
+		print(tile)
+		print(tilemap_node.get_cell_source_id(0, tile))

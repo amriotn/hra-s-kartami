@@ -4,10 +4,10 @@ extends TileMap
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	
-	print(cell_quadrant_size)
-	print(tile_set.get_source(0))
-	print(get_used_cells(0))
-	print(get_used_cells_by_id(0))
+	#print(cell_quadrant_size)
+	#print(tile_set.get_source(0))
+	#print(get_used_cells(0))
+	print(get_used_cells_by_id(1))
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

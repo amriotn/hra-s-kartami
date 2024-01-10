@@ -6,6 +6,10 @@ var player_scene = load("res://Player.tscn")
 func _ready():
 	var player = player_scene.instantiate()
 	add_child(player)
+	
+	var dicenumber_label = $Camera2D/DiceNumber
+	dicenumber_label.connect("send_dice_number", Callable(player, "_on_dice_number_send_dice_number"))
+	#button.connect("pressed", Callable(player, "dice_rolled"))
 	#await get_tree().create_timer(1).timeout
 	#var start_pos_marker = self.get_parent().get_node("StartPosition")
 	var start_pos_marker = $StartPosition
@@ -27,8 +31,3 @@ func _input(event):
 	# Print the size of the viewport.
 	print("Viewport Resolution is: ", get_viewport_rect().size)
 """
-
-
-func _on_roll_dice_button_pressed():
-	var player = get_node("Player")
-	player.when_dice_button_pressed()
