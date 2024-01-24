@@ -69,7 +69,9 @@ func check_surrond_tiles_help(center_tile : Vector2i, previous_tile : Vector2i, 
 		highlights.append(highlight)
 		
 func _on_highlight_send_highlight_position(highlight_position):
-	self.position = highlight_position
+	var tween = get_tree().create_tween()
+	tween.tween_property(self, "position", highlight_position, 0.1*dice_number)
+	#self.position = highlight_position
 	for highlight in highlights:
 		highlight.queue_free()
 	highlights.clear()

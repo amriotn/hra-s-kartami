@@ -8,7 +8,7 @@ func _ready():
 	add_child(player)
 	
 	# when dice is rolled, sends the number to player
-	var dicenumber_label = $MainCamera/DiceNumber
+	var dicenumber_label = $MainCamera/GUI/MarginContainer/Rows/DiceNumber
 	dicenumber_label.connect("send_dice_number", Callable(player, "_on_dice_number_send_dice_number"))
 	
 	# sets player position to the start
