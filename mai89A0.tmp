@@ -12,27 +12,48 @@
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_anpot"]
 texture = ExtResource("6_ehyh4")
 texture_region_size = Vector2i(174, 100)
+7:2/0 = 0
 8:2/0 = 0
+9:2/0 = 0
+6:3/0 = 0
 7:3/0 = 0
 8:3/0 = 0
 9:3/0 = 0
+10:3/0 = 0
+1:4/0 = 0
+5:4/0 = 0
 6:4/0 = 0
+7:4/0 = 0
+9:4/0 = 0
 10:4/0 = 0
+11:4/0 = 0
 1:5/0 = 0
+2:5/0 = 0
 3:5/0 = 0
+4:5/0 = 0
 5:5/0 = 0
 6:5/0 = 0
 10:5/0 = 0
 11:5/0 = 0
 2:6/0 = 0
+3:6/0 = 0
 4:6/0 = 0
+5:6/0 = 0
 6:6/0 = 0
+7:6/0 = 0
+9:6/0 = 0
 10:6/0 = 0
+2:7/0 = 0
 3:7/0 = 0
+4:7/0 = 0
+6:7/0 = 0
 7:7/0 = 0
 8:7/0 = 0
 9:7/0 = 0
+10:7/0 = 0
+7:8/0 = 0
 8:8/0 = 0
+9:8/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_qdxuc"]
 tile_shape = 1
@@ -43,7 +64,7 @@ sources/0 = SubResource("TileSetAtlasSource_anpot")
 script = ExtResource("1_7sub8")
 
 [node name="Bg" type="Sprite2D" parent="."]
-modulate = Color(0.466667, 0.662745, 0.415686, 1)
+visible = false
 position = Vector2(1920, 809)
 scale = Vector2(19.16, 8.08)
 texture = ExtResource("2_dlnxg")
@@ -55,7 +76,7 @@ format = 2
 layer_0/name = "Route"
 layer_0/y_sort_enabled = true
 layer_0/z_index = 1
-layer_0/tile_data = PackedInt32Array(786441, 65536, 5, 851978, 65536, 5, 1245196, 65536, 5, 1179661, 65536, 5, 1114125, 65536, 5, 1048590, 65536, 5, 983053, 65536, 5, 917518, 65536, 5, 851981, 65536, 5, 786445, 65536, 5, 720908, 65536, 5, 655372, 65536, 5, 655370, 65536, 5, 720905, 65536, 5, 983048, 65536, 5, 917512, 65536, 5, 851976, 65536, 5, 983051, 65536, 5, 917515, 65536, 5, 786442, 65536, 5, 655371, 65536, 5, 589834, 65536, 5, 1048584, 65536, 5, 1114120, 65536, 5, 1179657, 65536, 5, 1245193, 65536, 5, 1310730, 65536, 5, 1310731, 65536, 5, 1376266, 65536, 5, 1376267, 65536, 5, 1310732, 65536, 5, 589835, 65536, 5, 851980, 65536, 5, 917516, 65536, 5, 1114121, 65536, 5, 1048586, 65536, 5, 983050, 65536, 5)
+layer_0/tile_data = PackedInt32Array(1048584, 393216, 6, 1114120, 65536, 5, 1179657, 458752, 7, 1245193, 524288, 8, 1114121, 524288, 7, 1179658, 589824, 7, 1114122, 655360, 6, 1048587, 720896, 5, 1048586, 655360, 5, 983050, 655360, 4, 917514, 65536, 5, 851977, 65536, 5, 786441, 196608, 5, 983047, 327680, 5, 983048, 393216, 5, 917512, 393216, 4, 851976, 65536, 5)
 layer_1/name = "Environment"
 layer_1/y_sort_enabled = true
 layer_1/z_index = 3
@@ -63,28 +84,24 @@ layer_1/tile_data = PackedInt32Array()
 script = ExtResource("7_lktir")
 
 [node name="MainCamera" type="Camera2D" parent="."]
-top_level = true
 position = Vector2(1837, 702)
 script = ExtResource("5_nspln")
 
 [node name="RollDice_button" type="Button" parent="MainCamera"]
 z_index = 5
-layout_direction = 1
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -109.0
-offset_top = 137.0
-offset_right = 115.0
-offset_bottom = 211.0
+offset_left = -78.0
+offset_top = 126.73
+offset_right = 78.0
+offset_bottom = 197.73
 grow_horizontal = 2
 grow_vertical = 0
-size_flags_horizontal = 3
-size_flags_vertical = 3
+size_flags_horizontal = 4
 text = "ROLL DICE"
-icon_alignment = 1
 
 [node name="DiceNumber" type="Label" parent="MainCamera"]
 z_index = 10
@@ -109,11 +126,10 @@ vertical_alignment = 1
 script = ExtResource("1_etkmo")
 
 [node name="StartPosition" type="Marker2D" parent="."]
-position = Vector2(2008, 749)
+position = Vector2(1462, 848)
 script = ExtResource("10_5347o")
 
 [node name="Highlight" parent="." instance=ExtResource("7_ffnu3")]
-z_index = 5
-position = Vector2(1611, 607)
+position = Vector2(1762, 547)
 
 [connection signal="pressed" from="MainCamera/RollDice_button" to="MainCamera/DiceNumber" method="_on_roll_dice_button_pressed"]

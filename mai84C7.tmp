@@ -43,7 +43,6 @@ sources/0 = SubResource("TileSetAtlasSource_anpot")
 script = ExtResource("1_7sub8")
 
 [node name="Bg" type="Sprite2D" parent="."]
-modulate = Color(0.466667, 0.662745, 0.415686, 1)
 position = Vector2(1920, 809)
 scale = Vector2(19.16, 8.08)
 texture = ExtResource("2_dlnxg")
@@ -55,7 +54,7 @@ format = 2
 layer_0/name = "Route"
 layer_0/y_sort_enabled = true
 layer_0/z_index = 1
-layer_0/tile_data = PackedInt32Array(786441, 65536, 5, 851978, 65536, 5, 1245196, 65536, 5, 1179661, 65536, 5, 1114125, 65536, 5, 1048590, 65536, 5, 983053, 65536, 5, 917518, 65536, 5, 851981, 65536, 5, 786445, 65536, 5, 720908, 65536, 5, 655372, 65536, 5, 655370, 65536, 5, 720905, 65536, 5, 983048, 65536, 5, 917512, 65536, 5, 851976, 65536, 5, 983051, 65536, 5, 917515, 65536, 5, 786442, 65536, 5, 655371, 65536, 5, 589834, 65536, 5, 1048584, 65536, 5, 1114120, 65536, 5, 1179657, 65536, 5, 1245193, 65536, 5, 1310730, 65536, 5, 1310731, 65536, 5, 1376266, 65536, 5, 1376267, 65536, 5, 1310732, 65536, 5, 589835, 65536, 5, 851980, 65536, 5, 917516, 65536, 5, 1114121, 65536, 5, 1048586, 65536, 5, 983050, 65536, 5)
+layer_0/tile_data = PackedInt32Array(1048585, 65536, 5, 983049, 65536, 5, 917514, 65536, 5, 983050, 65536, 5, 1048587, 65536, 5, 851977, 65536, 5, 786441, 65536, 5, 851978, 65536, 5, 786443, 65536, 5)
 layer_1/name = "Environment"
 layer_1/y_sort_enabled = true
 layer_1/z_index = 3
@@ -63,7 +62,6 @@ layer_1/tile_data = PackedInt32Array()
 script = ExtResource("7_lktir")
 
 [node name="MainCamera" type="Camera2D" parent="."]
-top_level = true
 position = Vector2(1837, 702)
 script = ExtResource("5_nspln")
 
@@ -109,11 +107,11 @@ vertical_alignment = 1
 script = ExtResource("1_etkmo")
 
 [node name="StartPosition" type="Marker2D" parent="."]
-position = Vector2(2008, 749)
+position = Vector2(1819, 753)
 script = ExtResource("10_5347o")
 
 [node name="Highlight" parent="." instance=ExtResource("7_ffnu3")]
-z_index = 5
-position = Vector2(1611, 607)
+visible = false
+position = Vector2(1762, 547)
 
 [connection signal="pressed" from="MainCamera/RollDice_button" to="MainCamera/DiceNumber" method="_on_roll_dice_button_pressed"]
