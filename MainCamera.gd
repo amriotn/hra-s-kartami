@@ -7,7 +7,7 @@ var _target_zoom: float = 1.0
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:
-		if event.button_mask == MOUSE_BUTTON_MASK_MIDDLE:
+		if event.button_mask == MOUSE_BUTTON_MASK_LEFT:
 			position -= event.relative / zoom
 	if event is InputEventMouseButton:
 		if event.is_pressed():

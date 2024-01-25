@@ -1,6 +1,7 @@
 extends Sprite2D
 
 var highlight_scene : PackedScene = load("res://Highlight.tscn")
+var rolldice_button : Button
 
 var dice_number : int = 0
 var markers : Array = []
@@ -11,7 +12,9 @@ var highlights : Array = []
 #var first_tile_pos = tile_node.get_used_cells(0)[0]
 
 func _ready():
+	rolldice_button = self.get_parent().get_node("MainCamera/GUI/MarginContainer/Rows/RollDice_button")
 	markers = [$NorthMarker, $SouthMarker, $EastMarker, $WestMarker]
+	print(rolldice_button)
 	print(position)
 	print(markers)
 
@@ -49,6 +52,8 @@ func check_surrond_tiles_help(center_tile : Vector2i, previous_tile : Vector2i, 
 	var tilemap_node : TileMap = self.get_parent().get_node("TileMap")
 	var current_surrounds : Array = tilemap_node.get_surrounding_cells(center_tile)
 	print("Tile ", center_tile, "surronds: ", current_surrounds,"\ndice:", dice_number)
+	rolldice_button.disabled = true
+	
 	if dice_number > 0:
 		for tile in current_surrounds:
 			if tile == previous_tile:
@@ -75,3 +80,4 @@ func _on_highlight_send_highlight_position(highlight_position):
 	for highlight in highlights:
 		highlight.queue_free()
 	highlights.clear()
+	rolldice_button.disabled = false
