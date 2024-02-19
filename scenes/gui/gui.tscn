@@ -1,0 +1,100 @@
+[gd_scene load_steps=5 format=3 uid="uid://cu4lhv5r0ij68"]
+
+[ext_resource type="Script" path="res://scenes/gui/DiceNumber.gd" id="1_2vjuq"]
+[ext_resource type="PackedScene" uid="uid://7rsratqfj43e" path="res://scenes/card_hand_ui/card_hand_ui.tscn" id="2_6xk3u"]
+[ext_resource type="Script" path="res://scenes/gui/hand.gd" id="2_34o4f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eorai"]
+size = Vector2(1920, 750)
+
+[node name="GUI" type="CanvasLayer" groups=["ui_layer"]]
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+top_level = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 465.0
+offset_bottom = -205.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 8
+
+[node name="DiceControl" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 8
+alignment = 1
+
+[node name="DiceNumber" type="Label" parent="CenterContainer/DiceControl"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 15
+theme_override_font_sizes/font_size = 50
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("1_2vjuq")
+
+[node name="RollDice_button" type="Button" parent="CenterContainer/DiceControl"]
+custom_minimum_size = Vector2(11.35, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 15
+text = "ROLL DICE"
+icon_alignment = 1
+
+[node name="Hand" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -650.0
+offset_top = -200.0
+offset_right = 650.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+script = ExtResource("2_34o4f")
+
+[node name="CardHandUI" parent="Hand" instance=ExtResource("2_6xk3u")]
+layout_mode = 2
+offset_left = 376.0
+offset_right = 509.0
+
+[node name="CardHandUI2" parent="Hand" instance=ExtResource("2_6xk3u")]
+layout_mode = 2
+offset_left = 444.0
+offset_right = 577.0
+
+[node name="CardHandUI3" parent="Hand" instance=ExtResource("2_6xk3u")]
+layout_mode = 2
+offset_left = 513.0
+offset_right = 646.0
+
+[node name="CardHandUI4" parent="Hand" instance=ExtResource("2_6xk3u")]
+layout_mode = 2
+offset_left = 581.0
+offset_right = 714.0
+
+[node name="CardDropZone" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+grow_horizontal = 2
+
+[node name="DropDetectionArea" type="Area2D" parent="CardDropZone"]
+position = Vector2(-960, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CardDropZone/DropDetectionArea"]
+position = Vector2(960, 375)
+shape = SubResource("RectangleShape2D_eorai")
+
+[connection signal="pressed" from="CenterContainer/DiceControl/RollDice_button" to="CenterContainer/DiceControl/DiceNumber" method="_on_roll_dice_button_pressed"]

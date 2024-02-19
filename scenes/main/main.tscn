@@ -1,0 +1,98 @@
+[gd_scene load_steps=14 format=3 uid="uid://cja5kon0sg03y"]
+
+[ext_resource type="Script" path="res://scenes/main/main.gd" id="1_61e2m"]
+[ext_resource type="Texture2D" uid="uid://t77edi32bv7v" path="res://assets/DirtTileSet.png" id="4_08yuv"]
+[ext_resource type="Texture2D" uid="uid://cq4um00ww0eei" path="res://assets/StonePath.png" id="5_ac40r"]
+[ext_resource type="Script" path="res://scenes/main/MainCamera.gd" id="5_nspln"]
+[ext_resource type="Texture2D" uid="uid://n5ymdcpjcy64" path="res://assets/Z pohadky do pohádky  (11).png" id="6_ehyh4"]
+[ext_resource type="PackedScene" uid="uid://cu4lhv5r0ij68" path="res://scenes/gui/gui.tscn" id="6_gohn5"]
+[ext_resource type="Script" path="res://scenes/main/TileMap.gd" id="7_lktir"]
+[ext_resource type="Texture2D" uid="uid://dij03whkopbi3" path="res://assets/Seamless ground.png" id="8_e3nya"]
+[ext_resource type="Script" path="res://scenes/main/StartPosition.gd" id="10_5347o"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k35ca"]
+texture = ExtResource("4_08yuv")
+texture_region_size = Vector2i(200, 100)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_anpot"]
+texture = ExtResource("6_ehyh4")
+texture_region_size = Vector2i(174, 100)
+8:2/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+6:4/0 = 0
+10:4/0 = 0
+1:5/0 = 0
+3:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+10:5/0 = 0
+11:5/0 = 0
+2:6/0 = 0
+4:6/0 = 0
+6:6/0 = 0
+10:6/0 = 0
+3:7/0 = 0
+7:7/0 = 0
+8:7/0 = 0
+9:7/0 = 0
+8:8/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_27ice"]
+texture = ExtResource("5_ac40r")
+texture_region_size = Vector2i(200, 100)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_qdxuc"]
+tile_shape = 1
+tile_size = Vector2i(200, 100)
+sources/10 = SubResource("TileSetAtlasSource_anpot")
+sources/0 = SubResource("TileSetAtlasSource_k35ca")
+sources/7 = SubResource("TileSetAtlasSource_27ice")
+tile_proxies/coords_level = [[1, Vector2i(0, 0)], [7, Vector2i(0, 0)], [2, Vector2i(0, 0)], [7, Vector2i(1, 0)], [3, Vector2i(0, 0)], [7, Vector2i(2, 0)], [4, Vector2i(0, 0)], [7, Vector2i(3, 0)], [5, Vector2i(0, 0)], [7, Vector2i(4, 0)], [6, Vector2i(0, 0)], [7, Vector2i(5, 0)], [7, Vector2i(0, 0)], [9, Vector2i(2, 0)], [10, Vector2i(0, 0)], [13, Vector2i(0, 0)], [11, Vector2i(0, 0)], [13, Vector2i(1, 0)], [12, Vector2i(0, 0)], [13, Vector2i(2, 0)]]
+
+[node name="main" type="Node2D"]
+script = ExtResource("1_61e2m")
+
+[node name="SeamlessGround" type="Sprite2D" parent="."]
+self_modulate = Color(0.47451, 0.596078, 0.313726, 1)
+texture_repeat = 3
+position = Vector2(2800, 913)
+scale = Vector2(0.593078, 0.593078)
+texture = ExtResource("8_e3nya")
+region_enabled = true
+region_rect = Rect2(0, 0, 5302.5, 5302.5)
+
+[node name="TileMap" type="TileMap" parent="."]
+y_sort_enabled = true
+tile_set = SubResource("TileSet_qdxuc")
+format = 2
+layer_0/name = "Route"
+layer_0/y_sort_enabled = true
+layer_0/z_index = 1
+layer_0/tile_data = PackedInt32Array(851978, 131072, 0, 1245196, 131072, 0, 1179661, 131072, 0, 1114125, 131072, 0, 1048590, 0, 0, 983053, 0, 268435456, 917518, 0, 0, 851981, 131072, 0, 720908, 131072, 0, 655370, 131072, 0, 983051, 65536, 0, 786442, 131072, 0, 1048584, 131072, 0, 1245193, 131072, 0, 1310730, 131072, 0, 1310731, 65536, 536870912, 1376266, 65536, 0, 1376267, 65536, 0, 1310732, 131072, 0, 851980, 131072, 0, 917516, 131072, 0, 1114120, 131072, 0, 917515, 131072, 0, 1179657, 131072, 0, 720905, 0, 268435456, 786445, 131072, 0, 1245197, 131072, 0, 1310734, 131072, 0, 1376270, 65536, 0, 1310735, 131072, 0, 1245199, 131072, 0, 1179664, 131072, 0, 655372, 0, 268435456, 589836, 131072, 0, 524301, 131072, 0, 458765, 131072, 0, 393230, 131072, 0, 589834, 131072, 0, 524299, 131072, 0, 458763, 131072, 0, 393228, 131072, 0, 327692, 65536, 536870912, 393229, 131072, 0, 327694, 131072, 0, 262159, 131072, 0, 196623, 131072, 0, 1114128, 65536, 536870912, 1179665, 131072, 0, 1245201, 131072, 0, 1310738, 65536, 0, 1245202, 131072, 0, 1179667, 0, 0, 1114130, 0, 268435456, 1048595, 131072, 0, 983059, 131072, 0, 917524, 131072, 0, 851988, 131072, 0, 1769485, 65543, 0, 1769484, 131079, 0, 1835021, 327687, 0, 1703949, 7, 0, 1900554, 262151, 0, 1835019, 262151, 0, 1769483, 262151, 0, 1835020, 196615, 268435456, 1900555, 196615, 268435456, 1966091, 196615, 268435456, 2097166, 262151, 268435456, 2031629, 262151, 268435456, 1966093, 262151, 268435456, 2031628, 196615, 0, 2097165, 196615, 0, 2162701, 196615, 0)
+layer_1/name = "Environment"
+layer_1/y_sort_enabled = true
+layer_1/z_index = 3
+layer_1/tile_data = PackedInt32Array()
+script = ExtResource("7_lktir")
+
+[node name="StartPosition" type="Marker2D" parent="."]
+position = Vector2(1701, 845)
+script = ExtResource("10_5347o")
+
+[node name="MainCamera" type="Camera2D" parent="." groups=["cameras"]]
+top_level = true
+position = Vector2(2009, 700)
+script = ExtResource("5_nspln")
+
+[node name="GUI" parent="MainCamera" instance=ExtResource("6_gohn5")]
