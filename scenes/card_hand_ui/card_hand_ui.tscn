@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scenes/card_hand_ui/card_hand_ui.gd" id="1_fhmeo"]
 [ext_resource type="Script" path="res://scenes/card_hand_ui/card_state_machine.gd" id="2_6i30o"]
 [ext_resource type="Script" path="res://scenes/card_hand_ui/card_states/card_base_state.gd" id="3_700ko"]
-[ext_resource type="Script" path="res://scenes/card_hand_ui/card_states/card_clicked_state.gd" id="4_lmwq7"]
+[ext_resource type="Script" path="res://scenes/card_hand_ui/card_states/card_hover_state.gd" id="4_766e7"]
 [ext_resource type="Script" path="res://scenes/card_hand_ui/card_states/card_dragging_state.gd" id="5_gqy0u"]
 [ext_resource type="Script" path="res://scenes/card_hand_ui/card_states/card_released_state.gd" id="6_xltb0"]
 
@@ -58,8 +58,8 @@ initial_state = NodePath("CardBaseState")
 [node name="CardBaseState" type="Node" parent="CardStateMachine"]
 script = ExtResource("3_700ko")
 
-[node name="CardClickedState" type="Node" parent="CardStateMachine"]
-script = ExtResource("4_lmwq7")
+[node name="CardHoverState" type="Node" parent="CardStateMachine"]
+script = ExtResource("4_766e7")
 state = 1
 
 [node name="CardDraggingState" type="Node" parent="CardStateMachine"]

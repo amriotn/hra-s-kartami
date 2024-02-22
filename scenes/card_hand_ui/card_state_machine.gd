@@ -13,6 +13,7 @@ func init(card: CardHandUI) -> void:
 			states[child.state] = child
 			child.transition_requested.connect(_on_transition_requested)
 			child.card_hand_ui = card
+			child.hand_container = card.get_parent()
 	if initial_state:
 		initial_state.enter()
 		current_state = initial_state

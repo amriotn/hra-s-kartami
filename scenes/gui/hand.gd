@@ -23,16 +23,18 @@ func update_hand():
 	var hand_size = hand_list.size()
 	var viewport_size = get_viewport_rect().size
 	
-	var horizontal_space = viewport_size.x - ((SCREEN_EDGE_BORDER/100 * viewport_size.x)*2) - CARD_SIZE.x/2
+	#var horizontal_space = viewport_size.x - ((SCREEN_EDGE_BORDER/100 * viewport_size.x)*2)
+	var horizontal_space = self.size.x
 	var dist_between_cards = min(horizontal_space / hand_size, (MAX_DISTANCE_BETWEEN_CARDS/100*CARD_SIZE.x))
 	var start_position = (horizontal_space/2)-(dist_between_cards*hand_size/2)
-	print(horizontal_space)
-	print(dist_between_cards)
-	print(start_position)
+	
+	#print(dist_between_cards)
+	#print(start_position)
 	
 	for i in range(hand_size):
+		#hand_list[i].position = Vector2(start_position, 0)
 		hand_list[i].position = Vector2(start_position+dist_between_cards*i, 0)
-		print(hand_list[i].position)
+		#print(hand_list[i].position)
 		
 	
 

@@ -5,7 +5,7 @@
 [ext_resource type="Script" path="res://scenes/gui/hand.gd" id="2_34o4f"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eorai"]
-size = Vector2(1920, 750)
+size = Vector2(3000, 750)
 
 [node name="GUI" type="CanvasLayer" groups=["ui_layer"]]
 
@@ -46,20 +46,21 @@ theme_override_font_sizes/font_size = 15
 text = "ROLL DICE"
 icon_alignment = 1
 
-[node name="Hand" type="Control" parent="."]
+[node name="Hand" type="Control" parent="." groups=["hand"]]
 layout_mode = 3
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -650.0
-offset_top = -200.0
-offset_right = 650.0
+offset_left = -672.0
+offset_top = -80.0
+offset_right = 672.0
+offset_bottom = 120.0
 grow_horizontal = 2
 grow_vertical = 0
 size_flags_horizontal = 4
-size_flags_vertical = 4
+size_flags_vertical = 8
 mouse_filter = 2
 script = ExtResource("2_34o4f")
 
@@ -69,19 +70,16 @@ offset_left = 376.0
 offset_right = 509.0
 
 [node name="CardHandUI2" parent="Hand" instance=ExtResource("2_6xk3u")]
-layout_mode = 2
-offset_left = 444.0
-offset_right = 577.0
+offset_left = 376.0
+offset_right = 509.0
 
 [node name="CardHandUI3" parent="Hand" instance=ExtResource("2_6xk3u")]
-layout_mode = 2
-offset_left = 513.0
-offset_right = 646.0
+offset_left = 752.0
+offset_right = 885.0
 
 [node name="CardHandUI4" parent="Hand" instance=ExtResource("2_6xk3u")]
-layout_mode = 2
-offset_left = 581.0
-offset_right = 714.0
+offset_left = 376.0
+offset_right = 509.0
 
 [node name="CardDropZone" type="Control" parent="."]
 layout_mode = 3
@@ -89,8 +87,10 @@ anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 grow_horizontal = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 
-[node name="DropDetectionArea" type="Area2D" parent="CardDropZone"]
+[node name="DropDetectionArea" type="Area2D" parent="CardDropZone" groups=["card_detection_zones"]]
 position = Vector2(-960, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CardDropZone/DropDetectionArea"]

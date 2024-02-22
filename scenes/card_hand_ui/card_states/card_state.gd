@@ -1,13 +1,14 @@
 class_name CardState
 extends Node
 
-enum State {BASE, CLICKED, DRAGGING, RELEASED}
+enum State {BASE, HOVER, DRAGGING, RELEASED}
 
 signal transition_requested(from: CardState, to: State)
 
 @export var state: State
 
 var card_hand_ui: CardHandUI
+var hand_container : Control
 
 func enter() -> void:
 	pass
