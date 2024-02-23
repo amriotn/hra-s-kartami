@@ -54,14 +54,13 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -672.0
-offset_top = -80.0
+offset_top = -130.0
 offset_right = 672.0
 offset_bottom = 120.0
 grow_horizontal = 2
 grow_vertical = 0
 size_flags_horizontal = 4
 size_flags_vertical = 8
-mouse_filter = 2
 script = ExtResource("2_34o4f")
 
 [node name="CardHandUI" parent="Hand" instance=ExtResource("2_6xk3u")]
@@ -98,3 +97,4 @@ position = Vector2(960, 375)
 shape = SubResource("RectangleShape2D_eorai")
 
 [connection signal="pressed" from="CenterContainer/DiceControl/RollDice_button" to="CenterContainer/DiceControl/DiceNumber" method="_on_roll_dice_button_pressed"]
+[connection signal="mouse_exited" from="Hand" to="Hand" method="_on_mouse_exited"]

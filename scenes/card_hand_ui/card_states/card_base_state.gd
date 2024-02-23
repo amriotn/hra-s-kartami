@@ -8,12 +8,14 @@ func enter() -> void:
 	
 	card_hand_ui.reparent_requested.emit(card_hand_ui)
 	
+	
 	card_hand_ui.scale = Vector2(1,1)
 	hand_container.update_hand()
 	
 	card_hand_ui.color_rect.color = Color.WEB_GREEN
 	card_hand_ui.state.text = "BASE"
 	card_hand_ui.pivot_offset = Vector2.ZERO
+	
 
 
 func on_mouse_entered() -> void:
@@ -21,8 +23,8 @@ func on_mouse_entered() -> void:
 		hand_tween.kill()
 	#print(hand_container.position)
 	hand_tween = hand_container.get_tree().create_tween()
-	hand_tween.tween_property(hand_container, "position:y", 880, 0.15)
+	hand_tween.tween_property(hand_container, "position:y", 850, 0.15)
 	
 	#hand_container.position = Vector2(hand_container.position.x, 880)
 	transition_requested.emit(self, CardState.State.HOVER)
-
+	
