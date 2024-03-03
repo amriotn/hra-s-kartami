@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://cja5kon0sg03y"]
+[gd_scene load_steps=16 format=3 uid="uid://cja5kon0sg03y"]
 
 [ext_resource type="Script" path="res://scenes/main/main.gd" id="1_61e2m"]
 [ext_resource type="Texture2D" uid="uid://t77edi32bv7v" path="res://assets/DirtTileSet.png" id="4_08yuv"]
@@ -10,7 +10,6 @@
 [ext_resource type="Script" path="res://scenes/main/TileMap.gd" id="7_lktir"]
 [ext_resource type="Texture2D" uid="uid://dij03whkopbi3" path="res://assets/Seamless ground.png" id="8_e3nya"]
 [ext_resource type="Texture2D" uid="uid://bq457fko1s0ub" path="res://assets/BG.png" id="10_fs1ih"]
-[ext_resource type="Script" path="res://scenes/main/ActionsOfTiles.gd" id="11_knj1u"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k35ca"]
 texture = ExtResource("4_08yuv")
@@ -517,7 +516,6 @@ RoadSelect(crossroad_index) (?)
 
 [node name="ActionsOfTiles" type="Node2D" parent="."]
 position = Vector2(1690, 1546)
-script = ExtResource("11_knj1u")
 
 [node name="MovePlayer" type="Node2D" parent="ActionsOfTiles"]
 

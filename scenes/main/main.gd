@@ -11,6 +11,12 @@ func _ready():
 	var dicenumber_label = $MainCamera/GUI/CenterContainer/DiceControl/DiceNumber
 	dicenumber_label.connect("send_dice_number", Callable(player, "_on_dice_number_send_dice_number"))
 	
+	
+	var tile_node : TileMap = self.get_node("TileMap")
+	var start_pos_marker : Marker2D = $StartPosition
+	# sets position of StartPosition marker to the center of the desired starting tile
+	start_pos_marker.position = tile_node.map_to_local(tile_node.local_to_map(start_pos_marker.position))
 	# sets player position to the start
-	var start_pos_marker = $StartPosition
 	player.position = start_pos_marker.position
+	
+	
