@@ -3,9 +3,12 @@ extends CardState
 var hand_tween : Tween
 
 func enter() -> void:
-	#card_hand_ui.scale = Vector2(2,2)
 	card_hand_ui.color_rect.color = Color.ORANGE
 	card_hand_ui.state.text = "HOVER"
+	
+	#card_hand_ui.pivot_offset = Vector2(133/2, 200)
+	card_hand_ui.position.y -= 10
+	hand_container.update_hand()
 	#card_hand_ui.drop_detection_area.monitoring = true
 	
 	

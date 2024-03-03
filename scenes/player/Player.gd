@@ -4,7 +4,6 @@ extends Sprite2D
 @onready var rolldice_button : Button = self.get_parent().get_node("MainCamera/GUI/CenterContainer/DiceControl/RollDice_button")
 
 var dice_number : int = 0
-var markers : Array = []
 
 var highlights : Array = []
 
@@ -12,7 +11,7 @@ var highlights : Array = []
 #var first_tile_pos = tile_node.get_used_cells(0)[0]
 
 func _ready():
-	markers = [$NorthMarker, $SouthMarker, $EastMarker, $WestMarker]
+	pass
 	#print(rolldice_button)
 	#print(position)
 	#print(markers)
@@ -28,10 +27,10 @@ func _on_dice_number_send_dice_number(number):
 	#var player_surrounds = tilemap_node.get_surrounding_cells(tilemap_node.local_to_map(self.position))
 	var reference_tile = tilemap_node.local_to_map(self.position)
 	#print(reference_tile)
-	check_surrond_tiles_help(reference_tile, reference_tile, dice_number)
+	check_surround_tiles_help(reference_tile, reference_tile, dice_number)
 	
 
-func check_surrond_tiles_help(center_tile : Vector2i, previous_tile : Vector2i, dice_number : int):
+func check_surround_tiles_help(center_tile : Vector2i, previous_tile : Vector2i, dice_number : int):
 	var tilemap_node : TileMap = self.get_parent().get_node("TileMap")
 	var current_surrounds : Array = tilemap_node.get_surrounding_cells(center_tile)
 	#print("Tile ", center_tile, "surronds: ", current_surrounds,"\ndice:", dice_number)
@@ -42,7 +41,7 @@ func check_surrond_tiles_help(center_tile : Vector2i, previous_tile : Vector2i, 
 			if tile != previous_tile:
 				if tilemap_node.get_cell_source_id(0, tile) == 0: # = tile exists
 					#print("Tile:", tile, "exists")
-					check_surrond_tiles_help(tile, center_tile, dice_number-1)
+					check_surround_tiles_help(tile, center_tile, dice_number-1)
 	elif dice_number <= 0:
 		#print("\bReference tile: ", center_tile)
 		var highlight = highlight_scene.instantiate()

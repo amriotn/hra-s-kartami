@@ -5,21 +5,8 @@
 
 [node name="Player" type="Sprite2D"]
 z_index = 5
-texture_filter = 2
-scale = Vector2(0.8, 0.8)
+texture_filter = 1
 texture = ExtResource("1_a6yq5")
 offset = Vector2(0, -125)
 script = ExtResource("2_akcfd")
 metadata/_edit_group_ = true
-
-[node name="EastMarker" type="Marker2D" parent="."]
-position = Vector2(100, 50)
-
-[node name="NorthMarker" type="Marker2D" parent="."]
-position = Vector2(100, -50)
-
-[node name="WestMarker" type="Marker2D" parent="."]
-position = Vector2(-100, -50)
-
-[node name="SouthMarker" type="Marker2D" parent="."]
-position = Vector2(-100, 50)

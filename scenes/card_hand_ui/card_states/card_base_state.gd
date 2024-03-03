@@ -9,7 +9,6 @@ func enter() -> void:
 	card_hand_ui.reparent_requested.emit(card_hand_ui)
 	
 	
-	card_hand_ui.scale = Vector2(1,1)
 	hand_container.update_hand()
 	
 	card_hand_ui.color_rect.color = Color.WEB_GREEN
