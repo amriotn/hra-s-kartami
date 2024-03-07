@@ -105,7 +105,7 @@ layer_2/tile_data = PackedInt32Array(-262097, 65546, 5, 1703970, 65546, 5, 16384
 script = ExtResource("7_lktir")
 
 [node name="StartPosition" type="Marker2D" parent="."]
-position = Vector2(986, 1203)
+position = Vector2(2699, 1939)
 
 [node name="MainCamera" type="Camera2D" parent="." groups=["cameras"]]
 top_level = true
@@ -119,6 +119,8 @@ metadata/_edit_lock_ = true
 
 [node name="Zone1Start" type="Node2D" parent="Notes"]
 position = Vector2(1289, 1584)
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="Bg" type="Sprite2D" parent="Notes/Zone1Start"]
 modulate = Color(1, 1, 0.239216, 0.407843)
@@ -156,6 +158,8 @@ Ježibaba
 - Dopad za = výběr cesty dle čísla na kostce"
 
 [node name="Zone2Fields" type="Node2D" parent="Notes"]
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="Bg2" type="Sprite2D" parent="Notes/Zone2Fields"]
 modulate = Color(0.309804, 0.67451, 0, 0.407843)
@@ -215,6 +219,8 @@ Hnědý kůň
 
 [node name="Zone3Swamp" type="Node2D" parent="Notes"]
 position = Vector2(1289, 1584)
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="Bg3" type="Sprite2D" parent="Notes/Zone3Swamp"]
 modulate = Color(0.0784314, 0.6, 0.941176, 0.407843)
@@ -297,6 +303,8 @@ text = "???:
                                  - Zpět: jde na pole s korunkou"
 
 [node name="Zone4WizardRoad" type="Node2D" parent="Notes"]
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="Bg4" type="Sprite2D" parent="Notes/Zone4WizardRoad"]
 modulate = Color(1, 1, 0.239216, 0.407843)
@@ -315,6 +323,8 @@ text = "Move Player:
 - posílá hráče pást prasata"
 
 [node name="Zone5Pigs" type="Node2D" parent="Notes"]
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="Bg5" type="Sprite2D" parent="Notes/Zone5Pigs"]
 modulate = Color(1, 0.603922, 0.239216, 0.407843)
@@ -343,6 +353,8 @@ text = "Move Player:
 - hráč jde do pekla"
 
 [node name="Zone6GoldenHill" type="Node2D" parent="Notes"]
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="Bg6" type="Sprite2D" parent="Notes/Zone6GoldenHill"]
 modulate = Color(1, 1, 0.239216, 0.407843)
@@ -369,6 +381,8 @@ theme_override_font_sizes/font_size = 36
 text = "Koruna Žabího prince"
 
 [node name="Zone7RoadsToCastle" type="Node2D" parent="Notes"]
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="Bg7" type="Sprite2D" parent="Notes/Zone7RoadsToCastle"]
 modulate = Color(1, 1, 0.239216, 0.407843)
@@ -465,6 +479,8 @@ Komnaty hradu
 - hráč jde zpět k čaroději"
 
 [node name="Zone8Hell" type="Node2D" parent="Notes"]
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="Bg8" type="Sprite2D" parent="Notes/Zone8Hell"]
 modulate = Color(1, 0, 0.239216, 0.407843)
@@ -548,3 +564,22 @@ position = Vector2(296, 146)
 
 [node name="StuckPlayer5_3" type="Marker2D" parent="ActionsOfTiles/StuckPlayer/San_Roll3"]
 position = Vector2(394, 196)
+
+[node name="Crossroads" type="Node2D" parent="ActionsOfTiles"]
+
+[node name="Jezibaba" type="Node2D" parent="ActionsOfTiles/Crossroads"]
+position = Vector2(1304, 247)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jezibaba"]
+position = Vector2(20, -5)
+
+[node name="OddWay_135" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jezibaba"]
+position = Vector2(-81, -1043)
+
+[node name="EvenWay_246" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jezibaba"]
+position = Vector2(1688, 151)
+
+[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jezibaba"]
+position = Vector2(1396, -685)
+
+[node name="GiveCard" type="Node2D" parent="ActionsOfTiles"]
