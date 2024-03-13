@@ -12,7 +12,7 @@ var stuck_until_dice_number : int = 0
 
 
 
-func _on_dice_number_send_dice_number(number):
+func _on_dice_animated_sprite_send_dice_number(number):
 	dice_number = number
 	
 	var tilemap_node : TileMap = self.get_parent().get_node("TileMap")

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ql6sm47ou1d0"
-path="res://.godot/imported/ActionTileStuckPlayer.png-563adb4b61617415064a628bb5ff9ade.ctex"
+path="res://.godot/imported/ActionTileStuckPlayer.png-a82d3bdc15721d9cc60537fc1d282456.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Action tiles/ActionTileStuckPlayer.png"
-dest_files=["res://.godot/imported/ActionTileStuckPlayer.png-563adb4b61617415064a628bb5ff9ade.ctex"]
+source_file="res://assets/action tiles/ActionTileStuckPlayer.png"
+dest_files=["res://.godot/imported/ActionTileStuckPlayer.png-a82d3bdc15721d9cc60537fc1d282456.ctex"]
 
 [params]
 

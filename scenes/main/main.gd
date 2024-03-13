@@ -8,8 +8,8 @@ func _ready():
 	add_child(player)
 	
 	# when dice is rolled, sends the number to player
-	var dicenumber_label = $MainCamera/GUI/CenterContainer/DiceControl/DiceNumber
-	dicenumber_label.connect("send_dice_number", Callable(player, "_on_dice_number_send_dice_number"))
+	var dice_animated_sprite = $MainCamera/GUI/CenterContainer/DiceControl/DiceAnimatedSprite
+	dice_animated_sprite.connect("send_dice_number", Callable(player, "_on_dice_animated_sprite_send_dice_number"))
 	
 	
 	var tile_node : TileMap = self.get_node("TileMap")

@@ -7,8 +7,8 @@ func enter() -> void:
 	card_hand_ui.state.text = "HOVER"
 	
 	#card_hand_ui.pivot_offset = Vector2(133/2, 200)
-	card_hand_ui.position.y -= 10
 	hand_container.update_hand()
+	card_hand_ui.position.y -= 30
 	#card_hand_ui.drop_detection_area.monitoring = true
 	
 	
@@ -17,6 +17,8 @@ func on_gui_input(event: InputEvent) -> void:
 	if event.is_action_pressed("left_mouse"):
 		#card_hand_ui.pivot_offset = card_hand_ui.get_global_mouse_position() - card_hand_ui.global_position
 		transition_requested.emit(self, CardState.State.DRAGGING)
+	if event.is_action_pressed("right_mouse"):
+		print("Show details")
 
 
 func on_mouse_exited():

@@ -1,8 +1,155 @@
-[gd_scene load_steps=5 format=3 uid="uid://cu4lhv5r0ij68"]
+[gd_scene load_steps=25 format=3 uid="uid://cu4lhv5r0ij68"]
 
-[ext_resource type="Script" path="res://scenes/gui/DiceNumber.gd" id="1_2vjuq"]
 [ext_resource type="PackedScene" uid="uid://7rsratqfj43e" path="res://scenes/card_hand_ui/card_hand_ui.tscn" id="2_6xk3u"]
 [ext_resource type="Script" path="res://scenes/gui/hand.gd" id="2_34o4f"]
+[ext_resource type="Texture2D" uid="uid://cp8k6hm1uvmln" path="res://assets/dice roll white/dice_roll_white_spritesheet.png" id="2_f6v6k"]
+[ext_resource type="Texture2D" uid="uid://dbhb6giad6j6b" path="res://assets/dice numbers white/dice_smaller5.png" id="2_xddek"]
+[ext_resource type="Texture2D" uid="uid://chhglueuw8d15" path="res://assets/dice numbers white/dice_smaller4.png" id="3_q87ah"]
+[ext_resource type="Texture2D" uid="uid://bp3ts1rklur5c" path="res://assets/dice numbers white/dice_smaller1.png" id="4_cjmcl"]
+[ext_resource type="Texture2D" uid="uid://m67lxuj7c5by" path="res://assets/dice numbers white/dice_smaller6.png" id="6_row3t"]
+[ext_resource type="Texture2D" uid="uid://cpf2fd1ilaxbe" path="res://assets/dice numbers white/dice_smaller3.png" id="7_ar0cj"]
+[ext_resource type="Script" path="res://scenes/gui/dice_animated_sprite.gd" id="8_3ijpp"]
+[ext_resource type="Texture2D" uid="uid://5inlmkcqk1e0" path="res://assets/dice numbers white/dice_smaller2.png" id="8_ojig4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0i1uk"]
+atlas = ExtResource("2_f6v6k")
+region = Rect2(0, 0, 139, 139)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tuec1"]
+atlas = ExtResource("2_f6v6k")
+region = Rect2(139, 0, 139, 139)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_05rpg"]
+atlas = ExtResource("2_f6v6k")
+region = Rect2(278, 0, 139, 139)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_78516"]
+atlas = ExtResource("2_f6v6k")
+region = Rect2(417, 0, 139, 139)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vakdr"]
+atlas = ExtResource("2_f6v6k")
+region = Rect2(556, 0, 139, 139)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x5khb"]
+atlas = ExtResource("2_f6v6k")
+region = Rect2(695, 0, 139, 139)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tr0ji"]
+atlas = ExtResource("2_f6v6k")
+region = Rect2(834, 0, 139, 139)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4am5m"]
+atlas = ExtResource("2_f6v6k")
+region = Rect2(973, 0, 139, 139)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e3iph"]
+atlas = ExtResource("2_f6v6k")
+region = Rect2(1112, 0, 139, 139)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mluao"]
+atlas = ExtResource("2_f6v6k")
+region = Rect2(1251, 0, 139, 139)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4n1oi"]
+atlas = ExtResource("2_f6v6k")
+region = Rect2(1390, 0, 139, 139)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q7m0k"]
+atlas = ExtResource("2_f6v6k")
+region = Rect2(1529, 0, 139, 139)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mwfa2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_cjmcl")
+}],
+"loop": false,
+"name": &"1",
+"speed": 0.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_ojig4")
+}],
+"loop": false,
+"name": &"2",
+"speed": 0.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_ar0cj")
+}],
+"loop": false,
+"name": &"3",
+"speed": 0.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_q87ah")
+}],
+"loop": false,
+"name": &"4",
+"speed": 0.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_xddek")
+}],
+"loop": false,
+"name": &"5",
+"speed": 0.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_row3t")
+}],
+"loop": false,
+"name": &"6",
+"speed": 0.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0i1uk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tuec1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_05rpg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_78516")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vakdr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x5khb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tr0ji")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4am5m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e3iph")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mluao")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4n1oi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q7m0k")
+}],
+"loop": false,
+"name": &"roll",
+"speed": 15.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eorai"]
 size = Vector2(3000, 750)
@@ -26,16 +173,14 @@ size_flags_horizontal = 6
 size_flags_vertical = 8
 alignment = 1
 
-[node name="DiceNumber" type="Label" parent="CenterContainer/DiceControl"]
-layout_mode = 2
-size_flags_vertical = 8
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 15
-theme_override_font_sizes/font_size = 50
-text = "0"
-horizontal_alignment = 1
-vertical_alignment = 1
-script = ExtResource("1_2vjuq")
+[node name="DiceAnimatedSprite" type="AnimatedSprite2D" parent="CenterContainer/DiceControl"]
+position = Vector2(44, -65)
+sprite_frames = SubResource("SpriteFrames_mwfa2")
+animation = &"roll"
+autoplay = "6"
+frame = 11
+frame_progress = 1.0
+script = ExtResource("8_3ijpp")
 
 [node name="RollDice_button" type="Button" parent="CenterContainer/DiceControl"]
 custom_minimum_size = Vector2(11.35, 0)
@@ -81,6 +226,7 @@ offset_left = 376.0
 offset_right = 509.0
 
 [node name="CardDropZone" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 5
 anchor_left = 0.5
@@ -96,5 +242,5 @@ position = Vector2(-960, 0)
 position = Vector2(960, 375)
 shape = SubResource("RectangleShape2D_eorai")
 
-[connection signal="pressed" from="CenterContainer/DiceControl/RollDice_button" to="CenterContainer/DiceControl/DiceNumber" method="_on_roll_dice_button_pressed"]
+[connection signal="pressed" from="CenterContainer/DiceControl/RollDice_button" to="CenterContainer/DiceControl/DiceAnimatedSprite" method="_on_roll_dice_button_pressed"]
 [connection signal="mouse_exited" from="Hand" to="Hand" method="_on_mouse_exited"]
