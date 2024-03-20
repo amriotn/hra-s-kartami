@@ -1,0 +1,170 @@
+[gd_scene load_steps=2 format=3 uid="uid://cnsxnyxe4mnd0"]
+
+[ext_resource type="Theme" uid="uid://cxf28t24j2lk7" path="res://new_theme.tres" id="1_seyji"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.294118, 0.294118, 0.294118, 1)
+
+[node name="LeftSide" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 962.0
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="LeftSide"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -152.0
+offset_top = 50.0
+offset_right = 152.0
+offset_bottom = 190.0
+grow_horizontal = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="LeftSide/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_seyji")
+text = "Hráči:"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="LeftSide/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_seyji")
+text = "+ Přidat Hráče  "
+
+[node name="Header" type="Control" parent="LeftSide"]
+anchors_preset = 0
+offset_left = 60.0
+offset_top = 202.0
+offset_right = 882.0
+offset_bottom = 273.0
+
+[node name="Order" type="Label" parent="LeftSide/Header"]
+layout_mode = 2
+offset_left = -59.0
+offset_right = 110.0
+offset_bottom = 64.0
+theme = ExtResource("1_seyji")
+text = "Pořadí"
+horizontal_alignment = 2
+
+[node name="VSeparator" type="VSeparator" parent="LeftSide/Header"]
+layout_mode = 0
+offset_left = 123.0
+offset_right = 130.0
+offset_bottom = 71.0
+
+[node name="Name" type="Label" parent="LeftSide/Header"]
+layout_mode = 2
+offset_left = 156.0
+offset_right = 669.0
+offset_bottom = 56.0
+theme = ExtResource("1_seyji")
+text = "Jméno"
+
+[node name="VSeparator2" type="VSeparator" parent="LeftSide/Header"]
+offset_left = 667.0
+offset_right = 674.0
+offset_bottom = 71.0
+
+[node name="Color" type="Label" parent="LeftSide/Header"]
+layout_mode = 0
+offset_left = 681.0
+offset_right = 797.0
+offset_bottom = 64.0
+theme = ExtResource("1_seyji")
+text = "Barva"
+horizontal_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="LeftSide"]
+layout_mode = 0
+offset_left = 82.0
+offset_top = 318.0
+offset_right = 944.0
+offset_bottom = 1000.0
+
+[node name="Pos1" type="Control" parent="LeftSide/ScrollContainer"]
+layout_mode = 2
+metadata/_edit_group_ = true
+
+[node name="Position" type="Label" parent="LeftSide/ScrollContainer/Pos1"]
+layout_mode = 2
+offset_right = 72.0
+offset_bottom = 66.0
+theme = ExtResource("1_seyji")
+theme_override_font_sizes/font_size = 56
+text = "1#"
+horizontal_alignment = 2
+
+[node name="Name" type="LineEdit" parent="LeftSide/ScrollContainer/Pos1"]
+layout_mode = 2
+offset_left = 107.0
+offset_right = 636.0
+offset_bottom = 64.0
+theme = ExtResource("1_seyji")
+placeholder_text = "Hráč1"
+max_length = 25
+deselect_on_focus_loss_enabled = false
+
+[node name="Color" type="ColorPickerButton" parent="LeftSide/ScrollContainer/Pos1"]
+layout_mode = 0
+offset_left = 664.0
+offset_right = 754.0
+offset_bottom = 63.0
+
+[node name="VSeparator" type="VSeparator" parent="."]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -2.0
+offset_right = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RightSide" type="Control" parent="."]
+layout_mode = 1
+anchor_left = 0.580208
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -153.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="RightSide"]
+layout_mode = 0
+offset_left = 256.0
+offset_top = 50.0
+offset_right = 694.0
+offset_bottom = 106.0
+theme = ExtResource("1_seyji")
+text = "Doporučený počet hráčů: 2-6"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="RightSide"]
+layout_mode = 0
+offset_left = 351.0
+offset_top = 191.0
+offset_right = 606.0
+offset_bottom = 255.0
+theme = ExtResource("1_seyji")
+text = "Začít Hrát"
