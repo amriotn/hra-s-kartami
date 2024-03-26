@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://cu4lhv5r0ij68"]
+[gd_scene load_steps=26 format=3 uid="uid://cu4lhv5r0ij68"]
 
 [ext_resource type="PackedScene" uid="uid://7rsratqfj43e" path="res://scenes/card_hand_ui/card_hand_ui.tscn" id="2_6xk3u"]
 [ext_resource type="Script" path="res://scenes/gui/hand.gd" id="2_34o4f"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://cpf2fd1ilaxbe" path="res://assets/dice numbers white/dice_smaller3.png" id="7_ar0cj"]
 [ext_resource type="Script" path="res://scenes/gui/dice_animated_sprite.gd" id="8_3ijpp"]
 [ext_resource type="Texture2D" uid="uid://5inlmkcqk1e0" path="res://assets/dice numbers white/dice_smaller2.png" id="8_ojig4"]
+[ext_resource type="PackedScene" uid="uid://bge11g3xmo2m8" path="res://player_display_ui.tscn" id="11_jwsbu"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0i1uk"]
 atlas = ExtResource("2_f6v6k")
@@ -241,6 +242,19 @@ position = Vector2(-960, 0)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CardDropZone/DropDetectionArea"]
 position = Vector2(960, 375)
 shape = SubResource("RectangleShape2D_eorai")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = -1
+anchor_top = 0.125
+anchor_right = 0.376
+anchor_bottom = 0.881333
+offset_right = -0.920044
+offset_bottom = 0.159912
+size_flags_horizontal = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="PlayerDisplayUI" parent="VBoxContainer" instance=ExtResource("11_jwsbu")]
+layout_mode = 2
 
 [connection signal="pressed" from="CenterContainer/DiceControl/RollDice_button" to="CenterContainer/DiceControl/DiceAnimatedSprite" method="_on_roll_dice_button_pressed"]
 [connection signal="mouse_exited" from="Hand" to="Hand" method="_on_mouse_exited"]

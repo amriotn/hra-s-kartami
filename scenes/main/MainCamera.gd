@@ -26,7 +26,7 @@ func zoom_in() -> void:
 	_target_zoom = min(_target_zoom + ZOOM_INCREMENT, MAX_ZOOM)
 	set_physics_process(true)
 
-const ZOOM_RATE: float = 8.0
+const ZOOM_RATE: float = 5.0
 
 func _physics_process(delta: float) -> void:
 	zoom = lerp(

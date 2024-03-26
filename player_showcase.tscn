@@ -1,0 +1,97 @@
+[gd_scene load_steps=9 format=3 uid="uid://ccw3u8l83i4o3"]
+
+[ext_resource type="Script" path="res://player_showcase.gd" id="1_brk4k"]
+[ext_resource type="Theme" uid="uid://cxf28t24j2lk7" path="res://new_theme.tres" id="1_qkug1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e8s7x"]
+bg_color = Color(0.313726, 0, 0.00784314, 0.682353)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l8tc7"]
+bg_color = Color(0.796078, 0.305882, 0.329412, 0.627451)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l0j0q"]
+bg_color = Color(0.623529, 0.211765, 0.235294, 0.568627)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ex7ra"]
+bg_color = Color(1, 0.113725, 0.160784, 0.462745)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k5pyg"]
+bg_color = Color(0.772549, 0.290196, 0.313726, 1)
+
+[sub_resource type="Theme" id="Theme_82i8t"]
+Button/styles/disabled = SubResource("StyleBoxFlat_e8s7x")
+Button/styles/focus = SubResource("StyleBoxFlat_l8tc7")
+Button/styles/hover = SubResource("StyleBoxFlat_l0j0q")
+Button/styles/normal = SubResource("StyleBoxFlat_ex7ra")
+Button/styles/pressed = SubResource("StyleBoxFlat_k5pyg")
+
+[node name="PlayerShowcase" type="Control"]
+custom_minimum_size = Vector2(0, 103)
+layout_mode = 3
+anchors_preset = 0
+offset_top = -2.0
+offset_right = 758.0
+offset_bottom = 101.0
+script = ExtResource("1_brk4k")
+
+[node name="WarningLabel" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 107.0
+offset_top = 1.0
+offset_right = 635.0
+offset_bottom = 29.0
+theme_override_colors/font_color = Color(1, 0.196078, 0.145098, 1)
+theme_override_font_sizes/font_size = 20
+text = "* Nenechávejte prázdné!"
+
+[node name="Order" type="Label" parent="."]
+layout_mode = 2
+offset_top = 29.0
+offset_right = 72.0
+offset_bottom = 102.0
+theme = ExtResource("1_qkug1")
+theme_override_font_sizes/font_size = 56
+text = "1#"
+horizontal_alignment = 2
+
+[node name="PlayerName" type="LineEdit" parent="."]
+layout_mode = 2
+offset_left = 107.0
+offset_top = 29.0
+offset_right = 636.0
+offset_bottom = 101.0
+theme = ExtResource("1_qkug1")
+text = "Hráč1"
+max_length = 25
+context_menu_enabled = false
+select_all_on_focus = true
+
+[node name="Color" type="ColorPickerButton" parent="."]
+layout_mode = 0
+offset_left = 664.0
+offset_top = 33.0
+offset_right = 754.0
+offset_bottom = 96.0
+color = Color(1, 1, 1, 1)
+
+[node name="DeleteButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 787.0
+offset_top = 30.0
+offset_right = 856.0
+offset_bottom = 98.0
+theme = SubResource("Theme_82i8t")
+
+[node name="XLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 788.0
+offset_top = 16.0
+offset_right = 854.0
+offset_bottom = 107.0
+theme_override_colors/font_color = Color(1, 0.396078, 0, 1)
+theme_override_font_sizes/font_size = 66
+text = "X"
+horizontal_alignment = 1
+
+[connection signal="text_changed" from="PlayerName" to="." method="_on_player_name_text_changed"]

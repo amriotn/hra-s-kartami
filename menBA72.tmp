@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://cnsxnyxe4mnd0"]
+[gd_scene load_steps=4 format=3 uid="uid://cnsxnyxe4mnd0"]
 
 [ext_resource type="Script" path="res://menu.gd" id="1_4na3m"]
 [ext_resource type="Theme" uid="uid://cxf28t24j2lk7" path="res://new_theme.tres" id="1_seyji"]
+[ext_resource type="PackedScene" uid="uid://ccw3u8l83i4o3" path="res://player_showcase.tscn" id="3_4pgqs"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -54,9 +55,9 @@ text = "+ Přidat Hráče  "
 
 [node name="Header" type="Control" parent="LeftSide"]
 anchors_preset = 0
-offset_left = 26.0
+offset_left = 60.0
 offset_top = 202.0
-offset_right = 850.0
+offset_right = 882.0
 offset_bottom = 273.0
 
 [node name="Order" type="Label" parent="LeftSide/Header"]
@@ -99,15 +100,18 @@ horizontal_alignment = 1
 
 [node name="PlayerListScrollContainer" type="ScrollContainer" parent="LeftSide"]
 layout_mode = 0
-offset_left = 40.0
+offset_left = 82.0
 offset_top = 318.0
-offset_right = 922.0
+offset_right = 944.0
 offset_bottom = 1000.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="LeftSide/PlayerListScrollContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+
+[node name="PlayerShowcase" parent="LeftSide/PlayerListScrollContainer/VBoxContainer" instance=ExtResource("3_4pgqs")]
+layout_mode = 2
 
 [node name="VSeparator" type="VSeparator" parent="."]
 layout_mode = 1
@@ -150,4 +154,3 @@ theme = ExtResource("1_seyji")
 text = "Začít Hrát"
 
 [connection signal="pressed" from="LeftSide/AddPlayersContainer/AddPlayerButton" to="." method="_on_add_player_button_pressed"]
-[connection signal="pressed" from="RightSide/StartGameButton" to="." method="_on_start_game_button_pressed"]

@@ -16,13 +16,13 @@ func _ready():
 	stuck_player = {}
 	
 	for action in actions_array:
-		print(action.name)
+#		print(action.name)
 		# = MovePlayer; StuckPlayer; GiveCard
 		match action.name:
 				"MovePlayer":
 					for action_tile : Node2D in action.get_children():
 						# = DivotvornyMec; ...
-						print("\t"+action_tile.name)
+#						print("\t"+action_tile.name)
 						var actions_markers : Array = action_tile.get_children()
 						# FIX MARKER POSITION TO CENTER OF TILE
 						for marker : Marker2D in actions_markers:
@@ -32,7 +32,7 @@ func _ready():
 				"StuckPlayer":
 					for action_tile in action.get_children():
 						# = San_Roll3, ...
-						print("\t"+action_tile.name)
+#						print("\t"+action_tile.name)
 						var dice_number_needed = int(String(action_tile.name)[-1])
 						var actions_markers : Array = action_tile.get_children() # All tiles player can be stuck on
 						for marker : Marker2D in actions_markers:
@@ -43,7 +43,7 @@ func _ready():
 				"Crossroads":
 					for action_tile in action.get_children():
 						# Jezibaba, ...
-						print("\t"+action_tile.name)
+#						print("\t"+action_tile.name)
 						var actions_markers : Array = action_tile.get_children() # StartMarker, OddWay, EvenWay
 						
 						# fix marker positon to center of tile
@@ -54,6 +54,6 @@ func _ready():
 						if actions_markers.size() == 4:
 							crossroads[actions_markers[0].global_position] = [actions_markers[1].global_position, actions_markers[2].global_position, actions_markers[3].global_position]
 	
-	print(move_player)
-	print(stuck_player)
-	print(crossroads)
+#	print(move_player)
+#	print(stuck_player)
+#	print(crossroads)
