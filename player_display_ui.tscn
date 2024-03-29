@@ -1,57 +1,61 @@
-[gd_scene load_steps=6 format=3 uid="uid://bge11g3xmo2m8"]
+[gd_scene load_steps=7 format=3 uid="uid://bge11g3xmo2m8"]
 
 [ext_resource type="Texture2D" uid="uid://dqt60403c2qqf" path="res://assets/characters/KnightIcon.png" id="1_3wsyn"]
+[ext_resource type="Script" path="res://player_display_ui.gd" id="1_giri2"]
 [ext_resource type="Texture2D" uid="uid://dn7yjdsf604f3" path="res://assets/select.png" id="1_xg6p3"]
 [ext_resource type="Texture2D" uid="uid://evjsyd2e21od" path="res://assets/171069355917953053 (3).png" id="2_4r3b2"]
 [ext_resource type="Theme" uid="uid://cxf28t24j2lk7" path="res://new_theme.tres" id="2_76f7l"]
 [ext_resource type="Texture2D" uid="uid://cvt3fs8gasuwc" path="res://assets/171069355917953053 (2).png" id="4_m38ue"]
 
 [node name="PlayerDisplayUI" type="Control"]
-custom_minimum_size = Vector2(250, 116)
+custom_minimum_size = Vector2(500, 98)
 layout_mode = 3
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = -1191.0
-offset_bottom = -964.0
+offset_right = -1420.0
+offset_bottom = -982.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_giri2")
 
 [node name="SelectGradient" type="Sprite2D" parent="."]
+visible = false
 modulate = Color(1, 1, 1, 0.568627)
-position = Vector2(250, 58)
-scale = Vector2(0.624924, 0.188333)
+position = Vector2(148, 53)
+scale = Vector2(0.367765, 0.110833)
 texture = ExtResource("1_xg6p3")
 
 [node name="PlayerIcon" type="Sprite2D" parent="."]
-position = Vector2(194.027, 56.0625)
-scale = Vector2(0.776079, 0.776079)
+position = Vector2(79.9447, 48)
+scale = Vector2(0.670638, 0.670638)
 texture = ExtResource("1_3wsyn")
 
 [node name="PositionBGCircle" type="Sprite2D" parent="."]
+visible = false
 modulate = Color(1, 0.764706, 0.101961, 1)
-position = Vector2(63.5, 58.1971)
-scale = Vector2(0.16184, 0.16184)
+position = Vector2(47.5, 42.0881)
+scale = Vector2(0.107325, 0.107325)
 texture = ExtResource("2_4r3b2")
 
 [node name="Position" type="Label" parent="."]
 layout_mode = 0
-offset_left = 25.0
-offset_top = 2.0
-offset_right = 111.0
-offset_bottom = 128.0
+offset_left = 22.0
+offset_top = 18.0
+offset_right = 75.0
+offset_bottom = 86.0
 theme = ExtResource("2_76f7l")
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 15
-theme_override_font_sizes/font_size = 96
-text = "1st"
+text = "1."
 vertical_alignment = 2
 
 [node name="Nickname" type="Label" parent="."]
 layout_mode = 0
-offset_left = 269.0
-offset_top = 2.0
-offset_right = 467.0
-offset_bottom = 66.0
+offset_left = 129.945
+offset_top = 10.0
+offset_right = 327.945
+offset_bottom = 74.0
 theme = ExtResource("2_76f7l")
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_outline_size = 2
@@ -59,28 +63,29 @@ text = "Hráč1"
 
 [node name="171069355917953053(2)" type="Sprite2D" parent="."]
 modulate = Color(0.996078, 0.764706, 0.105882, 1)
-position = Vector2(359, 82.4375)
-scale = Vector2(0.925, 0.244375)
+position = Vector2(166.75, 78.4375)
+scale = Vector2(0.4325, 0.244375)
 texture = ExtResource("4_m38ue")
 
 [node name="Points" type="Label" parent="."]
 layout_mode = 0
-offset_left = 267.0
-offset_top = 55.0
-offset_right = 448.0
-offset_bottom = 119.0
+offset_left = 124.0
+offset_top = 49.0
+offset_right = 209.0
+offset_bottom = 113.0
 theme = ExtResource("2_76f7l")
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_outline_size = 6
-text = "0 bodů"
+text = "0"
 horizontal_alignment = 1
 
 [node name="TurnStatus" type="Label" parent="."]
+visible = false
 layout_mode = 0
-offset_left = 534.0
+offset_left = 319.0
 offset_top = 22.0
-offset_right = 711.0
+offset_right = 496.0
 offset_bottom = 86.0
 theme = ExtResource("2_76f7l")
 text = "(Na řadě)"

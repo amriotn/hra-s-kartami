@@ -1,195 +1,33 @@
-[gd_scene load_steps=26 format=3 uid="uid://cu4lhv5r0ij68"]
+[gd_scene load_steps=8 format=3 uid="uid://cu4lhv5r0ij68"]
 
+[ext_resource type="Script" path="res://scenes/gui/gui.gd" id="1_nahqx"]
 [ext_resource type="PackedScene" uid="uid://7rsratqfj43e" path="res://scenes/card_hand_ui/card_hand_ui.tscn" id="2_6xk3u"]
 [ext_resource type="Script" path="res://scenes/gui/hand.gd" id="2_34o4f"]
-[ext_resource type="Texture2D" uid="uid://cp8k6hm1uvmln" path="res://assets/dice roll white/dice_roll_white_spritesheet.png" id="2_f6v6k"]
-[ext_resource type="Texture2D" uid="uid://dbhb6giad6j6b" path="res://assets/dice numbers white/dice_smaller5.png" id="2_xddek"]
-[ext_resource type="Texture2D" uid="uid://chhglueuw8d15" path="res://assets/dice numbers white/dice_smaller4.png" id="3_q87ah"]
-[ext_resource type="Texture2D" uid="uid://bp3ts1rklur5c" path="res://assets/dice numbers white/dice_smaller1.png" id="4_cjmcl"]
-[ext_resource type="Texture2D" uid="uid://m67lxuj7c5by" path="res://assets/dice numbers white/dice_smaller6.png" id="6_row3t"]
-[ext_resource type="Texture2D" uid="uid://cpf2fd1ilaxbe" path="res://assets/dice numbers white/dice_smaller3.png" id="7_ar0cj"]
-[ext_resource type="Script" path="res://scenes/gui/dice_animated_sprite.gd" id="8_3ijpp"]
-[ext_resource type="Texture2D" uid="uid://5inlmkcqk1e0" path="res://assets/dice numbers white/dice_smaller2.png" id="8_ojig4"]
-[ext_resource type="PackedScene" uid="uid://bge11g3xmo2m8" path="res://player_display_ui.tscn" id="11_jwsbu"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_0i1uk"]
-atlas = ExtResource("2_f6v6k")
-region = Rect2(0, 0, 139, 139)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_tuec1"]
-atlas = ExtResource("2_f6v6k")
-region = Rect2(139, 0, 139, 139)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_05rpg"]
-atlas = ExtResource("2_f6v6k")
-region = Rect2(278, 0, 139, 139)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_78516"]
-atlas = ExtResource("2_f6v6k")
-region = Rect2(417, 0, 139, 139)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_vakdr"]
-atlas = ExtResource("2_f6v6k")
-region = Rect2(556, 0, 139, 139)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_x5khb"]
-atlas = ExtResource("2_f6v6k")
-region = Rect2(695, 0, 139, 139)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_tr0ji"]
-atlas = ExtResource("2_f6v6k")
-region = Rect2(834, 0, 139, 139)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_4am5m"]
-atlas = ExtResource("2_f6v6k")
-region = Rect2(973, 0, 139, 139)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_e3iph"]
-atlas = ExtResource("2_f6v6k")
-region = Rect2(1112, 0, 139, 139)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_mluao"]
-atlas = ExtResource("2_f6v6k")
-region = Rect2(1251, 0, 139, 139)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_4n1oi"]
-atlas = ExtResource("2_f6v6k")
-region = Rect2(1390, 0, 139, 139)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_q7m0k"]
-atlas = ExtResource("2_f6v6k")
-region = Rect2(1529, 0, 139, 139)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_mwfa2"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("4_cjmcl")
-}],
-"loop": false,
-"name": &"1",
-"speed": 0.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("8_ojig4")
-}],
-"loop": false,
-"name": &"2",
-"speed": 0.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("7_ar0cj")
-}],
-"loop": false,
-"name": &"3",
-"speed": 0.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("3_q87ah")
-}],
-"loop": false,
-"name": &"4",
-"speed": 0.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("2_xddek")
-}],
-"loop": false,
-"name": &"5",
-"speed": 0.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("6_row3t")
-}],
-"loop": false,
-"name": &"6",
-"speed": 0.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_0i1uk")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_tuec1")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_05rpg")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_78516")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_vakdr")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_x5khb")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_tr0ji")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_4am5m")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_e3iph")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_mluao")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_4n1oi")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_q7m0k")
-}],
-"loop": false,
-"name": &"roll",
-"speed": 15.0
-}]
+[ext_resource type="Theme" uid="uid://cxf28t24j2lk7" path="res://new_theme.tres" id="12_17xg2"]
+[ext_resource type="Texture2D" uid="uid://v0vne3ahnxit" path="res://arrow_left.png" id="12_38maw"]
+[ext_resource type="Texture2D" uid="uid://dmwdrawu710xf" path="res://pause.png" id="14_v0w0w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eorai"]
 size = Vector2(3000, 750)
 
 [node name="GUI" type="CanvasLayer" groups=["ui_layer"]]
+script = ExtResource("1_nahqx")
 
-[node name="CenterContainer" type="CenterContainer" parent="."]
-top_level = true
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = 465.0
-offset_bottom = -205.0
+[node name="RollDice_button" type="Button" parent="."]
+custom_minimum_size = Vector2(11.35, 0)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -160.0
+offset_top = 167.0
+offset_right = 157.0
+offset_bottom = 239.0
 grow_horizontal = 2
 grow_vertical = 2
-size_flags_vertical = 8
-
-[node name="DiceControl" type="VBoxContainer" parent="CenterContainer"]
-layout_mode = 2
-size_flags_horizontal = 6
-size_flags_vertical = 8
-alignment = 1
-
-[node name="DiceAnimatedSprite" type="AnimatedSprite2D" parent="CenterContainer/DiceControl"]
-position = Vector2(44, -65)
-sprite_frames = SubResource("SpriteFrames_mwfa2")
-animation = &"roll"
-autoplay = "6"
-frame = 11
-frame_progress = 1.0
-script = ExtResource("8_3ijpp")
-
-[node name="RollDice_button" type="Button" parent="CenterContainer/DiceControl"]
-custom_minimum_size = Vector2(11.35, 0)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_font_sizes/font_size = 15
-text = "ROLL DICE"
+theme = ExtResource("12_17xg2")
+text = "Hoď kostkou"
 icon_alignment = 1
 
 [node name="Hand" type="Control" parent="." groups=["hand"]]
@@ -243,18 +81,78 @@ position = Vector2(-960, 0)
 position = Vector2(960, 375)
 shape = SubResource("RectangleShape2D_eorai")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-anchors_preset = -1
-anchor_top = 0.125
-anchor_right = 0.376
-anchor_bottom = 0.881333
-offset_right = -0.920044
-offset_bottom = 0.159912
-size_flags_horizontal = 0
-metadata/_edit_use_anchors_ = true
+[node name="CollapsablePlayerList" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_top = 152.0
+offset_right = 508.0
+offset_bottom = 767.0
 
-[node name="PlayerDisplayUI" parent="VBoxContainer" instance=ExtResource("11_jwsbu")]
+[node name="PlayersScrollBar" type="ScrollContainer" parent="CollapsablePlayerList"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_right = 508.0
+offset_bottom = 615.0
+horizontal_scroll_mode = 0
+
+[node name="PlayerListVBox" type="VBoxContainer" parent="CollapsablePlayerList/PlayersScrollBar"]
 layout_mode = 2
+size_flags_horizontal = 0
 
-[connection signal="pressed" from="CenterContainer/DiceControl/RollDice_button" to="CenterContainer/DiceControl/DiceAnimatedSprite" method="_on_roll_dice_button_pressed"]
+[node name="CollapsePlayerListButton" type="Button" parent="CollapsablePlayerList"]
+modulate = Color(1, 1, 1, 0.658824)
+layout_mode = 0
+offset_left = 305.0
+offset_top = 268.0
+offset_right = 340.0
+offset_bottom = 328.0
+
+[node name="ArrowLeft" type="Sprite2D" parent="CollapsablePlayerList/CollapsePlayerListButton"]
+position = Vector2(15, 30)
+scale = Vector2(0.205986, 0.192147)
+texture = ExtResource("12_38maw")
+
+[node name="TimeLabel" type="Label" parent="."]
+offset_left = 91.0
+offset_right = 303.0
+offset_bottom = 83.0
+theme = ExtResource("12_17xg2")
+theme_override_font_sizes/font_size = 40
+text = "Čas: 00:00"
+
+[node name="RoundLabel" type="Label" parent="."]
+offset_left = 376.0
+offset_right = 588.0
+offset_bottom = 83.0
+theme = ExtResource("12_17xg2")
+theme_override_font_sizes/font_size = 40
+text = "Kolo 1"
+
+[node name="PauseButton" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0.670588)
+offset_right = 57.0
+offset_bottom = 57.0
+
+[node name="Pause" type="Sprite2D" parent="PauseButton"]
+position = Vector2(28, 28)
+scale = Vector2(0.100798, 0.130541)
+texture = ExtResource("14_v0w0w")
+
+[node name="EndTurnButton" type="Button" parent="."]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -262.0
+offset_top = -112.0
+offset_right = -39.0
+offset_bottom = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+theme = ExtResource("12_17xg2")
+text = "Ukončit tah"
+
 [connection signal="mouse_exited" from="Hand" to="Hand" method="_on_mouse_exited"]
+[connection signal="pressed" from="CollapsablePlayerList/CollapsePlayerListButton" to="." method="_on_collapse_player_list_button_pressed"]
+[connection signal="pressed" from="PauseButton" to="." method="_on_pause_button_pressed"]

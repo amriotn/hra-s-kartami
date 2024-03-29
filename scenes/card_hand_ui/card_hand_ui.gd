@@ -3,6 +3,7 @@ extends Control
 
 signal reparent_requested(which_card_ui: CardHandUI)
 
+@onready var shine = $Shine
 @onready var color_rect: ColorRect = $DebugColor
 @onready var state: Label = $State
 @onready var drop_detection_area = $DropDetectionArea

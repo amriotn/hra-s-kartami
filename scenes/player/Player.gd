@@ -1,7 +1,11 @@
 extends Sprite2D
+class_name Player
 
 @onready var highlight_scene : PackedScene = preload("res://scenes/highlight/Highlight.tscn")
-@onready var rolldice_button : Button = self.get_parent().get_node("MainCamera/GUI/CenterContainer/DiceControl/RollDice_button")
+#@onready var rolldice_button : Button = self.get_parent().get_node("MainCamera/GUI/CenterContainer/DiceControl/RollDice_button")
+@onready var roll_dice_button = get_tree().get_nodes_in_group("ui_layer")[0].roll_dice_button
+@onready var player = $"."
+@onready var dice_animated_sprite = $DiceAnimatedSprite
 
 var tilemap_node : TileMap
 var actions_of_tiles : Node2D
@@ -13,6 +17,7 @@ var route_of_tiles : Array = []
 var last_tile : Vector2i = Vector2i(29, 21)
 
 var stuck_until_dice_number : int = 0
+var is_on_turn : bool
 
 var stats : PlayerStats = null
 
@@ -80,7 +85,7 @@ func _on_highlight_send_highlight_position(highlight_position):
 		tween.tween_interval(0.2)
 	
 	
-	rolldice_button.disabled = false
+	#rolldice_button.disabled = false
 	
 	print(route_of_tiles)
 	route_of_tiles.clear()
