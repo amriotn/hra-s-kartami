@@ -48,7 +48,9 @@ func _ready():
 		# sets player position to the start
 		player.position = start_pos_marker.position
 		player_list.append(player)
-		
+	
+	player_list[0].fix_players_on_tile()
+	
 	game = true
 	turn_of_player = 0
 	gui.timer_on = true

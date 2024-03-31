@@ -6,9 +6,12 @@ class_name Player
 @onready var roll_dice_button = get_tree().get_nodes_in_group("ui_layer")[0].roll_dice_button
 @onready var player = $"."
 @onready var dice_animated_sprite = $DiceAnimatedSprite
+@onready var player_finder = $PlayerFinder
 
 var tilemap_node : TileMap
 var actions_of_tiles : Node2D
+
+const DEFAULT_OFFSET : Vector2 = Vector2(0, -125)
 
 var dice_number : int = 0
 var highlights : Array = []
@@ -17,7 +20,7 @@ var route_of_tiles : Array = []
 var last_tile : Vector2i = Vector2i(29, 21)
 
 var stuck_until_dice_number : int = 0
-var is_on_turn : bool
+var ventured_tiles : Array = []
 
 var stats : PlayerStats = null
 
@@ -27,6 +30,8 @@ func load_stats(player_stats : PlayerStats) -> void:
 
 func _on_dice_animated_sprite_send_dice_number(number):
 	dice_number = number
+	
+	fix_players_on_tile()
 	
 	var tilemap_node : TileMap = self.get_parent().get_node("TileMap")
 	
@@ -57,7 +62,7 @@ func check_surround_tiles_help(center_tile : Vector2i, previous_tile : Vector2i,
 				check_surround_tiles_help(tilemap_node.local_to_map(actions_of_tiles.crossroads.get(tilemap_node.map_to_local(center_tile))[0]), tilemap_node.local_to_map(actions_of_tiles.crossroads.get(tilemap_node.map_to_local(center_tile))[0]), dice_number-1)
 		else:
 			for tile in current_surrounds:
-				if tile != previous_tile and tile != last_tile:
+				if tile != previous_tile and tile != last_tile and tile not in ventured_tiles:
 					if tilemap_node.get_cell_source_id(0, tile) == 0: # = tile je na Layer 0 a je z TileSet 0
 						check_surround_tiles_help(tile, center_tile, dice_number-1)
 	elif dice_number <= 0:
@@ -81,6 +86,7 @@ func _on_highlight_send_highlight_position(highlight_position):
 	tilemap_node = self.get_parent().get_node("TileMap")
 	var tween = get_tree().create_tween()
 	for tile in route_of_tiles:
+		ventured_tiles.append(tile)
 		tween.tween_property(self, "position", tilemap_node.map_to_local(tile), 0.2)
 		tween.tween_interval(0.2)
 	
@@ -95,6 +101,8 @@ func _on_highlight_send_highlight_position(highlight_position):
 func handle_what_tile_player_stepped_on():
 	tilemap_node = self.get_parent().get_node("TileMap")
 	actions_of_tiles = self.get_parent().get_node("ActionsOfTiles")
+	
+	player_finder.get_overlapping_bodies()
 	
 	if actions_of_tiles.move_player.has(self.position):
 		print("move player works")
@@ -113,3 +121,22 @@ func handle_what_tile_player_stepped_on():
 	
 	elif actions_of_tiles.give_card.has(self.position):
 		print("give card works")
+
+
+func fix_players_on_tile():
+	tilemap_node = self.get_parent().get_node("TileMap")
+	
+	var players_on_tile = []
+	for area in player_finder.get_overlapping_areas():
+		players_on_tile.append(area)
+	
+	players_on_tile.append(self)
+	print(players_on_tile)
+	var first_pos_help = 200/players_on_tile.size()
+	var first_pos = first_pos_help/2
+	var i = 0
+	for player in players_on_tile:
+		player.position = tilemap_node.map_to_local(tilemap_node.local_to_map(player.position))
+		player.position.x -= 100
+		player.position.x += first_pos + i*first_pos_help
+		i += 1
