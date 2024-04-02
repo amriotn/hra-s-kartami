@@ -27,6 +27,7 @@ scale = Vector2(0.367765, 0.110833)
 texture = ExtResource("1_xg6p3")
 
 [node name="PlayerIcon" type="Sprite2D" parent="."]
+texture_filter = 2
 position = Vector2(79.9447, 48)
 scale = Vector2(0.670638, 0.670638)
 texture = ExtResource("1_3wsyn")

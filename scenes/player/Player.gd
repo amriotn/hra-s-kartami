@@ -4,7 +4,6 @@ class_name Player
 @onready var highlight_scene : PackedScene = preload("res://scenes/highlight/Highlight.tscn")
 #@onready var rolldice_button : Button = self.get_parent().get_node("MainCamera/GUI/CenterContainer/DiceControl/RollDice_button")
 @onready var roll_dice_button = get_tree().get_nodes_in_group("ui_layer")[0].roll_dice_button
-@onready var player = $"."
 @onready var dice_animated_sprite = $DiceAnimatedSprite
 @onready var player_finder = $PlayerFinder
 
@@ -31,13 +30,12 @@ func load_stats(player_stats : PlayerStats) -> void:
 func _on_dice_animated_sprite_send_dice_number(number):
 	dice_number = number
 	
-	fix_players_on_tile()
-	
 	var tilemap_node : TileMap = self.get_parent().get_node("TileMap")
 	
 	var reference_tile = tilemap_node.local_to_map(self.position)
 	
 	if stuck_until_dice_number == 0 or dice_number == stuck_until_dice_number:
+		self.position = tilemap_node.map_to_local(tilemap_node.local_to_map(self.position))
 		check_surround_tiles_help(reference_tile, last_tile, dice_number)
 		stuck_until_dice_number = 0
 	
@@ -102,8 +100,6 @@ func handle_what_tile_player_stepped_on():
 	tilemap_node = self.get_parent().get_node("TileMap")
 	actions_of_tiles = self.get_parent().get_node("ActionsOfTiles")
 	
-	player_finder.get_overlapping_bodies()
-	
 	if actions_of_tiles.move_player.has(self.position):
 		print("move player works")
 		print(actions_of_tiles.move_player.get(self.position))
@@ -123,20 +119,3 @@ func handle_what_tile_player_stepped_on():
 		print("give card works")
 
 
-func fix_players_on_tile():
-	tilemap_node = self.get_parent().get_node("TileMap")
-	
-	var players_on_tile = []
-	for area in player_finder.get_overlapping_areas():
-		players_on_tile.append(area)
-	
-	players_on_tile.append(self)
-	print(players_on_tile)
-	var first_pos_help = 200/players_on_tile.size()
-	var first_pos = first_pos_help/2
-	var i = 0
-	for player in players_on_tile:
-		player.position = tilemap_node.map_to_local(tilemap_node.local_to_map(player.position))
-		player.position.x -= 100
-		player.position.x += first_pos + i*first_pos_help
-		i += 1

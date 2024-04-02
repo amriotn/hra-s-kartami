@@ -33,7 +33,7 @@ func _ready():
 			var player_display = player_display_ui_scene.instantiate()
 			player_display.load_stats(stat)
 			player_list_v_box.add_child(player_display)
-			print(stat.nickname, stat.points)
+			#print(stat.nickname, stat.points)
 			player_display.player_icon.modulate = stat.player_color
 			player_display.nickname.text = stat.nickname
 			player_display.points.text = str(stat.points)

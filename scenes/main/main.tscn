@@ -1,13 +1,13 @@
-[gd_scene load_steps=22 format=3 uid="uid://cja5kon0sg03y"]
+[gd_scene load_steps=24 format=3 uid="uid://cja5kon0sg03y"]
 
 [ext_resource type="Script" path="res://scenes/main/main.gd" id="1_61e2m"]
 [ext_resource type="Texture2D" uid="uid://t77edi32bv7v" path="res://assets/DirtTileSet.png" id="4_08yuv"]
+[ext_resource type="Texture2D" uid="uid://cl54qwphi16t5" path="res://assets/path/path.png" id="5_4k8cm"]
 [ext_resource type="Texture2D" uid="uid://cq4um00ww0eei" path="res://assets/StonePath.png" id="5_ac40r"]
 [ext_resource type="Texture2D" uid="uid://dh4qt871iu3gy" path="res://assets/ActionTileSet.png" id="5_bhrjv"]
 [ext_resource type="Script" path="res://scenes/main/MainCamera.gd" id="5_nspln"]
 [ext_resource type="Texture2D" uid="uid://n5ymdcpjcy64" path="res://assets/Z pohadky do pohádky  (11).png" id="6_ehyh4"]
 [ext_resource type="PackedScene" uid="uid://cu4lhv5r0ij68" path="res://scenes/gui/gui.tscn" id="6_gohn5"]
-[ext_resource type="Script" path="res://scenes/main/TileMap.gd" id="7_lktir"]
 [ext_resource type="Texture2D" uid="uid://dij03whkopbi3" path="res://assets/Seamless ground.png" id="8_e3nya"]
 [ext_resource type="Texture2D" uid="uid://bq457fko1s0ub" path="res://assets/BG.png" id="10_fs1ih"]
 [ext_resource type="Script" path="res://scenes/main/ActionsOfTiles.gd" id="11_knj1u"]
@@ -46,6 +46,20 @@ texture_region_size = Vector2i(174, 100)
 9:7/0 = 0
 8:8/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ynddw"]
+texture = ExtResource("5_4k8cm")
+texture_region_size = Vector2i(200, 150)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_usi1v"]
+texture = ExtResource("5_4k8cm")
+texture_region_size = Vector2i(200, 200)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1pej7"]
 texture = ExtResource("5_bhrjv")
 texture_region_size = Vector2i(200, 100)
@@ -72,7 +86,9 @@ sources/10 = SubResource("TileSetAtlasSource_anpot")
 sources/0 = SubResource("TileSetAtlasSource_k35ca")
 sources/7 = SubResource("TileSetAtlasSource_27ice")
 sources/6 = SubResource("TileSetAtlasSource_1pej7")
-tile_proxies/coords_level = [[1, Vector2i(0, 0)], [6, Vector2i(0, 0)], [2, Vector2i(0, 0)], [6, Vector2i(1, 0)], [3, Vector2i(0, 0)], [6, Vector2i(2, 0)], [4, Vector2i(0, 0)], [6, Vector2i(3, 0)], [5, Vector2i(0, 0)], [6, Vector2i(4, 0)], [6, Vector2i(0, 0)], [7, Vector2i(5, 0)], [7, Vector2i(0, 0)], [9, Vector2i(2, 0)], [10, Vector2i(0, 0)], [13, Vector2i(0, 0)], [11, Vector2i(0, 0)], [13, Vector2i(1, 0)], [12, Vector2i(0, 0)], [13, Vector2i(2, 0)]]
+sources/11 = SubResource("TileSetAtlasSource_ynddw")
+sources/15 = SubResource("TileSetAtlasSource_usi1v")
+tile_proxies/coords_level = [[1, Vector2i(0, 0)], [6, Vector2i(0, 0)], [2, Vector2i(0, 0)], [6, Vector2i(1, 0)], [3, Vector2i(0, 0)], [6, Vector2i(2, 0)], [4, Vector2i(0, 0)], [11, Vector2i(0, 0)], [5, Vector2i(0, 0)], [11, Vector2i(1, 0)], [6, Vector2i(0, 0)], [7, Vector2i(5, 0)], [7, Vector2i(0, 0)], [9, Vector2i(2, 0)], [8, Vector2i(0, 0)], [11, Vector2i(2, 0)], [10, Vector2i(0, 0)], [13, Vector2i(0, 0)], [11, Vector2i(0, 0)], [13, Vector2i(1, 0)], [12, Vector2i(0, 0)], [15, Vector2i(0, 0)], [12, Vector2i(0, 1)], [15, Vector2i(0, 1)], [13, Vector2i(0, 0)], [15, Vector2i(1, 0)], [13, Vector2i(0, 1)], [15, Vector2i(1, 1)], [14, Vector2i(0, 0)], [15, Vector2i(2, 0)], [14, Vector2i(0, 1)], [15, Vector2i(2, 1)]]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_prlbn"]
 noise_type = 0
@@ -118,8 +134,7 @@ layer_1/tile_data = PackedInt32Array(1507332, 196614, 0, 1966088, 131078, 0, 209
 layer_2/name = "Environment"
 layer_2/y_sort_enabled = true
 layer_2/z_index = 3
-layer_2/tile_data = PackedInt32Array(-262097, 65546, 5, 1703970, 65546, 5, 1638433, 65546, 5, -196576, 65546, 5, 458791, 65546, 5)
-script = ExtResource("7_lktir")
+layer_2/tile_data = PackedInt32Array(-262097, 65546, 5, 1703970, 65546, 5, 1638433, 65546, 5, -196576, 65546, 5, 458791, 65546, 5, 1507332, 131087, 0, 1572869, 131087, 0, 1638405, 131087, 0, 1703942, 131087, 0, 1769478, 131087, 0, 1835015, 131087, 0, 1900551, 131087, 0, 1966088, 131087, 0, 1572868, 15, 0, 1638404, 15, 0, 1703941, 15, 0, 1769477, 15, 0, 1835014, 15, 0, 1900550, 15, 0, 1966087, 15, 0, 2031623, 15, 0, 1441797, 65551, 0, 1507333, 65551, 0, 1572870, 65551, 0, 1638406, 65551, 0, 1703943, 65551, 0, 1769479, 65551, 0, 1835016, 65551, 0, 1900552, 65551, 0, 2031624, 131087, 0, 2097161, 131087, 0, 2162697, 131087, 0, 2228234, 131087, 0, 1966089, 65551, 0, 2031625, 65551, 0, 2097162, 65551, 0, 2162698, 65551, 0, 2293769, 15, 0, 2228233, 15, 0, 2162696, 15, 0, 2097160, 15, 0)
 
 [node name="TileMap2" type="TileMap" parent="."]
 visible = false
@@ -139,7 +154,6 @@ layer_2/name = "Environment"
 layer_2/y_sort_enabled = true
 layer_2/z_index = 3
 layer_2/tile_data = PackedInt32Array()
-script = ExtResource("7_lktir")
 
 [node name="TileMap3" type="TileMap" parent="."]
 visible = false
@@ -159,7 +173,6 @@ layer_2/name = "Environment"
 layer_2/y_sort_enabled = true
 layer_2/z_index = 3
 layer_2/tile_data = PackedInt32Array(-262097, 65546, 5, 1703970, 65546, 5, 1638433, 65546, 5, -196576, 65546, 5, 458791, 65546, 5)
-script = ExtResource("7_lktir")
 
 [node name="StartPosition" type="Marker2D" parent="."]
 position = Vector2(997, 1198)

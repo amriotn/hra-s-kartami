@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://u2hiqqykopsu"
-path="res://.godot/imported/ActionTileMovePlayer.png-af787cfcca5ded91a85a47ddced5e8b8.ctex"
+path="res://.godot/imported/ActionTileMovePlayer.png-94fc45d534c80c38b79bf4caaaee161c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Action tiles/ActionTileMovePlayer.png"
-dest_files=["res://.godot/imported/ActionTileMovePlayer.png-af787cfcca5ded91a85a47ddced5e8b8.ctex"]
+source_file="res://assets/action tiles/ActionTileMovePlayer.png"
+dest_files=["res://.godot/imported/ActionTileMovePlayer.png-94fc45d534c80c38b79bf4caaaee161c.ctex"]
 
 [params]
 
