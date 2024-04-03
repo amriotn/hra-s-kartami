@@ -27,9 +27,15 @@ func _on_mouse_exited() -> void:
 
 
 func _on_drop_detection_area_area_entered(area):
-	if not targets.has(area):
-		targets.append(area)
+	var card_detection_zones_layer : Area2D = get_tree().get_first_node_in_group("card_detection_zones")
+	if area == card_detection_zones_layer:
+		if not targets.has(area):
+			targets.append(area)
+			print(str(area) + "added")
 
 
 func _on_drop_detection_area_area_exited(area):
-	targets.erase(area)
+	var card_detection_zones_layer : Area2D = get_tree().get_first_node_in_group("card_detection_zones")
+	if area == card_detection_zones_layer:
+		targets.erase(area)
+		print(str(area) + "removed")

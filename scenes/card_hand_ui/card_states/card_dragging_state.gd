@@ -24,13 +24,15 @@ func enter() -> void:
 	card_hand_ui.state.text = "DRAGGING"
 	
 	card_hand_ui.pivot_offset = card_hand_ui.get_global_mouse_position() - card_hand_ui.global_position
-	
-	
-	"""
-	minimum_drag_time_elapsed = false
-	var threshold_timer := get_tree().create_timer(DRAG_MINIMUM_THRESHOLD, false)
-	threshold_timer.timeout.connect(func(): minimum_drag_time_elapsed = true)
-	"""
+
+
+func _process(delta):
+	var card_detection_zones_layer : Area2D = get_tree().get_first_node_in_group("card_detection_zones")
+	if not card_hand_ui.targets.is_empty():
+		if card_hand_ui.targets.has(card_detection_zones_layer):
+			card_hand_ui.shine.show()
+	else:
+		card_hand_ui.shine.hide()
 	
 
 func on_input(event: InputEvent) -> void:
@@ -51,3 +53,4 @@ func on_input(event: InputEvent) -> void:
 		if camera_layer: camera_layer.can_move = true
 		get_viewport().set_input_as_handled()
 		transition_requested.emit(self, CardState.State.RELEASED)
+
