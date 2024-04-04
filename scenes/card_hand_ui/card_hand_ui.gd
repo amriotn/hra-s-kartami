@@ -10,6 +10,13 @@ signal reparent_requested(which_card_ui: CardHandUI)
 @onready var card_state_machine : CardStateMachine = $CardStateMachine as CardStateMachine
 @onready var targets: Array[Node] = []
 
+
+var data : CardResource = null
+
+func load_data(card_data : CardResource) -> void:
+	data = card_data
+
+
 func _ready() -> void:
 	card_state_machine.init(self)
 

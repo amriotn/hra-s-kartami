@@ -27,8 +27,8 @@ func _ready():
 						# FIX MARKER POSITION TO CENTER OF TILE
 						for marker : Marker2D in actions_markers:
 							marker.global_position = tile_node.map_to_local(tile_node.local_to_map(marker.global_position))
-						# move_player[start_marker] = destination_marker
-						move_player[actions_markers[0].global_position] = actions_markers[1].global_position
+						# move_player[start_marker] = [destination_marker, invalid_way_marker]
+						move_player[actions_markers[0].global_position] = [actions_markers[1].global_position, actions_markers[2].global_position]
 				"StuckPlayer":
 					for action_tile in action.get_children():
 						# = San_Roll3, ...
@@ -53,7 +53,15 @@ func _ready():
 						# crossroads = { (StartMarker) : ([OddWay, EvenWay, StraightWay]) }
 						if actions_markers.size() == 4:
 							crossroads[actions_markers[0].global_position] = [actions_markers[1].global_position, actions_markers[2].global_position, actions_markers[3].global_position]
-	
+				"GiveCard":
+					for card_marker : Marker2D in action.get_children():
+						card_marker.global_position = tile_node.map_to_local(tile_node.local_to_map(card_marker.global_position))
+						
+						var card_name : String = card_marker.name
+						if card_name[-1] == "%d":
+							card_name = card_name
+							
+						give_card[card_marker.global_position] = ""
 #	print(move_player)
 #	print(stuck_player)
 #	print(crossroads)

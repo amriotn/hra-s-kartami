@@ -11,9 +11,9 @@ extends CanvasLayer
 @onready var time_label = $TimeLabel
 @onready var round_label = $RoundLabel
 
-var player_display_ui_scene = load("res://player_display_ui.tscn")
-var player_display_list : Array
+const PLAYER_DISPLAY_UI = preload("res://scenes/player_display_ui/player_display_ui.tscn")
 
+var player_display_list : Array
 var time = 0
 var timer_on = false
 
@@ -30,7 +30,7 @@ func _process(delta):
 func _ready():
 	if not Global.player_stats_resources.is_empty():
 		for stat in Global.player_stats_resources:
-			var player_display = player_display_ui_scene.instantiate()
+			var player_display = PLAYER_DISPLAY_UI.instantiate()
 			player_display.load_stats(stat)
 			player_list_v_box.add_child(player_display)
 			#print(stat.nickname, stat.points)

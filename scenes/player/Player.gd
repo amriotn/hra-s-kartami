@@ -27,6 +27,10 @@ func load_stats(player_stats : PlayerStats) -> void:
 	stats = player_stats
 
 
+func _ready():
+	print(str(self) + " is ready")
+
+
 func _on_dice_animated_sprite_send_dice_number(number):
 	dice_number = number
 	
@@ -104,7 +108,8 @@ func handle_what_tile_player_stepped_on():
 		print("move player works")
 		print(actions_of_tiles.move_player.get(self.position))
 		var tween = get_tree().create_tween()
-		tween.tween_property(self, "position", actions_of_tiles.move_player.get(self.position), 0.5)
+		tween.tween_property(self, "position", actions_of_tiles.move_player.get(self.position)[0], 0.5)
+		ventured_tiles.append(tilemap_node.local_to_map(actions_of_tiles.move_player.get(self.position)[1]))
 		
 	elif actions_of_tiles.stuck_player.has(self.position):
 		print("stuck player works")

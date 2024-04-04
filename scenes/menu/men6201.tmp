@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cnsxnyxe4mnd0"]
 
-[ext_resource type="Script" path="res://menu.gd" id="1_4na3m"]
-[ext_resource type="Theme" uid="uid://cxf28t24j2lk7" path="res://new_theme.tres" id="1_seyji"]
+[ext_resource type="Script" path="res://scenes/menu/menu.gd" id="1_4na3m"]
+[ext_resource type="Theme" uid="uid://cxf28t24j2lk7" path="res://fonts/new_theme.tres" id="1_seyji"]
 [ext_resource type="Texture2D" uid="uid://dij03whkopbi3" path="res://assets/Seamless ground.png" id="2_5twbe"]
 
 [node name="Menu" type="Control"]

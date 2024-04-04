@@ -1,10 +1,10 @@
 [gd_scene load_steps=7 format=3 uid="uid://bge11g3xmo2m8"]
 
-[ext_resource type="Texture2D" uid="uid://dqt60403c2qqf" path="res://assets/characters/KnightIcon.png" id="1_3wsyn"]
-[ext_resource type="Script" path="res://player_display_ui.gd" id="1_giri2"]
+[ext_resource type="Texture2D" uid="uid://dqt60403c2qqf" path="res://assets/Characters/KnightIcon.png" id="1_3wsyn"]
+[ext_resource type="Script" path="res://scenes/player_display_ui/player_display_ui.gd" id="1_giri2"]
 [ext_resource type="Texture2D" uid="uid://dn7yjdsf604f3" path="res://assets/select.png" id="1_xg6p3"]
 [ext_resource type="Texture2D" uid="uid://evjsyd2e21od" path="res://assets/171069355917953053 (3).png" id="2_4r3b2"]
-[ext_resource type="Theme" uid="uid://cxf28t24j2lk7" path="res://new_theme.tres" id="2_76f7l"]
+[ext_resource type="Theme" uid="uid://cxf28t24j2lk7" path="res://fonts/new_theme.tres" id="2_76f7l"]
 [ext_resource type="Texture2D" uid="uid://cvt3fs8gasuwc" path="res://assets/171069355917953053 (2).png" id="4_m38ue"]
 
 [node name="PlayerDisplayUI" type="Control"]

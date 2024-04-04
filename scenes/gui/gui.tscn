@@ -1,11 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://cu4lhv5r0ij68"]
+[gd_scene load_steps=7 format=3 uid="uid://cu4lhv5r0ij68"]
 
 [ext_resource type="Script" path="res://scenes/gui/gui.gd" id="1_nahqx"]
-[ext_resource type="PackedScene" uid="uid://7rsratqfj43e" path="res://scenes/card_hand_ui/card_hand_ui.tscn" id="2_6xk3u"]
 [ext_resource type="Script" path="res://scenes/gui/hand.gd" id="2_34o4f"]
-[ext_resource type="Texture2D" uid="uid://cpa2y17sspolm" path="res://arrow_icon.png" id="5_t0iey"]
-[ext_resource type="Texture2D" uid="uid://b6qq4a7e54m2v" path="res://settings_icon.png" id="6_0g3pb"]
-[ext_resource type="Theme" uid="uid://cxf28t24j2lk7" path="res://new_theme.tres" id="12_17xg2"]
+[ext_resource type="Theme" uid="uid://cxf28t24j2lk7" path="res://fonts/new_theme.tres" id="2_vnduq"]
+[ext_resource type="Texture2D" uid="uid://cpa2y17sspolm" path="res://assets/arrow_icon.png" id="5_6x07o"]
+[ext_resource type="Texture2D" uid="uid://b6qq4a7e54m2v" path="res://assets/settings_icon.png" id="6_xha2n"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eorai"]
 size = Vector2(3000, 750)
@@ -26,7 +25,7 @@ offset_right = 157.0
 offset_bottom = 239.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("12_17xg2")
+theme = ExtResource("2_vnduq")
 text = "Hoď kostkou"
 icon_alignment = 1
 
@@ -46,23 +45,6 @@ grow_vertical = 0
 size_flags_horizontal = 4
 size_flags_vertical = 8
 script = ExtResource("2_34o4f")
-
-[node name="CardHandUI" parent="Hand" instance=ExtResource("2_6xk3u")]
-layout_mode = 2
-offset_left = 376.0
-offset_right = 509.0
-
-[node name="CardHandUI2" parent="Hand" instance=ExtResource("2_6xk3u")]
-offset_left = 376.0
-offset_right = 509.0
-
-[node name="CardHandUI3" parent="Hand" instance=ExtResource("2_6xk3u")]
-offset_left = 752.0
-offset_right = 885.0
-
-[node name="CardHandUI4" parent="Hand" instance=ExtResource("2_6xk3u")]
-offset_left = 376.0
-offset_right = 509.0
 
 [node name="CardDropZone" type="Control" parent="."]
 layout_mode = 3
@@ -86,6 +68,7 @@ anchors_preset = 0
 offset_top = 152.0
 offset_right = 508.0
 offset_bottom = 767.0
+mouse_filter = 1
 
 [node name="PlayersScrollBar" type="ScrollContainer" parent="CollapsablePlayerList"]
 self_modulate = Color(1, 1, 1, 0)
@@ -105,18 +88,18 @@ offset_left = 305.0
 offset_top = 268.0
 offset_right = 340.0
 offset_bottom = 328.0
-theme = ExtResource("12_17xg2")
+theme = ExtResource("2_vnduq")
 
 [node name="ArrowLeft" type="Sprite2D" parent="CollapsablePlayerList/CollapsePlayerListButton"]
 position = Vector2(16.6065, 30)
 scale = Vector2(0.182703, 0.192147)
-texture = ExtResource("5_t0iey")
+texture = ExtResource("5_6x07o")
 
 [node name="TimeLabel" type="Label" parent="."]
 offset_left = 91.0
 offset_right = 303.0
 offset_bottom = 83.0
-theme = ExtResource("12_17xg2")
+theme = ExtResource("2_vnduq")
 theme_override_font_sizes/font_size = 40
 text = "Čas: 00:00"
 
@@ -124,7 +107,7 @@ text = "Čas: 00:00"
 offset_left = 376.0
 offset_right = 588.0
 offset_bottom = 83.0
-theme = ExtResource("12_17xg2")
+theme = ExtResource("2_vnduq")
 theme_override_font_sizes/font_size = 40
 text = "Kolo 1"
 
@@ -132,12 +115,12 @@ text = "Kolo 1"
 modulate = Color(1, 1, 1, 0.670588)
 offset_right = 57.0
 offset_bottom = 57.0
-theme = ExtResource("12_17xg2")
+theme = ExtResource("2_vnduq")
 
 [node name="Pause" type="Sprite2D" parent="PauseButton"]
 position = Vector2(29, 28)
 scale = Vector2(0.204167, 0.204167)
-texture = ExtResource("6_0g3pb")
+texture = ExtResource("6_xha2n")
 
 [node name="EndTurnButton" type="Button" parent="."]
 anchors_preset = 3
@@ -151,7 +134,7 @@ offset_right = -39.0
 offset_bottom = -40.0
 grow_horizontal = 0
 grow_vertical = 0
-theme = ExtResource("12_17xg2")
+theme = ExtResource("2_vnduq")
 text = "Ukončit tah"
 
 [connection signal="mouse_exited" from="Hand" to="Hand" method="_on_mouse_exited"]

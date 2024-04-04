@@ -5,15 +5,19 @@ const SCREEN_EDGE_BORDER = 15.0 #percent
 const CARD_SIZE = Vector2(133, 200)
 const MAX_DISTANCE_BETWEEN_CARDS = 95.0 #percent
 
+var hand : Array
 var hand_tween : Tween
 
 func _ready() -> void:
 	update_hand()
 	#print("ready")
-	for child in get_children():
+	load_hand(hand)
+
+func load_hand(cards_array : Array):
+	hand = cards_array
+	for child in hand:
 		var card_hand_ui := child as CardHandUI
 		card_hand_ui.reparent_requested.connect(_on_card_hand_ui_reparent_requested)
-	
 
 
 func _on_card_hand_ui_reparent_requested(child: CardHandUI) -> void:

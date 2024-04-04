@@ -5,7 +5,7 @@ extends Control
 
 @onready var player_showcase = $LeftSide/PlayerListScrollContainer/VBoxContainer/PlayerShowcase
 
-const PLAYER_SHOWCASE = preload("res://player_showcase.tscn")
+const PLAYER_SHOWCASE = preload("res://scenes/player_showcase/player_showcase.tscn")
 
 var player_count : int
 var player_list

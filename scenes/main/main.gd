@@ -5,7 +5,10 @@ var player_scene = load("res://scenes/player/Player.tscn")
 @onready var end_turn_button : Button = get_tree().get_nodes_in_group("ui_layer")[0].end_turn_button
 @onready var player_list_v_box = $MainCamera/GUI/CollapsablePlayerList/PlayersScrollBar/PlayerListVBox
 @onready var gui = $MainCamera/GUI
+@onready var main_camera = $MainCamera
 
+
+var cam_tween : Tween
 var game : bool
 var player_list : Array
 var turn_of_player : int
@@ -51,10 +54,21 @@ func _ready():
 		player_list.append(player)
 	
 	
+	await get_tree().create_timer(0.5).timeout
+	fix_players_on_tile(player_list)
 	game = true
 	turn_of_player = 0
 	gui.timer_on = true
 	while game:
+		"""if cam_tween:
+			cam_tween.kill()
+		main_camera.movement_toggle()
+		cam_tween = get_tree().create_tween()
+		cam_tween.tween_property(main_camera, "position", player_list[turn_of_player].position, 1.0)
+		cam_tween.connect("finished", main_camera.movement_toggle)"""
+		#main_camera.can_move = true
+		main_camera.position = player_list[turn_of_player].position
+		
 		player_list[turn_of_player].roll_dice_button.disabled = false
 		
 		player_list_v_box.get_children()[turn_of_player].select_gradient.show()
@@ -62,7 +76,6 @@ func _ready():
 		player_list[turn_of_player].dice_animated_sprite.show()
 		player_list[turn_of_player].dice_animated_sprite.connect("send_dice_number", Callable(player_list[turn_of_player], "_on_dice_animated_sprite_send_dice_number"))
 		fix_players_on_tile(player_list)
-		
 		
 		
 		

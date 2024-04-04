@@ -1,6 +1,6 @@
 [gd_resource type="Theme" load_steps=8 format=3 uid="uid://cxf28t24j2lk7"]
 
-[ext_resource type="Texture2D" uid="uid://b4ngh0fqe68mj" path="res://button.png" id="1_nwo3k"]
+[ext_resource type="Texture2D" uid="uid://b4ngh0fqe68mj" path="res://assets/button.png" id="1_nwo3k"]
 [ext_resource type="FontFile" uid="uid://b1wk1icctcjsm" path="res://fonts/odstemplik/odstemplikBold.otf" id="1_y6ro3"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qll1q"]

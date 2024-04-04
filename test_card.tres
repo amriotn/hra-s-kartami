@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="CardResource" load_steps=2 format=3 uid="uid://6sxoeevq1kl2"]
+
+[ext_resource type="Script" path="res://card_resource.gd" id="1_4f83l"]
+
+[resource]
+script = ExtResource("1_4f83l")
+points = 5
+target = 0
+rarity = 0
+card_name = ""
+description = "Gives you IMMUNITY"
