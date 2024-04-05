@@ -16,6 +16,9 @@ func enter() -> void:
 		if card_hand_ui.targets.has(card_detection_zones_layer):
 			played = true
 			print("play card for target(s) ", card_hand_ui.targets)
+			if card_hand_ui.data.target == card_hand_ui.data.Target["SELF"]:
+				card_hand_ui.data.effect.trigger_effect(card_hand_ui.data.holder)
+			card_hand_ui.queue_free()
 
 func on_input(_event: InputEvent) -> void:
 	if played:

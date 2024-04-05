@@ -11,18 +11,25 @@ var hand_tween : Tween
 func _ready() -> void:
 	update_hand()
 	#print("ready")
-	load_hand(hand)
 
-func load_hand(cards_array : Array):
+func load_hand(cards_array : Array): # player_stats.cards_in_hand
 	hand = cards_array
-	for child in hand:
-		var card_hand_ui := child as CardHandUI
+	for card in hand:
+		self.add_child(card)
+		var card_hand_ui := card as CardHandUI
 		card_hand_ui.reparent_requested.connect(_on_card_hand_ui_reparent_requested)
+	update_hand()
 
 
 func _on_card_hand_ui_reparent_requested(child: CardHandUI) -> void:
 	child.reparent(self)
 
+func add_card(card : CardHandUI):
+	hand.append(card)
+	add_child(card)
+	var card_hand_ui := card as CardHandUI
+	card_hand_ui.reparent_requested.connect(_on_card_hand_ui_reparent_requested)
+	update_hand()
 
 func update_hand():
 	var hand_list = get_children()
@@ -43,7 +50,9 @@ func update_hand():
 		#print(hand_list[i].position)
 		
 
-
+func clear_hand():
+	for child in get_children():
+		child.hide()
 
 func _on_mouse_exited():
 	if hand_tween:

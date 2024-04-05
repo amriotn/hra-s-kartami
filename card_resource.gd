@@ -9,6 +9,8 @@ var Rarity_colors : Array = [Color.GRAY, Color.BLUE, Color.WEB_PURPLE, Color.GOL
 @export var points : int
 @export var target : Target
 @export var rarity : Rarity
+@export var effect : CardEffect
+var holder : Player
 var color : Color = Rarity_colors[rarity]
 
 @export_group("Card Visuals")

@@ -56,17 +56,19 @@ func _ready():
 	
 	await get_tree().create_timer(0.5).timeout
 	fix_players_on_tile(player_list)
+	
+	var player_hands = []
+	for player in player_list:
+		gui.add_child(player.stats.hand)
+		player_hands.append(player.stats.hand)
+		player.stats.hand.hide()
+	
 	game = true
 	turn_of_player = 0
 	gui.timer_on = true
 	while game:
-		"""if cam_tween:
-			cam_tween.kill()
-		main_camera.movement_toggle()
-		cam_tween = get_tree().create_tween()
-		cam_tween.tween_property(main_camera, "position", player_list[turn_of_player].position, 1.0)
-		cam_tween.connect("finished", main_camera.movement_toggle)"""
-		#main_camera.can_move = true
+		player_hands[turn_of_player].show()
+		
 		main_camera.position = player_list[turn_of_player].position
 		
 		player_list[turn_of_player].roll_dice_button.disabled = false
@@ -80,7 +82,7 @@ func _ready():
 		
 		
 		await end_turn_button.pressed
-		
+		player_hands[turn_of_player].hide()
 		player_list[turn_of_player].dice_animated_sprite.disconnect("send_dice_number", Callable(player_list[turn_of_player], "_on_dice_animated_sprite_send_dice_number"))
 		player_list[turn_of_player].dice_animated_sprite.hide()
 		player_list_v_box.get_children()[turn_of_player].select_gradient.hide()

@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://cu4lhv5r0ij68"]
 
 [ext_resource type="Script" path="res://scenes/gui/gui.gd" id="1_nahqx"]
-[ext_resource type="Script" path="res://scenes/gui/hand.gd" id="2_34o4f"]
 [ext_resource type="Theme" uid="uid://cxf28t24j2lk7" path="res://fonts/new_theme.tres" id="2_vnduq"]
+[ext_resource type="PackedScene" uid="uid://cmhdnroehs4q6" path="res://hand.tscn" id="3_ux0pl"]
 [ext_resource type="Texture2D" uid="uid://cpa2y17sspolm" path="res://assets/arrow_icon.png" id="5_6x07o"]
 [ext_resource type="Texture2D" uid="uid://b6qq4a7e54m2v" path="res://assets/settings_icon.png" id="6_xha2n"]
 
@@ -29,22 +29,7 @@ theme = ExtResource("2_vnduq")
 text = "Hoď kostkou"
 icon_alignment = 1
 
-[node name="Hand" type="Control" parent="." groups=["hand"]]
-layout_mode = 3
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -672.0
-offset_top = -130.0
-offset_right = 672.0
-offset_bottom = 120.0
-grow_horizontal = 2
-grow_vertical = 0
-size_flags_horizontal = 4
-size_flags_vertical = 8
-script = ExtResource("2_34o4f")
+[node name="Hand" parent="." instance=ExtResource("3_ux0pl")]
 
 [node name="CardDropZone" type="Control" parent="."]
 layout_mode = 3
@@ -137,6 +122,5 @@ grow_vertical = 0
 theme = ExtResource("2_vnduq")
 text = "Ukončit tah"
 
-[connection signal="mouse_exited" from="Hand" to="Hand" method="_on_mouse_exited"]
 [connection signal="pressed" from="CollapsablePlayerList/CollapsePlayerListButton" to="." method="_on_collapse_player_list_button_pressed"]
 [connection signal="pressed" from="PauseButton" to="." method="_on_pause_button_pressed"]

@@ -10,6 +10,7 @@ extends CanvasLayer
 @onready var players_scroll_bar : ScrollContainer = $CollapsablePlayerList/PlayersScrollBar
 @onready var time_label = $TimeLabel
 @onready var round_label = $RoundLabel
+@onready var hand = $Hand
 
 const PLAYER_DISPLAY_UI = preload("res://scenes/player_display_ui/player_display_ui.tscn")
 

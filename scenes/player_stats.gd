@@ -1,6 +1,8 @@
 extends Resource
 class_name PlayerStats
 
+const HAND = preload("res://hand.tscn")
+
 @export var nickname : String
 @export var player_color : Color
 
@@ -10,8 +12,10 @@ var stuck_immunity : int = 0
 
 enum Effect {NONE, STUCK, LUCK, SPEED, IMMUNE}
 
-@export var card_in_hand : Array = []
+@export var cards_in_hand : Array = []
+var hand : Hand
 
 func _init(p_nickname = "", p_color = Color.WHITE):
 	nickname = p_nickname
 	player_color = p_color
+	hand = HAND.instantiate()

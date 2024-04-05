@@ -10,6 +10,8 @@ signal reparent_requested(which_card_ui: CardHandUI)
 @onready var card_state_machine : CardStateMachine = $CardStateMachine as CardStateMachine
 @onready var targets: Array[Node] = []
 
+@onready var border : ColorRect = $Border
+@onready var points_label : Label = $PointsLabel
 
 var data : CardResource = null
 
@@ -17,8 +19,11 @@ func load_data(card_data : CardResource) -> void:
 	data = card_data
 
 
+
 func _ready() -> void:
 	card_state_machine.init(self)
+	border.color = data.Rarity_colors[data.rarity]
+	points_label.text =str(data.points)
 
 func _input(event: InputEvent) -> void:
 	card_state_machine.on_input(event)

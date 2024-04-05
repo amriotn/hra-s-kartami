@@ -11,6 +11,7 @@ var tilemap_node : TileMap
 var actions_of_tiles : Node2D
 
 const DEFAULT_OFFSET : Vector2 = Vector2(0, -125)
+const CARD_HAND_UI = preload("res://scenes/card_hand_ui/card_hand_ui.tscn")
 
 var dice_number : int = 0
 var highlights : Array = []
@@ -122,5 +123,10 @@ func handle_what_tile_player_stepped_on():
 	
 	elif actions_of_tiles.give_card.has(self.position):
 		print("give card works")
-
-
+		print(actions_of_tiles.give_card.get(self.position))
+		var card_data_path = actions_of_tiles.give_card.get(self.position)
+		var card = CARD_HAND_UI.instantiate()
+		card.load_data(load(card_data_path))
+		card.data.holder = self
+		stats.cards_in_hand.append(card)
+		stats.hand.add_card(card)

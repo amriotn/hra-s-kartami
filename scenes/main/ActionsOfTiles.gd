@@ -61,7 +61,7 @@ func _ready():
 						if card_name[-1] == "%d":
 							card_name = card_name
 							
-						give_card[card_marker.global_position] = ""
+						give_card[card_marker.global_position] = "res://test_card.tres"
 #	print(move_player)
 #	print(stuck_player)
 #	print(crossroads)
