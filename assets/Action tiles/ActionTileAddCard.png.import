@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://8mb80r66p0so"
-path="res://.godot/imported/ActionTileAddCard.png-71e3acd08fde19b2e5d3baafb6c01982.ctex"
+path="res://.godot/imported/ActionTileAddCard.png-ed5d2ff326702144c2ab517e0c36537e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Action tiles/ActionTileAddCard.png"
-dest_files=["res://.godot/imported/ActionTileAddCard.png-71e3acd08fde19b2e5d3baafb6c01982.ctex"]
+source_file="res://assets/action tiles/ActionTileAddCard.png"
+dest_files=["res://.godot/imported/ActionTileAddCard.png-ed5d2ff326702144c2ab517e0c36537e.ctex"]
 
 [params]
 

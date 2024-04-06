@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c0b07y2k7dgqu"
-path="res://.godot/imported/ActionTileCrossroad.png-adb87cc6f55aad085bd36de5b45bc28a.ctex"
+uid="uid://cl54qwphi16t5"
+path="res://.godot/imported/path.png-2206a3cde554a3a1b290a49f8906e7ac.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/action tiles/ActionTileCrossroad.png"
-dest_files=["res://.godot/imported/ActionTileCrossroad.png-adb87cc6f55aad085bd36de5b45bc28a.ctex"]
+source_file="res://assets/path ver1/path.png"
+dest_files=["res://.godot/imported/path.png-2206a3cde554a3a1b290a49f8906e7ac.ctex"]
 
 [params]
 

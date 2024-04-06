@@ -5,7 +5,10 @@
 [resource]
 script = ExtResource("1_4f83l")
 points = 5
-target = 0
 rarity = 0
-card_name = "GIVE POINT"
-description = "Gives you IMMUNITY"
+effect = 0
+effect_data = 3
+effect_target = 0
+effect_target_data = 0
+card_name = "GIVE CARD"
+description = "Gives you 3 random cards"
