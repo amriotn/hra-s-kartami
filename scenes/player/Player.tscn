@@ -1,7 +1,8 @@
-[gd_scene load_steps=26 format=3 uid="uid://d1svj53fqwe7l"]
+[gd_scene load_steps=28 format=3 uid="uid://d1svj53fqwe7l"]
 
 [ext_resource type="Texture2D" uid="uid://qsbkdgx4lg11" path="res://assets/characters/Knight.png" id="1_a6yq5"]
 [ext_resource type="Script" path="res://scenes/player/Player.gd" id="2_akcfd"]
+[ext_resource type="Texture2D" uid="uid://d23qi7giy6f1" path="res://fade_out.png" id="3_1ocul"]
 [ext_resource type="Texture2D" uid="uid://bp3ts1rklur5c" path="res://assets/dice numbers white/dice_smaller1.png" id="3_s4xm1"]
 [ext_resource type="Texture2D" uid="uid://5inlmkcqk1e0" path="res://assets/dice numbers white/dice_smaller2.png" id="4_b41fq"]
 [ext_resource type="Texture2D" uid="uid://cpf2fd1ilaxbe" path="res://assets/dice numbers white/dice_smaller3.png" id="5_afud4"]
@@ -152,6 +153,9 @@ animations = [{
 "speed": 15.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sbv3f"]
+size = Vector2(126.429, 122.837)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l32sn"]
 size = Vector2(500, 20)
 
@@ -162,6 +166,12 @@ texture = ExtResource("1_a6yq5")
 offset = Vector2(0, -125)
 script = ExtResource("2_akcfd")
 
+[node name="FadeOut" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(4, -388)
+scale = Vector2(1.875, 1.875)
+texture = ExtResource("3_1ocul")
+
 [node name="DiceAnimatedSprite" type="AnimatedSprite2D" parent="."]
 visible = false
 position = Vector2(-3, -405)
@@ -170,6 +180,13 @@ sprite_frames = SubResource("SpriteFrames_1g6tu")
 animation = &"1"
 autoplay = "6"
 script = ExtResource("10_jjr3k")
+
+[node name="Area2D" type="Area2D" parent="DiceAnimatedSprite"]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DiceAnimatedSprite/Area2D"]
+position = Vector2(0.718347, -1.07755)
+shape = SubResource("RectangleShape2D_sbv3f")
 
 [node name="Shadow" type="Sprite2D" parent="."]
 self_modulate = Color(0.156863, 0.156863, 0.156863, 0.431373)
@@ -183,3 +200,6 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerFinder"]
 shape = SubResource("RectangleShape2D_l32sn")
+
+[connection signal="visibility_changed" from="DiceAnimatedSprite" to="DiceAnimatedSprite" method="_on_visibility_changed"]
+[connection signal="input_event" from="DiceAnimatedSprite/Area2D" to="DiceAnimatedSprite" method="_on_area_2d_input_event"]

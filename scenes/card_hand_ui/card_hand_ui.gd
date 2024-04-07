@@ -15,8 +15,9 @@ signal reparent_requested(which_card_ui: CardHandUI)
 
 var data : CardResource = null
 
-func load_data(card_data : CardResource) -> void:
-	data = card_data
+func load_data(card_data : CardResource, holder : Player) -> void:
+	data = card_data.create_instance()
+	data.holder = holder
 
 
 
@@ -24,6 +25,8 @@ func _ready() -> void:
 	card_state_machine.init(self)
 	border.color = data.Rarity_colors[data.rarity]
 	points_label.text =str(data.points)
+	if data.holder:
+		shine.modulate = data.holder.stats.player_color
 
 func _input(event: InputEvent) -> void:
 	card_state_machine.on_input(event)
@@ -43,11 +46,11 @@ func _on_drop_detection_area_area_entered(area):
 	if area == card_detection_zones_layer:
 		if not targets.has(area):
 			targets.append(area)
-			print(str(area) + "added")
+			#print(str(area) + "added")
 
 
 func _on_drop_detection_area_area_exited(area):
 	var card_detection_zones_layer : Area2D = get_tree().get_first_node_in_group("card_detection_zones")
 	if area == card_detection_zones_layer:
 		targets.erase(area)
-		print(str(area) + "removed")
+		#print(str(area) + "removed")

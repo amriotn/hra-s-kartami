@@ -15,7 +15,7 @@ func enter() -> void:
 	if not card_hand_ui.targets.is_empty():
 		if card_hand_ui.targets.has(card_detection_zones_layer):
 			played = true
-			print("play card for target(s) ", card_hand_ui.targets)
+			#print("play card for target(s) ", card_hand_ui.targets)
 			card_hand_ui.data.trigger_effect()
 			card_hand_ui.queue_free()
 

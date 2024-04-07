@@ -13,6 +13,15 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_4na3m")
 
+[node name="SeamlessGround" type="Sprite2D" parent="."]
+self_modulate = Color(0.85098, 0.686275, 0.45098, 1)
+texture_repeat = 3
+position = Vector2(961, 554)
+scale = Vector2(0.593078, 0.593078)
+texture = ExtResource("2_5twbe")
+region_enabled = true
+region_rect = Rect2(0, 0, 4000, 2000)
+
 [node name="ColorRect" type="ColorRect" parent="."]
 visible = false
 layout_mode = 1
@@ -23,15 +32,6 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 color = Color(0.294118, 0.294118, 0.294118, 1)
-
-[node name="SeamlessGround" type="Sprite2D" parent="."]
-self_modulate = Color(0.85098, 0.686275, 0.45098, 1)
-texture_repeat = 3
-position = Vector2(961, 554)
-scale = Vector2(0.593078, 0.593078)
-texture = ExtResource("2_5twbe")
-region_enabled = true
-region_rect = Rect2(0, 0, 4000, 2000)
 
 [node name="LeftSide" type="Control" parent="."]
 layout_mode = 1
@@ -65,9 +65,9 @@ text = "+ Přidat Hráče  "
 
 [node name="Header" type="Control" parent="LeftSide"]
 anchors_preset = 0
-offset_left = 26.0
+offset_left = 65.75
 offset_top = 202.0
-offset_right = 850.0
+offset_right = 889.75
 offset_bottom = 273.0
 
 [node name="Order" type="Label" parent="LeftSide/Header"]
@@ -110,9 +110,9 @@ horizontal_alignment = 1
 
 [node name="PlayerListScrollContainer" type="ScrollContainer" parent="LeftSide"]
 layout_mode = 0
-offset_left = 40.0
+offset_left = 65.75
 offset_top = 318.0
-offset_right = 922.0
+offset_right = 947.75
 offset_bottom = 1000.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="LeftSide/PlayerListScrollContainer"]

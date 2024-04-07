@@ -105,12 +105,12 @@ func fix_players_on_tile(player_list):
 			if area.collision_layer == 2:
 				if not players_on_tile.has(player):
 					players_on_tile.append(player)
-				print(area)
+				#print(area)
 	
-	print(players_on_tile)
+	#print(players_on_tile)
 	
 	#players_on_tile.append(self)
-	print(players_on_tile)
+	#print(players_on_tile)
 	if players_on_tile:
 		var first_pos_help = 200/players_on_tile.size()
 		var first_pos = first_pos_help/2
@@ -119,7 +119,7 @@ func fix_players_on_tile(player_list):
 			player.position = tilemap_node.map_to_local(tilemap_node.local_to_map(player.position))
 			player.position.x -= 100
 			player.position.x += first_pos + i*first_pos_help
-			print(player.position.x)
+			#print(player.position.x)
 			i += 1
 	
 	

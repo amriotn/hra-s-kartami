@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://7rsratqfj43e"]
+[gd_scene load_steps=10 format=3 uid="uid://d04ldlkvtwluj"]
 
 [ext_resource type="Script" path="res://scenes/card_hand_ui/card_hand_ui.gd" id="1_fhmeo"]
 [ext_resource type="Script" path="res://scenes/card_hand_ui/card_state_machine.gd" id="2_6i30o"]
@@ -7,7 +7,7 @@
 [ext_resource type="Script" path="res://scenes/card_hand_ui/card_states/card_hover_state.gd" id="4_766e7"]
 [ext_resource type="Script" path="res://scenes/card_hand_ui/card_states/card_dragging_state.gd" id="5_gqy0u"]
 [ext_resource type="Script" path="res://scenes/card_hand_ui/card_states/card_released_state.gd" id="6_xltb0"]
-[ext_resource type="Theme" uid="uid://cxf28t24j2lk7" path="res://fonts/new_theme.tres" id="8_25je3"]
+[ext_resource type="Theme" uid="uid://cxf28t24j2lk7" path="res://fonts/new_theme.tres" id="8_5lld8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yfddo"]
 size = Vector2(133, 200)
@@ -19,6 +19,7 @@ anchors_preset = 0
 offset_right = 133.0
 offset_bottom = 200.0
 script = ExtResource("1_fhmeo")
+metadata/_edit_group_ = true
 
 [node name="Shine" type="Sprite2D" parent="."]
 visible = false
@@ -33,7 +34,7 @@ offset_top = -3.0
 offset_right = 136.0
 offset_bottom = 203.0
 mouse_filter = 2
-color = Color(0, 0.87451, 0.168627, 1)
+color = Color(0, 0, 0, 1)
 
 [node name="DebugColor" type="ColorRect" parent="."]
 layout_mode = 0
@@ -79,9 +80,9 @@ state = 3
 
 [node name="PointsLabel" type="Label" parent="."]
 layout_mode = 0
-offset_right = 133.0
-offset_bottom = 64.0
-theme = ExtResource("8_25je3")
+offset_right = 40.0
+offset_bottom = 23.0
+theme = ExtResource("8_5lld8")
 text = "0"
 
 [connection signal="gui_input" from="." to="." method="_on_gui_input"]

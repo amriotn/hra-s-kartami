@@ -25,11 +25,7 @@ var ventured_tiles : Array = []
 var stats : PlayerStats = null
 
 func load_stats(player_stats : PlayerStats) -> void:
-	stats = player_stats
-
-
-func _ready():
-	print(str(self) + " is ready")
+	stats = player_stats.create_instance()
 
 
 func _on_dice_animated_sprite_send_dice_number(number):
@@ -96,7 +92,7 @@ func _on_highlight_send_highlight_position(highlight_position):
 	
 	#rolldice_button.disabled = false
 	
-	print(route_of_tiles)
+	#print(route_of_tiles)
 	route_of_tiles.clear()
 	
 	tween.connect("finished", handle_what_tile_player_stepped_on)
@@ -126,7 +122,10 @@ func handle_what_tile_player_stepped_on():
 		print(actions_of_tiles.give_card.get(self.position))
 		var card_data_path = actions_of_tiles.give_card.get(self.position)
 		var card = CARD_HAND_UI.instantiate()
-		card.load_data(load(card_data_path))
-		card.data.holder = self
+		var card_data : CardResource = load(card_data_path)
+		#card_data.holder = self
+		card.load_data(card_data, self)
+		#card.data.holder = self
+		print(str(card.data.holder)+ " PLAYER")
 		stats.cards_in_hand.append(card)
 		stats.hand.add_card(card)

@@ -11,7 +11,7 @@ extends Control
 var stats : PlayerStats = null
 
 func load_stats(player_stats : PlayerStats) -> void:
-	stats = player_stats
+	stats = player_stats.create_instance()
 	
 
 

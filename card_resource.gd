@@ -24,15 +24,27 @@ var color : Color = Rarity_colors[rarity]
 @export var icon : Texture
 @export var card_name : String
 @export_multiline var description : String
-
+"""
 func _init():
 	new_effect.card_data = self
-	new_effect.effect = effect
-	new_effect.effect_data = effect_data
-	new_effect.effect_target = effect_target
-	new_effect.effect_target_data = effect_target_data
 	print("Card resource init")
-
+"""
 
 func trigger_effect():
-	new_effect.trigger_effect()
+	new_effect.trigger_effect(self)
+
+func create_instance():
+	var instance : CardResource = CardResource.new()
+	instance.points = points
+	instance.rarity = rarity
+	instance.effect = effect
+	instance.effect_data = effect_data
+	instance.effect_target = effect_target
+	instance.effect_target_data = effect_target_data
+	
+	instance.icon = icon
+	instance.card_name = card_name
+	instance.description = description
+	#instance.holder = card_holder
+	instance.new_effect = instance.new_effect.create_instance(self)
+	return instance
