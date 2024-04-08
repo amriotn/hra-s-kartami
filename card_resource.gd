@@ -7,7 +7,7 @@ var new_effect : CardEffect = card_effect.new()
 enum Target {SELF, SINLGE_ENEMY, ALL_ENEMIES, EVERYONE, AREA, ENVIRONMENT}
 enum Rarity {COMMON, RARE, EPIC, LEGENDARY}
 const Rarity_colors : Array = [Color.GRAY, Color.BLUE, Color.WEB_PURPLE, Color.GOLDENROD]
-enum Effect {GIVE_CARD}
+enum Effect {GIVE_CARD, GIVE_IMMUNITY}
 
 @export_group("Card Attributes")
 @export var points : int
@@ -24,11 +24,7 @@ var color : Color = Rarity_colors[rarity]
 @export var icon : Texture
 @export var card_name : String
 @export_multiline var description : String
-"""
-func _init():
-	new_effect.card_data = self
-	print("Card resource init")
-"""
+
 
 func trigger_effect():
 	new_effect.trigger_effect(self)

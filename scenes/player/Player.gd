@@ -112,6 +112,7 @@ func handle_what_tile_player_stepped_on():
 		print("stuck player works")
 		print(actions_of_tiles.stuck_player.get(self.position))
 		stuck_until_dice_number = actions_of_tiles.stuck_player.get(self.position)
+		stats.active_effect = stats.Effect.STUCK
 	
 	elif actions_of_tiles.crossroads.has(self.position):
 		print("crossroads work")
@@ -126,6 +127,6 @@ func handle_what_tile_player_stepped_on():
 		#card_data.holder = self
 		card.load_data(card_data, self)
 		#card.data.holder = self
-		print(str(card.data.holder)+ " PLAYER")
+		#print(str(card.data.holder)+ " PLAYER")
 		stats.cards_in_hand.append(card)
 		stats.hand.add_card(card)

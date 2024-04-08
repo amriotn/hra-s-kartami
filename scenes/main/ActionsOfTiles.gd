@@ -58,10 +58,12 @@ func _ready():
 						card_marker.global_position = tile_node.map_to_local(tile_node.local_to_map(card_marker.global_position))
 						
 						var card_name : String = card_marker.name
-						if card_name[-1] == "%d":
-							card_name = card_name
-							
-						give_card[card_marker.global_position] = "res://test_card.tres"
+						var last_index : int = card_name.length()-1
+						while card_name[last_index].is_valid_int():
+							last_index -= 1
+						card_name = card_name.substr(0, last_index+1)
+						var resource_path = "res://"+str(card_name)+".tres"
+						give_card[card_marker.global_position] = resource_path
 #	print(move_player)
 #	print(stuck_player)
 #	print(crossroads)

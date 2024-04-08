@@ -168,8 +168,8 @@ script = ExtResource("2_akcfd")
 
 [node name="FadeOut" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(4, -388)
-scale = Vector2(1.875, 1.875)
+position = Vector2(-0.999992, -404)
+scale = Vector2(1.225, 1.225)
 texture = ExtResource("3_1ocul")
 
 [node name="DiceAnimatedSprite" type="AnimatedSprite2D" parent="."]
