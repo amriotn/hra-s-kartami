@@ -53,12 +53,18 @@ func check_surround_tiles_help(center_tile : Vector2i, previous_tile : Vector2i,
 	
 	if dice_number > 0:
 		if actions_of_tiles.crossroads.has(tilemap_node.map_to_local(center_tile)): # center_tile is a crossroad
-			if dice_number == self.dice_number: # STRAIGHT WAY
-				check_surround_tiles_help(tilemap_node.local_to_map(actions_of_tiles.crossroads.get(tilemap_node.map_to_local(center_tile))[2]), tilemap_node.local_to_map(actions_of_tiles.crossroads.get(tilemap_node.map_to_local(center_tile))[2]), dice_number-1)
-			elif self.dice_number%2 == 0: # EVEN WAY
-				check_surround_tiles_help(tilemap_node.local_to_map(actions_of_tiles.crossroads.get(tilemap_node.map_to_local(center_tile))[1]), tilemap_node.local_to_map(actions_of_tiles.crossroads.get(tilemap_node.map_to_local(center_tile))[1]), dice_number-1)
-			else: # ODD WAY
+			if actions_of_tiles.crossroads.get(tilemap_node.map_to_local(center_tile)).size() == 3:
+				if dice_number == self.dice_number: # STRAIGHT WAY
+					check_surround_tiles_help(tilemap_node.local_to_map(actions_of_tiles.crossroads.get(tilemap_node.map_to_local(center_tile))[2]), tilemap_node.local_to_map(actions_of_tiles.crossroads.get(tilemap_node.map_to_local(center_tile))[2]), dice_number-1)
+				elif self.dice_number%2 == 0: # EVEN WAY
+					check_surround_tiles_help(tilemap_node.local_to_map(actions_of_tiles.crossroads.get(tilemap_node.map_to_local(center_tile))[1]), tilemap_node.local_to_map(actions_of_tiles.crossroads.get(tilemap_node.map_to_local(center_tile))[1]), dice_number-1)
+				else: # ODD WAY
+					check_surround_tiles_help(tilemap_node.local_to_map(actions_of_tiles.crossroads.get(tilemap_node.map_to_local(center_tile))[0]), tilemap_node.local_to_map(actions_of_tiles.crossroads.get(tilemap_node.map_to_local(center_tile))[0]), dice_number-1)
+			elif actions_of_tiles.crossroads.get(tilemap_node.map_to_local(center_tile)).size() == 1:
 				check_surround_tiles_help(tilemap_node.local_to_map(actions_of_tiles.crossroads.get(tilemap_node.map_to_local(center_tile))[0]), tilemap_node.local_to_map(actions_of_tiles.crossroads.get(tilemap_node.map_to_local(center_tile))[0]), dice_number-1)
+		elif actions_of_tiles.swamp.has(tilemap_node.map_to_local(center_tile)):
+			if actions_of_tiles.swamp.get(tilemap_node.map_to_local(center_tile)).size() == 1:
+				check_surround_tiles_help(tilemap_node.local_to_map(actions_of_tiles.swamp.get(tilemap_node.map_to_local(center_tile))[0]), tilemap_node.local_to_map(actions_of_tiles.swamp.get(tilemap_node.map_to_local(center_tile))[0]), dice_number-1)
 		else:
 			for tile in current_surrounds:
 				if tile != previous_tile and tile != last_tile and tile not in ventured_tiles:
@@ -106,7 +112,9 @@ func handle_what_tile_player_stepped_on():
 		print(actions_of_tiles.move_player.get(self.position))
 		var tween = get_tree().create_tween()
 		tween.tween_property(self, "position", actions_of_tiles.move_player.get(self.position)[0], 0.5)
+		ventured_tiles.clear()
 		ventured_tiles.append(tilemap_node.local_to_map(actions_of_tiles.move_player.get(self.position)[1]))
+		last_tile = ventured_tiles[0]
 		
 	elif actions_of_tiles.stuck_player.has(self.position):
 		print("stuck player works")

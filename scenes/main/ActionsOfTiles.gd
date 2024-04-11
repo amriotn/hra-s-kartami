@@ -6,6 +6,7 @@ var move_player : Dictionary
 var stuck_player : Dictionary
 var crossroads : Dictionary
 var give_card : Dictionary
+var swamp : Dictionary
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -53,6 +54,8 @@ func _ready():
 						# crossroads = { (StartMarker) : ([OddWay, EvenWay, StraightWay]) }
 						if actions_markers.size() == 4:
 							crossroads[actions_markers[0].global_position] = [actions_markers[1].global_position, actions_markers[2].global_position, actions_markers[3].global_position]
+						elif actions_markers.size() == 2:
+							crossroads[actions_markers[0].global_position] = [actions_markers[1].global_position]
 				"GiveCard":
 					for card_marker : Marker2D in action.get_children():
 						card_marker.global_position = tile_node.map_to_local(tile_node.local_to_map(card_marker.global_position))
@@ -64,6 +67,21 @@ func _ready():
 						card_name = card_name.substr(0, last_index+1)
 						var resource_path = "res://"+str(card_name)+".tres"
 						give_card[card_marker.global_position] = resource_path
+				"BazinaWayThere":
+					for action_tile in action.get_children():
+						# Jezibaba, ...
+#						print("\t"+action_tile.name)
+						var actions_markers : Array = action_tile.get_children() # StartMarker, OddWay, EvenWay
+						
+						# fix marker positon to center of tile
+						for marker : Marker2D in actions_markers:
+							marker.global_position = tile_node.map_to_local(tile_node.local_to_map(marker.global_position))
+						
+						# crossroads = { (StartMarker) : ([OddWay, EvenWay, StraightWay]) }
+						if actions_markers.size() == 4:
+							swamp[actions_markers[0].global_position] = [actions_markers[1].global_position, actions_markers[2].global_position, actions_markers[3].global_position]
+						elif actions_markers.size() == 2:
+							swamp[actions_markers[0].global_position] = [actions_markers[1].global_position]
 #	print(move_player)
 #	print(stuck_player)
 #	print(crossroads)
