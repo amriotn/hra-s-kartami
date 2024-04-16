@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="CardResource" load_steps=2 format=3 uid="uid://dx7iv0j4eh7eh"]
+
+[ext_resource type="Script" path="res://card_resource.gd" id="1_36ce5"]
+
+[resource]
+script = ExtResource("1_36ce5")
+points = 15
+rarity = 2
+effect = 2
+effect_data = 0
+effect_target = 1
+effect_target_data = 0
+card_name = "Přines nepřítele"
+description = "Přinese k tobě hráče, kterého určíš."

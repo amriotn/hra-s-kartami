@@ -1,4 +1,5 @@
 extends Node2D
+class_name ActionsOfTiles
 
 var tile_node : TileMap
 var actions_array : Array
@@ -6,7 +7,17 @@ var move_player : Dictionary
 var stuck_player : Dictionary
 var crossroads : Dictionary
 var give_card : Dictionary
+var specials : Dictionary
+var bazina_way_there : Dictionary
+var bazina_way_back : Dictionary
 var swamp : Dictionary
+var conditional_jumps : Array
+
+@onready var korunka = $Specials/Korunka
+@onready var tun = $Specials/Tun/Tun
+@onready var conditional_jump_there = $ConditionalJumps/ConditionalJumpThere
+@onready var conditional_jump_back = $ConditionalJumps/ConditionalJumpBack
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -67,6 +78,7 @@ func _ready():
 						card_name = card_name.substr(0, last_index+1)
 						var resource_path = "res://"+str(card_name)+".tres"
 						give_card[card_marker.global_position] = resource_path
+						
 				"BazinaWayThere":
 					for action_tile in action.get_children():
 						# Jezibaba, ...
@@ -78,10 +90,56 @@ func _ready():
 							marker.global_position = tile_node.map_to_local(tile_node.local_to_map(marker.global_position))
 						
 						# crossroads = { (StartMarker) : ([OddWay, EvenWay, StraightWay]) }
-						if actions_markers.size() == 4:
-							swamp[actions_markers[0].global_position] = [actions_markers[1].global_position, actions_markers[2].global_position, actions_markers[3].global_position]
+						if actions_markers.size() == 3:
+							bazina_way_there[actions_markers[0].global_position] = [actions_markers[1].global_position, actions_markers[2].global_position]
 						elif actions_markers.size() == 2:
-							swamp[actions_markers[0].global_position] = [actions_markers[1].global_position]
+							bazina_way_there[actions_markers[0].global_position] = [actions_markers[1].global_position]
+						elif actions_markers.size() == 4:
+							for marker : Marker2D in actions_markers:
+								bazina_way_there[marker.global_position] = [int(String(action_tile.name)[-1])]
+				
+				"BazinaWayBack":
+					for action_tile in action.get_children():
+						# Jezibaba, ...
+#						print("\t"+action_tile.name)
+						var actions_markers : Array = action_tile.get_children() # StartMarker, OddWay, EvenWay
+						
+						# fix marker positon to center of tile
+						for marker : Marker2D in actions_markers:
+							marker.global_position = tile_node.map_to_local(tile_node.local_to_map(marker.global_position))
+						
+						# crossroads = { (StartMarker) : ([OddWay, EvenWay, StraightWay]) }
+						if actions_markers.size() == 3:
+							bazina_way_back[actions_markers[0].global_position] = [actions_markers[1].global_position, actions_markers[2].global_position]
+						elif actions_markers.size() == 2:
+							bazina_way_back[actions_markers[0].global_position] = [actions_markers[1].global_position]
+				
+				"Specials":
+					for action_tile in action.get_children():
+						# Jezibaba, ...
+#						print("\t"+action_tile.name)
+						var actions_markers : Array = action_tile.get_children() # StartMarker, OddWay, EvenWay
+						
+						# fix marker positon to center of tile
+						for marker : Marker2D in actions_markers:
+							marker.global_position = tile_node.map_to_local(tile_node.local_to_map(marker.global_position))
+							if marker.name != "DestinationMarkerThere" and marker.name != "InvalidWayMarkerThere" and marker.name != "DestinationMarkerBack" and marker.name != "InvalidWayMarkerBack":
+								specials[marker.global_position] = action_tile
+						
+						# crossroads = { (StartMarker) : ([OddWay, EvenWay, StraightWay]) }
+				
+				"Korunka":
+					korunka.global_position = tile_node.map_to_local(tile_node.local_to_map(korunka.global_position))
+				
+				"ConditionalJumps":
+					for action_tile in action.get_children():
+						# Jezibaba, ...
+						var actions_markers : Array = action_tile.get_children() # StartMarker, OddWay, EvenWay
+						# fix marker positon to center of tile
+						for marker : Marker2D in actions_markers:
+							marker.global_position = tile_node.map_to_local(tile_node.local_to_map(marker.global_position))
+						conditional_jumps.append(action_tile)
 #	print(move_player)
 #	print(stuck_player)
 #	print(crossroads)
+

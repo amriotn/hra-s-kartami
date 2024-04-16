@@ -1,8 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://cnsxnyxe4mnd0"]
+[gd_scene load_steps=6 format=3 uid="uid://cnsxnyxe4mnd0"]
 
 [ext_resource type="Script" path="res://scenes/menu/menu.gd" id="1_4na3m"]
 [ext_resource type="Theme" uid="uid://cxf28t24j2lk7" path="res://fonts/new_theme.tres" id="1_seyji"]
 [ext_resource type="Texture2D" uid="uid://dij03whkopbi3" path="res://assets/Seamless ground.png" id="2_5twbe"]
+[ext_resource type="Shader" path="res://scenes/menu/vignette.gdshader" id="4_q11ga"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hdkri"]
+shader = ExtResource("4_q11ga")
+shader_parameter/alpha = 0.5
+shader_parameter/inner_radius = 0.655
+shader_parameter/outer_radius = 1.495
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -21,17 +28,7 @@ scale = Vector2(0.593078, 0.593078)
 texture = ExtResource("2_5twbe")
 region_enabled = true
 region_rect = Rect2(0, 0, 4000, 2000)
-
-[node name="ColorRect" type="ColorRect" parent="."]
-visible = false
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-color = Color(0.294118, 0.294118, 0.294118, 1)
+metadata/_edit_lock_ = true
 
 [node name="LeftSide" type="Control" parent="."]
 layout_mode = 1
@@ -76,6 +73,7 @@ offset_left = -59.0
 offset_right = 110.0
 offset_bottom = 64.0
 theme = ExtResource("1_seyji")
+theme_override_font_sizes/font_size = 40
 text = "Pořadí"
 horizontal_alignment = 2
 
@@ -87,24 +85,43 @@ offset_bottom = 71.0
 
 [node name="Name" type="Label" parent="LeftSide/Header"]
 layout_mode = 2
-offset_left = 156.0
-offset_right = 669.0
+offset_left = 176.0
+offset_right = 288.0
 offset_bottom = 56.0
 theme = ExtResource("1_seyji")
+theme_override_font_sizes/font_size = 40
 text = "Jméno"
+
+[node name="VSeparator3" type="VSeparator" parent="LeftSide/Header"]
+layout_mode = 0
+offset_left = 476.25
+offset_right = 483.25
+offset_bottom = 71.0
+
+[node name="Icon" type="Label" parent="LeftSide/Header"]
+layout_mode = 0
+offset_left = 534.25
+offset_top = 4.0
+offset_right = 650.25
+offset_bottom = 68.0
+theme = ExtResource("1_seyji")
+theme_override_font_sizes/font_size = 40
+text = "Postava"
+horizontal_alignment = 1
 
 [node name="VSeparator2" type="VSeparator" parent="LeftSide/Header"]
 layout_mode = 0
-offset_left = 667.0
-offset_right = 674.0
+offset_left = 697.25
+offset_right = 704.25
 offset_bottom = 71.0
 
 [node name="Color" type="Label" parent="LeftSide/Header"]
 layout_mode = 0
-offset_left = 681.0
-offset_right = 797.0
+offset_left = 706.25
+offset_right = 822.25
 offset_bottom = 64.0
 theme = ExtResource("1_seyji")
+theme_override_font_sizes/font_size = 40
 text = "Barva"
 horizontal_alignment = 1
 
@@ -139,6 +156,7 @@ anchor_bottom = 1.0
 offset_left = -153.0
 grow_horizontal = 0
 grow_vertical = 2
+metadata/_edit_lock_ = true
 
 [node name="InfoLabel" type="Label" parent="RightSide"]
 layout_mode = 0
@@ -159,6 +177,16 @@ offset_right = 606.0
 offset_bottom = 255.0
 theme = ExtResource("1_seyji")
 text = "Začít Hrát"
+
+[node name="Vignette" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_hdkri")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
 
 [connection signal="pressed" from="LeftSide/AddPlayersContainer/AddPlayerButton" to="." method="_on_add_player_button_pressed"]
 [connection signal="pressed" from="RightSide/StartGameButton" to="." method="_on_start_game_button_pressed"]

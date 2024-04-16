@@ -4,10 +4,10 @@ extends Resource
 const card_effect = preload("res://card_effect.gd")
 var new_effect : CardEffect = card_effect.new()
 
-enum Target {SELF, SINLGE_ENEMY, ALL_ENEMIES, EVERYONE, AREA, ENVIRONMENT}
+enum Target {SELF, SINGLE_ENEMY, ALL_ENEMIES, EVERYONE, AREA, ENVIRONMENT}
 enum Rarity {COMMON, RARE, EPIC, LEGENDARY}
 const Rarity_colors : Array = [Color.GRAY, Color.BLUE, Color.WEB_PURPLE, Color.GOLDENROD]
-enum Effect {GIVE_CARD, GIVE_IMMUNITY}
+enum Effect {GIVE_CARD, GIVE_IMMUNITY, MOVE_PLAYER_TO_PLAYER}
 
 @export_group("Card Attributes")
 @export var points : int

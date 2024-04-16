@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://cja5kon0sg03y"]
+[gd_scene load_steps=37 format=3 uid="uid://cja5kon0sg03y"]
 
 [ext_resource type="Script" path="res://scenes/main/main.gd" id="1_61e2m"]
 [ext_resource type="Texture2D" uid="uid://t77edi32bv7v" path="res://assets/DirtTileSet.png" id="4_08yuv"]
@@ -13,6 +13,17 @@
 [ext_resource type="Script" path="res://scenes/main/ActionsOfTiles.gd" id="11_knj1u"]
 [ext_resource type="Shader" path="res://scenes/main/fog.gdshader" id="12_qrwrq"]
 [ext_resource type="Texture2D" uid="uid://caonnd2a1ehc3" path="res://assets/171069355917953053.png" id="13_6laf0"]
+[ext_resource type="Texture2D" uid="uid://77ttkhodefkk" path="res://assets/environment/trees/tree1.png" id="14_34i5n"]
+[ext_resource type="Texture2D" uid="uid://te0fexukr2tu" path="res://assets/environment/trees/tree3.png" id="15_vc04w"]
+[ext_resource type="Texture2D" uid="uid://crycyxobfauo0" path="res://assets/environment/trees/tree2.png" id="16_yvqtj"]
+[ext_resource type="Texture2D" uid="uid://c4cd6g01xbysl" path="res://assets/environment/trees/willow_tree2.png" id="17_fdvbs"]
+[ext_resource type="Texture2D" uid="uid://dl364rqci4kax" path="res://assets/environment/trees/willow_tree1.png" id="18_h0v0c"]
+[ext_resource type="Texture2D" uid="uid://4eouvnggkugp" path="res://assets/environment/grass_patches/grass_patch1.png" id="19_jd0vn"]
+[ext_resource type="Texture2D" uid="uid://dy480taqtag7w" path="res://assets/environment/grass_patches/grass_patch2.png" id="20_igcvw"]
+[ext_resource type="Texture2D" uid="uid://c272kb8ig373d" path="res://assets/environment/grass_patches/grass_patch3.png" id="21_aqjyk"]
+[ext_resource type="Texture2D" uid="uid://x84yfph05sdc" path="res://assets/environment/grass_patches/grass_patch4.png" id="22_p7try"]
+[ext_resource type="Texture2D" uid="uid://csq74ub1uyjyw" path="res://assets/environment/rocks/rock3.png" id="23_nybje"]
+[ext_resource type="Texture2D" uid="uid://b3bsq2cj8uiua" path="res://assets/environment/rocks/rock2.png" id="24_wosyr"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_xr8pr"]
 tile_data = PackedInt32Array(65536, 131076, 268435456, 131072, 131076, 268435456, 196608, 4, 536870912, 1, 131076, 268435456, 65537, 4, 536870912, 131073, 4, 536870912, 196609, 65540, 268435456, 262145, 65540, 268435456, 131074, 65540, 268435456)
@@ -145,18 +156,18 @@ format = 2
 layer_0/name = "Route"
 layer_0/y_sort_enabled = true
 layer_0/z_index = 1
-layer_0/tile_data = PackedInt32Array(2490391, 131072, 0, 2555927, 131072, 0, 1769474, 131072, 0, 1835011, 131072, 0, 1900547, 131072, 0, 1966084, 131072, 0, 2031620, 131072, 0, 2097157, 131072, 0, 2162693, 131072, 0, 2228230, 131072, 0, 2293766, 131072, 0, 2621448, 131072, 0, 2686984, 131072, 0, 2752521, 131072, 0, 2818057, 131072, 0, 2883594, 131072, 0, 2949130, 131072, 0, 3080203, 131072, 0, 3145740, 131072, 0, 3014669, 131072, 0, 3080204, 131072, 0, 2883598, 131072, 0, 2949133, 131072, 0, 2818072, 131072, 0, 3080216, 131072, 0, 3276824, 131072, 0, 3473431, 131072, 0, 3735575, 131072, 0, 3866648, 131072, 0, 3997721, 131072, 0, 4063259, 131072, 0, 3997724, 131072, 0, 3670047, 131072, 0, 3735582, 131072, 0, 3538976, 131072, 0, 3604511, 131072, 0, 3407905, 131072, 0, 3473440, 131072, 0, 3342369, 131072, 0, 3801118, 131072, 0, 3211299, 131072, 536870912, 3276837, 131072, 536870912, 3342374, 131072, 536870912, 3407912, 131072, 536870912, 3276841, 131072, 536870912, 3080233, 131072, 536870912, 2949161, 131072, 536870912, 2752553, 131072, 536870912, 2687016, 131072, 536870912, 2555943, 131072, 536870912, 2359334, 131072, 536870912, 2293797, 131072, 536870912, 2228261, 131072, 536870912, 2162724, 131072, 536870912, 1900579, 131072, 536870912, 1835044, 131072, 536870912, 1769508, 131072, 536870912, 1703973, 131072, 536870912, 1703975, 131072, 536870912, 1769512, 131072, 536870912, 1835051, 131072, 536870912, 1376303, 131072, 536870912, 1310767, 131072, 536870912, 1245229, 131072, 536870912, 1179693, 131072, 536870912, 1245228, 131072, 536870912, 1179692, 131072, 536870912, 1114155, 131072, 536870912, 1179691, 131072, 536870912, 1114154, 131072, 536870912, 1048618, 131072, 536870912, 458761, 131072, 536870912, 393225, 131072, 536870912, 327688, 131072, 536870912, 262152, 131072, 536870912, 196615, 131072, 536870912, 131079, 131072, 536870912, 65542, 131072, 536870912, 6, 131072, 536870912, -65531, 131072, 536870912, -65532, 131072, 536870912, 4, 131072, 536870912, 65539, 131072, 536870912, 65538, 131072, 536870912, 2, 131072, 536870912, -65535, 131072, 536870912, -131071, 131072, 536870912, -196608, 131072, 536870912, -327680, 131072, 536870912, -524286, 131072, 536870912, -524285, 131072, 536870912, -458749, 131072, 536870912, -393212, 131072, 536870912, -458748, 131072, 536870912, -524283, 131072, 536870912, -655355, 131072, 536870912, -786427, 131072, 536870912, -851963, 131072, 536870912, -917498, 131072, 536870912, -983034, 131072, 536870912, -983033, 131072, 536870912, -917496, 131072, 536870912, -851960, 131072, 536870912, -786423, 131072, 536870912, -720887, 131072, 536870912, -589815, 131072, 536870912, -524278, 131072, 536870912, -196600, 131072, 536870912, -131063, 131072, 536870912, -65527, 131072, 536870912, 10, 131072, 536870912, -262136, 131072, 536870912, -393207, 131072, 536870912, -327672, 131072, 536870912, -458743, 131072, 536870912, 1048601, 131072, 0, 983065, 131072, 0, 786458, 131072, 0, 720922, 131072, 0, 524315, 131072, 0, 458779, 131072, 0, 393244, 131072, 0, 131101, 131072, 0, 65565, 131072, 0, 30, 131072, 0, -65506, 131072, 0, -131041, 131072, 0, -65504, 131072, 0, -131039, 131072, 0, -196575, 131072, 0, -262110, 131072, 0, -327646, 131072, 0, 2031631, 131072, 0, 1966096, 131072, 0, 1179663, 131072, 0, 1245199, 131072, 0, 1245204, 131072, 0, 1179669, 131072, 0, 2031636, 131072, 0, 2097173, 131072, 0, -1179627, 131072, 0, -1245164, 131072, 0, -1376236, 131072, 0, -1441771, 131072, 0, -1507307, 131072, 0, -1310700, 131072, 0, -1572843, 131072, 0, -1638379, 131072, 0, -1703914, 131072, 0, -1769450, 131072, 0, -1834985, 131072, 0, -1900521, 131072, 0, -1834984, 131072, 0, -1769448, 131072, 0, -1703911, 131072, 0, -1638375, 131072, 0, -1572839, 131072, 0, -1507304, 131072, 0, -1441768, 131072, 0, -1376232, 131072, 0, -1310695, 131072, 0, -1245159, 131072, 0, -1048555, 131072, 0, -983019, 131072, 0, -917482, 131072, 0, -1114092, 131072, 0, -2949110, 131072, 0, -3014646, 131072, 0, -3080183, 131072, 0, -3211255, 131072, 0, -3735541, 131072, 0, -3801076, 131072, 0, -3866612, 131072, 0, -3932147, 131072, 0, -3997683, 131072, 0, -4063218, 131072, 0, -4128754, 131072, 0, -3538934, 131072, 0, -3473399, 131072, 0, -3670005, 131072, 0, -3604470, 131072, 0, -2752501, 131072, 0, -2621429, 131072, 0, -2555893, 131072, 0, -2490356, 131072, 0, -2424820, 131072, 0, -2359283, 131072, 0, -2293747, 131072, 0, -2686965, 131072, 0, -2228210, 131072, 0, -1245145, 131072, 0, -1179608, 131072, 0, -1114072, 131072, 0, -1048535, 131072, 0, -982999, 131072, 0, -917462, 131072, 0, -851926, 131072, 0, -786389, 131072, 0, -720853, 131072, 0, -655316, 131072, 0, -589780, 131072, 0, -524243, 131072, 0, -524241, 131072, 0, -589777, 131072, 0, -1966031, 131072, 0, -2031567, 131072, 0, -1966030, 131072, 0, -2097103, 131072, 0, -2162640, 131072, 0, -2228175, 131072, 0, -2293711, 131072, 0, -2359247, 131072, 0, -2424784, 131072, 0, -2490320, 131072, 0, -1834957, 131072, 0, -1834955, 131072, 0, -1966026, 131072, 0, -2097097, 131072, 0, -2162633, 131072, 0, -2228168, 131072, 0, -2293704, 131072, 0, -2359239, 131072, 0, -2621383, 131072, 0, -2686920, 131072, 0, -2752456, 131072, 0, -2817993, 131072, 0, -2883529, 131072, 0, -2949066, 131072, 0, -3276747, 131072, 0, -3342284, 131072, 0, -3407820, 131072, 0, -3473357, 131072, 0, -3538893, 131072, 0, -3669967, 131072, 0, -3735504, 131072, 0, -3801040, 131072, 0, -3866577, 131072, 0, -3932113, 131072, 0, -4063187, 131072, 0, -4128724, 131072, 0, -4063188, 131072, 0, -3997653, 131072, 0, -3932117, 131072, 0, -3866582, 131072, 0, -3801046, 131072, 0, -3735511, 131072, 0, -3407833, 131072, 0, -3342298, 131072, 0, -3276762, 131072, 0, -3145689, 131072, 0, -3080153, 131072, 0, -3145688, 131072, 0, -3211224, 131072, 0, -2818006, 131072, 0, -2752470, 131072, 0, -2686935, 131072, 0, -2621399, 131072, 0, -2555864, 131072, 0, -2490327, 131072, 0, -2424791, 131072, 0, -2293718, 131072, 0, -2359253, 131072, 0, -2424789, 131072, 0, -2490324, 131072, 0, -2555860, 131072, 0, -2621395, 131072, 0, -2555859, 131072, 0, -2490322, 131072, 0, -2424786, 131072, 0, 1638445, 131072, 536870912, 1703981, 131072, 536870912, 1507374, 131072, 536870912, 1572910, 131072, 536870912, -458706, 131072, 0, -2162674, 131072, 0, 1769514, 131072, 0, 1769516, 131072, 0, -3145719, 131072, 0)
+layer_0/tile_data = PackedInt32Array(2490391, 131072, 0, 2555927, 131072, 0, 1769474, 131072, 0, 1835011, 131072, 0, 1900547, 131072, 0, 1966084, 131072, 0, 2031620, 131072, 0, 2097157, 131072, 0, 2162693, 131072, 0, 2228230, 131072, 0, 2293766, 131072, 0, 2621448, 131072, 0, 2686984, 131072, 0, 2752521, 131072, 0, 2818057, 131072, 0, 2883594, 131072, 0, 2949130, 131072, 0, 3080203, 131072, 0, 3145740, 131072, 0, 3014669, 131072, 0, 3080204, 131072, 0, 2883598, 131072, 0, 2949133, 131072, 0, 2818072, 131072, 0, 3080216, 131072, 0, 3276824, 131072, 0, 3473431, 131072, 0, 3735575, 131072, 0, 3866648, 131072, 0, 3997721, 131072, 0, 4063259, 131072, 0, 3997724, 131072, 0, 3670047, 131072, 0, 3735582, 131072, 0, 3538976, 131072, 0, 3604511, 131072, 0, 3407905, 131072, 0, 3473440, 131072, 0, 3342369, 131072, 0, 3801118, 131072, 0, 3211299, 131072, 536870912, 3276837, 131072, 536870912, 3342374, 131072, 536870912, 3407912, 131072, 536870912, 3276841, 131072, 536870912, 3080233, 131072, 536870912, 2949161, 131072, 536870912, 2752553, 131072, 536870912, 2687016, 131072, 536870912, 2555943, 131072, 536870912, 2359334, 131072, 536870912, 2293797, 131072, 536870912, 2228261, 131072, 536870912, 2162724, 131072, 536870912, 1900579, 131072, 536870912, 1835044, 131072, 536870912, 1769508, 131072, 536870912, 1703973, 131072, 536870912, 1703975, 131072, 536870912, 1769512, 131072, 536870912, 1835051, 131072, 536870912, 1376303, 131072, 536870912, 1310767, 131072, 536870912, 1245229, 131072, 536870912, 1179693, 131072, 536870912, 1245228, 131072, 536870912, 1179692, 131072, 536870912, 1114155, 131072, 536870912, 1179691, 131072, 536870912, 1114154, 131072, 536870912, 1048618, 131072, 536870912, 458761, 131072, 536870912, 393225, 131072, 536870912, 327688, 131072, 536870912, 262152, 131072, 536870912, 196615, 131072, 536870912, 131079, 131072, 536870912, 65542, 131072, 536870912, 6, 131072, 536870912, -65531, 131072, 536870912, -65532, 131072, 536870912, 4, 131072, 536870912, 65539, 131072, 536870912, 65538, 131072, 536870912, 2, 131072, 536870912, -65535, 131072, 536870912, -131071, 131072, 536870912, -196608, 131072, 536870912, -327680, 131072, 536870912, -524286, 131072, 536870912, -524285, 131072, 536870912, -458749, 131072, 536870912, -393212, 131072, 536870912, -458748, 131072, 536870912, -524283, 131072, 536870912, -655355, 131072, 536870912, -786427, 131072, 536870912, -851963, 131072, 536870912, -917498, 131072, 536870912, -983034, 131072, 536870912, -983033, 131072, 536870912, -917496, 131072, 536870912, -851960, 131072, 536870912, -786423, 131072, 536870912, -720887, 131072, 536870912, -589815, 131072, 536870912, -524278, 131072, 536870912, -196600, 131072, 536870912, -131063, 131072, 536870912, -65527, 131072, 536870912, 10, 131072, 536870912, -262136, 131072, 536870912, -393207, 131072, 536870912, -327672, 131072, 536870912, -458743, 131072, 536870912, 1048601, 131072, 0, 983065, 131072, 0, 786458, 131072, 0, 720922, 131072, 0, 524315, 131072, 0, 458779, 131072, 0, 393244, 131072, 0, -65504, 131072, 0, -131039, 131072, 0, -196575, 131072, 0, -262110, 131072, 0, -327646, 131072, 0, 2031631, 131072, 0, 1966096, 131072, 0, 1179663, 131072, 0, 1245199, 131072, 0, 1245204, 131072, 0, 1179669, 131072, 0, 2031636, 131072, 0, 2097173, 131072, 0, -1179627, 131072, 0, -1245164, 131072, 0, -1376236, 131072, 0, -1441771, 131072, 0, -1507307, 131072, 0, -1310700, 131072, 0, -1572843, 131072, 0, -1638379, 131072, 0, -1703914, 131072, 0, -1769450, 131072, 0, -1834985, 131072, 0, -1900521, 131072, 0, -1834984, 131072, 0, -1769448, 131072, 0, -1703911, 131072, 0, -1638375, 131072, 0, -1572839, 131072, 0, -1507304, 131072, 0, -1441768, 131072, 0, -1376232, 131072, 0, -1310695, 131072, 0, -1245159, 131072, 0, -1048555, 131072, 0, -983019, 131072, 0, -917482, 131072, 0, -1114092, 131072, 0, -2949110, 131072, 0, -3014646, 131072, 0, -3080183, 131072, 0, -3211255, 131072, 0, -3735541, 131072, 0, -3801076, 131072, 0, -3866612, 131072, 0, -3932147, 131072, 0, -3997683, 131072, 0, -4063218, 131072, 0, -4128754, 131072, 0, -3538934, 131072, 0, -3473399, 131072, 0, -3670005, 131072, 0, -3604470, 131072, 0, -2752501, 131072, 0, -2621429, 131072, 0, -2555893, 131072, 0, -2490356, 131072, 0, -2424820, 131072, 0, -2359283, 131072, 0, -2293747, 131072, 0, -2686965, 131072, 0, -2228210, 131072, 0, -1245145, 131072, 0, -1179608, 131072, 0, -1114072, 131072, 0, -1048535, 131072, 0, -982999, 131072, 0, -917462, 131072, 0, -851926, 131072, 0, -786389, 131072, 0, -720853, 131072, 0, -655316, 131072, 0, -589780, 131072, 0, -524243, 131072, 0, -524241, 131072, 0, -1966031, 131072, 0, -2031567, 131072, 0, -1966030, 131072, 0, -2097103, 131072, 0, -2162640, 131072, 0, -2228175, 131072, 0, -2293711, 131072, 0, -2359247, 131072, 0, -2424784, 131072, 0, -2490320, 131072, 0, -1834957, 131072, 0, -1834955, 131072, 0, -1966026, 131072, 0, -2097097, 131072, 0, -2162633, 131072, 0, -2228168, 131072, 0, -2293704, 131072, 0, -2359239, 131072, 0, -2621383, 131072, 0, -2686920, 131072, 0, -2752456, 131072, 0, -2817993, 131072, 0, -2883529, 131072, 0, -2949066, 131072, 0, -3276747, 131072, 0, -3342284, 131072, 0, -3407820, 131072, 0, -3473357, 131072, 0, -3538893, 131072, 0, -3669967, 131072, 0, -3735504, 131072, 0, -3801040, 131072, 0, -3866577, 131072, 0, -3932113, 131072, 0, -4063187, 131072, 0, -4128724, 131072, 0, -4063188, 131072, 0, -3997653, 131072, 0, -3932117, 131072, 0, -3866582, 131072, 0, -3801046, 131072, 0, -3735511, 131072, 0, -3407833, 131072, 0, -3342298, 131072, 0, -3276762, 131072, 0, -3145689, 131072, 0, -3080153, 131072, 0, -3145688, 131072, 0, -3211224, 131072, 0, -2818006, 131072, 0, -2752470, 131072, 0, -2686935, 131072, 0, -2621399, 131072, 0, -2555864, 131072, 0, -2490327, 131072, 0, -2424791, 131072, 0, -2293718, 131072, 0, -2359253, 131072, 0, -2424789, 131072, 0, -2490324, 131072, 0, -2555860, 131072, 0, -2621395, 131072, 0, -2555859, 131072, 0, -2490322, 131072, 0, -2424786, 131072, 0, 1638445, 131072, 536870912, 1703981, 131072, 536870912, 1507374, 131072, 536870912, 1572910, 131072, 536870912, -458706, 131072, 0, -2162674, 131072, 0, 1769514, 131072, 0, 1769516, 131072, 0, -3145719, 131072, 0, 720935, 196614, 0, -1900496, 131072, 0, 327708, 131072, 0, -65506, 131072, 0, -131041, 131072, 0, 65565, 131072, 0, 131101, 131072, 0)
 layer_1/name = "Action"
 layer_1/y_sort_enabled = true
 layer_1/z_index = 2
-layer_1/tile_data = PackedInt32Array(1769474, 196614, 0, 2228230, 131078, 0, 2621448, 262150, 0, 2686984, 262150, 0, 2752521, 262150, 0, 2818057, 262150, 0, 2883594, 262150, 0, 2883598, 65542, 0, 1966096, 65542, 0, 1179663, 65542, 0, 1179669, 65542, 0, 2097173, 65542, 0, 3735582, 131078, 0, 3407905, 131078, 0, 3670047, 262150, 0, 3604511, 262150, 0, 3538976, 262150, 0, 3473440, 262150, 0, 2293797, 131078, 0, 1769508, 131078, 0, 1703973, 131078, 0, 1769512, 131078, 0, 1310767, 196614, 0, 1376303, 196614, 0, 65565, 131078, 0, -65506, 131078, 0, -327646, 65542, 0, -917462, 131078, 0, -851926, 131078, 0, -786389, 131078, 0, -589777, 65542, 0, -1245145, 196614, 0, -2031567, 131078, 0, -2293711, 131078, 0, -2424789, 131078, 0, -2555864, 131078, 0, -2752456, 131078, 0, -3866577, 131078, 0, -2818006, 196614, 0, -3211224, 196614, 0, -3145688, 131078, 0, -2752470, 131078, 0, -3801046, 262150, 0, -3866582, 262150, 0, -4063188, 262150, 0, -4128724, 262150, 0, -2293704, 196614, 0, -1310700, 131078, 0, -1638375, 131078, 0, -131071, 131078, 0, -393212, 131078, 0, 6, 131078, 0, -327672, 131078, 0, -917498, 131078, 0, -2359283, 131078, 0, -2424820, 131078, 0, -3014646, 131078, 0, -3473399, 131078, 0, -3538934, 131078, 0, -3866612, 131078, 0, -2162674, 65542, 0)
+layer_1/tile_data = PackedInt32Array(1769474, 196614, 0, 2228230, 131078, 0, 2621448, 262150, 0, 2686984, 262150, 0, 2752521, 262150, 0, 2818057, 262150, 0, 2883594, 262150, 0, 2883598, 65542, 0, 1966096, 65542, 0, 1179663, 65542, 0, 1179669, 65542, 0, 2097173, 65542, 0, 3735582, 131078, 0, 3407905, 131078, 0, 3670047, 262150, 0, 3604511, 262150, 0, 3538976, 262150, 0, 3473440, 262150, 0, 2293797, 131078, 0, 1769508, 131078, 0, 1703973, 131078, 0, 1769512, 131078, 0, 1310767, 196614, 0, 1376303, 196614, 0, -65506, 131078, 0, -327646, 65542, 0, -917462, 131078, 0, -851926, 131078, 0, -786389, 131078, 0, -1245145, 196614, 0, -2031567, 65542, 0, -2293711, 131078, 0, -2424789, 131078, 0, -2555864, 131078, 0, -2752456, 131078, 0, -3866577, 131078, 0, -2818006, 196614, 0, -3211224, 196614, 0, -3145688, 131078, 0, -2752470, 131078, 0, -3801046, 262150, 0, -3866582, 262150, 0, -4063188, 262150, 0, -4128724, 262150, 0, -2293704, 196614, 0, -1310700, 131078, 0, -1638375, 131078, 0, -131071, 131078, 0, -393212, 131078, 0, 6, 131078, 0, -327672, 131078, 0, -917498, 131078, 0, -2359283, 131078, 0, -2424820, 131078, 0, -3014646, 131078, 0, -3473399, 131078, 0, -3538934, 131078, 0, -3866612, 131078, 0, -2162674, 65542, 0, -1900496, 196614, 0, 131101, 131078, 0)
 layer_2/name = "Environment"
 layer_2/y_sort_enabled = true
 layer_2/z_index = 3
 layer_2/tile_data = PackedInt32Array()
 
 [node name="StartPosition" type="Marker2D" parent="."]
-position = Vector2(1864, 316)
+position = Vector2(597, 1404)
 
 [node name="MainCamera" type="Camera2D" parent="." groups=["cameras"]]
 top_level = true
@@ -664,30 +675,6 @@ position = Vector2(1205, 1769)
 [node name="InvalidWayMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/HnedyKun"]
 position = Vector2(1144, 1799)
 
-[node name="Carodej1" type="Node2D" parent="ActionsOfTiles/MovePlayer"]
-position = Vector2(5073, -1181)
-
-[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/Carodej1"]
-position = Vector2(2, 187)
-
-[node name="DestinationMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/Carodej1"]
-position = Vector2(-1495, -548)
-
-[node name="InvalidWayMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/Carodej1"]
-position = Vector2(-1413, -504)
-
-[node name="Carodej2" type="Node2D" parent="ActionsOfTiles/MovePlayer"]
-position = Vector2(5166, -1208)
-
-[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/Carodej2"]
-position = Vector2(107, 118)
-
-[node name="DestinationMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/Carodej2"]
-position = Vector2(-881, -770)
-
-[node name="InvalidWayMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/Carodej2"]
-position = Vector2(-796, -723)
-
 [node name="CernePrase" type="Node2D" parent="ActionsOfTiles/MovePlayer"]
 position = Vector2(4294, -2405)
 
@@ -784,6 +771,78 @@ position = Vector2(684, 3475)
 [node name="InvalidWayMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/CernyHavran"]
 position = Vector2(542, 3499)
 
+[node name="Had1" type="Node2D" parent="ActionsOfTiles/MovePlayer"]
+position = Vector2(9184, -2846)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/Had1"]
+position = Vector2(-114, 48)
+
+[node name="DestinationMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/Had1"]
+position = Vector2(-306, 366)
+
+[node name="InvalidWayMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/Had1"]
+position = Vector2(-574, 1415)
+
+[node name="Had2" type="Node2D" parent="ActionsOfTiles/MovePlayer"]
+position = Vector2(7841, -2977)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/Had2"]
+position = Vector2(37, 83)
+
+[node name="DestinationMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/Had2"]
+position = Vector2(999, 497)
+
+[node name="InvalidWayMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/Had2"]
+position = Vector2(725, 1520)
+
+[node name="Hrad1" type="Node2D" parent="ActionsOfTiles/MovePlayer"]
+position = Vector2(7520, -3218)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/Hrad1"]
+position = Vector2(37, 83)
+
+[node name="DestinationMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/Hrad1"]
+position = Vector2(-2544, 2299)
+
+[node name="InvalidWayMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/Hrad1"]
+position = Vector2(-2671, 2420)
+
+[node name="Hrad2" type="Node2D" parent="ActionsOfTiles/MovePlayer"]
+position = Vector2(7127, -3518)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/Hrad2"]
+position = Vector2(37, 83)
+
+[node name="DestinationMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/Hrad2"]
+position = Vector2(-1859, 2456)
+
+[node name="InvalidWayMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/Hrad2"]
+position = Vector2(-2019, 2549)
+
+[node name="DechDraka" type="Node2D" parent="ActionsOfTiles/MovePlayer"]
+position = Vector2(8747, -4069)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/DechDraka"]
+position = Vector2(-65, 86)
+
+[node name="DestinationMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/DechDraka"]
+position = Vector2(1712, 1286)
+
+[node name="InvalidWayMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/DechDraka"]
+position = Vector2(1642, 1317)
+
+[node name="DechDraka2" type="Node2D" parent="ActionsOfTiles/MovePlayer"]
+position = Vector2(10462, -3221)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/DechDraka2"]
+position = Vector2(-65, 86)
+
+[node name="DestinationMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/DechDraka2"]
+position = Vector2(-1605, 722)
+
+[node name="InvalidWayMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/DechDraka2"]
+position = Vector2(-1880, 1794)
+
 [node name="StuckPlayer" type="Node2D" parent="ActionsOfTiles"]
 position = Vector2(245, -3)
 
@@ -804,6 +863,417 @@ position = Vector2(243, 239)
 
 [node name="StuckPlayer5_3" type="Marker2D" parent="ActionsOfTiles/StuckPlayer/San_Roll3"]
 position = Vector2(333, 287)
+
+[node name="Drak_Roll1" type="Node2D" parent="ActionsOfTiles/StuckPlayer"]
+position = Vector2(7864, -4294)
+
+[node name="StuckPlayer1" type="Marker2D" parent="ActionsOfTiles/StuckPlayer/Drak_Roll1"]
+position = Vector2(95, 112)
+
+[node name="StuckPlayer2" type="Marker2D" parent="ActionsOfTiles/StuckPlayer/Drak_Roll1"]
+position = Vector2(-28, 155)
+
+[node name="StuckPlayer3" type="Marker2D" parent="ActionsOfTiles/StuckPlayer/Drak_Roll1"]
+position = Vector2(-340, 304)
+
+[node name="StuckPlayer4" type="Marker2D" parent="ActionsOfTiles/StuckPlayer/Drak_Roll1"]
+position = Vector2(-435, 369)
+
+[node name="Crossroads" type="Node2D" parent="ActionsOfTiles"]
+position = Vector2(364, -11)
+
+[node name="Jezibaba" type="Node2D" parent="ActionsOfTiles/Crossroads"]
+position = Vector2(2522, 211)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jezibaba"]
+position = Vector2(-371, 245)
+
+[node name="OddWay_135" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jezibaba"]
+position = Vector2(-490, -280)
+
+[node name="EvenWay_246" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jezibaba"]
+position = Vector2(516, 322)
+
+[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jezibaba"]
+position = Vector2(494, -281)
+
+[node name="Jump1" type="Node2D" parent="ActionsOfTiles/Crossroads"]
+position = Vector2(314, 641)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump1"]
+position = Vector2(-101, 93)
+
+[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump1"]
+position = Vector2(175, 339)
+
+[node name="Jump2" type="Node2D" parent="ActionsOfTiles/Crossroads"]
+position = Vector2(1092, 1139)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump2"]
+position = Vector2(-101, 93)
+
+[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump2"]
+position = Vector2(121, 192)
+
+[node name="Jump3" type="Node2D" parent="ActionsOfTiles/Crossroads"]
+position = Vector2(1835, 1082)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump3"]
+position = Vector2(-101, 93)
+
+[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump3"]
+position = Vector2(185, -553)
+
+[node name="Jump4" type="Node2D" parent="ActionsOfTiles/Crossroads"]
+position = Vector2(1912, -306)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump4"]
+position = Vector2(18, 179)
+
+[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump4"]
+position = Vector2(-1076, -379)
+
+[node name="Jump5" type="Node2D" parent="ActionsOfTiles/Crossroads"]
+position = Vector2(-19, -1193)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump5"]
+position = Vector2(45, 113)
+
+[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump5"]
+position = Vector2(-135, 125)
+
+[node name="Jump6" type="Node2D" parent="ActionsOfTiles/Crossroads"]
+position = Vector2(-503, -1088)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump6"]
+position = Vector2(132, 124)
+
+[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump6"]
+position = Vector2(-72, 106)
+
+[node name="Jump7" type="Node2D" parent="ActionsOfTiles/Crossroads"]
+position = Vector2(-795, -1254)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump7"]
+position = Vector2(-173, 84)
+
+[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump7"]
+position = Vector2(-206, -24)
+
+[node name="Jump8" type="Node2D" parent="ActionsOfTiles/Crossroads"]
+position = Vector2(-876, -1425)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump8"]
+position = Vector2(-62, 155)
+
+[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump8"]
+position = Vector2(220, 2)
+
+[node name="Jump9" type="Node2D" parent="ActionsOfTiles/Crossroads"]
+position = Vector2(-532, -1552)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump9"]
+position = Vector2(-176, 124)
+
+[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump9"]
+position = Vector2(68, 106)
+
+[node name="Jump10" type="Node2D" parent="ActionsOfTiles/Crossroads"]
+position = Vector2(122, -1612)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump10"]
+position = Vector2(-182, 191)
+
+[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump10"]
+position = Vector2(-183, 81)
+
+[node name="Jump11" type="Node2D" parent="ActionsOfTiles/Crossroads"]
+position = Vector2(-259, -1660)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump11"]
+position = Vector2(154, 134)
+
+[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump11"]
+position = Vector2(189, 30)
+
+[node name="Jump12" type="Node2D" parent="ActionsOfTiles/Crossroads"]
+position = Vector2(379, -1923)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump12"]
+position = Vector2(-144, 146)
+
+[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump12"]
+position = Vector2(46, 144)
+
+[node name="Jump13" type="Node2D" parent="ActionsOfTiles/Crossroads"]
+position = Vector2(1049, -1663)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump13"]
+position = Vector2(-214, 73)
+
+[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump13"]
+position = Vector2(-208, 185)
+
+[node name="Jump14" type="Node2D" parent="ActionsOfTiles/Crossroads"]
+position = Vector2(1125, -1098)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump14"]
+position = Vector2(-202, 83)
+
+[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump14"]
+position = Vector2(2806, 883)
+
+[node name="Jump15" type="Node2D" parent="ActionsOfTiles/Crossroads"]
+position = Vector2(4018, -509)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump15"]
+position = Vector2(20, 224)
+
+[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump15"]
+position = Vector2(125, 87)
+
+[node name="Jump16" type="Node2D" parent="ActionsOfTiles/Crossroads"]
+position = Vector2(4205, -713)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump16"]
+position = Vector2(20, 224)
+
+[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump16"]
+position = Vector2(125, 87)
+
+[node name="Jump17" type="Node2D" parent="ActionsOfTiles/Crossroads"]
+position = Vector2(4519, -956)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump17"]
+position = Vector2(124, 169)
+
+[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump17"]
+position = Vector2(213, 33)
+
+[node name="Jump18" type="Node2D" parent="ActionsOfTiles/Crossroads"]
+position = Vector2(5260, -1278)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump18"]
+position = Vector2(-130, 145)
+
+[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump18"]
+position = Vector2(190, 203)
+
+[node name="Jump19" type="Node2D" parent="ActionsOfTiles/Crossroads"]
+position = Vector2(6132, -1793)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump19"]
+position = Vector2(-312, 522)
+
+[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump19"]
+position = Vector2(669, -162)
+
+[node name="Jump20" type="Node2D" parent="ActionsOfTiles/Crossroads"]
+position = Vector2(3436, -285)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump20"]
+position = Vector2(-323, 166)
+
+[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump20"]
+position = Vector2(461, 63)
+
+[node name="Jump21" type="Node2D" parent="ActionsOfTiles/Crossroads"]
+position = Vector2(649, -3611)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump21"]
+position = Vector2(145, -68)
+
+[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump21"]
+position = Vector2(171, 134)
+
+[node name="Jump22" type="Node2D" parent="ActionsOfTiles/Crossroads"]
+position = Vector2(905, -3160)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump22"]
+position = Vector2(132, -122)
+
+[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump22"]
+position = Vector2(209, 33)
+
+[node name="Jump23" type="Node2D" parent="ActionsOfTiles/Crossroads"]
+position = Vector2(1886, -2447)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump23"]
+position = Vector2(-66, -227)
+
+[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump23"]
+position = Vector2(2409, 1817)
+
+[node name="Jump24" type="Node2D" parent="ActionsOfTiles/Crossroads"]
+position = Vector2(4708, -1158)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump24"]
+position = Vector2(124, 169)
+
+[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump24"]
+position = Vector2(291, 91)
+
+[node name="Jump25" type="Node2D" parent="ActionsOfTiles/Crossroads"]
+position = Vector2(8383, -1993)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump25"]
+position = Vector2(-88, 567)
+
+[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump25"]
+position = Vector2(255, -505)
+
+[node name="Jump26" type="Node2D" parent="ActionsOfTiles/Crossroads"]
+position = Vector2(7953, -1622)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump26"]
+position = Vector2(-37, 188)
+
+[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump26"]
+position = Vector2(276, 264)
+
+[node name="Jump27" type="Node2D" parent="ActionsOfTiles/Crossroads"]
+position = Vector2(8367, -3004)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump27"]
+position = Vector2(177, 74)
+
+[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump27"]
+position = Vector2(-136, 124)
+
+[node name="Jump28" type="Node2D" parent="ActionsOfTiles/Crossroads"]
+position = Vector2(7388, -2928)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump28"]
+position = Vector2(22, 158)
+
+[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump28"]
+position = Vector2(-158, 53)
+
+[node name="Jump29" type="Node2D" parent="ActionsOfTiles/Crossroads"]
+position = Vector2(9053, -2590)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump29"]
+position = Vector2(-114, 63)
+
+[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump29"]
+position = Vector2(99, 169)
+
+[node name="Jump30" type="Node2D" parent="ActionsOfTiles/Crossroads"]
+position = Vector2(9357, -2505)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump30"]
+position = Vector2(-247, 79)
+
+[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump30"]
+position = Vector2(182, 78)
+
+[node name="Jump31" type="Node2D" parent="ActionsOfTiles/Crossroads"]
+position = Vector2(9619, -2609)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump31"]
+position = Vector2(-127, 191)
+
+[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump31"]
+position = Vector2(107, 76)
+
+[node name="Jump32" type="Node2D" parent="ActionsOfTiles/Crossroads"]
+position = Vector2(9830, -2718)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump32"]
+position = Vector2(-127, 191)
+
+[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump32"]
+position = Vector2(107, 76)
+
+[node name="Jump33" type="Node2D" parent="ActionsOfTiles/Crossroads"]
+position = Vector2(10476, -3033)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump33"]
+position = Vector2(-127, 191)
+
+[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump33"]
+position = Vector2(-168, 1)
+
+[node name="Jump34" type="Node2D" parent="ActionsOfTiles/Crossroads"]
+position = Vector2(9731, -3495)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump34"]
+position = Vector2(97, 231)
+
+[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump34"]
+position = Vector2(-197, -31)
+
+[node name="Jump35" type="Node2D" parent="ActionsOfTiles/Crossroads"]
+position = Vector2(8925, -3855)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump35"]
+position = Vector2(200, 131)
+
+[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump35"]
+position = Vector2(-176, 44)
+
+[node name="Jump36" type="Node2D" parent="ActionsOfTiles/Crossroads"]
+position = Vector2(8159, -4161)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump36"]
+position = Vector2(167, 144)
+
+[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump36"]
+position = Vector2(-212, 48)
+
+[node name="Jump37" type="Node2D" parent="ActionsOfTiles/Crossroads"]
+position = Vector2(6962, -3830)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump37"]
+position = Vector2(259, -38)
+
+[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump37"]
+position = Vector2(-215, 214)
+
+[node name="Jump38" type="Node2D" parent="ActionsOfTiles/Crossroads"]
+position = Vector2(6508, -3386)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump38"]
+position = Vector2(29, -134)
+
+[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump38"]
+position = Vector2(215, -36)
+
+[node name="ZlataBrana" type="Node2D" parent="ActionsOfTiles/Crossroads"]
+position = Vector2(8914, -2643)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/ZlataBrana"]
+position = Vector2(-85, 67)
+
+[node name="OddWay_135" type="Marker2D" parent="ActionsOfTiles/Crossroads/ZlataBrana"]
+position = Vector2(-186, 24)
+
+[node name="EvenWay_246" type="Marker2D" parent="ActionsOfTiles/Crossroads/ZlataBrana"]
+position = Vector2(-24, 120)
+
+[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/ZlataBrana"]
+position = Vector2(-5879, 2572)
+
+[node name="GiveCard" type="Node2D" parent="ActionsOfTiles"]
+position = Vector2(493, -1)
+
+[node name="move_enemy_to_self" type="Marker2D" parent="ActionsOfTiles/GiveCard"]
+position = Vector2(-594, 376)
+
+[node name="move_enemy_to_self2" type="Marker2D" parent="ActionsOfTiles/GiveCard"]
+position = Vector2(-509, 414)
+
+[node name="move_enemy_to_self3" type="Marker2D" parent="ActionsOfTiles/GiveCard"]
+position = Vector2(-375, 463)
+
+[node name="move_enemy_to_self4" type="Marker2D" parent="ActionsOfTiles/GiveCard"]
+position = Vector2(-275, 533)
+
+[node name="move_enemy_to_self5" type="Marker2D" parent="ActionsOfTiles/GiveCard"]
+position = Vector2(-188, 566)
+
+[node name="move_enemy_to_self6" type="Marker2D" parent="ActionsOfTiles/GiveCard"]
+position = Vector2(-74, 621)
 
 [node name="BazinaWayThere" type="Node2D" parent="ActionsOfTiles"]
 visible = false
@@ -1034,15 +1504,6 @@ position = Vector2(-171, 99)
 [node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/BazinaWayThere/Jump44"]
 position = Vector2(208, 88)
 
-[node name="Jump45" type="Node2D" parent="ActionsOfTiles/BazinaWayThere"]
-position = Vector2(2274, -666)
-
-[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/BazinaWayThere/Jump45"]
-position = Vector2(-133, 80)
-
-[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/BazinaWayThere/Jump45"]
-position = Vector2(125, 118)
-
 [node name="Jump46" type="Node2D" parent="ActionsOfTiles/BazinaWayThere"]
 position = Vector2(3063, -621)
 
@@ -1061,269 +1522,51 @@ position = Vector2(18, 96)
 [node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/BazinaWayThere/Jump47"]
 position = Vector2(212, 2)
 
-[node name="ConditionalJump" type="Node2D" parent="ActionsOfTiles/BazinaWayThere"]
-position = Vector2(3582, -1085)
+[node name="Jump48" type="Node2D" parent="ActionsOfTiles/BazinaWayThere"]
+position = Vector2(2431, -1419)
 
-[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/BazinaWayThere/ConditionalJump"]
-position = Vector2(133, 184)
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/BazinaWayThere/Jump48"]
+position = Vector2(277, 320)
 
-[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/BazinaWayThere/ConditionalJump"]
-position = Vector2(-156, 141)
+[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/BazinaWayThere/Jump48"]
+position = Vector2(-173, 73)
 
-[node name="Crossroads" type="Node2D" parent="ActionsOfTiles"]
-position = Vector2(364, -11)
+[node name="Tun_Roll6" type="Node2D" parent="ActionsOfTiles/BazinaWayThere"]
+position = Vector2(533, 699)
 
-[node name="Jezibaba" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-position = Vector2(2522, 211)
+[node name="StuckPlayer1" type="Marker2D" parent="ActionsOfTiles/BazinaWayThere/Tun_Roll6"]
+position = Vector2(-16, 201)
 
-[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jezibaba"]
-position = Vector2(-371, 245)
+[node name="StuckPlayer2" type="Marker2D" parent="ActionsOfTiles/BazinaWayThere/Tun_Roll6"]
+position = Vector2(75, 151)
 
-[node name="OddWay_135" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jezibaba"]
-position = Vector2(-490, -280)
+[node name="StuckPlayer3" type="Marker2D" parent="ActionsOfTiles/BazinaWayThere/Tun_Roll6"]
+position = Vector2(196, 99)
 
-[node name="EvenWay_246" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jezibaba"]
-position = Vector2(516, 322)
+[node name="StuckPlayer4" type="Marker2D" parent="ActionsOfTiles/BazinaWayThere/Tun_Roll6"]
+position = Vector2(285, 41)
 
-[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jezibaba"]
-position = Vector2(494, -281)
+[node name="Princezna" type="Node2D" parent="ActionsOfTiles/BazinaWayThere"]
+position = Vector2(322, 778)
 
-[node name="Jump1" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-position = Vector2(314, 641)
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/BazinaWayThere/Princezna"]
+position = Vector2(75, 181)
 
-[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump1"]
-position = Vector2(-101, 93)
+[node name="DestinationMarker" type="Marker2D" parent="ActionsOfTiles/BazinaWayThere/Princezna"]
+position = Vector2(603, -71)
 
-[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump1"]
-position = Vector2(175, 339)
-
-[node name="Jump2" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-position = Vector2(1092, 1139)
-
-[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump2"]
-position = Vector2(-101, 93)
-
-[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump2"]
-position = Vector2(121, 192)
-
-[node name="Jump3" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-position = Vector2(1835, 1082)
-
-[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump3"]
-position = Vector2(-101, 93)
-
-[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump3"]
-position = Vector2(185, -553)
-
-[node name="Jump4" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-position = Vector2(1912, -306)
-
-[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump4"]
-position = Vector2(18, 179)
-
-[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump4"]
-position = Vector2(-1076, -379)
-
-[node name="Jump5" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-position = Vector2(-19, -1193)
-
-[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump5"]
-position = Vector2(45, 113)
-
-[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump5"]
-position = Vector2(-135, 125)
-
-[node name="Jump6" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-position = Vector2(-503, -1088)
-
-[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump6"]
-position = Vector2(132, 124)
-
-[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump6"]
-position = Vector2(-72, 106)
-
-[node name="Jump7" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-position = Vector2(-795, -1254)
-
-[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump7"]
-position = Vector2(-173, 84)
-
-[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump7"]
-position = Vector2(-206, -24)
-
-[node name="Jump8" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-position = Vector2(-876, -1425)
-
-[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump8"]
-position = Vector2(-62, 155)
-
-[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump8"]
-position = Vector2(220, 2)
-
-[node name="Jump9" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-position = Vector2(-532, -1552)
-
-[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump9"]
-position = Vector2(-176, 124)
-
-[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump9"]
-position = Vector2(68, 106)
-
-[node name="Jump10" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-position = Vector2(122, -1612)
-
-[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump10"]
-position = Vector2(-182, 191)
-
-[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump10"]
-position = Vector2(-183, 81)
-
-[node name="Jump11" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-position = Vector2(-259, -1660)
-
-[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump11"]
-position = Vector2(154, 134)
-
-[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump11"]
-position = Vector2(189, 30)
-
-[node name="Jump12" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-position = Vector2(379, -1923)
-
-[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump12"]
-position = Vector2(-144, 146)
-
-[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump12"]
-position = Vector2(46, 144)
-
-[node name="Jump13" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-position = Vector2(1049, -1663)
-
-[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump13"]
-position = Vector2(-214, 73)
-
-[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump13"]
-position = Vector2(-208, 185)
-
-[node name="Jump14" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-position = Vector2(1125, -1098)
-
-[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump14"]
-position = Vector2(-202, 83)
-
-[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump14"]
-position = Vector2(2806, 883)
-
-[node name="Jump15" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-position = Vector2(4018, -509)
-
-[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump15"]
-position = Vector2(20, 224)
-
-[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump15"]
-position = Vector2(125, 87)
-
-[node name="Jump16" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-position = Vector2(4205, -713)
-
-[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump16"]
-position = Vector2(20, 224)
-
-[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump16"]
-position = Vector2(125, 87)
-
-[node name="Jump17" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-position = Vector2(4519, -956)
-
-[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump17"]
-position = Vector2(20, 224)
-
-[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump17"]
-position = Vector2(213, 33)
-
-[node name="Jump18" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-position = Vector2(5260, -1278)
-
-[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump18"]
-position = Vector2(-130, 145)
-
-[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump18"]
-position = Vector2(190, 203)
-
-[node name="Jump19" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-position = Vector2(6132, -1793)
-
-[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump19"]
-position = Vector2(-312, 522)
-
-[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump19"]
-position = Vector2(669, -162)
-
-[node name="Jump20" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-position = Vector2(3436, -285)
-
-[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump20"]
-position = Vector2(-323, 166)
-
-[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump20"]
-position = Vector2(461, 63)
-
-[node name="Jump21" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-position = Vector2(649, -3611)
-
-[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump21"]
-position = Vector2(145, -68)
-
-[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump21"]
-position = Vector2(171, 134)
-
-[node name="Jump22" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-position = Vector2(905, -3160)
-
-[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump22"]
-position = Vector2(132, -122)
-
-[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump22"]
-position = Vector2(209, 33)
-
-[node name="Jump23" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-position = Vector2(1886, -2447)
-
-[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump23"]
-position = Vector2(-66, -227)
-
-[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump23"]
-position = Vector2(2409, 1817)
-
-[node name="GiveCard" type="Node2D" parent="ActionsOfTiles"]
-position = Vector2(493, -1)
-
-[node name="give_3_cards" type="Marker2D" parent="ActionsOfTiles/GiveCard"]
-position = Vector2(-594, 376)
-
-[node name="give_3_cards2" type="Marker2D" parent="ActionsOfTiles/GiveCard"]
-position = Vector2(-509, 414)
-
-[node name="give_3_cards3" type="Marker2D" parent="ActionsOfTiles/GiveCard"]
-position = Vector2(-375, 463)
-
-[node name="give_3_cards4" type="Marker2D" parent="ActionsOfTiles/GiveCard"]
-position = Vector2(-275, 533)
-
-[node name="give_3_cards5" type="Marker2D" parent="ActionsOfTiles/GiveCard"]
-position = Vector2(-188, 566)
-
-[node name="give_3_cards6" type="Marker2D" parent="ActionsOfTiles/GiveCard"]
-position = Vector2(-74, 621)
+[node name="InvalidWayMarker" type="Marker2D" parent="ActionsOfTiles/BazinaWayThere/Princezna"]
+position = Vector2(488, -3)
 
 [node name="BazinaWayBack" type="Node2D" parent="ActionsOfTiles"]
+visible = false
 position = Vector2(4979, 860)
 
 [node name="Jump20" type="Node2D" parent="ActionsOfTiles/BazinaWayBack"]
 position = Vector2(-1262, -366)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/BazinaWayBack/Jump20"]
-position = Vector2(165, 363)
+position = Vector2(201, 361)
 
 [node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/BazinaWayBack/Jump20"]
 position = Vector2(-220, 73)
@@ -1419,7 +1662,7 @@ position = Vector2(207, 47)
 position = Vector2(-80, 191)
 
 [node name="Jump31" type="Node2D" parent="ActionsOfTiles/BazinaWayBack"]
-position = Vector2(1190, 485)
+position = Vector2(1210, 477)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/BazinaWayBack/Jump31"]
 position = Vector2(173, 72)
@@ -1526,15 +1769,6 @@ position = Vector2(189, 115)
 [node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/BazinaWayBack/Jump42"]
 position = Vector2(-218, 124)
 
-[node name="Jump43" type="Node2D" parent="ActionsOfTiles/BazinaWayBack"]
-position = Vector2(2274, -666)
-
-[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/BazinaWayBack/Jump43"]
-position = Vector2(-133, 80)
-
-[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/BazinaWayBack/Jump43"]
-position = Vector2(125, 118)
-
 [node name="Jump44" type="Node2D" parent="ActionsOfTiles/BazinaWayBack"]
 position = Vector2(2606, -640)
 
@@ -1545,7 +1779,7 @@ position = Vector2(173, 99)
 position = Vector2(-162, 92)
 
 [node name="Jump45" type="Node2D" parent="ActionsOfTiles/BazinaWayBack"]
-position = Vector2(2274, -666)
+position = Vector2(2279, -657)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/BazinaWayBack/Jump45"]
 position = Vector2(139, 92)
@@ -1562,15 +1796,6 @@ position = Vector2(150, 83)
 [node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/BazinaWayBack/Jump46"]
 position = Vector2(-156, 131)
 
-[node name="ConditionalJump" type="Node2D" parent="ActionsOfTiles/BazinaWayBack"]
-position = Vector2(3603, -842)
-
-[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/BazinaWayBack/ConditionalJump"]
-position = Vector2(250, -15)
-
-[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/BazinaWayBack/ConditionalJump"]
-position = Vector2(19, 93)
-
 [node name="Jump47" type="Node2D" parent="ActionsOfTiles/BazinaWayBack"]
 position = Vector2(3582, -1085)
 
@@ -1580,8 +1805,263 @@ position = Vector2(-184, 131)
 [node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/BazinaWayBack/Jump47"]
 position = Vector2(106, 183)
 
+[node name="ZlataRybka" type="Node2D" parent="ActionsOfTiles/BazinaWayBack"]
+position = Vector2(769, 651)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/BazinaWayBack/ZlataRybka"]
+position = Vector2(151, 59)
+
+[node name="DestinationMarker" type="Marker2D" parent="ActionsOfTiles/BazinaWayBack/ZlataRybka"]
+position = Vector2(-357, 303)
+
+[node name="InvalidWayMarker" type="Marker2D" parent="ActionsOfTiles/BazinaWayBack/ZlataRybka"]
+position = Vector2(-250, 251)
+
+[node name="Jump48" type="Node2D" parent="ActionsOfTiles/BazinaWayBack"]
+position = Vector2(2431, -1419)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/BazinaWayBack/Jump48"]
+position = Vector2(-251, 72)
+
+[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/BazinaWayBack/Jump48"]
+position = Vector2(275, 317)
+
+[node name="Jump49" type="Node2D" parent="ActionsOfTiles/BazinaWayBack"]
+position = Vector2(-1500, -730)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/BazinaWayBack/Jump49"]
+position = Vector2(-118, 381)
+
+[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/BazinaWayBack/Jump49"]
+position = Vector2(-63, -210)
+
+[node name="Specials" type="Node2D" parent="ActionsOfTiles"]
+position = Vector2(628, 12)
+
+[node name="Tun" type="Node2D" parent="ActionsOfTiles/Specials"]
+
+[node name="Tun" type="Marker2D" parent="ActionsOfTiles/Specials/Tun"]
+position = Vector2(6583, -500)
+
+[node name="ZabiKral" type="Node2D" parent="ActionsOfTiles/Specials"]
+position = Vector2(8167, -173)
+
+[node name="ZabiKral1" type="Marker2D" parent="ActionsOfTiles/Specials/ZabiKral"]
+position = Vector2(-67, 126)
+
+[node name="ZabiKral2" type="Marker2D" parent="ActionsOfTiles/Specials/ZabiKral"]
+position = Vector2(41, 174)
+
+[node name="Goals" type="Node2D" parent="ActionsOfTiles/Specials"]
+position = Vector2(7000, -3382)
+
+[node name="Goal1" type="Marker2D" parent="ActionsOfTiles/Specials/Goals"]
+position = Vector2(174, 178)
+
+[node name="Goal2" type="Marker2D" parent="ActionsOfTiles/Specials/Goals"]
+position = Vector2(-245, -110)
+
+[node name="PtakOhnivak" type="Node2D" parent="ActionsOfTiles/Specials"]
+position = Vector2(5904, 172)
+
+[node name="StartMarker1" type="Marker2D" parent="ActionsOfTiles/Specials/PtakOhnivak"]
+position = Vector2(55, 130)
+
+[node name="StartMarker2" type="Marker2D" parent="ActionsOfTiles/Specials/PtakOhnivak"]
+position = Vector2(203, 75)
+
+[node name="DestinationMarkerThere" type="Marker2D" parent="ActionsOfTiles/Specials/PtakOhnivak"]
+position = Vector2(-1081, 1572)
+
+[node name="InvalidWayMarkerThere" type="Marker2D" parent="ActionsOfTiles/Specials/PtakOhnivak"]
+position = Vector2(-1096, 1628)
+
+[node name="DestinationMarkerBack" type="Marker2D" parent="ActionsOfTiles/Specials/PtakOhnivak"]
+position = Vector2(644, -2180)
+
+[node name="Jablicko1" type="Node2D" parent="ActionsOfTiles/Specials"]
+position = Vector2(6175, 458)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Specials/Jablicko1"]
+position = Vector2(-16, 246)
+
+[node name="DestinationMarker" type="Marker2D" parent="ActionsOfTiles/Specials/Jablicko1"]
+position = Vector2(611, -156)
+
+[node name="InvalidWayMarkerThere" type="Marker2D" parent="ActionsOfTiles/Specials/Jablicko1"]
+position = Vector2(306, -213)
+
+[node name="InvalidWayMarkerBack" type="Marker2D" parent="ActionsOfTiles/Specials/Jablicko1"]
+position = Vector2(986, -161)
+
+[node name="Jablicko2" type="Node2D" parent="ActionsOfTiles/Specials"]
+position = Vector2(6707, 176)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Specials/Jablicko2"]
+position = Vector2(32, 141)
+
+[node name="DestinationMarker" type="Marker2D" parent="ActionsOfTiles/Specials/Jablicko2"]
+position = Vector2(-560, 534)
+
+[node name="InvalidWayMarkerThere" type="Marker2D" parent="ActionsOfTiles/Specials/Jablicko2"]
+position = Vector2(-429, 582)
+
+[node name="InvalidWayMarkerBack" type="Marker2D" parent="ActionsOfTiles/Specials/Jablicko2"]
+position = Vector2(-640, 485)
+
+[node name="Korunka" type="Marker2D" parent="ActionsOfTiles/Specials"]
+position = Vector2(8399, -2501)
+
+[node name="Obr" type="Node2D" parent="ActionsOfTiles/Specials"]
+position = Vector2(7173, -1889)
+
+[node name="StartMarker1" type="Marker2D" parent="ActionsOfTiles/Specials/Obr"]
+position = Vector2(-106, 143)
+
+[node name="StartMarker2" type="Marker2D" parent="ActionsOfTiles/Specials/Obr"]
+position = Vector2(-6, 198)
+
+[node name="StartMarker3" type="Marker2D" parent="ActionsOfTiles/Specials/Obr"]
+position = Vector2(102, 241)
+
+[node name="StartMarker4" type="Marker2D" parent="ActionsOfTiles/Specials/Obr"]
+position = Vector2(-412, -1109)
+
+[node name="DestinationMarker" type="Marker2D" parent="ActionsOfTiles/Specials/Obr"]
+position = Vector2(-662, -114)
+
+[node name="InvalidWayMarker" type="Marker2D" parent="ActionsOfTiles/Specials/Obr"]
+position = Vector2(-736, -142)
+
+[node name="Carodej1" type="Node2D" parent="ActionsOfTiles/Specials"]
+position = Vector2(4553, -1188)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Specials/Carodej1"]
+position = Vector2(-94, 217)
+
+[node name="DestinationMarkerThere" type="Marker2D" parent="ActionsOfTiles/Specials/Carodej1"]
+position = Vector2(-1495, -548)
+
+[node name="InvalidWayMarkerThere" type="Marker2D" parent="ActionsOfTiles/Specials/Carodej1"]
+position = Vector2(-1413, -504)
+
+[node name="Carodej2" type="Node2D" parent="ActionsOfTiles/Specials"]
+position = Vector2(4635, -1226)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Specials/Carodej2"]
+position = Vector2(107, 118)
+
+[node name="DestinationMarkerThere" type="Marker2D" parent="ActionsOfTiles/Specials/Carodej2"]
+position = Vector2(-881, -770)
+
+[node name="InvalidWayMarkerThere" type="Marker2D" parent="ActionsOfTiles/Specials/Carodej2"]
+position = Vector2(-796, -723)
+
+[node name="PrasataExit1" type="Node2D" parent="ActionsOfTiles/Specials"]
+position = Vector2(3872, -2071)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Specials/PrasataExit1"]
+position = Vector2(-81, 83)
+
+[node name="DestinationMarkerThere" type="Marker2D" parent="ActionsOfTiles/Specials/PrasataExit1"]
+position = Vector2(878, 984)
+
+[node name="InvalidWayMarkerThere" type="Marker2D" parent="ActionsOfTiles/Specials/PrasataExit1"]
+position = Vector2(682, 1079)
+
+[node name="PrasataExit2" type="Node2D" parent="ActionsOfTiles/Specials"]
+position = Vector2(3167, -1775)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Specials/PrasataExit2"]
+position = Vector2(-82, 22)
+
+[node name="DestinationMarkerThere" type="Marker2D" parent="ActionsOfTiles/Specials/PrasataExit2"]
+position = Vector2(1330, 825)
+
+[node name="InvalidWayMarkerThere" type="Marker2D" parent="ActionsOfTiles/Specials/PrasataExit2"]
+position = Vector2(1208, 995)
+
+[node name="ConditionalJumps" type="Node2D" parent="ActionsOfTiles"]
+position = Vector2(755, -15)
+
+[node name="ConditionalJumpThere" type="Node2D" parent="ActionsOfTiles/ConditionalJumps"]
+position = Vector2(7790, -211)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/ConditionalJumps/ConditionalJumpThere"]
+position = Vector2(133, 184)
+
+[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/ConditionalJumps/ConditionalJumpThere"]
+position = Vector2(-156, 141)
+
+[node name="ConditionalJumpBack" type="Node2D" parent="ActionsOfTiles/ConditionalJumps"]
+position = Vector2(7794, 27)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/ConditionalJumps/ConditionalJumpBack"]
+position = Vector2(250, -15)
+
+[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/ConditionalJumps/ConditionalJumpBack"]
+position = Vector2(19, 93)
+
+[node name="Node2D" type="Node2D" parent="."]
+z_index = 5
+position = Vector2(1195, 667)
+
+[node name="Tree1" type="Sprite2D" parent="Node2D"]
+position = Vector2(-403, -89)
+texture = ExtResource("14_34i5n")
+
+[node name="Tree3" type="Sprite2D" parent="Node2D"]
+position = Vector2(246, 212)
+texture = ExtResource("15_vc04w")
+
+[node name="Tree2" type="Sprite2D" parent="Node2D"]
+position = Vector2(-767, 511)
+texture = ExtResource("16_yvqtj")
+
+[node name="WillowTree2" type="Sprite2D" parent="Node2D"]
+position = Vector2(4652, 1014)
+texture = ExtResource("17_fdvbs")
+
+[node name="WillowTree1" type="Sprite2D" parent="Node2D"]
+position = Vector2(5528, 2520)
+texture = ExtResource("18_h0v0c")
+
+[node name="WillowTree3" type="Sprite2D" parent="Node2D"]
+position = Vector2(7167, 758)
+texture = ExtResource("17_fdvbs")
+
+[node name="WillowTree4" type="Sprite2D" parent="Node2D"]
+position = Vector2(5950, 57)
+texture = ExtResource("18_h0v0c")
+flip_h = true
+
+[node name="GrassPatch1" type="Sprite2D" parent="Node2D"]
+position = Vector2(-1270, 1080)
+texture = ExtResource("19_jd0vn")
+
+[node name="GrassPatch2" type="Sprite2D" parent="Node2D"]
+modulate = Color(0.917647, 0.74902, 0.847059, 1)
+position = Vector2(-520, 1382)
+texture = ExtResource("20_igcvw")
+
+[node name="GrassPatch3" type="Sprite2D" parent="Node2D"]
+position = Vector2(-1476, 1741)
+texture = ExtResource("21_aqjyk")
+
+[node name="GrassPatch4" type="Sprite2D" parent="Node2D"]
+position = Vector2(-1151, 1965)
+texture = ExtResource("22_p7try")
+
+[node name="Rock3" type="Sprite2D" parent="Node2D"]
+position = Vector2(-44, 471)
+texture = ExtResource("23_nybje")
+
+[node name="Rock2" type="Sprite2D" parent="Node2D"]
+position = Vector2(-1147, 1789)
+texture = ExtResource("24_wosyr")
+
 [node name="Fog" type="Sprite2D" parent="."]
-z_index = 1
+z_index = 5
 material = SubResource("ShaderMaterial_y6cuy")
 position = Vector2(489, 2040)
 scale = Vector2(12.36, 12.36)

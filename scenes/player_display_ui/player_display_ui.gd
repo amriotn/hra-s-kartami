@@ -11,8 +11,21 @@ extends Control
 var stats : PlayerStats = null
 
 func load_stats(player_stats : PlayerStats) -> void:
-	stats = player_stats.create_instance()
-	
+	stats = player_stats
 
+var points_sum = 0
+func on_stats_updated():
+	points_sum = 0
+	print("stats updated")
+	for card in stats.hand.get_children():
+		points_sum += card.data.points
+	points.text = str(points_sum)
+	
+	Global.update_leaders()
+	leaderboard_position.text = str(Global.leaderboard.find(stats))
+	
+	# TODO
+	# pořadí se neupdatuje
+	
 
 

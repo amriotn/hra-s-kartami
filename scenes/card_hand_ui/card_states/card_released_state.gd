@@ -18,6 +18,7 @@ func enter() -> void:
 			#print("play card for target(s) ", card_hand_ui.targets)
 			card_hand_ui.data.trigger_effect()
 			card_hand_ui.queue_free()
+			Global.update_stats()
 
 func on_input(_event: InputEvent) -> void:
 	if played:

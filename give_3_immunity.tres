@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="CardResource" load_steps=2 format=3 uid="uid://nx5vieo62ldv"]
+
+[ext_resource type="Script" path="res://card_resource.gd" id="1_f8745"]
+
+[resource]
+script = ExtResource("1_f8745")
+points = 10
+rarity = 1
+effect = 1
+effect_data = 3
+effect_target = 0
+effect_target_data = 0
+card_name = "Imunita 3"
+description = "Dá hráči Imunitu na 3 kola"

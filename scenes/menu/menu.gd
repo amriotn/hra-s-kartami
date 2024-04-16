@@ -46,5 +46,5 @@ func _on_player_item_delete_button_pressed(player_item):
 func _on_start_game_button_pressed():
 	player_list = v_box_container.get_children()
 	for player in player_list:
-		Global.player_stats_resources.append(PlayerStats.new(player.nickname.text, player.color.color))
+		Global.player_stats_resources.append(PlayerStats.new(player.nickname.text, player.color.color, player.player_icon_index))
 	get_tree().change_scene_to_file("res://scenes/main/main.tscn")

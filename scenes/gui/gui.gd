@@ -35,9 +35,11 @@ func _ready():
 			player_display.load_stats(stat)
 			player_list_v_box.add_child(player_display)
 			#print(stat.nickname, stat.points)
+			player_display.player_icon.texture = load(stat.player_icon)
 			player_display.player_icon.modulate = stat.player_color
 			player_display.nickname.text = stat.nickname
 			player_display.points.text = str(stat.points)
+			stat.connect("stats_updated", Callable(player_display, "on_stats_updated"))
 			player_display_list.append(player_display)
 			
 
@@ -67,3 +69,5 @@ func _on_collapse_player_list_button_pressed():
 
 func _on_pause_button_pressed():
 	pass # Replace with function body.
+
+

@@ -30,6 +30,7 @@ func add_card(card : CardHandUI):
 	var card_hand_ui := card as CardHandUI
 	card_hand_ui.reparent_requested.connect(_on_card_hand_ui_reparent_requested)
 	update_hand()
+	Global.update_stats()
 
 func update_hand():
 	var hand_list = get_children()

@@ -13,9 +13,16 @@ var game : bool
 var player_list : Array
 var turn_of_player : int
 var turn = 1
+@onready var actions_of_tiles : ActionsOfTiles = $ActionsOfTiles
+@onready var bazina_way_there = $ActionsOfTiles/BazinaWayThere
+@onready var bazina_way_back = $ActionsOfTiles/BazinaWayBack
+
+
+
 
 func _ready():
 	#var dice_animated_sprite = $MainCamera/GUI/CenterContainer/DiceControl/DiceAnimatedSprite
+	Global.player_list = player_list
 	
 	var tile_node : TileMap = self.get_node("TileMap")
 	var start_pos_marker : Marker2D = $StartPosition
@@ -33,6 +40,7 @@ func _ready():
 			player.position = player_pos
 			player_pos.x += 120.0
 			player.self_modulate = stat.player_color
+			player.texture = load(stat.player_character)
 			# when dice is rolled, sends the number to player
 			#dice_animated_sprite.connect("send_dice_number", Callable(player, "_on_dice_animated_sprite_send_dice_number"))
 			
@@ -40,22 +48,12 @@ func _ready():
 			player.position = start_pos_marker.position
 			
 			player_list.append(player)
-		
 			
-	else:
-		# adds player to the scene tree
-		var player = player_scene.instantiate()
-		add_child(player)
-		# when dice is rolled, sends the number to player
-		#dice_animated_sprite.connect("send_dice_number", Callable(player, "_on_dice_animated_sprite_send_dice_number"))
-		
-		# sets player position to the start
-		player.position = start_pos_marker.position
-		player_list.append(player)
 	
 	
 	await get_tree().create_timer(0.5).timeout
 	fix_players_on_tile(player_list)
+	Global.update_leaders()
 	
 	var player_hands = []
 	for player in player_list:
@@ -63,11 +61,21 @@ func _ready():
 		player_hands.append(player.stats.hand)
 		player.stats.hand.hide()
 	
+	
+	
+	
+	
 	game = true
 	turn_of_player = 0
 	gui.timer_on = true
 	while game:
 		player_hands[turn_of_player].show()
+		
+		print(player_list[turn_of_player].swamp_route_swap)
+		if player_list[turn_of_player].swamp_route_swap:
+			actions_of_tiles.swamp = actions_of_tiles.bazina_way_back
+		else:
+			actions_of_tiles.swamp = actions_of_tiles.bazina_way_there
 		
 		main_camera.position = player_list[turn_of_player].position
 		

@@ -18,6 +18,7 @@ var data : CardResource = null
 func load_data(card_data : CardResource, holder : Player) -> void:
 	data = card_data.create_instance()
 	data.holder = holder
+	
 
 
 
