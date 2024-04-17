@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://cja5kon0sg03y"]
+[gd_scene load_steps=43 format=3 uid="uid://cja5kon0sg03y"]
 
 [ext_resource type="Script" path="res://scenes/main/main.gd" id="1_61e2m"]
 [ext_resource type="Texture2D" uid="uid://t77edi32bv7v" path="res://assets/DirtTileSet.png" id="4_08yuv"]
@@ -9,21 +9,27 @@
 [ext_resource type="Texture2D" uid="uid://n5ymdcpjcy64" path="res://assets/Z pohadky do pohádky  (11).png" id="6_ehyh4"]
 [ext_resource type="PackedScene" uid="uid://cu4lhv5r0ij68" path="res://scenes/gui/gui.tscn" id="6_gohn5"]
 [ext_resource type="Texture2D" uid="uid://dij03whkopbi3" path="res://assets/Seamless ground.png" id="8_e3nya"]
-[ext_resource type="Texture2D" uid="uid://bq457fko1s0ub" path="res://assets/BG.png" id="10_fs1ih"]
 [ext_resource type="Script" path="res://scenes/main/ActionsOfTiles.gd" id="11_knj1u"]
 [ext_resource type="Shader" path="res://scenes/main/fog.gdshader" id="12_qrwrq"]
 [ext_resource type="Texture2D" uid="uid://caonnd2a1ehc3" path="res://assets/171069355917953053.png" id="13_6laf0"]
-[ext_resource type="Texture2D" uid="uid://77ttkhodefkk" path="res://assets/environment/trees/tree1.png" id="14_34i5n"]
-[ext_resource type="Texture2D" uid="uid://te0fexukr2tu" path="res://assets/environment/trees/tree3.png" id="15_vc04w"]
-[ext_resource type="Texture2D" uid="uid://crycyxobfauo0" path="res://assets/environment/trees/tree2.png" id="16_yvqtj"]
-[ext_resource type="Texture2D" uid="uid://c4cd6g01xbysl" path="res://assets/environment/trees/willow_tree2.png" id="17_fdvbs"]
-[ext_resource type="Texture2D" uid="uid://dl364rqci4kax" path="res://assets/environment/trees/willow_tree1.png" id="18_h0v0c"]
-[ext_resource type="Texture2D" uid="uid://4eouvnggkugp" path="res://assets/environment/grass_patches/grass_patch1.png" id="19_jd0vn"]
-[ext_resource type="Texture2D" uid="uid://dy480taqtag7w" path="res://assets/environment/grass_patches/grass_patch2.png" id="20_igcvw"]
-[ext_resource type="Texture2D" uid="uid://c272kb8ig373d" path="res://assets/environment/grass_patches/grass_patch3.png" id="21_aqjyk"]
-[ext_resource type="Texture2D" uid="uid://x84yfph05sdc" path="res://assets/environment/grass_patches/grass_patch4.png" id="22_p7try"]
-[ext_resource type="Texture2D" uid="uid://csq74ub1uyjyw" path="res://assets/environment/rocks/rock3.png" id="23_nybje"]
-[ext_resource type="Texture2D" uid="uid://b3bsq2cj8uiua" path="res://assets/environment/rocks/rock2.png" id="24_wosyr"]
+[ext_resource type="Texture2D" uid="uid://ciwr8jcfxrhce" path="res://assets/environment/trees/dead_tree1.png" id="13_qjqt2"]
+[ext_resource type="Texture2D" uid="uid://dknyvj7qc3o0c" path="res://assets/TextureOverlay.png" id="13_v6203"]
+[ext_resource type="Texture2D" uid="uid://cvt3fs8gasuwc" path="res://assets/171069355917953053 (2).png" id="14_7unmf"]
+[ext_resource type="Texture2D" uid="uid://bfjoyldiph1of" path="res://assets/environment/trees/dead_tree3.png" id="14_xljd1"]
+[ext_resource type="Texture2D" uid="uid://c5n3ktenv4wrq" path="res://assets/environment/trees/dead_tree2.png" id="15_qkl3d"]
+[ext_resource type="Texture2D" uid="uid://8228xv43nbhe" path="res://assets/environment/trees/dead_tree4.png" id="16_47uyi"]
+[ext_resource type="Texture2D" uid="uid://c4cd6g01xbysl" path="res://assets/environment/trees/willow_tree2.png" id="17_otq00"]
+[ext_resource type="Texture2D" uid="uid://dl364rqci4kax" path="res://assets/environment/trees/willow_tree1.png" id="18_1u2ro"]
+[ext_resource type="Texture2D" uid="uid://crycyxobfauo0" path="res://assets/environment/trees/tree2.png" id="19_dmfvw"]
+[ext_resource type="Texture2D" uid="uid://77ttkhodefkk" path="res://assets/environment/trees/tree1.png" id="20_iffnc"]
+[ext_resource type="Texture2D" uid="uid://te0fexukr2tu" path="res://assets/environment/trees/tree3.png" id="21_mto3x"]
+[ext_resource type="Texture2D" uid="uid://c272kb8ig373d" path="res://assets/environment/grass_patches/grass_patch3.png" id="24_r8r2p"]
+[ext_resource type="Texture2D" uid="uid://dy480taqtag7w" path="res://assets/environment/grass_patches/grass_patch2.png" id="25_3jgtg"]
+[ext_resource type="Texture2D" uid="uid://x84yfph05sdc" path="res://assets/environment/grass_patches/grass_patch4.png" id="26_ufbag"]
+[ext_resource type="Texture2D" uid="uid://4eouvnggkugp" path="res://assets/environment/grass_patches/grass_patch1.png" id="27_wv80b"]
+[ext_resource type="Texture2D" uid="uid://vmm121ocnxm7" path="res://assets/environment/rocks/rock1.png" id="28_bouph"]
+[ext_resource type="Texture2D" uid="uid://b3bsq2cj8uiua" path="res://assets/environment/rocks/rock2.png" id="29_vlmxg"]
+[ext_resource type="Texture2D" uid="uid://csq74ub1uyjyw" path="res://assets/environment/rocks/rock3.png" id="30_71130"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_xr8pr"]
 tile_data = PackedInt32Array(65536, 131076, 268435456, 131072, 131076, 268435456, 196608, 4, 536870912, 1, 131076, 268435456, 65537, 4, 536870912, 131073, 4, 536870912, 196609, 65540, 268435456, 262145, 65540, 268435456, 131074, 65540, 268435456)
@@ -139,13 +145,21 @@ shader_parameter/noise_texture = SubResource("NoiseTexture2D_slkac")
 script = ExtResource("1_61e2m")
 
 [node name="SeamlessGround" type="Sprite2D" parent="."]
-self_modulate = Color(0.47451, 0.596078, 0.313726, 1)
+modulate = Color(0.815686, 0.815686, 0.815686, 1)
 texture_repeat = 3
-position = Vector2(4429, 1023)
-scale = Vector2(0.593078, 0.593078)
+position = Vector2(12140, 9352)
+scale = Vector2(1.37456, 1.5947)
 texture = ExtResource("8_e3nya")
 region_enabled = true
-region_rect = Rect2(0, 0, 20000, 10000)
+region_rect = Rect2(0, 0, 25000, 20000)
+metadata/_edit_lock_ = true
+
+[node name="SeamlessGround2" type="Sprite2D" parent="."]
+texture_repeat = 3
+position = Vector2(11735, 9885)
+texture = ExtResource("8_e3nya")
+region_enabled = true
+region_rect = Rect2(0, 0, 25000, 20000)
 metadata/_edit_lock_ = true
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -156,458 +170,46 @@ format = 2
 layer_0/name = "Route"
 layer_0/y_sort_enabled = true
 layer_0/z_index = 1
-layer_0/tile_data = PackedInt32Array(2490391, 131072, 0, 2555927, 131072, 0, 1769474, 131072, 0, 1835011, 131072, 0, 1900547, 131072, 0, 1966084, 131072, 0, 2031620, 131072, 0, 2097157, 131072, 0, 2162693, 131072, 0, 2228230, 131072, 0, 2293766, 131072, 0, 2621448, 131072, 0, 2686984, 131072, 0, 2752521, 131072, 0, 2818057, 131072, 0, 2883594, 131072, 0, 2949130, 131072, 0, 3080203, 131072, 0, 3145740, 131072, 0, 3014669, 131072, 0, 3080204, 131072, 0, 2883598, 131072, 0, 2949133, 131072, 0, 2818072, 131072, 0, 3080216, 131072, 0, 3276824, 131072, 0, 3473431, 131072, 0, 3735575, 131072, 0, 3866648, 131072, 0, 3997721, 131072, 0, 4063259, 131072, 0, 3997724, 131072, 0, 3670047, 131072, 0, 3735582, 131072, 0, 3538976, 131072, 0, 3604511, 131072, 0, 3407905, 131072, 0, 3473440, 131072, 0, 3342369, 131072, 0, 3801118, 131072, 0, 3211299, 131072, 536870912, 3276837, 131072, 536870912, 3342374, 131072, 536870912, 3407912, 131072, 536870912, 3276841, 131072, 536870912, 3080233, 131072, 536870912, 2949161, 131072, 536870912, 2752553, 131072, 536870912, 2687016, 131072, 536870912, 2555943, 131072, 536870912, 2359334, 131072, 536870912, 2293797, 131072, 536870912, 2228261, 131072, 536870912, 2162724, 131072, 536870912, 1900579, 131072, 536870912, 1835044, 131072, 536870912, 1769508, 131072, 536870912, 1703973, 131072, 536870912, 1703975, 131072, 536870912, 1769512, 131072, 536870912, 1835051, 131072, 536870912, 1376303, 131072, 536870912, 1310767, 131072, 536870912, 1245229, 131072, 536870912, 1179693, 131072, 536870912, 1245228, 131072, 536870912, 1179692, 131072, 536870912, 1114155, 131072, 536870912, 1179691, 131072, 536870912, 1114154, 131072, 536870912, 1048618, 131072, 536870912, 458761, 131072, 536870912, 393225, 131072, 536870912, 327688, 131072, 536870912, 262152, 131072, 536870912, 196615, 131072, 536870912, 131079, 131072, 536870912, 65542, 131072, 536870912, 6, 131072, 536870912, -65531, 131072, 536870912, -65532, 131072, 536870912, 4, 131072, 536870912, 65539, 131072, 536870912, 65538, 131072, 536870912, 2, 131072, 536870912, -65535, 131072, 536870912, -131071, 131072, 536870912, -196608, 131072, 536870912, -327680, 131072, 536870912, -524286, 131072, 536870912, -524285, 131072, 536870912, -458749, 131072, 536870912, -393212, 131072, 536870912, -458748, 131072, 536870912, -524283, 131072, 536870912, -655355, 131072, 536870912, -786427, 131072, 536870912, -851963, 131072, 536870912, -917498, 131072, 536870912, -983034, 131072, 536870912, -983033, 131072, 536870912, -917496, 131072, 536870912, -851960, 131072, 536870912, -786423, 131072, 536870912, -720887, 131072, 536870912, -589815, 131072, 536870912, -524278, 131072, 536870912, -196600, 131072, 536870912, -131063, 131072, 536870912, -65527, 131072, 536870912, 10, 131072, 536870912, -262136, 131072, 536870912, -393207, 131072, 536870912, -327672, 131072, 536870912, -458743, 131072, 536870912, 1048601, 131072, 0, 983065, 131072, 0, 786458, 131072, 0, 720922, 131072, 0, 524315, 131072, 0, 458779, 131072, 0, 393244, 131072, 0, -65504, 131072, 0, -131039, 131072, 0, -196575, 131072, 0, -262110, 131072, 0, -327646, 131072, 0, 2031631, 131072, 0, 1966096, 131072, 0, 1179663, 131072, 0, 1245199, 131072, 0, 1245204, 131072, 0, 1179669, 131072, 0, 2031636, 131072, 0, 2097173, 131072, 0, -1179627, 131072, 0, -1245164, 131072, 0, -1376236, 131072, 0, -1441771, 131072, 0, -1507307, 131072, 0, -1310700, 131072, 0, -1572843, 131072, 0, -1638379, 131072, 0, -1703914, 131072, 0, -1769450, 131072, 0, -1834985, 131072, 0, -1900521, 131072, 0, -1834984, 131072, 0, -1769448, 131072, 0, -1703911, 131072, 0, -1638375, 131072, 0, -1572839, 131072, 0, -1507304, 131072, 0, -1441768, 131072, 0, -1376232, 131072, 0, -1310695, 131072, 0, -1245159, 131072, 0, -1048555, 131072, 0, -983019, 131072, 0, -917482, 131072, 0, -1114092, 131072, 0, -2949110, 131072, 0, -3014646, 131072, 0, -3080183, 131072, 0, -3211255, 131072, 0, -3735541, 131072, 0, -3801076, 131072, 0, -3866612, 131072, 0, -3932147, 131072, 0, -3997683, 131072, 0, -4063218, 131072, 0, -4128754, 131072, 0, -3538934, 131072, 0, -3473399, 131072, 0, -3670005, 131072, 0, -3604470, 131072, 0, -2752501, 131072, 0, -2621429, 131072, 0, -2555893, 131072, 0, -2490356, 131072, 0, -2424820, 131072, 0, -2359283, 131072, 0, -2293747, 131072, 0, -2686965, 131072, 0, -2228210, 131072, 0, -1245145, 131072, 0, -1179608, 131072, 0, -1114072, 131072, 0, -1048535, 131072, 0, -982999, 131072, 0, -917462, 131072, 0, -851926, 131072, 0, -786389, 131072, 0, -720853, 131072, 0, -655316, 131072, 0, -589780, 131072, 0, -524243, 131072, 0, -524241, 131072, 0, -1966031, 131072, 0, -2031567, 131072, 0, -1966030, 131072, 0, -2097103, 131072, 0, -2162640, 131072, 0, -2228175, 131072, 0, -2293711, 131072, 0, -2359247, 131072, 0, -2424784, 131072, 0, -2490320, 131072, 0, -1834957, 131072, 0, -1834955, 131072, 0, -1966026, 131072, 0, -2097097, 131072, 0, -2162633, 131072, 0, -2228168, 131072, 0, -2293704, 131072, 0, -2359239, 131072, 0, -2621383, 131072, 0, -2686920, 131072, 0, -2752456, 131072, 0, -2817993, 131072, 0, -2883529, 131072, 0, -2949066, 131072, 0, -3276747, 131072, 0, -3342284, 131072, 0, -3407820, 131072, 0, -3473357, 131072, 0, -3538893, 131072, 0, -3669967, 131072, 0, -3735504, 131072, 0, -3801040, 131072, 0, -3866577, 131072, 0, -3932113, 131072, 0, -4063187, 131072, 0, -4128724, 131072, 0, -4063188, 131072, 0, -3997653, 131072, 0, -3932117, 131072, 0, -3866582, 131072, 0, -3801046, 131072, 0, -3735511, 131072, 0, -3407833, 131072, 0, -3342298, 131072, 0, -3276762, 131072, 0, -3145689, 131072, 0, -3080153, 131072, 0, -3145688, 131072, 0, -3211224, 131072, 0, -2818006, 131072, 0, -2752470, 131072, 0, -2686935, 131072, 0, -2621399, 131072, 0, -2555864, 131072, 0, -2490327, 131072, 0, -2424791, 131072, 0, -2293718, 131072, 0, -2359253, 131072, 0, -2424789, 131072, 0, -2490324, 131072, 0, -2555860, 131072, 0, -2621395, 131072, 0, -2555859, 131072, 0, -2490322, 131072, 0, -2424786, 131072, 0, 1638445, 131072, 536870912, 1703981, 131072, 536870912, 1507374, 131072, 536870912, 1572910, 131072, 536870912, -458706, 131072, 0, -2162674, 131072, 0, 1769514, 131072, 0, 1769516, 131072, 0, -3145719, 131072, 0, 720935, 196614, 0, -1900496, 131072, 0, 327708, 131072, 0, -65506, 131072, 0, -131041, 131072, 0, 65565, 131072, 0, 131101, 131072, 0)
-layer_1/name = "Action"
+layer_0/tile_data = PackedInt32Array(18612279, 131072, 0, 18677815, 131072, 0, 19398712, 131072, 0, 19595319, 131072, 0, 19857463, 131072, 0, 18939960, 131072, 0, 19202104, 131072, 0, 19988536, 131072, 0, 20119609, 131072, 0, 20185147, 131072, 0, 20119612, 131072, 0, 19923006, 131072, 0, 19791935, 131072, 0, 19857470, 131072, 0, 19660864, 131072, 0, 19726399, 131072, 0, 19529793, 131072, 0, 19595328, 131072, 0, 19464257, 131072, 0, 17956932, 131072, 536870912, 18022467, 131072, 536870912, 19333187, 131072, 536870912, 17825861, 131072, 536870912, 17891396, 131072, 536870912, 18284612, 131072, 536870912, 18350149, 131072, 536870912, 19398725, 131072, 536870912, 18415685, 131072, 536870912, 18481222, 131072, 536870912, 17825863, 131072, 536870912, 19464262, 131072, 536870912, 16842823, 196614, 0, 18677831, 131072, 536870912, 19529800, 131072, 536870912, 17891400, 131072, 536870912, 18808904, 131072, 536870912, 18874441, 131072, 536870912, 19398729, 131072, 536870912, 17170506, 131072, 536870912, 19071049, 131072, 536870912, 19202121, 131072, 536870912, 17236042, 131072, 536870912, 17301579, 131072, 536870912, 17891402, 131072, 0, 17956939, 131072, 536870912, 17236043, 131072, 536870912, 17301580, 131072, 536870912, 17301581, 131072, 536870912, 17367116, 131072, 536870912, 17825869, 131072, 536870912, 17891404, 131072, 0, 17367117, 131072, 536870912, 17694798, 131072, 536870912, 17760333, 131072, 536870912, 17432655, 131072, 536870912, 17629262, 131072, 536870912, 17498191, 131072, 536870912, 20512777, 131072, 0, 20578314, 131072, 0, 20643850, 131072, 0, 20709387, 131072, 0, 20774923, 131072, 0, 20840460, 131072, 0, 20905996, 131072, 0, 20971533, 131072, 0, 21037069, 131072, 0, 21364751, 131072, 0, 21430287, 131072, 0, 21495824, 131072, 0, 21561360, 131072, 0, 21626897, 131072, 0, 21692433, 131072, 0, 21823506, 131072, 0, 21823507, 131072, 0, 21889043, 131072, 0, 21692436, 131072, 0, 21757972, 131072, 0, 21626901, 131072, 0, 17301532, 131072, 0, 17367068, 131072, 0, 18153500, 131072, 0, 18087965, 131072, 0, 17367073, 131072, 0, 18153505, 131072, 0, 17301538, 131072, 0, 18219042, 131072, 0, 14680074, 131072, 536870912, 14811146, 131072, 536870912, 14876682, 131072, 536870912, 14942219, 131072, 536870912, 14483467, 131072, 536870912, 15007755, 131072, 536870912, 15073292, 131072, 536870912, 14483468, 131072, 536870912, 14549005, 131072, 536870912, 15073293, 131072, 536870912, 14549006, 131072, 536870912, 14614541, 131072, 536870912, 14942222, 131072, 536870912, 15007757, 131072, 536870912, 14155791, 131072, 536870912, 14221326, 131072, 536870912, 14352398, 131072, 536870912, 14483470, 131072, 536870912, 14942223, 131072, 536870912, 14024720, 131072, 536870912, 14090255, 131072, 536870912, 15007759, 131072, 536870912, 15073296, 131072, 536870912, 14024721, 131072, 536870912, 15138832, 131072, 536870912, 15204369, 131072, 536870912, 14090257, 131072, 536870912, 14155794, 131072, 536870912, 14680082, 131072, 536870912, 14745617, 131072, 536870912, 14811154, 131072, 536870912, 15269905, 131072, 536870912, 15335442, 131072, 536870912, 14221330, 131072, 536870912, 14286867, 131072, 536870912, 14417939, 131072, 536870912, 14549011, 131072, 536870912, 14614546, 131072, 536870912, 14876690, 131072, 536870912, 14942227, 131072, 536870912, 15400978, 131072, 536870912, 15466515, 131072, 536870912, 14483475, 131072, 536870912, 15007763, 131072, 536870912, 14745641, 131072, 0, 14811177, 131072, 0, 14483498, 131072, 0, 14549034, 131072, 0, 14221355, 131072, 0, 14286891, 131072, 0, 14090284, 131072, 0, 14155820, 131072, 0, 13828141, 131072, 0, 13893677, 131072, 0, 13697070, 131072, 0, 13631535, 131072, 0, 13697072, 131072, 0, 13566001, 131072, 0, 13631537, 131072, 0, 13434930, 131072, 0, 13500466, 131072, 0, 12582952, 131072, 0, 12648487, 131072, 0, 12714024, 131072, 0, 12845096, 131072, 0, 12320809, 131072, 0, 12386344, 131072, 0, 12451881, 131072, 0, 12517416, 131072, 0, 12779560, 131072, 0, 12910632, 131072, 0, 12976169, 131072, 0, 12189738, 131072, 0, 12255273, 131072, 0, 13041705, 131072, 0, 12058667, 131072, 0, 12124202, 131072, 0, 12124203, 131072, 0, 12189740, 131072, 0, 12451884, 131072, 0, 12517419, 131072, 0, 12582956, 131072, 0, 12255276, 131072, 0, 12320813, 131072, 0, 12386348, 131072, 0, 12648492, 131072, 0, 12714029, 131072, 0, 9043985, 131072, 0, 8650770, 131072, 0, 8716305, 131072, 0, 8978449, 131072, 0, 9109521, 131072, 0, 9175058, 131072, 0, 8519699, 131072, 0, 8585234, 131072, 0, 9240594, 131072, 0, 9437203, 131072, 0, 9568275, 131072, 0, 8388628, 131072, 0, 8454163, 131072, 0, 9502739, 131072, 0, 9633811, 131072, 0, 9699348, 131072, 0, 8257557, 131072, 0, 8323092, 131072, 0, 9764884, 131072, 0, 9830421, 131072, 0, 8126486, 131072, 0, 8192021, 131072, 0, 9895957, 131072, 0, 9961494, 131072, 0, 8060950, 131072, 0, 10027030, 131072, 0, 7798855, 131072, 0, 7667784, 131072, 0, 7733320, 131072, 0, 7536713, 131072, 0, 7602249, 131072, 0, 8257604, 131072, 0, 8126533, 131072, 0, 8192068, 131072, 0, 8388677, 131072, 0, 8388678, 131072, 0, 8454213, 131072, 0, 8323142, 131072, 0, 8912967, 131072, 0, 8978502, 131072, 0, 9044039, 131072, 0, 8781896, 131072, 0, 8847431, 131072, 0, 9109575, 131072, 0, 8716360, 131072, 0, 9175113, 131072, 0, 9240648, 131072, 0, 7471178, 131072, 0, 9044042, 131072, 0, 9109577, 131072, 0, 7405642, 131072, 0, 7471179, 131072, 0, 8912971, 131072, 0, 8978506, 131072, 0, 8978507, 131072, 0, 9044044, 131072, 0, 7602253, 131072, 0, 9109580, 131072, 0, 7667789, 131072, 0, 7733326, 131072, 0, 9044046, 131072, 0, 7798862, 131072, 0, 7864399, 131072, 0, 9109582, 131072, 0, 9175119, 131072, 0, 9306191, 131072, 0, 9371726, 131072, 0, 9437263, 131072, 0, 9568335, 131072, 0, 9633870, 131072, 0, 9240655, 131072, 0, 9502799, 131072, 0, 9568336, 131072, 0, 7995473, 131072, 0, 9699409, 131072, 0, 8061009, 131072, 0, 8126546, 131072, 0, 8192082, 131072, 0, 8257619, 131072, 0, 9699411, 131072, 0, 9568340, 131072, 0, 8585300, 131072, 0, 8650837, 131072, 0, 9437269, 131072, 0, 8716373, 131072, 0, 8781910, 131072, 0, 9306198, 131072, 0, 9371733, 131072, 0, 8847446, 131072, 0, 8912983, 131072, 0, 9175127, 131072, 0, 9240662, 131072, 0, 10092607, 131072, 0, 10158143, 131072, 0, 10223680, 131072, 0, 10289216, 131072, 0, 10354753, 131072, 0, 10420289, 131072, 0, 10485826, 131072, 0, 10551362, 131072, 0, 10616899, 131072, 0, 10682435, 131072, 0, 10747972, 131072, 0, 10813508, 131072, 0, 10813510, 131072, 0, 10879046, 131072, 0)
+layer_1/name = "Environment"
 layer_1/y_sort_enabled = true
 layer_1/z_index = 2
-layer_1/tile_data = PackedInt32Array(1769474, 196614, 0, 2228230, 131078, 0, 2621448, 262150, 0, 2686984, 262150, 0, 2752521, 262150, 0, 2818057, 262150, 0, 2883594, 262150, 0, 2883598, 65542, 0, 1966096, 65542, 0, 1179663, 65542, 0, 1179669, 65542, 0, 2097173, 65542, 0, 3735582, 131078, 0, 3407905, 131078, 0, 3670047, 262150, 0, 3604511, 262150, 0, 3538976, 262150, 0, 3473440, 262150, 0, 2293797, 131078, 0, 1769508, 131078, 0, 1703973, 131078, 0, 1769512, 131078, 0, 1310767, 196614, 0, 1376303, 196614, 0, -65506, 131078, 0, -327646, 65542, 0, -917462, 131078, 0, -851926, 131078, 0, -786389, 131078, 0, -1245145, 196614, 0, -2031567, 65542, 0, -2293711, 131078, 0, -2424789, 131078, 0, -2555864, 131078, 0, -2752456, 131078, 0, -3866577, 131078, 0, -2818006, 196614, 0, -3211224, 196614, 0, -3145688, 131078, 0, -2752470, 131078, 0, -3801046, 262150, 0, -3866582, 262150, 0, -4063188, 262150, 0, -4128724, 262150, 0, -2293704, 196614, 0, -1310700, 131078, 0, -1638375, 131078, 0, -131071, 131078, 0, -393212, 131078, 0, 6, 131078, 0, -327672, 131078, 0, -917498, 131078, 0, -2359283, 131078, 0, -2424820, 131078, 0, -3014646, 131078, 0, -3473399, 131078, 0, -3538934, 131078, 0, -3866612, 131078, 0, -2162674, 65542, 0, -1900496, 196614, 0, 131101, 131078, 0)
-layer_2/name = "Environment"
+layer_1/tile_data = PackedInt32Array(21889042, 14, 0, 21757971, 131086, 0, 21823506, 65550, 0, 21889043, 262158, 0, 21954578, 196622, 0, 22020115, 393230, 0, 21823507, 327694, 0, 21889044, 524302, 0, 21954579, 458766, 0, 21626900, 131076, 268435456, 21692435, 131076, 268435456, 21757972, 4, 536870912, 21561364, 131076, 268435456, 21626901, 4, 536870912, 21692436, 4, 536870912, 21757973, 65540, 268435456, 21823508, 65540, 268435456, 21692437, 65540, 268435456, 21692433, 4, 0, 21757969, 65540, 0, 21626898, 131076, 0, 21626897, 4, 0, 21692432, 65540, 0, 21561361, 131076, 0, 21561360, 4, 0, 21626896, 65540, 0, 21495825, 131076, 0, 21495824, 4, 0, 21561359, 65540, 0, 21430288, 131076, 0, 21430287, 4, 0, 21495823, 65540, 0, 21364752, 131076, 0, 21364751, 4, 0, 21430286, 65540, 0, 21299215, 131076, 0, 21037069, 4, 0, 21102605, 65540, 0, 20971534, 131076, 0, 20971533, 4, 0, 21037068, 65540, 0, 20905997, 131076, 0, 20905996, 4, 0, 20971532, 65540, 0, 20840461, 131076, 0, 20840460, 4, 0, 20905995, 65540, 0, 20774924, 131076, 0, 20774923, 4, 0, 20840459, 65540, 0, 20709388, 131076, 0, 20709387, 4, 0, 20774922, 65540, 0, 20643851, 131076, 0, 20643850, 4, 0, 20709386, 65540, 0, 20578315, 131076, 0, 20578314, 4, 0, 20643849, 65540, 0, 20512778, 131076, 0, 20512777, 4, 0, 20578313, 65540, 0, 20447242, 131076, 0, 18153500, 4, 536870912, 18087965, 4, 536870912, 18219037, 65540, 268435456, 18153501, 65540, 268435456, 18087964, 131076, 268435456, 18022428, 131076, 268435456, 14745640, 131076, 268435456, 14680105, 131076, 268435456, 14745641, 65550, 0, 14811177, 4, 536870912, 14876713, 65540, 268435456, 14549033, 131076, 268435456, 14614569, 4, 536870912, 14549034, 4, 536870912, 14614570, 65540, 268435456, 14680106, 65540, 268435456, 14155819, 131076, 268435456, 14221355, 4, 536870912, 14286891, 65550, 0, 14352427, 65540, 268435456, 14090283, 131076, 268435456, 14024748, 131076, 268435456, 13828140, 131076, 268435456, 13893676, 131076, 268435456, 13828141, 65550, 0, 13893677, 4, 536870912, 13959213, 65540, 268435456, 13893678, 65540, 268435456, 13631534, 131076, 268435456, 13762606, 4, 536870912, 13697070, 4, 536870912, 13828142, 65540, 268435456, 13500465, 131076, 268435456, 13631538, 262158, 0, 13434929, 131076, 268435456, 13369394, 131076, 268435456, 13434930, 4, 536870912, 13500466, 4, 536870912, 13566002, 65540, 268435456, 13500467, 65540, 268435456, 14221356, 65550, 0, 13762607, 65550, 0, 13697071, 262158, 0, 13697073, 262158, 0, 17236001, 131076, 268435456, 17301537, 131076, 268435456, 17367073, 4, 536870912, 17301538, 4, 536870912, 17367074, 65540, 268435456, 17432610, 65540, 268435456)
+layer_2/name = "Action"
 layer_2/y_sort_enabled = true
-layer_2/z_index = 3
-layer_2/tile_data = PackedInt32Array()
+layer_2/z_index = 2
+layer_2/tile_data = PackedInt32Array(20512777, 196614, 0, 20971533, 131078, 0, 21364751, 262150, 0, 21430287, 262150, 0, 21495824, 262150, 0, 21561360, 262150, 0, 21626897, 262150, 0, 21626901, 65542, 0, 14876682, 131078, 0, 14614541, 131078, 0, 14090255, 131078, 0, 15007759, 131078, 0, 14680082, 131078, 0, 17301532, 65542, 0, 18087965, 65542, 0, 17301538, 65542, 0, 18219042, 65542, 0, 19857470, 131078, 0, 19726399, 262150, 0, 19791935, 262150, 0, 19595328, 262150, 0, 19660864, 262150, 0, 19529793, 131078, 0, 17825861, 131078, 0, 17891396, 131078, 0, 18415685, 131078, 0, 17891400, 131078, 0, 17432655, 196614, 0, 17498191, 196614, 0, 8716305, 131078, 0, 8650770, 131078, 0, 9175058, 131078, 0, 8323092, 131078, 0, 9764884, 131078, 0, 9830421, 131078, 0, 10027030, 65542, 0, 13893677, 131078, 0, 13697070, 131078, 0, 13434930, 65542, 0, 12648487, 131078, 0, 12320813, 131078, 0, 8323142, 196614, 0, 8388678, 131078, 0, 8978502, 131078, 0, 7667784, 262150, 0, 7733320, 262150, 0, 8716360, 196614, 0, 8781896, 131078, 0, 9109577, 131078, 0, 7405642, 262150, 0, 7471178, 262150, 0, 7667789, 131078, 0, 9633870, 196614, 0, 9240655, 131078, 0, 9502799, 65542, 0, 8781910, 131078, 0, 9240662, 196614, 0, 10092607, 196614, 0, 10420289, 131078, 0, 10485826, 131078, 0, 10551362, 131078, 0)
 
 [node name="StartPosition" type="Marker2D" parent="."]
-position = Vector2(597, 1404)
+position = Vector2(1990, 15703)
 
 [node name="MainCamera" type="Camera2D" parent="." groups=["cameras"]]
 top_level = true
 position = Vector2(1000, 1000)
 zoom = Vector2(0.5, 0.5)
+limit_left = 0
+limit_top = 0
+limit_right = 25000
+limit_bottom = 20000
+limit_smoothed = true
 position_smoothing_enabled = true
 script = ExtResource("5_nspln")
 metadata/_edit_lock_ = true
 
 [node name="GUI" parent="MainCamera" instance=ExtResource("6_gohn5")]
 
-[node name="Notes" type="Node2D" parent="."]
-visible = false
-
-[node name="Zone1Start" type="Node2D" parent="Notes"]
-position = Vector2(1289, 1584)
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Bg" type="Sprite2D" parent="Notes/Zone1Start"]
-modulate = Color(1, 1, 0.239216, 0.407843)
-position = Vector2(742, 32.843)
-scale = Vector2(13.3, 5.63157)
-texture = ExtResource("10_fs1ih")
-
-[node name="Label" type="Label" parent="Notes/Zone1Start"]
-offset_right = 678.0
-offset_bottom = 247.0
-theme_override_font_sizes/font_size = 36
-text = "Move Player:
-Divotvorný meč
-- přesune hráče za saň"
-
-[node name="Label2" type="Label" parent="Notes/Zone1Start"]
-offset_left = 551.0
-offset_top = 291.0
-offset_right = 1229.0
-offset_bottom = 538.0
-theme_override_font_sizes/font_size = 36
-text = "Stuck Player Until:
-Saň
-- hráč může pokračovat když hodí 3"
-
-[node name="Label3" type="Label" parent="Notes/Zone1Start"]
-offset_left = 1630.0
-offset_top = 301.0
-offset_right = 2370.0
-offset_bottom = 548.0
-theme_override_font_sizes/font_size = 36
-text = "Road Select:
-Ježibaba
-- Dopad na pole = postupuje rovně
-- Dopad za = výběr cesty dle čísla na kostce"
-
-[node name="Zone2Fields" type="Node2D" parent="Notes"]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Bg2" type="Sprite2D" parent="Notes/Zone2Fields"]
-modulate = Color(0.309804, 0.67451, 0, 0.407843)
-position = Vector2(2261, 242)
-scale = Vector2(10.95, 5.82)
-texture = ExtResource("10_fs1ih")
-
-[node name="Label" type="Label" parent="Notes/Zone2Fields"]
-offset_left = 2061.0
-offset_top = 465.0
-offset_right = 2739.0
-offset_bottom = 712.0
-theme_override_font_sizes/font_size = 36
-text = "Move Player:
-Černý kůň
-- hráč jde do pekla"
-
-[node name="Label2" type="Label" parent="Notes/Zone2Fields"]
-offset_left = 1282.0
-offset_top = 4.0
-offset_right = 1960.0
-offset_bottom = 251.0
-theme_override_font_sizes/font_size = 36
-text = "Move Player:
-Černý kůň
-- hráč jde do pekla"
-
-[node name="Label3" type="Label" parent="Notes/Zone2Fields"]
-offset_left = 1832.0
-offset_top = -304.0
-offset_right = 2510.0
-offset_bottom = -57.0
-theme_override_font_sizes/font_size = 36
-text = "Move Player:
-Černý kůň
-- hráč jde do pekla"
-
-[node name="Label4" type="Label" parent="Notes/Zone2Fields"]
-offset_left = 2218.0
-offset_top = 230.0
-offset_right = 2896.0
-offset_bottom = 477.0
-theme_override_font_sizes/font_size = 36
-text = "Move Player:
-Bílý kůň
-- hráč jde na Zlatý vrch"
-
-[node name="Label5" type="Label" parent="Notes/Zone2Fields"]
-offset_left = 2907.0
-offset_top = 169.0
-offset_right = 3585.0
-offset_bottom = 416.0
-theme_override_font_sizes/font_size = 36
-text = "Move Player:
-Hnědý kůň
-- hráč jde k ježibabě"
-
-[node name="Zone3Swamp" type="Node2D" parent="Notes"]
-position = Vector2(1289, 1584)
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Bg3" type="Sprite2D" parent="Notes/Zone3Swamp"]
-modulate = Color(0.0784314, 0.6, 0.941176, 0.407843)
-position = Vector2(4392.16, 182.5)
-scale = Vector2(14.2916, 7.625)
-texture = ExtResource("10_fs1ih")
-
-[node name="Label4" type="Label" parent="Notes/Zone3Swamp"]
-offset_left = 3839.0
-offset_top = 770.0
-offset_right = 4579.0
-offset_bottom = 1017.0
-theme_override_font_sizes/font_size = 36
-text = "Move Player:
-Princezna
-- hráč postoupí za tůň"
-
-[node name="Label5" type="Label" parent="Notes/Zone3Swamp"]
-offset_left = 4154.0
-offset_top = 572.0
-offset_right = 4894.0
-offset_bottom = 819.0
-theme_override_font_sizes/font_size = 36
-text = "Stuck Player:
-Tůň
-- hráč pokračuje až hodí 6
-- cestou zpátky tohle neplatí"
-
-[node name="Label6" type="Label" parent="Notes/Zone3Swamp"]
-offset_left = 4486.0
-offset_top = 406.0
-offset_right = 5226.0
-offset_bottom = 653.0
-theme_override_font_sizes/font_size = 36
-text = "Move Player:
-Zlatá rybka
-- při zpáteční cestě posune hráče za tůň"
-
-[node name="Label7" type="Label" parent="Notes/Zone3Swamp"]
-offset_left = 4020.0
-offset_top = -215.0
-offset_right = 4760.0
-offset_bottom = 32.0
-theme_override_font_sizes/font_size = 36
-text = "Move Player:
-Jablíčka
-- posune hráče na další políčko s jablíčkem"
-
-[node name="Label8" type="Label" parent="Notes/Zone3Swamp"]
-offset_left = 4738.0
-offset_top = 68.0
-offset_right = 5478.0
-offset_bottom = 315.0
-theme_override_font_sizes/font_size = 36
-text = "Move Player:
-Jablíčka
-- posune hráče na další políčko s jablíčkem"
-
-[node name="Label9" type="Label" parent="Notes/Zone3Swamp"]
-offset_left = 4545.0
-offset_top = -363.0
-offset_right = 5285.0
-offset_bottom = -116.0
-theme_override_font_sizes/font_size = 36
-text = "Move Player:
-Pták Ohnivák
-- Tam: hráč jde zpět do tůně
-- Zpátky: hráč jde rovnou na Zlatý Vrch"
-
-[node name="Label10" type="Label" parent="Notes/Zone3Swamp"]
-offset_left = 5739.0
-offset_top = -431.0
-offset_right = 6551.0
-offset_bottom = -169.0
-theme_override_font_sizes/font_size = 36
-text = "???:
-Žabí král
-- hráč se zde MUSÍ zastavit přesným hodem
-- když pak hodí 1 - Tam: jde na studánku
-                                 - Zpět: jde na pole s korunkou"
-
-[node name="Zone4WizardRoad" type="Node2D" parent="Notes"]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Bg4" type="Sprite2D" parent="Notes/Zone4WizardRoad"]
-modulate = Color(1, 1, 0.239216, 0.407843)
-position = Vector2(5046, 715.313)
-scale = Vector2(7.87, 5.10687)
-texture = ExtResource("10_fs1ih")
-
-[node name="Label5" type="Label" parent="Notes/Zone4WizardRoad"]
-offset_left = 4442.0
-offset_top = 391.0
-offset_right = 5120.0
-offset_bottom = 638.0
-theme_override_font_sizes/font_size = 36
-text = "Move Player:
-Čaroděj
-- posílá hráče pást prasata"
-
-[node name="Zone5Pigs" type="Node2D" parent="Notes"]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Bg5" type="Sprite2D" parent="Notes/Zone5Pigs"]
-modulate = Color(1, 0.603922, 0.239216, 0.407843)
-position = Vector2(5450, -580.22)
-scale = Vector2(6.88, 4.4522)
-texture = ExtResource("10_fs1ih")
-
-[node name="Label5" type="Label" parent="Notes/Zone5Pigs"]
-offset_left = 4727.0
-offset_top = -444.0
-offset_right = 5405.0
-offset_bottom = -197.0
-theme_override_font_sizes/font_size = 36
-text = "Move Player:
-Zlaté prasátko
-- hráč jde na Zlatý vrch"
-
-[node name="Label6" type="Label" parent="Notes/Zone5Pigs"]
-offset_left = 5817.0
-offset_top = -644.0
-offset_right = 6495.0
-offset_bottom = -397.0
-theme_override_font_sizes/font_size = 36
-text = "Move Player:
-Černé prasátko
-- hráč jde do pekla"
-
-[node name="Zone6GoldenHill" type="Node2D" parent="Notes"]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Bg6" type="Sprite2D" parent="Notes/Zone6GoldenHill"]
-modulate = Color(1, 1, 0.239216, 0.407843)
-position = Vector2(7347.5, 201.5)
-scale = Vector2(7.605, 3.385)
-texture = ExtResource("10_fs1ih")
-
-[node name="Label5" type="Label" parent="Notes/Zone6GoldenHill"]
-offset_left = 6808.0
-offset_top = 277.0
-offset_right = 7486.0
-offset_bottom = 524.0
-theme_override_font_sizes/font_size = 36
-text = "Move Player:
-Obr
-- srazí kráče kyjem zpět na Zlatý vrch"
-
-[node name="Label6" type="Label" parent="Notes/Zone6GoldenHill"]
-offset_left = 8016.0
-offset_top = 475.0
-offset_right = 8694.0
-offset_bottom = 722.0
-theme_override_font_sizes/font_size = 36
-text = "Koruna Žabího prince"
-
-[node name="Zone7RoadsToCastle" type="Node2D" parent="Notes"]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Bg7" type="Sprite2D" parent="Notes/Zone7RoadsToCastle"]
-modulate = Color(1, 1, 0.239216, 0.407843)
-position = Vector2(8313.2, -481.411)
-scale = Vector2(14.078, 7.00411)
-texture = ExtResource("10_fs1ih")
-
-[node name="Label5" type="Label" parent="Notes/Zone7RoadsToCastle"]
-offset_left = 8609.0
-offset_top = 158.0
-offset_right = 9287.0
-offset_bottom = 405.0
-theme_override_font_sizes/font_size = 36
-text = "Move Player:
-Zlatá brána
-- vrátí hráče k ježibabě"
-
-[node name="Label6" type="Label" parent="Notes/Zone7RoadsToCastle"]
-offset_left = 9540.0
-offset_top = -88.0
-offset_right = 10218.0
-offset_bottom = 159.0
-theme_override_font_sizes/font_size = 36
-text = "Hvězdy"
-
-[node name="Label7" type="Label" parent="Notes/Zone7RoadsToCastle"]
-offset_left = 8705.0
-offset_top = -160.0
-offset_right = 9383.0
-offset_bottom = 87.0
-theme_override_font_sizes/font_size = 36
-text = "Move Player:
-Had
-- hráč jde zpět na pole s korunou"
-
-[node name="Label8" type="Label" parent="Notes/Zone7RoadsToCastle"]
-offset_left = 9327.0
-offset_top = -571.0
-offset_right = 10005.0
-offset_bottom = -324.0
-theme_override_font_sizes/font_size = 36
-text = "Move Player:
-Had
-- hráč jde zpět na pole s korunou"
-
-[node name="Label9" type="Label" parent="Notes/Zone7RoadsToCastle"]
-offset_left = 8079.0
-offset_top = -184.0
-offset_right = 8757.0
-offset_bottom = 63.0
-theme_override_font_sizes/font_size = 36
-text = "Move Player:
-Had
-- hráč jde zpět na pole s korunou"
-
-[node name="Label10" type="Label" parent="Notes/Zone7RoadsToCastle"]
-offset_left = 7300.0
-offset_top = -257.0
-offset_right = 7978.0
-offset_bottom = -10.0
-theme_override_font_sizes/font_size = 36
-text = "Move Player:
-Obr
-- srazí kráče kyjem zpět na Zlatý vrch"
-
-[node name="Label11" type="Label" parent="Notes/Zone7RoadsToCastle"]
-offset_left = 8235.0
-offset_top = -1092.0
-offset_right = 8913.0
-offset_bottom = -845.0
-theme_override_font_sizes/font_size = 36
-text = "Move Player:
-Dech draka
-- hráč jde zpět na pole s hvězdami"
-
-[node name="Label12" type="Label" parent="Notes/Zone7RoadsToCastle"]
-offset_left = 7150.0
-offset_top = -1213.0
-offset_right = 7828.0
-offset_bottom = -966.0
-theme_override_font_sizes/font_size = 36
-text = "Stuck Player:
-Drak
-- hráč se může pohnout jen hodem 1"
-
-[node name="Label13" type="Label" parent="Notes/Zone7RoadsToCastle"]
-offset_left = 7821.0
-offset_top = -804.0
-offset_right = 8499.0
-offset_bottom = -557.0
-theme_override_font_sizes/font_size = 36
-text = "Move Player:
-Komnaty hradu
-- hráč jde zpět k čaroději"
-
-[node name="Zone8Hell" type="Node2D" parent="Notes"]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Bg8" type="Sprite2D" parent="Notes/Zone8Hell"]
-modulate = Color(1, 0, 0.239216, 0.407843)
-position = Vector2(3794.89, -365.552)
-scale = Vector2(7.44109, 7.05552)
-texture = ExtResource("10_fs1ih")
-
-[node name="Label5" type="Label" parent="Notes/Zone8Hell"]
-offset_left = 3687.0
-offset_top = -552.0
-offset_right = 4365.0
-offset_bottom = -305.0
-theme_override_font_sizes/font_size = 36
-text = "Move Player:
-Čerti
-- hráč jde o 5 polí zpět"
-
-[node name="Label6" type="Label" parent="Notes/Zone8Hell"]
-offset_left = 3711.0
-offset_top = -112.0
-offset_right = 4389.0
-offset_bottom = 135.0
-theme_override_font_sizes/font_size = 36
-text = "Move Player:
-Červný havran
-- hráč jde zpět k ježibabě"
-
-[node name="Label7" type="Label" parent="Notes/Zone8Hell"]
-offset_left = 3627.0
-offset_top = 241.0
-offset_right = 4305.0
-offset_bottom = 488.0
-theme_override_font_sizes/font_size = 36
-text = "Move Player:
-Bílá holubice
-- hráč jde na Zlatý vrch"
-
-[node name="Label3" type="Label" parent="Notes"]
-offset_left = 43.0
-offset_top = 2557.0
-offset_right = 783.0
-offset_bottom = 2819.0
-theme_override_font_sizes/font_size = 36
-text = "SUMMARY:
-
-MovePlayer(number_of_tiles)
-StuckPlayer(dice_number)
-RoadSelect(crossroad_index) (?)
-"
-
 [node name="ActionsOfTiles" type="Node2D" parent="."]
-position = Vector2(807, 1082)
+position = Vector2(2724, 14586)
 script = ExtResource("11_knj1u")
 
 [node name="MovePlayer" type="Node2D" parent="ActionsOfTiles"]
 position = Vector2(117, 2)
 
 [node name="DivotvornyMec" type="Node2D" parent="ActionsOfTiles/MovePlayer"]
-position = Vector2(476, 578)
+position = Vector2(-147, 1315)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/DivotvornyMec"]
-position = Vector2(-91, 73)
+position = Vector2(2, 123)
 
 [node name="DestinationMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/DivotvornyMec"]
 position = Vector2(797, 633)
@@ -616,91 +218,91 @@ position = Vector2(797, 633)
 position = Vector2(682, 617)
 
 [node name="CernyKun1" type="Node2D" parent="ActionsOfTiles/MovePlayer"]
-position = Vector2(546, -1127)
+position = Vector2(529, -3186)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/CernyKun1"]
 position = Vector2(-174, 89)
 
 [node name="DestinationMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/CernyKun1"]
-position = Vector2(1488, -3058)
+position = Vector2(1197, -5207)
 
 [node name="InvalidWayMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/CernyKun1"]
-position = Vector2(1583, -3105)
+position = Vector2(1292, -5254)
 
 [node name="CernyKun2" type="Node2D" parent="ActionsOfTiles/MovePlayer"]
-position = Vector2(-422, -1267)
+position = Vector2(-439, -3326)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/CernyKun2"]
 position = Vector2(-194, 117)
 
 [node name="DestinationMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/CernyKun2"]
-position = Vector2(2492, -2916)
+position = Vector2(2201, -5065)
 
 [node name="InvalidWayMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/CernyKun2"]
-position = Vector2(2592, -2965)
+position = Vector2(2301, -5114)
 
 [node name="CernyKun3" type="Node2D" parent="ActionsOfTiles/MovePlayer"]
-position = Vector2(334, -1867)
+position = Vector2(317, -3926)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/CernyKun3"]
 position = Vector2(45, 113)
 
 [node name="DestinationMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/CernyKun3"]
-position = Vector2(1778, -2318)
+position = Vector2(1487, -4467)
 
 [node name="InvalidWayMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/CernyKun3"]
-position = Vector2(1871, -2368)
+position = Vector2(1580, -4517)
 
 [node name="BilyKun" type="Node2D" parent="ActionsOfTiles/MovePlayer"]
-position = Vector2(113, -1317)
+position = Vector2(96, -3376)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/BilyKun"]
 position = Vector2(-139, -33)
 
 [node name="DestinationMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/BilyKun"]
-position = Vector2(6971, -680)
+position = Vector2(9732, -3461)
 
 [node name="InvalidWayMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/BilyKun"]
-position = Vector2(6863, -725)
+position = Vector2(9667, -3509)
 
 [node name="HnedyKun" type="Node2D" parent="ActionsOfTiles/MovePlayer"]
-position = Vector2(1172, -1282)
+position = Vector2(1155, -3341)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/HnedyKun"]
 position = Vector2(-311, -15)
 
 [node name="DestinationMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/HnedyKun"]
-position = Vector2(1205, 1769)
+position = Vector2(2867, 2004)
 
 [node name="InvalidWayMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/HnedyKun"]
-position = Vector2(1144, 1799)
+position = Vector2(2806, 2034)
 
 [node name="CernePrase" type="Node2D" parent="ActionsOfTiles/MovePlayer"]
-position = Vector2(4294, -2405)
+position = Vector2(6290, -5258)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/CernePrase"]
 position = Vector2(-29, 114)
 
 [node name="DestinationMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/CernePrase"]
-position = Vector2(-2229, -1801)
+position = Vector2(-4539, -3140)
 
 [node name="InvalidWayMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/CernePrase"]
-position = Vector2(-2137, -1853)
+position = Vector2(-4447, -3192)
 
 [node name="ZlatePrase" type="Node2D" parent="ActionsOfTiles/MovePlayer"]
-position = Vector2(3123, -2164)
+position = Vector2(5096, -5021)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/ZlatePrase"]
 position = Vector2(53, 131)
 
 [node name="DestinationMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/ZlatePrase"]
-position = Vector2(4004, 170)
+position = Vector2(4779, -1830)
 
 [node name="InvalidWayMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/ZlatePrase"]
-position = Vector2(3848, 153)
+position = Vector2(4707, -1861)
 
 [node name="Cert1" type="Node2D" parent="ActionsOfTiles/MovePlayer"]
-position = Vector2(1573, -4077)
+position = Vector2(1259, -8279)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/Cert1"]
 position = Vector2(101, 94)
@@ -712,7 +314,7 @@ position = Vector2(522, -128)
 position = Vector2(618, -184)
 
 [node name="Cert2" type="Node2D" parent="ActionsOfTiles/MovePlayer"]
-position = Vector2(1066, -3850)
+position = Vector2(752, -8052)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/Cert2"]
 position = Vector2(101, 94)
@@ -724,7 +326,7 @@ position = Vector2(583, -144)
 position = Vector2(714, -184)
 
 [node name="Cert3" type="Node2D" parent="ActionsOfTiles/MovePlayer"]
-position = Vector2(975, -3781)
+position = Vector2(661, -7983)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/Cert3"]
 position = Vector2(101, 94)
@@ -736,7 +338,7 @@ position = Vector2(583, -144)
 position = Vector2(714, -184)
 
 [node name="Cert4" type="Node2D" parent="ActionsOfTiles/MovePlayer"]
-position = Vector2(1202, -3436)
+position = Vector2(888, -7638)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/Cert4"]
 position = Vector2(-28, 94)
@@ -748,31 +350,31 @@ position = Vector2(2, -294)
 position = Vector2(59, -349)
 
 [node name="BilaHolubice" type="Node2D" parent="ActionsOfTiles/MovePlayer"]
-position = Vector2(1885, -2923)
+position = Vector2(1571, -7125)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/BilaHolubice"]
 position = Vector2(-116, 94)
 
 [node name="DestinationMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/BilaHolubice"]
-position = Vector2(5199, 952)
+position = Vector2(8275, 286)
 
 [node name="InvalidWayMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/BilaHolubice"]
-position = Vector2(5119, 897)
+position = Vector2(8195, 231)
 
 [node name="CernyHavran" type="Node2D" parent="ActionsOfTiles/MovePlayer"]
-position = Vector2(1737, -3005)
+position = Vector2(1423, -7207)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/CernyHavran"]
 position = Vector2(-65, 114)
 
 [node name="DestinationMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/CernyHavran"]
-position = Vector2(684, 3475)
+position = Vector2(2656, 5861)
 
 [node name="InvalidWayMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/CernyHavran"]
-position = Vector2(542, 3499)
+position = Vector2(2566, 5923)
 
 [node name="Had1" type="Node2D" parent="ActionsOfTiles/MovePlayer"]
-position = Vector2(9184, -2846)
+position = Vector2(13272, -7545)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/Had1"]
 position = Vector2(-114, 48)
@@ -781,10 +383,10 @@ position = Vector2(-114, 48)
 position = Vector2(-306, 366)
 
 [node name="InvalidWayMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/Had1"]
-position = Vector2(-574, 1415)
+position = Vector2(-385, 426)
 
 [node name="Had2" type="Node2D" parent="ActionsOfTiles/MovePlayer"]
-position = Vector2(7841, -2977)
+position = Vector2(11929, -7676)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/Had2"]
 position = Vector2(37, 83)
@@ -793,34 +395,34 @@ position = Vector2(37, 83)
 position = Vector2(999, 497)
 
 [node name="InvalidWayMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/Had2"]
-position = Vector2(725, 1520)
+position = Vector2(914, 531)
 
 [node name="Hrad1" type="Node2D" parent="ActionsOfTiles/MovePlayer"]
-position = Vector2(7520, -3218)
+position = Vector2(11608, -7917)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/Hrad1"]
 position = Vector2(37, 83)
 
 [node name="DestinationMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/Hrad1"]
-position = Vector2(-2544, 2299)
+position = Vector2(1355, 694)
 
 [node name="InvalidWayMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/Hrad1"]
-position = Vector2(-2671, 2420)
+position = Vector2(-251, 1614)
 
 [node name="Hrad2" type="Node2D" parent="ActionsOfTiles/MovePlayer"]
-position = Vector2(7127, -3518)
+position = Vector2(11215, -8217)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/Hrad2"]
 position = Vector2(37, 83)
 
 [node name="DestinationMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/Hrad2"]
-position = Vector2(-1859, 2456)
+position = Vector2(1725, 998)
 
 [node name="InvalidWayMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/Hrad2"]
-position = Vector2(-2019, 2549)
+position = Vector2(185, 1921)
 
 [node name="DechDraka" type="Node2D" parent="ActionsOfTiles/MovePlayer"]
-position = Vector2(8747, -4069)
+position = Vector2(12835, -8768)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/DechDraka"]
 position = Vector2(-65, 86)
@@ -831,23 +433,23 @@ position = Vector2(1712, 1286)
 [node name="InvalidWayMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/DechDraka"]
 position = Vector2(1642, 1317)
 
-[node name="DechDraka2" type="Node2D" parent="ActionsOfTiles/MovePlayer"]
-position = Vector2(10462, -3221)
+[node name="Had3" type="Node2D" parent="ActionsOfTiles/MovePlayer"]
+position = Vector2(14535, -7933)
 
-[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/DechDraka2"]
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/Had3"]
 position = Vector2(-65, 86)
 
-[node name="DestinationMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/DechDraka2"]
+[node name="DestinationMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/Had3"]
 position = Vector2(-1605, 722)
 
-[node name="InvalidWayMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/DechDraka2"]
-position = Vector2(-1880, 1794)
+[node name="InvalidWayMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/Had3"]
+position = Vector2(-1683, 781)
 
 [node name="StuckPlayer" type="Node2D" parent="ActionsOfTiles"]
 position = Vector2(245, -3)
 
 [node name="San_Roll3" type="Node2D" parent="ActionsOfTiles/StuckPlayer"]
-position = Vector2(727, 867)
+position = Vector2(189, 1668)
 
 [node name="StuckPlayer_3" type="Marker2D" parent="ActionsOfTiles/StuckPlayer/San_Roll3"]
 position = Vector2(-64, 95)
@@ -865,7 +467,7 @@ position = Vector2(243, 239)
 position = Vector2(333, 287)
 
 [node name="Drak_Roll1" type="Node2D" parent="ActionsOfTiles/StuckPlayer"]
-position = Vector2(7864, -4294)
+position = Vector2(11952, -8993)
 
 [node name="StuckPlayer1" type="Marker2D" parent="ActionsOfTiles/StuckPlayer/Drak_Roll1"]
 position = Vector2(95, 112)
@@ -883,7 +485,7 @@ position = Vector2(-435, 369)
 position = Vector2(364, -11)
 
 [node name="Jezibaba" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-position = Vector2(2522, 211)
+position = Vector2(3196, -991)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jezibaba"]
 position = Vector2(-371, 245)
@@ -898,16 +500,16 @@ position = Vector2(516, 322)
 position = Vector2(494, -281)
 
 [node name="Jump1" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-position = Vector2(314, 641)
+position = Vector2(-101, 1415)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump1"]
-position = Vector2(-101, 93)
+position = Vector2(-190, 125)
 
 [node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump1"]
-position = Vector2(175, 339)
+position = Vector2(132, 351)
 
 [node name="Jump2" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-position = Vector2(1092, 1139)
+position = Vector2(554, 1940)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump2"]
 position = Vector2(-101, 93)
@@ -916,25 +518,25 @@ position = Vector2(-101, 93)
 position = Vector2(121, 192)
 
 [node name="Jump3" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-position = Vector2(1835, 1082)
+position = Vector2(1326, 1858)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump3"]
 position = Vector2(-101, 93)
 
 [node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump3"]
-position = Vector2(185, -553)
+position = Vector2(1360, -2537)
 
 [node name="Jump4" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-position = Vector2(1912, -306)
+position = Vector2(2593, -1524)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump4"]
 position = Vector2(18, 179)
 
 [node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump4"]
-position = Vector2(-1076, -379)
+position = Vector2(-1767, -1199)
 
 [node name="Jump5" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-position = Vector2(-19, -1193)
+position = Vector2(-36, -3252)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump5"]
 position = Vector2(45, 113)
@@ -943,7 +545,7 @@ position = Vector2(45, 113)
 position = Vector2(-135, 125)
 
 [node name="Jump6" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-position = Vector2(-503, -1088)
+position = Vector2(-520, -3147)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump6"]
 position = Vector2(132, 124)
@@ -952,7 +554,7 @@ position = Vector2(132, 124)
 position = Vector2(-72, 106)
 
 [node name="Jump7" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-position = Vector2(-795, -1254)
+position = Vector2(-812, -3313)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump7"]
 position = Vector2(-173, 84)
@@ -961,7 +563,7 @@ position = Vector2(-173, 84)
 position = Vector2(-206, -24)
 
 [node name="Jump8" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-position = Vector2(-876, -1425)
+position = Vector2(-893, -3484)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump8"]
 position = Vector2(-62, 155)
@@ -970,7 +572,7 @@ position = Vector2(-62, 155)
 position = Vector2(220, 2)
 
 [node name="Jump9" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-position = Vector2(-532, -1552)
+position = Vector2(-549, -3611)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump9"]
 position = Vector2(-176, 124)
@@ -979,7 +581,7 @@ position = Vector2(-176, 124)
 position = Vector2(68, 106)
 
 [node name="Jump10" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-position = Vector2(122, -1612)
+position = Vector2(105, -3671)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump10"]
 position = Vector2(-182, 191)
@@ -988,7 +590,7 @@ position = Vector2(-182, 191)
 position = Vector2(-183, 81)
 
 [node name="Jump11" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-position = Vector2(-259, -1660)
+position = Vector2(-276, -3719)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump11"]
 position = Vector2(154, 134)
@@ -997,7 +599,7 @@ position = Vector2(154, 134)
 position = Vector2(189, 30)
 
 [node name="Jump12" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-position = Vector2(379, -1923)
+position = Vector2(362, -3982)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump12"]
 position = Vector2(-144, 146)
@@ -1006,7 +608,7 @@ position = Vector2(-144, 146)
 position = Vector2(46, 144)
 
 [node name="Jump13" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-position = Vector2(1049, -1663)
+position = Vector2(1032, -3722)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump13"]
 position = Vector2(-214, 73)
@@ -1015,34 +617,34 @@ position = Vector2(-214, 73)
 position = Vector2(-208, 185)
 
 [node name="Jump14" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-position = Vector2(1125, -1098)
+position = Vector2(1108, -3157)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump14"]
 position = Vector2(-202, 83)
 
 [node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump14"]
-position = Vector2(2806, 883)
+position = Vector2(4106, -77)
 
 [node name="Jump15" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-position = Vector2(4018, -509)
+position = Vector2(6426, -4368)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump15"]
 position = Vector2(20, 224)
 
 [node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump15"]
-position = Vector2(125, 87)
+position = Vector2(286, 319)
 
 [node name="Jump16" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-position = Vector2(4205, -713)
+position = Vector2(7101, -4504)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump16"]
 position = Vector2(20, 224)
 
 [node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump16"]
-position = Vector2(125, 87)
+position = Vector2(2492, -2311)
 
 [node name="Jump17" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-position = Vector2(4519, -956)
+position = Vector2(5191, -3452)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump17"]
 position = Vector2(124, 169)
@@ -1051,25 +653,25 @@ position = Vector2(124, 169)
 position = Vector2(213, 33)
 
 [node name="Jump18" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-position = Vector2(5260, -1278)
+position = Vector2(5796, -4102)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump18"]
-position = Vector2(-130, 145)
+position = Vector2(127, 343)
 
 [node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump18"]
-position = Vector2(190, 203)
+position = Vector2(220, 180)
 
 [node name="Jump19" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-position = Vector2(6132, -1793)
+position = Vector2(6151, -4251)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump19"]
-position = Vector2(-312, 522)
+position = Vector2(-14, 261)
 
 [node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump19"]
-position = Vector2(669, -162)
+position = Vector2(154, 177)
 
 [node name="Jump20" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-position = Vector2(3436, -285)
+position = Vector2(9619, -199)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump20"]
 position = Vector2(-323, 166)
@@ -1078,7 +680,7 @@ position = Vector2(-323, 166)
 position = Vector2(461, 63)
 
 [node name="Jump21" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-position = Vector2(649, -3611)
+position = Vector2(335, -7813)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump21"]
 position = Vector2(145, -68)
@@ -1087,7 +689,7 @@ position = Vector2(145, -68)
 position = Vector2(171, 134)
 
 [node name="Jump22" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-position = Vector2(905, -3160)
+position = Vector2(591, -7362)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump22"]
 position = Vector2(132, -122)
@@ -1096,43 +698,43 @@ position = Vector2(132, -122)
 position = Vector2(209, 33)
 
 [node name="Jump23" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-position = Vector2(1886, -2447)
+position = Vector2(1572, -6649)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump23"]
 position = Vector2(-66, -227)
 
 [node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump23"]
-position = Vector2(2409, 1817)
+position = Vector2(3608, 3434)
 
 [node name="Jump24" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-position = Vector2(4708, -1158)
+position = Vector2(5380, -3654)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump24"]
 position = Vector2(124, 169)
 
 [node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump24"]
-position = Vector2(291, 91)
+position = Vector2(227, 19)
 
 [node name="Jump25" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-position = Vector2(8383, -1993)
+position = Vector2(11207, -6747)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump25"]
-position = Vector2(-88, 567)
+position = Vector2(-99, 471)
 
 [node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump25"]
-position = Vector2(255, -505)
+position = Vector2(1507, -441)
 
 [node name="Jump26" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-position = Vector2(7953, -1622)
+position = Vector2(10735, -6467)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump26"]
 position = Vector2(-37, 188)
 
 [node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump26"]
-position = Vector2(276, 264)
+position = Vector2(281, 232)
 
 [node name="Jump27" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-position = Vector2(8367, -3004)
+position = Vector2(12455, -7703)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump27"]
 position = Vector2(177, 74)
@@ -1141,7 +743,7 @@ position = Vector2(177, 74)
 position = Vector2(-136, 124)
 
 [node name="Jump28" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-position = Vector2(7388, -2928)
+position = Vector2(11476, -7627)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump28"]
 position = Vector2(22, 158)
@@ -1150,7 +752,7 @@ position = Vector2(22, 158)
 position = Vector2(-158, 53)
 
 [node name="Jump29" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-position = Vector2(9053, -2590)
+position = Vector2(13141, -7289)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump29"]
 position = Vector2(-114, 63)
@@ -1159,7 +761,7 @@ position = Vector2(-114, 63)
 position = Vector2(99, 169)
 
 [node name="Jump30" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-position = Vector2(9357, -2505)
+position = Vector2(13445, -7204)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump30"]
 position = Vector2(-247, 79)
@@ -1168,7 +770,7 @@ position = Vector2(-247, 79)
 position = Vector2(182, 78)
 
 [node name="Jump31" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-position = Vector2(9619, -2609)
+position = Vector2(13707, -7308)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump31"]
 position = Vector2(-127, 191)
@@ -1177,7 +779,7 @@ position = Vector2(-127, 191)
 position = Vector2(107, 76)
 
 [node name="Jump32" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-position = Vector2(9830, -2718)
+position = Vector2(13918, -7417)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump32"]
 position = Vector2(-127, 191)
@@ -1186,7 +788,7 @@ position = Vector2(-127, 191)
 position = Vector2(107, 76)
 
 [node name="Jump33" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-position = Vector2(10476, -3033)
+position = Vector2(14564, -7732)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump33"]
 position = Vector2(-127, 191)
@@ -1195,7 +797,7 @@ position = Vector2(-127, 191)
 position = Vector2(-168, 1)
 
 [node name="Jump34" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-position = Vector2(9731, -3495)
+position = Vector2(13819, -8194)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump34"]
 position = Vector2(97, 231)
@@ -1204,7 +806,7 @@ position = Vector2(97, 231)
 position = Vector2(-197, -31)
 
 [node name="Jump35" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-position = Vector2(8925, -3855)
+position = Vector2(13013, -8554)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump35"]
 position = Vector2(200, 131)
@@ -1213,7 +815,7 @@ position = Vector2(200, 131)
 position = Vector2(-176, 44)
 
 [node name="Jump36" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-position = Vector2(8159, -4161)
+position = Vector2(12247, -8860)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump36"]
 position = Vector2(167, 144)
@@ -1222,7 +824,7 @@ position = Vector2(167, 144)
 position = Vector2(-212, 48)
 
 [node name="Jump37" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-position = Vector2(6962, -3830)
+position = Vector2(11050, -8529)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump37"]
 position = Vector2(259, -38)
@@ -1231,7 +833,7 @@ position = Vector2(259, -38)
 position = Vector2(-215, 214)
 
 [node name="Jump38" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-position = Vector2(6508, -3386)
+position = Vector2(10596, -8085)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump38"]
 position = Vector2(29, -134)
@@ -1240,7 +842,7 @@ position = Vector2(29, -134)
 position = Vector2(215, -36)
 
 [node name="ZlataBrana" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-position = Vector2(8914, -2643)
+position = Vector2(13002, -7342)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/ZlataBrana"]
 position = Vector2(-85, 67)
@@ -1252,38 +854,37 @@ position = Vector2(-186, 24)
 position = Vector2(-24, 120)
 
 [node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/ZlataBrana"]
-position = Vector2(-5879, 2572)
+position = Vector2(-9178, 6017)
 
 [node name="GiveCard" type="Node2D" parent="ActionsOfTiles"]
 position = Vector2(493, -1)
 
 [node name="move_enemy_to_self" type="Marker2D" parent="ActionsOfTiles/GiveCard"]
-position = Vector2(-594, 376)
+position = Vector2(-1217, 1113)
 
 [node name="move_enemy_to_self2" type="Marker2D" parent="ActionsOfTiles/GiveCard"]
-position = Vector2(-509, 414)
+position = Vector2(-1132, 1151)
 
 [node name="move_enemy_to_self3" type="Marker2D" parent="ActionsOfTiles/GiveCard"]
-position = Vector2(-375, 463)
+position = Vector2(-998, 1200)
 
 [node name="move_enemy_to_self4" type="Marker2D" parent="ActionsOfTiles/GiveCard"]
-position = Vector2(-275, 533)
+position = Vector2(-898, 1270)
 
 [node name="move_enemy_to_self5" type="Marker2D" parent="ActionsOfTiles/GiveCard"]
-position = Vector2(-188, 566)
+position = Vector2(-811, 1303)
 
 [node name="move_enemy_to_self6" type="Marker2D" parent="ActionsOfTiles/GiveCard"]
-position = Vector2(-74, 621)
+position = Vector2(-697, 1358)
 
 [node name="BazinaWayThere" type="Node2D" parent="ActionsOfTiles"]
-visible = false
-position = Vector2(4979, 860)
+position = Vector2(9450, -345)
 
 [node name="Jump20" type="Node2D" parent="ActionsOfTiles/BazinaWayThere"]
 position = Vector2(-1262, -366)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/BazinaWayThere/Jump20"]
-position = Vector2(-232, 78)
+position = Vector2(-4014, 88)
 
 [node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/BazinaWayThere/Jump20"]
 position = Vector2(155, 374)
@@ -1560,7 +1161,7 @@ position = Vector2(488, -3)
 
 [node name="BazinaWayBack" type="Node2D" parent="ActionsOfTiles"]
 visible = false
-position = Vector2(4979, 860)
+position = Vector2(9466, -342)
 
 [node name="Jump20" type="Node2D" parent="ActionsOfTiles/BazinaWayBack"]
 position = Vector2(-1262, -366)
@@ -1569,7 +1170,7 @@ position = Vector2(-1262, -366)
 position = Vector2(201, 361)
 
 [node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/BazinaWayBack/Jump20"]
-position = Vector2(-220, 73)
+position = Vector2(-4014, 85)
 
 [node name="Jump21" type="Node2D" parent="ActionsOfTiles/BazinaWayBack"]
 position = Vector2(-768, -6)
@@ -1827,33 +1428,34 @@ position = Vector2(-251, 72)
 position = Vector2(275, 317)
 
 [node name="Jump49" type="Node2D" parent="ActionsOfTiles/BazinaWayBack"]
-position = Vector2(-1500, -730)
+position = Vector2(-4928, -736)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/BazinaWayBack/Jump49"]
-position = Vector2(-118, 381)
+position = Vector2(-448, 393)
 
 [node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/BazinaWayBack/Jump49"]
-position = Vector2(-63, -210)
+position = Vector2(-471, -204)
 
 [node name="Specials" type="Node2D" parent="ActionsOfTiles"]
+visible = false
 position = Vector2(628, 12)
 
 [node name="Tun" type="Node2D" parent="ActionsOfTiles/Specials"]
 
 [node name="Tun" type="Marker2D" parent="ActionsOfTiles/Specials/Tun"]
-position = Vector2(6583, -500)
+position = Vector2(11069, -1706)
 
 [node name="ZabiKral" type="Node2D" parent="ActionsOfTiles/Specials"]
-position = Vector2(8167, -173)
+position = Vector2(12612, -1392)
 
 [node name="ZabiKral1" type="Marker2D" parent="ActionsOfTiles/Specials/ZabiKral"]
-position = Vector2(-67, 126)
+position = Vector2(-73, 139)
 
 [node name="ZabiKral2" type="Marker2D" parent="ActionsOfTiles/Specials/ZabiKral"]
 position = Vector2(41, 174)
 
 [node name="Goals" type="Node2D" parent="ActionsOfTiles/Specials"]
-position = Vector2(7000, -3382)
+position = Vector2(11084, -8089)
 
 [node name="Goal1" type="Marker2D" parent="ActionsOfTiles/Specials/Goals"]
 position = Vector2(174, 178)
@@ -1862,7 +1464,7 @@ position = Vector2(174, 178)
 position = Vector2(-245, -110)
 
 [node name="PtakOhnivak" type="Node2D" parent="ActionsOfTiles/Specials"]
-position = Vector2(5904, 172)
+position = Vector2(10390, -1034)
 
 [node name="StartMarker1" type="Marker2D" parent="ActionsOfTiles/Specials/PtakOhnivak"]
 position = Vector2(55, 130)
@@ -1871,16 +1473,16 @@ position = Vector2(55, 130)
 position = Vector2(203, 75)
 
 [node name="DestinationMarkerThere" type="Marker2D" parent="ActionsOfTiles/Specials/PtakOhnivak"]
-position = Vector2(-1081, 1572)
+position = Vector2(-1049, 1582)
 
 [node name="InvalidWayMarkerThere" type="Marker2D" parent="ActionsOfTiles/Specials/PtakOhnivak"]
-position = Vector2(-1096, 1628)
+position = Vector2(-1112, 1638)
 
 [node name="DestinationMarkerBack" type="Marker2D" parent="ActionsOfTiles/Specials/PtakOhnivak"]
-position = Vector2(644, -2180)
+position = Vector2(-1051, -5838)
 
 [node name="Jablicko1" type="Node2D" parent="ActionsOfTiles/Specials"]
-position = Vector2(6175, 458)
+position = Vector2(10661, -748)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Specials/Jablicko1"]
 position = Vector2(-16, 246)
@@ -1895,7 +1497,7 @@ position = Vector2(306, -213)
 position = Vector2(986, -161)
 
 [node name="Jablicko2" type="Node2D" parent="ActionsOfTiles/Specials"]
-position = Vector2(6707, 176)
+position = Vector2(11193, -1030)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Specials/Jablicko2"]
 position = Vector2(32, 141)
@@ -1910,10 +1512,10 @@ position = Vector2(-429, 582)
 position = Vector2(-640, 485)
 
 [node name="Korunka" type="Marker2D" parent="ActionsOfTiles/Specials"]
-position = Vector2(8399, -2501)
+position = Vector2(12445, -7194)
 
 [node name="Obr" type="Node2D" parent="ActionsOfTiles/Specials"]
-position = Vector2(7173, -1889)
+position = Vector2(9979, -6749)
 
 [node name="StartMarker1" type="Marker2D" parent="ActionsOfTiles/Specials/Obr"]
 position = Vector2(-106, 143)
@@ -1925,7 +1527,7 @@ position = Vector2(-6, 198)
 position = Vector2(102, 241)
 
 [node name="StartMarker4" type="Marker2D" parent="ActionsOfTiles/Specials/Obr"]
-position = Vector2(-412, -1109)
+position = Vector2(869, -941)
 
 [node name="DestinationMarker" type="Marker2D" parent="ActionsOfTiles/Specials/Obr"]
 position = Vector2(-662, -114)
@@ -1934,58 +1536,59 @@ position = Vector2(-662, -114)
 position = Vector2(-736, -142)
 
 [node name="Carodej1" type="Node2D" parent="ActionsOfTiles/Specials"]
-position = Vector2(4553, -1188)
+position = Vector2(5824, -4182)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Specials/Carodej1"]
 position = Vector2(-94, 217)
 
 [node name="DestinationMarkerThere" type="Marker2D" parent="ActionsOfTiles/Specials/Carodej1"]
-position = Vector2(-1495, -548)
+position = Vector2(-800, -407)
 
 [node name="InvalidWayMarkerThere" type="Marker2D" parent="ActionsOfTiles/Specials/Carodej1"]
-position = Vector2(-1413, -504)
+position = Vector2(-687, -335)
 
 [node name="Carodej2" type="Node2D" parent="ActionsOfTiles/Specials"]
-position = Vector2(4635, -1226)
+position = Vector2(5944, -4218)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Specials/Carodej2"]
 position = Vector2(107, 118)
 
 [node name="DestinationMarkerThere" type="Marker2D" parent="ActionsOfTiles/Specials/Carodej2"]
-position = Vector2(-881, -770)
+position = Vector2(-170, -624)
 
 [node name="InvalidWayMarkerThere" type="Marker2D" parent="ActionsOfTiles/Specials/Carodej2"]
-position = Vector2(-796, -723)
+position = Vector2(-91, -577)
 
 [node name="PrasataExit1" type="Node2D" parent="ActionsOfTiles/Specials"]
-position = Vector2(3872, -2071)
+position = Vector2(5823, -4942)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Specials/PrasataExit1"]
 position = Vector2(-81, 83)
 
 [node name="DestinationMarkerThere" type="Marker2D" parent="ActionsOfTiles/Specials/PrasataExit1"]
-position = Vector2(878, 984)
+position = Vector2(204, 833)
 
 [node name="InvalidWayMarkerThere" type="Marker2D" parent="ActionsOfTiles/Specials/PrasataExit1"]
-position = Vector2(682, 1079)
+position = Vector2(38, 925)
 
 [node name="PrasataExit2" type="Node2D" parent="ActionsOfTiles/Specials"]
-position = Vector2(3167, -1775)
+position = Vector2(5154, -4626)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Specials/PrasataExit2"]
 position = Vector2(-82, 22)
 
 [node name="DestinationMarkerThere" type="Marker2D" parent="ActionsOfTiles/Specials/PrasataExit2"]
-position = Vector2(1330, 825)
+position = Vector2(582, 665)
 
 [node name="InvalidWayMarkerThere" type="Marker2D" parent="ActionsOfTiles/Specials/PrasataExit2"]
-position = Vector2(1208, 995)
+position = Vector2(508, 831)
 
 [node name="ConditionalJumps" type="Node2D" parent="ActionsOfTiles"]
+visible = false
 position = Vector2(755, -15)
 
 [node name="ConditionalJumpThere" type="Node2D" parent="ActionsOfTiles/ConditionalJumps"]
-position = Vector2(7790, -211)
+position = Vector2(12270, -1426)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/ConditionalJumps/ConditionalJumpThere"]
 position = Vector2(133, 184)
@@ -1994,7 +1597,7 @@ position = Vector2(133, 184)
 position = Vector2(-156, 141)
 
 [node name="ConditionalJumpBack" type="Node2D" parent="ActionsOfTiles/ConditionalJumps"]
-position = Vector2(7794, 27)
+position = Vector2(12303, -1157)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/ConditionalJumps/ConditionalJumpBack"]
 position = Vector2(250, -15)
@@ -2002,68 +1605,734 @@ position = Vector2(250, -15)
 [node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/ConditionalJumps/ConditionalJumpBack"]
 position = Vector2(19, 93)
 
-[node name="Node2D" type="Node2D" parent="."]
-z_index = 5
-position = Vector2(1195, 667)
-
-[node name="Tree1" type="Sprite2D" parent="Node2D"]
-position = Vector2(-403, -89)
-texture = ExtResource("14_34i5n")
-
-[node name="Tree3" type="Sprite2D" parent="Node2D"]
-position = Vector2(246, 212)
-texture = ExtResource("15_vc04w")
-
-[node name="Tree2" type="Sprite2D" parent="Node2D"]
-position = Vector2(-767, 511)
-texture = ExtResource("16_yvqtj")
-
-[node name="WillowTree2" type="Sprite2D" parent="Node2D"]
-position = Vector2(4652, 1014)
-texture = ExtResource("17_fdvbs")
-
-[node name="WillowTree1" type="Sprite2D" parent="Node2D"]
-position = Vector2(5528, 2520)
-texture = ExtResource("18_h0v0c")
-
-[node name="WillowTree3" type="Sprite2D" parent="Node2D"]
-position = Vector2(7167, 758)
-texture = ExtResource("17_fdvbs")
-
-[node name="WillowTree4" type="Sprite2D" parent="Node2D"]
-position = Vector2(5950, 57)
-texture = ExtResource("18_h0v0c")
-flip_h = true
-
-[node name="GrassPatch1" type="Sprite2D" parent="Node2D"]
-position = Vector2(-1270, 1080)
-texture = ExtResource("19_jd0vn")
-
-[node name="GrassPatch2" type="Sprite2D" parent="Node2D"]
-modulate = Color(0.917647, 0.74902, 0.847059, 1)
-position = Vector2(-520, 1382)
-texture = ExtResource("20_igcvw")
-
-[node name="GrassPatch3" type="Sprite2D" parent="Node2D"]
-position = Vector2(-1476, 1741)
-texture = ExtResource("21_aqjyk")
-
-[node name="GrassPatch4" type="Sprite2D" parent="Node2D"]
-position = Vector2(-1151, 1965)
-texture = ExtResource("22_p7try")
-
-[node name="Rock3" type="Sprite2D" parent="Node2D"]
-position = Vector2(-44, 471)
-texture = ExtResource("23_nybje")
-
-[node name="Rock2" type="Sprite2D" parent="Node2D"]
-position = Vector2(-1147, 1789)
-texture = ExtResource("24_wosyr")
-
 [node name="Fog" type="Sprite2D" parent="."]
+visible = false
 z_index = 5
 material = SubResource("ShaderMaterial_y6cuy")
-position = Vector2(489, 2040)
-scale = Vector2(12.36, 12.36)
+position = Vector2(541, 19740)
+scale = Vector2(31.385, 31.385)
 texture = ExtResource("13_6laf0")
 region_rect = Rect2(0, 0, 2000, 2000)
+
+[node name="TextureOverlay2" type="Sprite2D" parent="."]
+modulate = Color(0.486275, 0.717647, 0.0745098, 1)
+position = Vector2(11096, 14686)
+scale = Vector2(10.1347, 3.25105)
+texture = ExtResource("13_v6203")
+metadata/_edit_lock_ = true
+
+[node name="TextureOverlay3" type="Sprite2D" parent="."]
+modulate = Color(0.188235, 0.509804, 0.615686, 1)
+position = Vector2(17442, 15907.5)
+scale = Vector2(6.125, 2.59949)
+texture = ExtResource("13_v6203")
+metadata/_edit_lock_ = true
+
+[node name="171069355917953053(2)7" type="Sprite2D" parent="."]
+modulate = Color(0.890196, 1, 1, 1)
+position = Vector2(9494, 15040)
+scale = Vector2(6.385, 28.15)
+texture = ExtResource("14_7unmf")
+metadata/_edit_lock_ = true
+
+[node name="171069355917953053(2)8" type="Sprite2D" parent="."]
+position = Vector2(18315, 10176.8)
+scale = Vector2(67.785, 17.7675)
+texture = ExtResource("14_7unmf")
+metadata/_edit_lock_ = true
+
+[node name="171069355917953053(2)" type="Sprite2D" parent="."]
+modulate = Color(1, 0.878431, 0.831373, 1)
+position = Vector2(2566, 8723)
+scale = Vector2(49.01, 7.87)
+texture = ExtResource("14_7unmf")
+metadata/_edit_lock_ = true
+
+[node name="Enivornment" type="Node2D" parent="."]
+scale = Vector2(25.87, 25.87)
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
+
+[node name="Center" type="Node2D" parent="Enivornment"]
+metadata/_edit_group_ = true
+
+[node name="DeadTree1" type="Sprite2D" parent="Enivornment/Center"]
+position = Vector2(204.832, 459.181)
+scale = Vector2(0.0386548, 0.0386548)
+texture = ExtResource("13_qjqt2")
+
+[node name="DeadTree4" type="Sprite2D" parent="Enivornment/Center"]
+position = Vector2(292.153, 489.447)
+scale = Vector2(0.0386548, 0.0386548)
+texture = ExtResource("13_qjqt2")
+flip_h = true
+
+[node name="DeadTree3" type="Sprite2D" parent="Enivornment/Center"]
+position = Vector2(318.709, 519.637)
+scale = Vector2(0.0386548, 0.0386548)
+texture = ExtResource("14_xljd1")
+
+[node name="DeadTree2" type="Sprite2D" parent="Enivornment/Center"]
+position = Vector2(237.263, 494.472)
+scale = Vector2(0.0386548, 0.0386548)
+texture = ExtResource("15_qkl3d")
+
+[node name="DeadTree6" type="Sprite2D" parent="Enivornment/Center"]
+position = Vector2(292.308, 565.713)
+scale = Vector2(0.0386548, 0.0386548)
+texture = ExtResource("16_47uyi")
+flip_h = true
+
+[node name="DeadTree5" type="Sprite2D" parent="Enivornment/Center"]
+position = Vector2(184.925, 516.081)
+scale = Vector2(0.0386548, 0.0386548)
+texture = ExtResource("16_47uyi")
+
+[node name="Swamp" type="Node2D" parent="Enivornment"]
+metadata/_edit_group_ = true
+
+[node name="DeadTree11" type="Sprite2D" parent="Enivornment/Swamp"]
+position = Vector2(493.081, 449.903)
+scale = Vector2(0.0386548, 0.0386548)
+texture = ExtResource("15_qkl3d")
+
+[node name="WillowTree13" type="Sprite2D" parent="Enivornment/Swamp"]
+position = Vector2(487.824, 469.385)
+scale = Vector2(0.0386548, 0.0386548)
+texture = ExtResource("17_otq00")
+
+[node name="WillowTree14" type="Sprite2D" parent="Enivornment/Swamp"]
+position = Vector2(530.924, 454.735)
+scale = Vector2(0.0386548, 0.0386548)
+texture = ExtResource("18_1u2ro")
+
+[node name="WillowTree15" type="Sprite2D" parent="Enivornment/Swamp"]
+position = Vector2(516.506, 476.807)
+scale = Vector2(0.0386548, 0.0386548)
+texture = ExtResource("17_otq00")
+flip_h = true
+
+[node name="DeadTree7" type="Sprite2D" parent="Enivornment/Swamp"]
+position = Vector2(636.761, 545.845)
+scale = Vector2(0.0386548, 0.0386548)
+texture = ExtResource("16_47uyi")
+
+[node name="DeadTree10" type="Sprite2D" parent="Enivornment/Swamp"]
+position = Vector2(442.327, 491.747)
+scale = Vector2(0.0386548, 0.0386548)
+texture = ExtResource("14_xljd1")
+flip_h = true
+
+[node name="WillowTree11" type="Sprite2D" parent="Enivornment/Swamp"]
+position = Vector2(478.895, 496.502)
+scale = Vector2(0.0386548, 0.0386548)
+texture = ExtResource("18_1u2ro")
+flip_h = true
+
+[node name="WillowTree12" type="Sprite2D" parent="Enivornment/Swamp"]
+position = Vector2(452.184, 506.629)
+scale = Vector2(0.0386548, 0.0386548)
+texture = ExtResource("17_otq00")
+flip_h = true
+
+[node name="DeadTree9" type="Sprite2D" parent="Enivornment/Swamp"]
+position = Vector2(561.191, 452.145)
+scale = Vector2(0.0386548, 0.0386548)
+texture = ExtResource("14_xljd1")
+
+[node name="WillowTree10" type="Sprite2D" parent="Enivornment/Swamp"]
+position = Vector2(597.758, 456.9)
+scale = Vector2(0.0386548, 0.0386548)
+texture = ExtResource("18_1u2ro")
+
+[node name="WillowTree2" type="Sprite2D" parent="Enivornment/Swamp"]
+position = Vector2(607.267, 555.702)
+scale = Vector2(0.0386548, 0.0386548)
+texture = ExtResource("17_otq00")
+
+[node name="WillowTree1" type="Sprite2D" parent="Enivornment/Swamp"]
+position = Vector2(496.521, 508.002)
+scale = Vector2(0.0386548, 0.0386548)
+texture = ExtResource("18_1u2ro")
+
+[node name="WillowTree3" type="Sprite2D" parent="Enivornment/Swamp"]
+position = Vector2(571.048, 467.027)
+scale = Vector2(0.0386548, 0.0386548)
+texture = ExtResource("17_otq00")
+flip_h = true
+
+[node name="WillowTree6" type="Sprite2D" parent="Enivornment/Swamp"]
+position = Vector2(633.205, 579.281)
+scale = Vector2(0.0386548, 0.0386548)
+texture = ExtResource("18_1u2ro")
+
+[node name="DeadTree8" type="Sprite2D" parent="Enivornment/Swamp"]
+position = Vector2(681.948, 511.558)
+scale = Vector2(0.0386548, 0.0386548)
+texture = ExtResource("14_xljd1")
+
+[node name="WillowTree4" type="Sprite2D" parent="Enivornment/Swamp"]
+position = Vector2(657.905, 513.877)
+scale = Vector2(0.0386548, 0.0386548)
+texture = ExtResource("18_1u2ro")
+flip_h = true
+
+[node name="WillowTree8" type="Sprite2D" parent="Enivornment/Swamp"]
+position = Vector2(673.29, 538.539)
+scale = Vector2(0.0386548, 0.0386548)
+texture = ExtResource("18_1u2ro")
+
+[node name="WillowTree7" type="Sprite2D" parent="Enivornment/Swamp"]
+position = Vector2(666.409, 556.436)
+scale = Vector2(0.0386548, 0.0386548)
+texture = ExtResource("17_otq00")
+
+[node name="DeadTree12" type="Sprite2D" parent="Enivornment/Swamp"]
+position = Vector2(470.39, 631.929)
+scale = Vector2(0.0386548, 0.0386548)
+texture = ExtResource("16_47uyi")
+
+[node name="WillowTree17" type="Sprite2D" parent="Enivornment/Swamp"]
+position = Vector2(397.874, 583.456)
+scale = Vector2(0.0386548, 0.0386548)
+texture = ExtResource("17_otq00")
+
+[node name="WillowTree5" type="Sprite2D" parent="Enivornment/Swamp"]
+position = Vector2(593.815, 591.689)
+scale = Vector2(0.0386548, 0.0386548)
+texture = ExtResource("17_otq00")
+flip_h = true
+
+[node name="WillowTree9" type="Sprite2D" parent="Enivornment/Swamp"]
+position = Vector2(670.39, 579.668)
+scale = Vector2(0.0386548, 0.0386548)
+texture = ExtResource("18_1u2ro")
+
+[node name="WillowTree16" type="Sprite2D" parent="Enivornment/Swamp"]
+position = Vector2(400.464, 620.294)
+scale = Vector2(0.0386548, 0.0386548)
+texture = ExtResource("18_1u2ro")
+
+[node name="WillowTree18" type="Sprite2D" parent="Enivornment/Swamp"]
+position = Vector2(444.26, 636.761)
+scale = Vector2(0.0386548, 0.0386548)
+texture = ExtResource("18_1u2ro")
+flip_h = true
+
+[node name="WillowTree19" type="Sprite2D" parent="Enivornment/Swamp"]
+position = Vector2(410.591, 647.12)
+scale = Vector2(0.0386548, 0.0386548)
+texture = ExtResource("17_otq00")
+flip_h = true
+
+[node name="WillowTree20" type="Sprite2D" parent="Enivornment/Swamp"]
+position = Vector2(469.849, 658.562)
+scale = Vector2(0.0386548, 0.0386548)
+texture = ExtResource("17_otq00")
+
+[node name="Horses" type="Node2D" parent="Enivornment"]
+metadata/_edit_group_ = true
+
+[node name="Tree16" type="Sprite2D" parent="Enivornment/Horses"]
+position = Vector2(37.4952, 360.92)
+scale = Vector2(0.0386548, 0.0386548)
+texture = ExtResource("19_dmfvw")
+
+[node name="Tree17" type="Sprite2D" parent="Enivornment/Horses"]
+position = Vector2(96.2505, 360.572)
+scale = Vector2(0.0386548, 0.0386548)
+texture = ExtResource("19_dmfvw")
+flip_h = true
+
+[node name="Tree18" type="Sprite2D" parent="Enivornment/Horses"]
+position = Vector2(78.1214, 377.348)
+scale = Vector2(0.0386548, 0.0386548)
+texture = ExtResource("20_iffnc")
+flip_h = true
+
+[node name="Tree2" type="Sprite2D" parent="Enivornment/Horses"]
+position = Vector2(148.666, 371.048)
+scale = Vector2(0.0386548, 0.0386548)
+texture = ExtResource("19_dmfvw")
+
+[node name="Tree1" type="Sprite2D" parent="Enivornment/Horses"]
+position = Vector2(119.521, 378.315)
+scale = Vector2(0.0386548, 0.0386548)
+texture = ExtResource("20_iffnc")
+
+[node name="Tree3" type="Sprite2D" parent="Enivornment/Horses"]
+position = Vector2(128.952, 387.399)
+scale = Vector2(0.0386548, 0.0386548)
+texture = ExtResource("21_mto3x")
+
+[node name="Tree4" type="Sprite2D" parent="Enivornment/Horses"]
+position = Vector2(184.055, 392.424)
+scale = Vector2(0.0386548, 0.0386548)
+texture = ExtResource("19_dmfvw")
+flip_h = true
+
+[node name="Tree5" type="Sprite2D" parent="Enivornment/Horses"]
+position = Vector2(156.339, 391.882)
+scale = Vector2(0.0386548, 0.0386548)
+texture = ExtResource("20_iffnc")
+flip_h = true
+
+[node name="Tree6" type="Sprite2D" parent="Enivornment/Horses"]
+position = Vector2(172.884, 404.368)
+scale = Vector2(0.0386548, 0.0386548)
+texture = ExtResource("21_mto3x")
+flip_h = true
+
+[node name="Tree13" type="Sprite2D" parent="Enivornment/Horses"]
+position = Vector2(32.4314, 385.273)
+scale = Vector2(0.0386548, 0.0386548)
+texture = ExtResource("20_iffnc")
+
+[node name="Tree14" type="Sprite2D" parent="Enivornment/Horses"]
+position = Vector2(74.7584, 377.928)
+scale = Vector2(0.0386548, 0.0386548)
+texture = ExtResource("21_mto3x")
+
+[node name="Tree15" type="Sprite2D" parent="Enivornment/Horses"]
+position = Vector2(81.1751, 397.719)
+scale = Vector2(0.0386548, 0.0386548)
+texture = ExtResource("19_dmfvw")
+
+[node name="Tree10" type="Sprite2D" parent="Enivornment/Horses"]
+position = Vector2(13.0653, 415.539)
+scale = Vector2(0.0386548, 0.0386548)
+texture = ExtResource("20_iffnc")
+flip_h = true
+
+[node name="Tree11" type="Sprite2D" parent="Enivornment/Horses"]
+position = Vector2(50.7538, 409.973)
+scale = Vector2(0.0386548, 0.0386548)
+texture = ExtResource("21_mto3x")
+flip_h = true
+
+[node name="Tree12" type="Sprite2D" parent="Enivornment/Horses"]
+position = Vector2(35.4851, 430.808)
+scale = Vector2(0.0386548, 0.0386548)
+texture = ExtResource("19_dmfvw")
+flip_h = true
+
+[node name="Tree8" type="Sprite2D" parent="Enivornment/Horses"]
+position = Vector2(15.3073, 442.25)
+scale = Vector2(0.0386548, 0.0386548)
+texture = ExtResource("20_iffnc")
+
+[node name="Tree9" type="Sprite2D" parent="Enivornment/Horses"]
+position = Vector2(54.8125, 452.184)
+scale = Vector2(0.0386548, 0.0386548)
+texture = ExtResource("21_mto3x")
+
+[node name="Tree7" type="Sprite2D" parent="Enivornment/Horses"]
+position = Vector2(44.453, 466.95)
+scale = Vector2(0.0386548, 0.0386548)
+texture = ExtResource("19_dmfvw")
+
+[node name="Start" type="Node2D" parent="Enivornment"]
+metadata/_edit_group_ = true
+
+[node name="Tree22" type="Sprite2D" parent="Enivornment/Start"]
+position = Vector2(128.102, 545.149)
+scale = Vector2(0.0386548, 0.0386548)
+texture = ExtResource("19_dmfvw")
+
+[node name="Tree25" type="Sprite2D" parent="Enivornment/Start"]
+position = Vector2(239.737, 642.443)
+scale = Vector2(0.0386548, 0.0386548)
+texture = ExtResource("19_dmfvw")
+flip_h = true
+
+[node name="Tree27" type="Sprite2D" parent="Enivornment/Start"]
+position = Vector2(233.127, 677.116)
+scale = Vector2(0.0386548, 0.0386548)
+texture = ExtResource("21_mto3x")
+flip_h = true
+
+[node name="Tree28" type="Sprite2D" parent="Enivornment/Start"]
+position = Vector2(84.3062, 558.987)
+scale = Vector2(0.0386548, 0.0386548)
+texture = ExtResource("20_iffnc")
+
+[node name="Tree30" type="Sprite2D" parent="Enivornment/Start"]
+position = Vector2(27.9088, 635.408)
+scale = Vector2(0.0386548, 0.0386548)
+texture = ExtResource("19_dmfvw")
+
+[node name="Tree32" type="Sprite2D" parent="Enivornment/Start"]
+position = Vector2(54.4646, 532.934)
+scale = Vector2(0.0386548, 0.0386548)
+texture = ExtResource("21_mto3x")
+flip_h = true
+
+[node name="Tree34" type="Sprite2D" parent="Enivornment/Start"]
+position = Vector2(-4.32934, 578.701)
+scale = Vector2(0.0386548, 0.0386548)
+texture = ExtResource("20_iffnc")
+
+[node name="GrassPatch3" type="Sprite2D" parent="Enivornment/Start"]
+position = Vector2(46.3858, 672.71)
+scale = Vector2(0.0386548, 0.0386548)
+texture = ExtResource("24_r8r2p")
+
+[node name="GrassPatch4" type="Sprite2D" parent="Enivornment/Start"]
+position = Vector2(104.445, 678.431)
+scale = Vector2(0.0629041, 0.0629041)
+texture = ExtResource("24_r8r2p")
+
+[node name="GrassPatch2" type="Sprite2D" parent="Enivornment/Start"]
+position = Vector2(-7.69231, 650.097)
+scale = Vector2(0.0797973, 0.0797973)
+texture = ExtResource("25_3jgtg")
+
+[node name="GrassPatch5" type="Sprite2D" parent="Enivornment/Start"]
+position = Vector2(60.5334, 643.332)
+scale = Vector2(0.0762788, 0.0762788)
+texture = ExtResource("26_ufbag")
+
+[node name="GrassPatch6" type="Sprite2D" parent="Enivornment/Start"]
+position = Vector2(155.547, 668.265)
+scale = Vector2(0.0776962, 0.0776962)
+texture = ExtResource("26_ufbag")
+flip_h = true
+
+[node name="GrassPatch1" type="Sprite2D" parent="Enivornment/Start"]
+position = Vector2(93.1195, 583.997)
+scale = Vector2(0.0844559, 0.0844559)
+texture = ExtResource("27_wv80b")
+
+[node name="GrassPatch7" type="Sprite2D" parent="Enivornment/Start"]
+position = Vector2(33.1658, 580.905)
+scale = Vector2(0.0761092, 0.0761092)
+texture = ExtResource("24_r8r2p")
+flip_h = true
+
+[node name="Fog" type="Node2D" parent="Enivornment"]
+metadata/_edit_lock_ = true
+
+[node name="Fog" type="Sprite2D" parent="Enivornment/Fog"]
+z_index = 5
+material = SubResource("ShaderMaterial_y6cuy")
+position = Vector2(-86.6641, 699.923)
+scale = Vector2(1.72613, 1.72613)
+texture = ExtResource("13_6laf0")
+region_rect = Rect2(0, 0, 2000, 2000)
+
+[node name="Fog2" type="Sprite2D" parent="Enivornment/Fog"]
+z_index = 5
+material = SubResource("ShaderMaterial_y6cuy")
+position = Vector2(30.6049, 869.226)
+scale = Vector2(2.5892, 2.5892)
+texture = ExtResource("13_6laf0")
+region_rect = Rect2(0, 0, 2000, 2000)
+
+[node name="Fog3" type="Sprite2D" parent="Enivornment/Fog"]
+z_index = 5
+material = SubResource("ShaderMaterial_y6cuy")
+position = Vector2(257.828, 853.73)
+scale = Vector2(2.21685, 2.21685)
+texture = ExtResource("13_6laf0")
+region_rect = Rect2(0, 0, 2000, 2000)
+
+[node name="Fog4" type="Sprite2D" parent="Enivornment/Fog"]
+z_index = 5
+material = SubResource("ShaderMaterial_y6cuy")
+position = Vector2(-106.571, 773.019)
+scale = Vector2(2.00106, 2.00106)
+texture = ExtResource("13_6laf0")
+region_rect = Rect2(0, 0, 2000, 2000)
+
+[node name="Fog5" type="Sprite2D" parent="Enivornment/Fog"]
+z_index = 5
+material = SubResource("ShaderMaterial_y6cuy")
+position = Vector2(423.309, 834.326)
+scale = Vector2(2.74758, 2.74758)
+texture = ExtResource("13_6laf0")
+region_rect = Rect2(0, 0, 2000, 2000)
+
+[node name="Fog6" type="Sprite2D" parent="Enivornment/Fog"]
+z_index = 5
+material = SubResource("ShaderMaterial_y6cuy")
+position = Vector2(922.304, 815.655)
+scale = Vector2(2.42511, 2.42511)
+texture = ExtResource("13_6laf0")
+region_rect = Rect2(0, 0, 2000, 2000)
+
+[node name="Fog7" type="Sprite2D" parent="Enivornment/Fog"]
+z_index = 5
+material = SubResource("ShaderMaterial_y6cuy")
+position = Vector2(705.218, 950.831)
+scale = Vector2(3.25715, 3.25715)
+texture = ExtResource("13_6laf0")
+region_rect = Rect2(0, 0, 2000, 2000)
+
+[node name="Fog8" type="Sprite2D" parent="Enivornment/Fog"]
+z_index = 5
+material = SubResource("ShaderMaterial_y6cuy")
+position = Vector2(599.188, 828.141)
+scale = Vector2(3.30392, 3.30392)
+texture = ExtResource("13_6laf0")
+region_rect = Rect2(0, 0, 2000, 2000)
+
+[node name="Fog9" type="Sprite2D" parent="Enivornment/Fog"]
+z_index = 5
+material = SubResource("ShaderMaterial_y6cuy")
+position = Vector2(177.619, 794.086)
+scale = Vector2(1.57866, 1.57866)
+texture = ExtResource("13_6laf0")
+region_rect = Rect2(0, 0, 2000, 2000)
+
+[node name="Fog10" type="Sprite2D" parent="Enivornment/Fog"]
+z_index = 5
+material = SubResource("ShaderMaterial_y6cuy")
+position = Vector2(20.2938, 759.722)
+scale = Vector2(1.57866, 1.57866)
+texture = ExtResource("13_6laf0")
+region_rect = Rect2(0, 0, 2000, 2000)
+
+[node name="Fog11" type="Sprite2D" parent="Enivornment/Fog"]
+z_index = 5
+material = SubResource("ShaderMaterial_y6cuy")
+position = Vector2(-80.4407, 620.835)
+scale = Vector2(1.57866, 1.57866)
+texture = ExtResource("13_6laf0")
+region_rect = Rect2(0, 0, 2000, 2000)
+
+[node name="Fog14" type="Sprite2D" parent="Enivornment/Fog"]
+z_index = 5
+material = SubResource("ShaderMaterial_y6cuy")
+position = Vector2(845.497, 692.269)
+scale = Vector2(2.58954, 2.58954)
+texture = ExtResource("13_6laf0")
+region_rect = Rect2(0, 0, 2000, 2000)
+
+[node name="Fog15" type="Sprite2D" parent="Enivornment/Fog"]
+z_index = 5
+material = SubResource("ShaderMaterial_y6cuy")
+position = Vector2(328.45, 710.901)
+scale = Vector2(1.57866, 1.57866)
+texture = ExtResource("13_6laf0")
+region_rect = Rect2(0, 0, 2000, 2000)
+
+[node name="Fog16" type="Sprite2D" parent="Enivornment/Fog"]
+z_index = 5
+material = SubResource("ShaderMaterial_y6cuy")
+position = Vector2(359.528, 628.643)
+scale = Vector2(1.57866, 1.57866)
+texture = ExtResource("13_6laf0")
+region_rect = Rect2(0, 0, 2000, 2000)
+
+[node name="Fog17" type="Sprite2D" parent="Enivornment/Fog"]
+z_index = 5
+material = SubResource("ShaderMaterial_y6cuy")
+position = Vector2(558.446, 683.417)
+scale = Vector2(1.57866, 1.57866)
+texture = ExtResource("13_6laf0")
+region_rect = Rect2(0, 0, 2000, 2000)
+
+[node name="Fog18" type="Sprite2D" parent="Enivornment/Fog"]
+z_index = 5
+material = SubResource("ShaderMaterial_y6cuy")
+position = Vector2(717.356, 618.748)
+scale = Vector2(1.57866, 1.57866)
+texture = ExtResource("13_6laf0")
+region_rect = Rect2(0, 0, 2000, 2000)
+
+[node name="Fog19" type="Sprite2D" parent="Enivornment/Fog"]
+z_index = 5
+material = SubResource("ShaderMaterial_y6cuy")
+position = Vector2(836.374, 549.633)
+scale = Vector2(1.98106, 1.98106)
+texture = ExtResource("13_6laf0")
+region_rect = Rect2(0, 0, 2000, 2000)
+
+[node name="Fog20" type="Sprite2D" parent="Enivornment/Fog"]
+z_index = 5
+material = SubResource("ShaderMaterial_y6cuy")
+position = Vector2(757.673, 467.685)
+scale = Vector2(1.98106, 1.98106)
+texture = ExtResource("13_6laf0")
+region_rect = Rect2(0, 0, 2000, 2000)
+
+[node name="Fog21" type="Sprite2D" parent="Enivornment/Fog"]
+z_index = 5
+material = SubResource("ShaderMaterial_y6cuy")
+position = Vector2(986.973, 462.08)
+scale = Vector2(1.98106, 1.98106)
+texture = ExtResource("13_6laf0")
+region_rect = Rect2(0, 0, 2000, 2000)
+
+[node name="Fog23" type="Sprite2D" parent="Enivornment/Fog"]
+z_index = 5
+material = SubResource("ShaderMaterial_y6cuy")
+position = Vector2(-91.5733, 502.667)
+scale = Vector2(2.20879, 3.25715)
+texture = ExtResource("13_6laf0")
+region_rect = Rect2(0, 0, 2000, 2000)
+
+[node name="Fog24" type="Sprite2D" parent="Enivornment/Fog"]
+z_index = 5
+material = SubResource("ShaderMaterial_y6cuy")
+position = Vector2(-118.593, 319.211)
+scale = Vector2(2.59669, 2.98691)
+texture = ExtResource("13_6laf0")
+region_rect = Rect2(0, 0, 2000, 2000)
+
+[node name="Fog28" type="Sprite2D" parent="Enivornment/Fog"]
+z_index = 5
+material = SubResource("ShaderMaterial_y6cuy")
+position = Vector2(327.522, 627.638)
+scale = Vector2(0.891573, 1.09867)
+texture = ExtResource("13_6laf0")
+region_rect = Rect2(0, 0, 2000, 2000)
+
+[node name="Fog33" type="Sprite2D" parent="Enivornment/Fog"]
+z_index = 5
+material = SubResource("ShaderMaterial_y6cuy")
+position = Vector2(447.043, 443.68)
+scale = Vector2(0.721492, 0.721492)
+texture = ExtResource("13_6laf0")
+region_rect = Rect2(0, 0, 2000, 2000)
+
+[node name="Fog35" type="Sprite2D" parent="Enivornment/Fog"]
+z_index = 5
+material = SubResource("ShaderMaterial_y6cuy")
+position = Vector2(205.876, 353.112)
+scale = Vector2(0.944047, 0.845091)
+texture = ExtResource("13_6laf0")
+region_rect = Rect2(0, 0, 2000, 2000)
+
+[node name="Fog36" type="Sprite2D" parent="Enivornment/Fog"]
+z_index = 5
+material = SubResource("ShaderMaterial_y6cuy")
+position = Vector2(113.114, 321.922)
+scale = Vector2(0.885292, 0.900754)
+texture = ExtResource("13_6laf0")
+region_rect = Rect2(0, 0, 2000, 2000)
+
+[node name="Fog37" type="Sprite2D" parent="Enivornment/Fog"]
+z_index = 5
+material = SubResource("ShaderMaterial_y6cuy")
+position = Vector2(343.641, 286.857)
+scale = Vector2(1.1264, 1.1264)
+texture = ExtResource("13_6laf0")
+region_rect = Rect2(0, 0, 2000, 2000)
+
+[node name="Fog38" type="Sprite2D" parent="Enivornment/Fog"]
+z_index = 5
+material = SubResource("ShaderMaterial_y6cuy")
+position = Vector2(439.737, 335.678)
+scale = Vector2(1.1264, 0.771937)
+texture = ExtResource("13_6laf0")
+region_rect = Rect2(0, 0, 2000, 2000)
+
+[node name="171069355917953053(2)2" type="Sprite2D" parent="."]
+modulate = Color(0.909804, 0.909804, 0.909804, 1)
+position = Vector2(-3145, 10404)
+scale = Vector2(34.855, 120.38)
+texture = ExtResource("14_7unmf")
+
+[node name="171069355917953053(2)3" type="Sprite2D" parent="."]
+modulate = Color(0.909804, 0.909804, 0.909804, 1)
+position = Vector2(25023, 10544)
+scale = Vector2(34.855, 120.38)
+texture = ExtResource("14_7unmf")
+
+[node name="171069355917953053(2)4" type="Sprite2D" parent="."]
+modulate = Color(0.909804, 0.909804, 0.909804, 1)
+position = Vector2(10407, 24582)
+scale = Vector2(179.08, 58.31)
+texture = ExtResource("14_7unmf")
+
+[node name="171069355917953053(2)5" type="Sprite2D" parent="."]
+position = Vector2(12645, 20198)
+rotation = 0.261799
+scale = Vector2(59.7691, 29.6034)
+texture = ExtResource("14_7unmf")
+
+[node name="171069355917953053(2)6" type="Sprite2D" parent="."]
+position = Vector2(19802, 19436)
+rotation = -0.523598
+scale = Vector2(72.0443, 32.02)
+texture = ExtResource("14_7unmf")
+
+[node name="Rock1" type="Sprite2D" parent="."]
+position = Vector2(1876, 14987)
+texture = ExtResource("28_bouph")
+
+[node name="Rock2" type="Sprite2D" parent="."]
+position = Vector2(3388, 14623)
+texture = ExtResource("29_vlmxg")
+
+[node name="Rock3" type="Sprite2D" parent="."]
+position = Vector2(3128, 14751)
+texture = ExtResource("30_71130")
+
+[node name="Rock11" type="Sprite2D" parent="."]
+position = Vector2(11574, 11426)
+rotation = 0.261799
+scale = Vector2(2.92948, 2.92948)
+texture = ExtResource("29_vlmxg")
+
+[node name="Rock8" type="Sprite2D" parent="."]
+position = Vector2(10522, 11729)
+scale = Vector2(2.59073, 2.59073)
+texture = ExtResource("28_bouph")
+
+[node name="Rock4" type="Sprite2D" parent="."]
+position = Vector2(1587, 16500)
+texture = ExtResource("28_bouph")
+
+[node name="Rock5" type="Sprite2D" parent="."]
+position = Vector2(4608, 14079)
+texture = ExtResource("28_bouph")
+
+[node name="Rock6" type="Sprite2D" parent="."]
+position = Vector2(6292, 13570)
+texture = ExtResource("30_71130")
+
+[node name="Rock7" type="Sprite2D" parent="."]
+position = Vector2(4931, 14129)
+texture = ExtResource("29_vlmxg")
+
+[node name="Rock9" type="Sprite2D" parent="."]
+position = Vector2(10042, 12267)
+scale = Vector2(2.96308, 2.96308)
+texture = ExtResource("30_71130")
+
+[node name="Rock12" type="Sprite2D" parent="."]
+position = Vector2(9851, 12705)
+scale = Vector2(1.25956, 1.31853)
+texture = ExtResource("28_bouph")
+
+[node name="Rock10" type="Sprite2D" parent="."]
+position = Vector2(10366, 12869)
+scale = Vector2(1.65396, 1.65396)
+texture = ExtResource("28_bouph")
+flip_h = true
+
+[node name="171069355917953053(2)9" type="Sprite2D" parent="."]
+modulate = Color(0.909804, 0.909804, 0.909804, 1)
+position = Vector2(11320, -1942)
+scale = Vector2(187.45, 58.31)
+texture = ExtResource("14_7unmf")
+
+[node name="171069355917953053(2)10" type="Sprite2D" parent="."]
+modulate = Color(1, 0.878431, 0.831373, 1)
+position = Vector2(6953, 5725)
+scale = Vector2(11.0275, 38.15)
+texture = ExtResource("14_7unmf")
+
+[node name="171069355917953053(2)11" type="Sprite2D" parent="."]
+modulate = Color(1, 0.878431, 0.831373, 1)
+position = Vector2(3087, 3300)
+scale = Vector2(46.38, 18.07)
+texture = ExtResource("14_7unmf")
+
+[node name="171069355917953053(2)12" type="Sprite2D" parent="."]
+modulate = Color(1, 0.878431, 0.831373, 1)
+position = Vector2(614, 5740)
+scale = Vector2(15.095, 33.7)
+texture = ExtResource("14_7unmf")

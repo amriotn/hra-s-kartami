@@ -20,12 +20,19 @@ func on_stats_updated():
 	for card in stats.hand.get_children():
 		points_sum += card.data.points
 	points.text = str(points_sum)
+	stats.points = points_sum
+	print(Global.player_stats_resources)
+	print(Global.player_stats_resources.find(stats))
+	Global.player_stats_resources.sort_custom(custom_sort)
+	print(Global.player_stats_resources)
 	
-	Global.update_leaders()
-	leaderboard_position.text = str(Global.leaderboard.find(stats))
+	leaderboard_position.text = str(Global.player_stats_resources.find(stats)+1)
 	
-	# TODO
-	# pořadí se neupdatuje
 	
-
+	
+	
+func custom_sort(a, b):
+	if a.points > b.points:
+		return true
+	return false
 

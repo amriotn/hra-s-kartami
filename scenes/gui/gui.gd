@@ -55,19 +55,15 @@ func _on_collapse_player_list_button_pressed():
 		var tween = get_tree().create_tween()
 		tween.tween_property(collapsable_player_list, "position", Vector2(0.0, collapsable_player_list.position.y), 0.25)
 		
-"""
-func _on_collapse_player_list_button_pressed():
-	if players_scroll_bar.visible:
-		players_scroll_bar.hide()
-		collapse_player_list_button.position.x = 0.0
-		arrow_left.flip_h = true
-	else:
-		players_scroll_bar.show()
-		collapse_player_list_button.position.x = 305.0
-		arrow_left.flip_h = false
-"""
+
+@onready var settings_panel : Panel = $SettingsPanel
 
 func _on_pause_button_pressed():
-	pass # Replace with function body.
+	if settings_panel.is_visible_in_tree():
+		settings_panel.hide()
+	else:
+		settings_panel.show()
 
 
+func _on_close_settings_button_pressed():
+	settings_panel.hide()

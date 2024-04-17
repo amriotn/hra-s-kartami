@@ -53,7 +53,6 @@ func _ready():
 	
 	await get_tree().create_timer(0.5).timeout
 	fix_players_on_tile(player_list)
-	Global.update_leaders()
 	
 	var player_hands = []
 	for player in player_list:
@@ -64,14 +63,12 @@ func _ready():
 	
 	
 	
-	
 	game = true
 	turn_of_player = 0
 	gui.timer_on = true
 	while game:
 		player_hands[turn_of_player].show()
 		
-		print(player_list[turn_of_player].swamp_route_swap)
 		if player_list[turn_of_player].swamp_route_swap:
 			actions_of_tiles.swamp = actions_of_tiles.bazina_way_back
 		else:

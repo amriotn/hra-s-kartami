@@ -14,17 +14,35 @@ func update_stats():
 		stat.emit_signal("stats_updated")
 
 
-var leaderboard : Array = player_stats_resources
-var previous_leaderboard : Array = player_stats_resources
 func update_leaders():
-	leaderboard.sort_custom(sort_by_points)
-	if previous_leaderboard != leaderboard:
-		previous_leaderboard = leaderboard
-		update_stats()
-		
+	var leaderboard : Array
+	for stat in player_stats_resources:
+		leaderboard.append(stat)
+	print(leaderboard)
+	
+	var n : int = leaderboard.size()
 
-func sort_by_points(a, b):
-	if a.points > b.points:
-		return true
-	return false
+	# One by one move boundary of unsorted subarray 
+	var i = 0
+	while i < n-1: 
+	# Find the minimum element in unsorted array 
+		var min_idx : int = i; 
+		var j : int = i+1
+		while j < n: 
+			if leaderboard[j].points < leaderboard[min_idx].points:
+				min_idx = j
+			j += 1
+
+# Swap the found minimum element with the first element 
+		var temp = leaderboard[min_idx] 
+		leaderboard[min_idx] = leaderboard[i] 
+		leaderboard[i] = temp
+		i += 1
+	
+	print(leaderboard)
+	for stat in leaderboard:
+		stat.leaderboard_position = leaderboard.find(stat)
+	
+	
+
 
