@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="CardResource" load_steps=2 format=3 uid="uid://bgtrvypyx88dt"]
+
+[ext_resource type="Script" path="res://card_resource.gd" id="1_pfpj4"]
+
+[resource]
+script = ExtResource("1_pfpj4")
+points = 20
+rarity = 3
+effect = 4
+effect_data = 0
+effect_target = 3
+effect_target_data = 0
+card_name = "Multiswap"
+description = "Všichni hráči si vymění pozice"

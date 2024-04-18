@@ -11,6 +11,7 @@ extends CanvasLayer
 @onready var time_label = $TimeLabel
 @onready var round_label = $RoundLabel
 @onready var hand = $Hand
+@onready var end_game_panel = $EndGamePanel
 
 const PLAYER_DISPLAY_UI = preload("res://scenes/player_display_ui/player_display_ui.tscn")
 

@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://cnsxnyxe4mnd0"]
+[gd_scene load_steps=7 format=3 uid="uid://cnsxnyxe4mnd0"]
 
 [ext_resource type="Script" path="res://scenes/menu/menu.gd" id="1_4na3m"]
 [ext_resource type="Theme" uid="uid://cxf28t24j2lk7" path="res://fonts/new_theme.tres" id="1_seyji"]
 [ext_resource type="Texture2D" uid="uid://dij03whkopbi3" path="res://assets/Seamless ground.png" id="2_5twbe"]
 [ext_resource type="Shader" path="res://scenes/menu/vignette.gdshader" id="4_q11ga"]
+[ext_resource type="AudioStream" uid="uid://c2qgfly20u08e" path="res://evening.wav" id="5_xtrx1"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_hdkri"]
 shader = ExtResource("4_q11ga")
@@ -188,6 +189,11 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_xtrx1")
+autoplay = true
+bus = &"Music"
 
 [connection signal="pressed" from="LeftSide/AddPlayersContainer/AddPlayerButton" to="." method="_on_add_player_button_pressed"]
 [connection signal="pressed" from="RightSide/StartGameButton" to="." method="_on_start_game_button_pressed"]

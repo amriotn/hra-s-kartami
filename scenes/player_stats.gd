@@ -10,6 +10,7 @@ var player_character : String
 
 @export var points : int = 0
 var leaderboard_position : int
+var has_finished : bool = false
 
 enum Effect {NONE, STUCK, LUCK, SPEED, IMMUNE}
 

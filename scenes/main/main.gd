@@ -52,7 +52,8 @@ func _ready():
 	
 	
 	await get_tree().create_timer(0.5).timeout
-	fix_players_on_tile(player_list)
+	fix_players_on_tile(Global.player_list)
+	Global.update_stats()
 	
 	var player_hands = []
 	for player in player_list:
@@ -67,37 +68,48 @@ func _ready():
 	turn_of_player = 0
 	gui.timer_on = true
 	while game:
+		gui.end_turn_button.disabled = true
 		player_hands[turn_of_player].show()
 		
-		if player_list[turn_of_player].swamp_route_swap:
+		if Global.player_list[turn_of_player].swamp_route_swap:
 			actions_of_tiles.swamp = actions_of_tiles.bazina_way_back
 		else:
 			actions_of_tiles.swamp = actions_of_tiles.bazina_way_there
 		
-		main_camera.position = player_list[turn_of_player].position
+		main_camera.position = Global.player_list[turn_of_player].position
 		
-		player_list[turn_of_player].roll_dice_button.disabled = false
+		Global.player_list[turn_of_player].roll_dice_button.disabled = false
 		
 		player_list_v_box.get_children()[turn_of_player].select_gradient.show()
 		
-		player_list[turn_of_player].dice_animated_sprite.show()
-		player_list[turn_of_player].dice_animated_sprite.connect("send_dice_number", Callable(player_list[turn_of_player], "_on_dice_animated_sprite_send_dice_number"))
-		fix_players_on_tile(player_list)
+		Global.player_list[turn_of_player].dice_animated_sprite.show()
+		Global.player_list[turn_of_player].dice_animated_sprite.connect("send_dice_number", Callable(Global.player_list[turn_of_player], "_on_dice_animated_sprite_send_dice_number"))
+		fix_players_on_tile(Global.player_list)
 		
 		
 		
 		await end_turn_button.pressed
 		player_hands[turn_of_player].hide()
-		player_list[turn_of_player].dice_animated_sprite.disconnect("send_dice_number", Callable(player_list[turn_of_player], "_on_dice_animated_sprite_send_dice_number"))
-		player_list[turn_of_player].dice_animated_sprite.hide()
+		Global.player_list[turn_of_player].dice_animated_sprite.disconnect("send_dice_number", Callable(Global.player_list[turn_of_player], "_on_dice_animated_sprite_send_dice_number"))
+		Global.player_list[turn_of_player].dice_animated_sprite.hide()
 		player_list_v_box.get_children()[turn_of_player].select_gradient.hide()
-		
-		if turn_of_player +1 == player_list.size():
-			turn_of_player = 0
-			turn += 1
-			gui.round_label.text = "Kolo " + str(turn)
+		if Global.player_list[turn_of_player].stats.has_finished == false:
+			if Global.player_list.size() > 0:
+				if turn_of_player +1 >= Global.player_list.size():
+					turn_of_player = 0
+					turn += 1
+					gui.round_label.text = "Kolo " + str(turn)
+				else:
+					turn_of_player += 1
+			else:
+				game = false
 		else:
-			turn_of_player += 1
+			Global.player_list.erase(Global.player_list[turn_of_player])
+			if Global.player_list.is_empty():
+				game = false
+		
+	
+	gui.end_game_panel.show()
 		
 		
 	

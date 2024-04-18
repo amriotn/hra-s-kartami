@@ -7,7 +7,7 @@ var new_effect : CardEffect = card_effect.new()
 enum Target {SELF, SINGLE_ENEMY, ALL_ENEMIES, EVERYONE, AREA, ENVIRONMENT}
 enum Rarity {COMMON, RARE, EPIC, LEGENDARY}
 const Rarity_colors : Array = [Color.GRAY, Color.BLUE, Color.WEB_PURPLE, Color.GOLDENROD]
-enum Effect {GIVE_CARD, GIVE_IMMUNITY, MOVE_PLAYER_TO_PLAYER}
+enum Effect {GIVE_CARD, GIVE_IMMUNITY, MOVE_PLAYER_TO_PLAYER, STUCK_PLAYER, SWAP_POSITIONS}
 
 @export_group("Card Attributes")
 @export var points : int

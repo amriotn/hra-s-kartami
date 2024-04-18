@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://d04ldlkvtwluj"]
+[gd_scene load_steps=11 format=3 uid="uid://d04ldlkvtwluj"]
 
 [ext_resource type="Script" path="res://scenes/card_hand_ui/card_hand_ui.gd" id="1_fhmeo"]
 [ext_resource type="Script" path="res://scenes/card_hand_ui/card_state_machine.gd" id="2_6i30o"]
@@ -8,6 +8,7 @@
 [ext_resource type="Script" path="res://scenes/card_hand_ui/card_states/card_dragging_state.gd" id="5_gqy0u"]
 [ext_resource type="Script" path="res://scenes/card_hand_ui/card_states/card_released_state.gd" id="6_xltb0"]
 [ext_resource type="Theme" uid="uid://cxf28t24j2lk7" path="res://fonts/new_theme.tres" id="8_5lld8"]
+[ext_resource type="Texture2D" uid="uid://bimte6tg60l18" path="res://assets/card.png" id="9_3e6pj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yfddo"]
 size = Vector2(133, 200)
@@ -37,6 +38,7 @@ mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
 [node name="DebugColor" type="ColorRect" parent="."]
+visible = false
 layout_mode = 0
 offset_right = 133.0
 offset_bottom = 200.0
@@ -44,6 +46,7 @@ mouse_filter = 2
 color = Color(0.360784, 0.721569, 0.862745, 1)
 
 [node name="State" type="Label" parent="."]
+visible = false
 layout_mode = 0
 offset_right = 133.0
 offset_bottom = 200.0
@@ -78,12 +81,39 @@ state = 2
 script = ExtResource("6_xltb0")
 state = 3
 
+[node name="Card" type="Sprite2D" parent="."]
+position = Vector2(66.5, 100)
+scale = Vector2(0.665, 0.666667)
+texture = ExtResource("9_3e6pj")
+
 [node name="PointsLabel" type="Label" parent="."]
 layout_mode = 0
+offset_left = 4.0
+offset_top = -10.0
 offset_right = 40.0
-offset_bottom = 23.0
+offset_bottom = 54.0
 theme = ExtResource("8_5lld8")
 text = "0"
+
+[node name="CardNameLabel" type="Label" parent="."]
+offset_left = 33.0
+offset_top = 102.0
+offset_right = 104.0
+offset_bottom = 123.0
+theme = ExtResource("8_5lld8")
+theme_override_font_sizes/font_size = 15
+text = "Placeholder"
+
+[node name="CardDescriptionLabel" type="Label" parent="."]
+offset_left = 8.0
+offset_top = 126.0
+offset_right = 124.0
+offset_bottom = 197.0
+theme = ExtResource("8_5lld8")
+theme_override_font_sizes/font_size = 15
+text = "Lorem ipsum dolor sit amet"
+autowrap_mode = 3
+clip_text = true
 
 [connection signal="gui_input" from="." to="." method="_on_gui_input"]
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]

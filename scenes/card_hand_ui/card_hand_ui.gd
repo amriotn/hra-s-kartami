@@ -12,6 +12,8 @@ signal reparent_requested(which_card_ui: CardHandUI)
 
 @onready var border : ColorRect = $Border
 @onready var points_label : Label = $PointsLabel
+@onready var card_name_label = $CardNameLabel
+@onready var card_description_label = $CardDescriptionLabel
 
 var data : CardResource = null
 
@@ -26,6 +28,8 @@ func _ready() -> void:
 	card_state_machine.init(self)
 	border.color = data.Rarity_colors[data.rarity]
 	points_label.text =str(data.points)
+	card_name_label.text = data.card_name
+	card_description_label.text = data.description
 	if data.holder:
 		shine.modulate = data.holder.stats.player_color
 

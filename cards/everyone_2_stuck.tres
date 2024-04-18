@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="CardResource" load_steps=2 format=3 uid="uid://cksydhuviyxm1"]
+
+[ext_resource type="Script" path="res://card_resource.gd" id="1_3nw81"]
+
+[resource]
+script = ExtResource("1_3nw81")
+points = 5
+rarity = 3
+effect = 3
+effect_data = 2
+effect_target = 3
+effect_target_data = 0
+card_name = "Ani hnout!"
+description = "2 kola se nikdo nepohne."

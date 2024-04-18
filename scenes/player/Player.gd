@@ -4,8 +4,10 @@ class_name Player
 @onready var highlight_scene : PackedScene = preload("res://scenes/highlight/Highlight.tscn")
 #@onready var rolldice_button : Button = self.get_parent().get_node("MainCamera/GUI/CenterContainer/DiceControl/RollDice_button")
 @onready var roll_dice_button = get_tree().get_nodes_in_group("ui_layer")[0].roll_dice_button
+@onready var end_turn_button = get_tree().get_nodes_in_group("ui_layer")[0].end_turn_button
 @onready var dice_animated_sprite = $DiceAnimatedSprite
 @onready var player_finder = $PlayerFinder
+@onready var audio_stream_player_player : AudioStreamPlayer = $AudioStreamPlayerPlayer
 
 var tilemap_node : TileMap
 var actions_of_tiles : ActionsOfTiles
@@ -90,6 +92,7 @@ func _on_dice_animated_sprite_send_dice_number(number):
 				check_surround_tiles_help(reference_tile, last_tile, dice_number)
 				actions_of_tiles.swamp.erase(actions_of_tiles.conditional_jump_back.get_children()[0].global_position)
 	
+	end_turn_button.disabled = false
 
 func check_surround_tiles_help(center_tile : Vector2i, previous_tile : Vector2i, dice_number : int):
 	tilemap_node = self.get_parent().get_node("TileMap")
@@ -150,6 +153,8 @@ func _on_highlight_send_highlight_position(highlight_position):
 		ventured_tiles.append(tile)
 		tween.tween_property(self, "position", tilemap_node.map_to_local(tile), 0.2)
 		tween.tween_interval(0.2)
+	
+	
 	
 	
 	#rolldice_button.disabled = false
@@ -278,6 +283,10 @@ func handle_what_tile_player_stepped_on():
 				ventured_tiles.clear()
 				ventured_tiles.append(tilemap_node.local_to_map(invalid_way_pos))
 				last_tile = ventured_tiles[0]
+				
+			"Goals":
+				print("player erase")
+				stats.has_finished = true
 			
 @onready var choose_player = $ChoosePlayer
 @onready var click_detection = $ClickDetection
