@@ -19,7 +19,7 @@ func _on_roll_dice_button_pressed():
 	fade_out.hide()
 	
 	var rng = RandomNumberGenerator.new()
-	var dice_number = rng.randi_range(6, 6)
+	var dice_number = rng.randi_range(1, 6)
 	
 	roll_dice_button.disabled = true
 	var dice_animations = self.sprite_frames.get_animation_names()

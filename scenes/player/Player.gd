@@ -48,7 +48,7 @@ func _on_dice_animated_sprite_send_dice_number(number):
 		stats.effect_active_for_rounds = 0
 			
 	
-	if ((stuck_until_dice_number == 0 or dice_number == stuck_until_dice_number) and standing_on_zabi_kral == false) or stats.active_effect == stats.Effect.IMMUNE:
+	if ((stuck_until_dice_number == 0 or dice_number == stuck_until_dice_number) and standing_on_zabi_kral == false and stats.active_effect != stats.Effect.STUCK) or stats.active_effect == stats.Effect.IMMUNE:
 		if dice_number == stuck_until_dice_number:
 			match stuck_until_dice_number:
 				3:
@@ -70,11 +70,16 @@ func _on_dice_animated_sprite_send_dice_number(number):
 				tween.tween_property(self, "position", actions_of_tiles.korunka.global_position, 0.5)
 				ventured_tiles.clear()
 				standing_on_zabi_kral = false
+				await get_tree().create_timer(0.6).timeout
+				handle_what_tile_player_stepped_on()
 			else:
+				# poslat na políčko studny
 				var tween = get_tree().create_tween()
 				tween.tween_property(self, "position", actions_of_tiles.tun.global_position, 0.5)
 				ventured_tiles.clear()
 				standing_on_zabi_kral = false
+				await get_tree().create_timer(0.6).timeout
+				handle_what_tile_player_stepped_on()
 		else:
 			# aktivovat správný conditional_jump
 			if swamp_route_swap == false:

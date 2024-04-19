@@ -296,7 +296,6 @@ visible = false
 position = Vector2(117, 2)
 
 [node name="DivotvornyMec" type="Node2D" parent="ActionsOfTiles/MovePlayer"]
-visible = false
 position = Vector2(74, -500)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/DivotvornyMec"]
@@ -309,7 +308,6 @@ position = Vector2(695, 704)
 position = Vector2(592, 657)
 
 [node name="CernyKun1" type="Node2D" parent="ActionsOfTiles/MovePlayer"]
-visible = false
 position = Vector2(371, -3154)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/CernyKun1"]
@@ -322,7 +320,6 @@ position = Vector2(1405, -5222)
 position = Vector2(1498, -5269)
 
 [node name="CernyKun2" type="Node2D" parent="ActionsOfTiles/MovePlayer"]
-visible = false
 position = Vector2(-434, -2530)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/CernyKun2"]
@@ -335,7 +332,6 @@ position = Vector2(2167, -5864)
 position = Vector2(2243, -5902)
 
 [node name="CernyKun3" type="Node2D" parent="ActionsOfTiles/MovePlayer"]
-visible = false
 position = Vector2(527, -2459)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/CernyKun3"]
@@ -348,7 +344,6 @@ position = Vector2(1238, -5935)
 position = Vector2(1307, -5985)
 
 [node name="BilyKun" type="Node2D" parent="ActionsOfTiles/MovePlayer"]
-visible = false
 position = Vector2(199, -2599)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/BilyKun"]
@@ -361,7 +356,6 @@ position = Vector2(9658, -4253)
 position = Vector2(9575, -4281)
 
 [node name="HnedyKun" type="Node2D" parent="ActionsOfTiles/MovePlayer"]
-visible = false
 position = Vector2(1148, -2532)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/HnedyKun"]
@@ -374,7 +368,6 @@ position = Vector2(3207, 834)
 position = Vector2(3104, 894)
 
 [node name="CernePrase" type="Node2D" parent="ActionsOfTiles/MovePlayer"]
-visible = false
 position = Vector2(4494, -4352)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/CernePrase"]
@@ -387,7 +380,6 @@ position = Vector2(-2753, -4041)
 position = Vector2(-2654, -4087)
 
 [node name="ZlatePrase" type="Node2D" parent="ActionsOfTiles/MovePlayer"]
-visible = false
 position = Vector2(3296, -4123)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/ZlatePrase"]
@@ -400,7 +392,6 @@ position = Vector2(6575, -2731)
 position = Vector2(6493, -2766)
 
 [node name="Cert1" type="Node2D" parent="ActionsOfTiles/MovePlayer"]
-visible = false
 position = Vector2(1259, -8279)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/Cert1"]
@@ -413,7 +404,6 @@ position = Vector2(522, -128)
 position = Vector2(618, -184)
 
 [node name="Cert2" type="Node2D" parent="ActionsOfTiles/MovePlayer"]
-visible = false
 position = Vector2(752, -8052)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/Cert2"]
@@ -426,7 +416,6 @@ position = Vector2(583, -144)
 position = Vector2(714, -184)
 
 [node name="Cert3" type="Node2D" parent="ActionsOfTiles/MovePlayer"]
-visible = false
 position = Vector2(661, -7983)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/Cert3"]
@@ -439,7 +428,6 @@ position = Vector2(583, -144)
 position = Vector2(692, -209)
 
 [node name="Cert4" type="Node2D" parent="ActionsOfTiles/MovePlayer"]
-visible = false
 position = Vector2(888, -7638)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/Cert4"]
@@ -452,7 +440,6 @@ position = Vector2(2, -294)
 position = Vector2(59, -349)
 
 [node name="BilaHolubice" type="Node2D" parent="ActionsOfTiles/MovePlayer"]
-visible = false
 position = Vector2(1571, -7125)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/BilaHolubice"]
@@ -465,7 +452,6 @@ position = Vector2(8275, 286)
 position = Vector2(8195, 231)
 
 [node name="CernyHavran" type="Node2D" parent="ActionsOfTiles/MovePlayer"]
-visible = false
 position = Vector2(1423, -7207)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/CernyHavran"]
@@ -478,7 +464,6 @@ position = Vector2(2920, 5512)
 position = Vector2(2836, 5580)
 
 [node name="Had1" type="Node2D" parent="ActionsOfTiles/MovePlayer"]
-visible = false
 position = Vector2(13272, -7545)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/Had1"]
@@ -491,7 +476,6 @@ position = Vector2(-306, 366)
 position = Vector2(-385, 426)
 
 [node name="Had2" type="Node2D" parent="ActionsOfTiles/MovePlayer"]
-visible = false
 position = Vector2(11929, -7676)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/Had2"]
@@ -504,7 +488,6 @@ position = Vector2(999, 497)
 position = Vector2(914, 531)
 
 [node name="Hrad1" type="Node2D" parent="ActionsOfTiles/MovePlayer"]
-visible = false
 position = Vector2(11608, -7917)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/Hrad1"]
@@ -517,7 +500,6 @@ position = Vector2(-5357, 3980)
 position = Vector2(-5450, 4128)
 
 [node name="Hrad2" type="Node2D" parent="ActionsOfTiles/MovePlayer"]
-visible = false
 position = Vector2(11215, -8217)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/Hrad2"]
@@ -530,7 +512,6 @@ position = Vector2(-4653, 4143)
 position = Vector2(-4757, 4190)
 
 [node name="DechDraka" type="Node2D" parent="ActionsOfTiles/MovePlayer"]
-visible = false
 position = Vector2(12835, -8768)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/DechDraka"]
@@ -543,7 +524,6 @@ position = Vector2(1712, 1286)
 position = Vector2(1642, 1317)
 
 [node name="Had3" type="Node2D" parent="ActionsOfTiles/MovePlayer"]
-visible = false
 position = Vector2(14535, -7933)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/MovePlayer/Had3"]
@@ -560,7 +540,6 @@ visible = false
 position = Vector2(245, -3)
 
 [node name="San_Roll3" type="Node2D" parent="ActionsOfTiles/StuckPlayer"]
-visible = false
 position = Vector2(202, -142)
 
 [node name="StuckPlayer_3" type="Marker2D" parent="ActionsOfTiles/StuckPlayer/San_Roll3"]
@@ -579,7 +558,6 @@ position = Vector2(243, 239)
 position = Vector2(333, 287)
 
 [node name="Drak_Roll1" type="Node2D" parent="ActionsOfTiles/StuckPlayer"]
-visible = false
 position = Vector2(11952, -8993)
 
 [node name="StuckPlayer1" type="Marker2D" parent="ActionsOfTiles/StuckPlayer/Drak_Roll1"]
@@ -593,421 +571,6 @@ position = Vector2(-340, 304)
 
 [node name="StuckPlayer4" type="Marker2D" parent="ActionsOfTiles/StuckPlayer/Drak_Roll1"]
 position = Vector2(-435, 369)
-
-[node name="Crossroads" type="Node2D" parent="ActionsOfTiles"]
-visible = false
-position = Vector2(364, -11)
-
-[node name="Jezibaba" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-visible = false
-position = Vector2(3196, -991)
-
-[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jezibaba"]
-position = Vector2(-782, 563)
-
-[node name="OddWay_135" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jezibaba"]
-position = Vector2(-890, -579)
-
-[node name="EvenWay_246" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jezibaba"]
-position = Vector2(1512, 413)
-
-[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jezibaba"]
-position = Vector2(814, -628)
-
-[node name="Jump1" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-visible = false
-position = Vector2(-96, -400)
-
-[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump1"]
-position = Vector2(-190, 125)
-
-[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump1"]
-position = Vector2(105, 364)
-
-[node name="Jump2" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-visible = false
-position = Vector2(661, 78)
-
-[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump2"]
-position = Vector2(-159, 148)
-
-[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump2"]
-position = Vector2(38, 248)
-
-[node name="Jump3" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-visible = false
-position = Vector2(1322, -134)
-
-[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump3"]
-position = Vector2(-87, 310)
-
-[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump3"]
-position = Vector2(997, -238)
-
-[node name="Jump4" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-visible = false
-position = Vector2(1542, -2020)
-
-[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump4"]
-position = Vector2(675, 378)
-
-[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump4"]
-position = Vector2(-619, 43)
-
-[node name="Jump5" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-visible = false
-position = Vector2(54, -2498)
-
-[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump5"]
-position = Vector2(45, 113)
-
-[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump5"]
-position = Vector2(-135, 125)
-
-[node name="Jump6" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-visible = false
-position = Vector2(-417, -2386)
-
-[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump6"]
-position = Vector2(132, 124)
-
-[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump6"]
-position = Vector2(-72, 106)
-
-[node name="Jump7" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-visible = false
-position = Vector2(-698, -2550)
-
-[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump7"]
-position = Vector2(-173, 84)
-
-[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump7"]
-position = Vector2(-206, -24)
-
-[node name="Jump8" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-visible = false
-position = Vector2(-821, -2725)
-
-[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump8"]
-position = Vector2(-62, 155)
-
-[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump8"]
-position = Vector2(220, 2)
-
-[node name="Jump9" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-visible = false
-position = Vector2(-453, -2839)
-
-[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump9"]
-position = Vector2(-145, 121)
-
-[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump9"]
-position = Vector2(68, 106)
-
-[node name="Jump10" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-visible = false
-position = Vector2(196, -2913)
-
-[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump10"]
-position = Vector2(-182, 191)
-
-[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump10"]
-position = Vector2(-183, 81)
-
-[node name="Jump11" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-visible = false
-position = Vector2(-166, -2964)
-
-[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump11"]
-position = Vector2(154, 134)
-
-[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump11"]
-position = Vector2(189, 30)
-
-[node name="Jump12" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-visible = false
-position = Vector2(458, -3221)
-
-[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump12"]
-position = Vector2(-144, 146)
-
-[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump12"]
-position = Vector2(46, 144)
-
-[node name="Jump13" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-visible = false
-position = Vector2(1128, -2970)
-
-[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump13"]
-position = Vector2(-214, 73)
-
-[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump13"]
-position = Vector2(-208, 185)
-
-[node name="Jump14" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-visible = false
-position = Vector2(1218, -2413)
-
-[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump14"]
-position = Vector2(-202, 83)
-
-[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump14"]
-position = Vector2(3992, -814)
-
-[node name="Jump15" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-visible = false
-position = Vector2(6426, -4368)
-
-[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump15"]
-position = Vector2(-22, 236)
-
-[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump15"]
-position = Vector2(301, 295)
-
-[node name="Jump16" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-visible = false
-position = Vector2(7101, -4504)
-
-[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump16"]
-position = Vector2(20, 224)
-
-[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump16"]
-position = Vector2(2492, -2311)
-
-[node name="Jump17" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-visible = false
-position = Vector2(5191, -3452)
-
-[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump17"]
-position = Vector2(124, 169)
-
-[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump17"]
-position = Vector2(213, 33)
-
-[node name="Jump18" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-visible = false
-position = Vector2(5796, -4102)
-
-[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump18"]
-position = Vector2(127, 343)
-
-[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump18"]
-position = Vector2(220, 180)
-
-[node name="Jump19" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-visible = false
-position = Vector2(6151, -4251)
-
-[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump19"]
-position = Vector2(-14, 261)
-
-[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump19"]
-position = Vector2(154, 177)
-
-[node name="Jump20" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-position = Vector2(9619, -199)
-
-[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump20"]
-position = Vector2(-323, 166)
-
-[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump20"]
-position = Vector2(461, 63)
-
-[node name="Jump21" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-visible = false
-position = Vector2(335, -7813)
-
-[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump21"]
-position = Vector2(145, -68)
-
-[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump21"]
-position = Vector2(171, 134)
-
-[node name="Jump22" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-visible = false
-position = Vector2(591, -7362)
-
-[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump22"]
-position = Vector2(132, -122)
-
-[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump22"]
-position = Vector2(209, 33)
-
-[node name="Jump23" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-visible = false
-position = Vector2(1572, -6649)
-
-[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump23"]
-position = Vector2(-66, -227)
-
-[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump23"]
-position = Vector2(4019, 3015)
-
-[node name="Jump24" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-visible = false
-position = Vector2(5380, -3654)
-
-[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump24"]
-position = Vector2(124, 169)
-
-[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump24"]
-position = Vector2(227, 19)
-
-[node name="Jump25" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-visible = false
-position = Vector2(11207, -6747)
-
-[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump25"]
-position = Vector2(-99, 471)
-
-[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump25"]
-position = Vector2(1507, -441)
-
-[node name="Jump26" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-visible = false
-position = Vector2(10735, -6467)
-
-[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump26"]
-position = Vector2(-37, 188)
-
-[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump26"]
-position = Vector2(281, 232)
-
-[node name="Jump27" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-visible = false
-position = Vector2(12455, -7703)
-
-[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump27"]
-position = Vector2(177, 74)
-
-[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump27"]
-position = Vector2(-136, 124)
-
-[node name="Jump28" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-visible = false
-position = Vector2(11476, -7627)
-
-[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump28"]
-position = Vector2(22, 158)
-
-[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump28"]
-position = Vector2(-158, 53)
-
-[node name="Jump29" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-visible = false
-position = Vector2(13141, -7289)
-
-[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump29"]
-position = Vector2(-114, 63)
-
-[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump29"]
-position = Vector2(99, 169)
-
-[node name="Jump30" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-visible = false
-position = Vector2(13445, -7204)
-
-[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump30"]
-position = Vector2(-247, 79)
-
-[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump30"]
-position = Vector2(182, 78)
-
-[node name="Jump31" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-visible = false
-position = Vector2(13707, -7308)
-
-[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump31"]
-position = Vector2(-127, 191)
-
-[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump31"]
-position = Vector2(107, 76)
-
-[node name="Jump32" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-visible = false
-position = Vector2(13918, -7417)
-
-[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump32"]
-position = Vector2(-127, 191)
-
-[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump32"]
-position = Vector2(107, 76)
-
-[node name="Jump33" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-visible = false
-position = Vector2(14564, -7732)
-
-[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump33"]
-position = Vector2(-127, 191)
-
-[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump33"]
-position = Vector2(-168, 1)
-
-[node name="Jump34" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-visible = false
-position = Vector2(13819, -8194)
-
-[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump34"]
-position = Vector2(97, 231)
-
-[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump34"]
-position = Vector2(-197, -31)
-
-[node name="Jump35" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-visible = false
-position = Vector2(13013, -8554)
-
-[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump35"]
-position = Vector2(200, 131)
-
-[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump35"]
-position = Vector2(-176, 44)
-
-[node name="Jump36" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-visible = false
-position = Vector2(12247, -8860)
-
-[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump36"]
-position = Vector2(167, 144)
-
-[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump36"]
-position = Vector2(-212, 48)
-
-[node name="Jump37" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-visible = false
-position = Vector2(11050, -8529)
-
-[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump37"]
-position = Vector2(259, -38)
-
-[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump37"]
-position = Vector2(-215, 214)
-
-[node name="Jump38" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-visible = false
-position = Vector2(10596, -8085)
-
-[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump38"]
-position = Vector2(29, -134)
-
-[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump38"]
-position = Vector2(215, -36)
-
-[node name="ZlataBrana" type="Node2D" parent="ActionsOfTiles/Crossroads"]
-visible = false
-position = Vector2(13002, -7342)
-
-[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/ZlataBrana"]
-position = Vector2(-85, 67)
-
-[node name="OddWay_135" type="Marker2D" parent="ActionsOfTiles/Crossroads/ZlataBrana"]
-position = Vector2(-186, 24)
-
-[node name="EvenWay_246" type="Marker2D" parent="ActionsOfTiles/Crossroads/ZlataBrana"]
-position = Vector2(-24, 120)
-
-[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/ZlataBrana"]
-position = Vector2(-8892, 5674)
 
 [node name="GiveCard" type="Node2D" parent="ActionsOfTiles"]
 position = Vector2(493, -1)
@@ -1170,6 +733,381 @@ position = Vector2(251, -7645)
 
 [node name="move_to_random_player10" type="Marker2D" parent="ActionsOfTiles/GiveCard"]
 position = Vector2(779, -7292)
+
+[node name="Crossroads" type="Node2D" parent="ActionsOfTiles"]
+position = Vector2(364, -11)
+
+[node name="Jezibaba" type="Node2D" parent="ActionsOfTiles/Crossroads"]
+position = Vector2(3196, -991)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jezibaba"]
+position = Vector2(-782, 563)
+
+[node name="OddWay_135" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jezibaba"]
+position = Vector2(-890, -579)
+
+[node name="EvenWay_246" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jezibaba"]
+position = Vector2(1512, 413)
+
+[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jezibaba"]
+position = Vector2(814, -628)
+
+[node name="Jump1" type="Node2D" parent="ActionsOfTiles/Crossroads"]
+position = Vector2(-96, -400)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump1"]
+position = Vector2(-190, 125)
+
+[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump1"]
+position = Vector2(105, 364)
+
+[node name="Jump2" type="Node2D" parent="ActionsOfTiles/Crossroads"]
+position = Vector2(661, 78)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump2"]
+position = Vector2(-159, 148)
+
+[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump2"]
+position = Vector2(38, 248)
+
+[node name="Jump3" type="Node2D" parent="ActionsOfTiles/Crossroads"]
+position = Vector2(1322, -134)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump3"]
+position = Vector2(-87, 310)
+
+[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump3"]
+position = Vector2(997, -238)
+
+[node name="Jump4" type="Node2D" parent="ActionsOfTiles/Crossroads"]
+position = Vector2(1542, -2020)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump4"]
+position = Vector2(675, 378)
+
+[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump4"]
+position = Vector2(-619, 43)
+
+[node name="Jump5" type="Node2D" parent="ActionsOfTiles/Crossroads"]
+position = Vector2(54, -2498)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump5"]
+position = Vector2(45, 113)
+
+[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump5"]
+position = Vector2(-135, 125)
+
+[node name="Jump6" type="Node2D" parent="ActionsOfTiles/Crossroads"]
+position = Vector2(-417, -2386)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump6"]
+position = Vector2(132, 124)
+
+[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump6"]
+position = Vector2(-72, 106)
+
+[node name="Jump7" type="Node2D" parent="ActionsOfTiles/Crossroads"]
+position = Vector2(-698, -2550)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump7"]
+position = Vector2(-173, 84)
+
+[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump7"]
+position = Vector2(-206, -24)
+
+[node name="Jump8" type="Node2D" parent="ActionsOfTiles/Crossroads"]
+position = Vector2(-821, -2725)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump8"]
+position = Vector2(-62, 155)
+
+[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump8"]
+position = Vector2(220, 2)
+
+[node name="Jump9" type="Node2D" parent="ActionsOfTiles/Crossroads"]
+position = Vector2(-453, -2839)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump9"]
+position = Vector2(-145, 121)
+
+[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump9"]
+position = Vector2(68, 106)
+
+[node name="Jump10" type="Node2D" parent="ActionsOfTiles/Crossroads"]
+position = Vector2(196, -2913)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump10"]
+position = Vector2(-182, 191)
+
+[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump10"]
+position = Vector2(-183, 81)
+
+[node name="Jump11" type="Node2D" parent="ActionsOfTiles/Crossroads"]
+position = Vector2(-166, -2964)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump11"]
+position = Vector2(154, 134)
+
+[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump11"]
+position = Vector2(189, 30)
+
+[node name="Jump12" type="Node2D" parent="ActionsOfTiles/Crossroads"]
+position = Vector2(458, -3221)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump12"]
+position = Vector2(-144, 146)
+
+[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump12"]
+position = Vector2(46, 144)
+
+[node name="Jump13" type="Node2D" parent="ActionsOfTiles/Crossroads"]
+position = Vector2(1128, -2970)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump13"]
+position = Vector2(-214, 73)
+
+[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump13"]
+position = Vector2(-208, 185)
+
+[node name="Jump14" type="Node2D" parent="ActionsOfTiles/Crossroads"]
+position = Vector2(1218, -2413)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump14"]
+position = Vector2(-202, 83)
+
+[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump14"]
+position = Vector2(3992, -814)
+
+[node name="Jump15" type="Node2D" parent="ActionsOfTiles/Crossroads"]
+position = Vector2(6426, -4368)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump15"]
+position = Vector2(-22, 236)
+
+[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump15"]
+position = Vector2(301, 295)
+
+[node name="Jump16" type="Node2D" parent="ActionsOfTiles/Crossroads"]
+position = Vector2(7101, -4504)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump16"]
+position = Vector2(20, 224)
+
+[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump16"]
+position = Vector2(2492, -2311)
+
+[node name="Jump17" type="Node2D" parent="ActionsOfTiles/Crossroads"]
+position = Vector2(5191, -3452)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump17"]
+position = Vector2(124, 169)
+
+[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump17"]
+position = Vector2(213, 33)
+
+[node name="Jump18" type="Node2D" parent="ActionsOfTiles/Crossroads"]
+position = Vector2(5796, -4102)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump18"]
+position = Vector2(127, 343)
+
+[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump18"]
+position = Vector2(220, 180)
+
+[node name="Jump19" type="Node2D" parent="ActionsOfTiles/Crossroads"]
+position = Vector2(6151, -4251)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump19"]
+position = Vector2(-14, 261)
+
+[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump19"]
+position = Vector2(154, 177)
+
+[node name="Jump20" type="Node2D" parent="ActionsOfTiles/Crossroads"]
+position = Vector2(4314, -2624)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump20"]
+position = Vector2(-195, 940)
+
+[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump20"]
+position = Vector2(914, -617)
+
+[node name="Jump21" type="Node2D" parent="ActionsOfTiles/Crossroads"]
+position = Vector2(335, -7813)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump21"]
+position = Vector2(145, -68)
+
+[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump21"]
+position = Vector2(171, 134)
+
+[node name="Jump22" type="Node2D" parent="ActionsOfTiles/Crossroads"]
+position = Vector2(591, -7362)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump22"]
+position = Vector2(132, -122)
+
+[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump22"]
+position = Vector2(209, 33)
+
+[node name="Jump23" type="Node2D" parent="ActionsOfTiles/Crossroads"]
+position = Vector2(1572, -6649)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump23"]
+position = Vector2(-66, -227)
+
+[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump23"]
+position = Vector2(4019, 3015)
+
+[node name="Jump24" type="Node2D" parent="ActionsOfTiles/Crossroads"]
+position = Vector2(5380, -3654)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump24"]
+position = Vector2(124, 169)
+
+[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump24"]
+position = Vector2(227, 19)
+
+[node name="Jump25" type="Node2D" parent="ActionsOfTiles/Crossroads"]
+position = Vector2(11207, -6747)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump25"]
+position = Vector2(-99, 471)
+
+[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump25"]
+position = Vector2(1507, -441)
+
+[node name="Jump26" type="Node2D" parent="ActionsOfTiles/Crossroads"]
+position = Vector2(10735, -6467)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump26"]
+position = Vector2(-37, 188)
+
+[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump26"]
+position = Vector2(281, 232)
+
+[node name="Jump27" type="Node2D" parent="ActionsOfTiles/Crossroads"]
+position = Vector2(12455, -7703)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump27"]
+position = Vector2(177, 74)
+
+[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump27"]
+position = Vector2(-136, 124)
+
+[node name="Jump28" type="Node2D" parent="ActionsOfTiles/Crossroads"]
+position = Vector2(11476, -7627)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump28"]
+position = Vector2(22, 158)
+
+[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump28"]
+position = Vector2(-158, 53)
+
+[node name="Jump29" type="Node2D" parent="ActionsOfTiles/Crossroads"]
+position = Vector2(13141, -7289)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump29"]
+position = Vector2(-114, 63)
+
+[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump29"]
+position = Vector2(99, 169)
+
+[node name="Jump30" type="Node2D" parent="ActionsOfTiles/Crossroads"]
+position = Vector2(13445, -7204)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump30"]
+position = Vector2(-247, 79)
+
+[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump30"]
+position = Vector2(182, 78)
+
+[node name="Jump31" type="Node2D" parent="ActionsOfTiles/Crossroads"]
+position = Vector2(13707, -7308)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump31"]
+position = Vector2(-127, 191)
+
+[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump31"]
+position = Vector2(107, 76)
+
+[node name="Jump32" type="Node2D" parent="ActionsOfTiles/Crossroads"]
+position = Vector2(13918, -7417)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump32"]
+position = Vector2(-127, 191)
+
+[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump32"]
+position = Vector2(107, 76)
+
+[node name="Jump33" type="Node2D" parent="ActionsOfTiles/Crossroads"]
+position = Vector2(14564, -7732)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump33"]
+position = Vector2(-127, 191)
+
+[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump33"]
+position = Vector2(-168, 1)
+
+[node name="Jump34" type="Node2D" parent="ActionsOfTiles/Crossroads"]
+position = Vector2(13819, -8194)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump34"]
+position = Vector2(97, 231)
+
+[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump34"]
+position = Vector2(-197, -31)
+
+[node name="Jump35" type="Node2D" parent="ActionsOfTiles/Crossroads"]
+position = Vector2(13013, -8554)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump35"]
+position = Vector2(200, 131)
+
+[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump35"]
+position = Vector2(-176, 44)
+
+[node name="Jump36" type="Node2D" parent="ActionsOfTiles/Crossroads"]
+position = Vector2(12247, -8860)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump36"]
+position = Vector2(167, 144)
+
+[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump36"]
+position = Vector2(-212, 48)
+
+[node name="Jump37" type="Node2D" parent="ActionsOfTiles/Crossroads"]
+position = Vector2(11050, -8529)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump37"]
+position = Vector2(259, -38)
+
+[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump37"]
+position = Vector2(-215, 214)
+
+[node name="Jump38" type="Node2D" parent="ActionsOfTiles/Crossroads"]
+position = Vector2(10596, -8085)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump38"]
+position = Vector2(29, -134)
+
+[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/Jump38"]
+position = Vector2(215, -36)
+
+[node name="ZlataBrana" type="Node2D" parent="ActionsOfTiles/Crossroads"]
+position = Vector2(13002, -7342)
+
+[node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Crossroads/ZlataBrana"]
+position = Vector2(-85, 67)
+
+[node name="OddWay_135" type="Marker2D" parent="ActionsOfTiles/Crossroads/ZlataBrana"]
+position = Vector2(-186, 24)
+
+[node name="EvenWay_246" type="Marker2D" parent="ActionsOfTiles/Crossroads/ZlataBrana"]
+position = Vector2(-24, 120)
+
+[node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/Crossroads/ZlataBrana"]
+position = Vector2(-8892, 5674)
 
 [node name="BazinaWayThere" type="Node2D" parent="ActionsOfTiles"]
 visible = false
@@ -1485,7 +1423,6 @@ position = Vector2(603, -71)
 position = Vector2(488, -3)
 
 [node name="BazinaWayBack" type="Node2D" parent="ActionsOfTiles"]
-visible = false
 position = Vector2(9466, -342)
 
 [node name="Jump20" type="Node2D" parent="ActionsOfTiles/BazinaWayBack"]
@@ -1495,7 +1432,7 @@ position = Vector2(-1262, -366)
 position = Vector2(201, 361)
 
 [node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/BazinaWayBack/Jump20"]
-position = Vector2(-4014, 85)
+position = Vector2(-3022, 166)
 
 [node name="Jump21" type="Node2D" parent="ActionsOfTiles/BazinaWayBack"]
 position = Vector2(-768, -6)
@@ -1753,13 +1690,13 @@ position = Vector2(-251, 72)
 position = Vector2(275, 317)
 
 [node name="Jump49" type="Node2D" parent="ActionsOfTiles/BazinaWayBack"]
-position = Vector2(-4928, -736)
+position = Vector2(-4536, -800)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/BazinaWayBack/Jump49"]
-position = Vector2(-448, 393)
+position = Vector2(129, 571)
 
 [node name="StraightWay" type="Marker2D" parent="ActionsOfTiles/BazinaWayBack/Jump49"]
-position = Vector2(-471, -204)
+position = Vector2(-557, -493)
 
 [node name="Specials" type="Node2D" parent="ActionsOfTiles"]
 position = Vector2(628, 12)
@@ -1809,7 +1746,6 @@ position = Vector2(-1112, 1638)
 position = Vector2(-1038, -5822)
 
 [node name="Jablicko1" type="Node2D" parent="ActionsOfTiles/Specials"]
-visible = false
 position = Vector2(10661, -748)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Specials/Jablicko1"]
@@ -1825,7 +1761,6 @@ position = Vector2(306, -213)
 position = Vector2(986, -161)
 
 [node name="Jablicko2" type="Node2D" parent="ActionsOfTiles/Specials"]
-visible = false
 position = Vector2(11193, -1030)
 
 [node name="StartMarker" type="Marker2D" parent="ActionsOfTiles/Specials/Jablicko2"]
@@ -2660,6 +2595,8 @@ texture = ExtResource("14_7unmf")
 
 [node name="obstacles" type="Node2D" parent="."]
 z_index = 6
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
 
 [node name="San" type="Sprite2D" parent="obstacles"]
 position = Vector2(3490, 14438)
@@ -2800,22 +2737,26 @@ bus = &"Music"
 position = Vector2(16216, 6832)
 scale = Vector2(3.21169, 3.21169)
 texture = ExtResource("48_cagde")
+metadata/_edit_lock_ = true
 
 [node name="Vez" type="Sprite2D" parent="."]
 position = Vector2(14686, 6381)
 scale = Vector2(2.85417, 2.85417)
 texture = ExtResource("45_0v1ik")
+metadata/_edit_lock_ = true
 
 [node name="Hrad" type="Sprite2D" parent="."]
 position = Vector2(14080, 4891)
 scale = Vector2(8.19658, 8.19658)
 texture = ExtResource("49_0um6c")
+metadata/_edit_lock_ = true
 
 [node name="Hrad2" type="Sprite2D" parent="."]
 position = Vector2(16379, 4871)
 scale = Vector2(9.22436, 9.22436)
 texture = ExtResource("49_0um6c")
 flip_h = true
+metadata/_edit_lock_ = true
 
 [node name="171069355917953053(2)15" type="Sprite2D" parent="."]
 position = Vector2(14480, 5741.25)
