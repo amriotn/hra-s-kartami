@@ -45,11 +45,11 @@ func _on_dice_animated_sprite_send_dice_number(number):
 	
 	stats.effect_active_for_rounds -= 1
 	if stats.effect_active_for_rounds <= 0:
-		stats.active_effect == stats.Effect.NONE
+		stats.active_effect = stats.Effect.NONE
 		stats.effect_active_for_rounds = 0
 			
 	
-	if ((stuck_until_dice_number == 0 or dice_number == stuck_until_dice_number) and standing_on_zabi_kral == false and stats.active_effect != stats.Effect.STUCK) or stats.active_effect == stats.Effect.IMMUNE:
+	if ((stuck_until_dice_number == 0 or dice_number == stuck_until_dice_number) and stats.active_effect != stats.Effect.STUCK and standing_on_zabi_kral == false) or stats.active_effect == stats.Effect.IMMUNE:
 		if dice_number == stuck_until_dice_number:
 			match stuck_until_dice_number:
 				3:
@@ -63,7 +63,7 @@ func _on_dice_animated_sprite_send_dice_number(number):
 		check_surround_tiles_help(reference_tile, last_tile, dice_number)
 		stuck_until_dice_number = 0
 		
-	elif standing_on_zabi_kral == true:
+	elif standing_on_zabi_kral == true and stats.active_effect != stats.Effect.STUCK:
 		if dice_number == 1:
 			if swamp_route_swap:
 			# poslat na políčko korunky
@@ -97,8 +97,10 @@ func _on_dice_animated_sprite_send_dice_number(number):
 				self.position = tilemap_node.map_to_local(tilemap_node.local_to_map(self.position))
 				check_surround_tiles_help(reference_tile, last_tile, dice_number)
 				actions_of_tiles.swamp.erase(actions_of_tiles.conditional_jump_back.get_children()[0].global_position)
+	else:
+		end_turn_button.disabled = false
 	
-	end_turn_button.disabled = false
+	#end_turn_button.disabled = false
 
 func check_surround_tiles_help(center_tile : Vector2i, previous_tile : Vector2i, dice_number : int):
 	tilemap_node = self.get_parent().get_node("TileMap")
@@ -180,6 +182,8 @@ func _on_highlight_send_highlight_position(highlight_position):
 	
 func handle_what_tile_player_stepped_on():
 	$AnimationPlayer.stop()
+	end_turn_button.disabled = false
+	
 	tilemap_node = self.get_parent().get_node("TileMap")
 	actions_of_tiles = self.get_parent().get_node("ActionsOfTiles")
 	
@@ -199,9 +203,10 @@ func handle_what_tile_player_stepped_on():
 		print(actions_of_tiles.stuck_player.get(self.position))
 		stuck_until_dice_number = actions_of_tiles.stuck_player.get(self.position)
 	
-	elif actions_of_tiles.crossroads.has(self.position):
-		print("crossroads work")
-		print(actions_of_tiles.crossroads.get(self.position))
+	#elif actions_of_tiles.crossroads.has(self.position):
+	#	print("crossroads work")
+	#	print(actions_of_tiles.crossroads.get(self.position))
+	
 	
 	elif actions_of_tiles.give_card.has(self.position):
 		print("give card works")
