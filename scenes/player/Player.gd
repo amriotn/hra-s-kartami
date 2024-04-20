@@ -7,7 +7,8 @@ class_name Player
 @onready var end_turn_button = get_tree().get_nodes_in_group("ui_layer")[0].end_turn_button
 @onready var dice_animated_sprite = $DiceAnimatedSprite
 @onready var player_finder = $PlayerFinder
-@onready var audio_stream_player_player : AudioStreamPlayer = $AudioStreamPlayerPlayer
+@onready var choose_player = $ChoosePlayer
+@onready var confirm_action_button = $ChoosePlayer/ConfirmActionButton
 
 var tilemap_node : TileMap
 var actions_of_tiles : ActionsOfTiles
@@ -70,16 +71,16 @@ func _on_dice_animated_sprite_send_dice_number(number):
 				tween.tween_property(self, "position", actions_of_tiles.korunka.global_position, 0.5)
 				ventured_tiles.clear()
 				standing_on_zabi_kral = false
-				await get_tree().create_timer(0.6).timeout
-				handle_what_tile_player_stepped_on()
+				#await get_tree().create_timer(0.6).timeout
+				#handle_what_tile_player_stepped_on()
 			else:
 				# poslat na políčko studny
 				var tween = get_tree().create_tween()
 				tween.tween_property(self, "position", actions_of_tiles.tun.global_position, 0.5)
 				ventured_tiles.clear()
 				standing_on_zabi_kral = false
-				await get_tree().create_timer(0.6).timeout
-				handle_what_tile_player_stepped_on()
+				#await get_tree().create_timer(0.6).timeout
+				#handle_what_tile_player_stepped_on()
 		else:
 			# aktivovat správný conditional_jump
 			if swamp_route_swap == false:
@@ -144,20 +145,27 @@ func check_surround_tiles_help(center_tile : Vector2i, previous_tile : Vector2i,
 		highlight.connect("send_highlight_position", Callable(self, "_on_highlight_send_highlight_position"))
 		highlights.append(highlight)
 		
+		
+func playSound():
+	$AudioStreamPlayer.play()
+	
 func _on_highlight_send_highlight_position(highlight_position):
+	$AnimationPlayer.play("move")
 	#var tween = get_tree().create_tween()
 	#tween.tween_property(self, "position", highlight_position, 0.1*dice_number)
 	#self.position = highlight_position
 	for highlight in highlights:
 		highlight.queue_free()
 	highlights.clear()
-	
+
 	tilemap_node = self.get_parent().get_node("TileMap")
 	var tween = get_tree().create_tween()
 	for tile in route_of_tiles:
 		ventured_tiles.append(tile)
 		tween.tween_property(self, "position", tilemap_node.map_to_local(tile), 0.2)
 		tween.tween_interval(0.2)
+		
+
 	
 	
 	
@@ -168,8 +176,10 @@ func _on_highlight_send_highlight_position(highlight_position):
 	route_of_tiles.clear()
 	
 	tween.connect("finished", handle_what_tile_player_stepped_on)
+
 	
 func handle_what_tile_player_stepped_on():
+	$AnimationPlayer.stop()
 	tilemap_node = self.get_parent().get_node("TileMap")
 	actions_of_tiles = self.get_parent().get_node("ActionsOfTiles")
 	
@@ -293,10 +303,12 @@ func handle_what_tile_player_stepped_on():
 				print("player erase")
 				stats.has_finished = true
 			
-@onready var choose_player = $ChoosePlayer
 @onready var click_detection = $ClickDetection
-@onready var confirm_action_button : Button = $ChoosePlayer/ConfirmActionButton
 @onready var select = $Select
+
+func player_chooser():
+	choose_player.show()
+	confirm_action_button.disabled = true
 
 
 func _on_click_detection_input_event(viewport, event, shape_idx):

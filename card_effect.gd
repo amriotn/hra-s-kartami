@@ -56,7 +56,7 @@ func move_player_to_player():
 			for player in Global.player_list:
 				if player != card_data.holder:
 					player.click_detection.show()
-			card_data.holder.choose_player.show()
+			card_data.holder.player_chooser()
 			await card_data.holder.confirm_action_button.pressed
 			print("move "+str(Global.card_player_target)+" to "+str(card_data.holder))
 			
@@ -80,7 +80,7 @@ func stuck_player():
 			for player in Global.player_list:
 				if player != card_data.holder:
 					player.click_detection.show()
-			card_data.holder.choose_player.show()
+			card_data.holder.player_chooser()
 			await card_data.holder.confirm_action_button.pressed
 			
 			print("give stuck to "+str(Global.card_player_target)+" for "+str(card_data.effect_data)+" rounds")
@@ -112,7 +112,7 @@ func swap_positions():
 			for player in Global.player_list:
 				if player != card_data.holder:
 					player.click_detection.show()
-			card_data.holder.choose_player.show()
+			card_data.holder.player_chooser()
 			await card_data.holder.confirm_action_button.pressed
 			
 			print("swap positions with "+str(Global.card_player_target))

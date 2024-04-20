@@ -575,13 +575,13 @@ position = Vector2(-435, 369)
 [node name="GiveCard" type="Node2D" parent="ActionsOfTiles"]
 position = Vector2(493, -1)
 
-[node name="move_enemy_to_self" type="Marker2D" parent="ActionsOfTiles/GiveCard"]
+[node name="give_3_cards10" type="Marker2D" parent="ActionsOfTiles/GiveCard"]
 position = Vector2(-1103, -638)
 
 [node name="give_3_immunity1" type="Marker2D" parent="ActionsOfTiles/GiveCard"]
 position = Vector2(-802, -478)
 
-[node name="move_enemy_to_self6" type="Marker2D" parent="ActionsOfTiles/GiveCard"]
+[node name="give_3_cards9" type="Marker2D" parent="ActionsOfTiles/GiveCard"]
 position = Vector2(-601, -390)
 
 [node name="move_to_random_player1" type="Marker2D" parent="ActionsOfTiles/GiveCard"]
