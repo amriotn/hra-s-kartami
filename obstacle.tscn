@@ -1,0 +1,45 @@
+[gd_scene load_steps=5 format=3 uid="uid://bhennfnw6jq85"]
+
+[ext_resource type="Script" path="res://obstacle.gd" id="1_heqps"]
+[ext_resource type="Theme" uid="uid://cxf28t24j2lk7" path="res://fonts/new_theme.tres" id="2_42gdw"]
+[ext_resource type="Texture2D" uid="uid://b4ngh0fqe68mj" path="res://assets/button.png" id="3_pn0xn"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xptto"]
+content_margin_left = 20.0
+content_margin_top = 20.0
+content_margin_right = 20.0
+content_margin_bottom = 20.0
+texture = ExtResource("3_pn0xn")
+texture_margin_left = 25.0
+texture_margin_top = 20.0
+texture_margin_right = 25.0
+texture_margin_bottom = 20.0
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
+
+[node name="Obstacle" type="TextureRect"]
+script = ExtResource("1_heqps")
+
+[node name="ObstacleDescription" type="RichTextLabel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -589.0
+offset_top = -169.0
+offset_right = 461.0
+offset_bottom = -64.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 3
+theme = ExtResource("2_42gdw")
+theme_override_styles/normal = SubResource("StyleBoxTexture_xptto")
+text = "Obstacle - obstacle description"
+fit_content = true
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]

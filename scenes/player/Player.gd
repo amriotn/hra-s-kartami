@@ -110,6 +110,7 @@ func check_surround_tiles_help(center_tile : Vector2i, previous_tile : Vector2i,
 	route_of_tiles.append(center_tile)
 	
 	var current_surrounds : Array = tilemap_node.get_surrounding_cells(center_tile) # Získá souřadnice okolních polí
+	var available_surrounds : Array = []
 	#print("Tile ", center_tile, "surronds: ", current_surrounds,"\ndice:", dice_number)
 	
 	if dice_number > 0:
@@ -136,7 +137,13 @@ func check_surround_tiles_help(center_tile : Vector2i, previous_tile : Vector2i,
 			for tile in current_surrounds:
 				if tile != previous_tile and tile != last_tile and tile: #  not in ventured_tiles
 					if tilemap_node.get_cell_source_id(0, tile) == 0: # = tile je na Layer 0 a je z TileSet 0
-						check_surround_tiles_help(tile, center_tile, dice_number-1)
+						available_surrounds.append(tile)
+			if not available_surrounds.is_empty():
+				for tile in available_surrounds:
+					check_surround_tiles_help(tile, center_tile, dice_number-1)
+			else:
+				end_turn_button.disabled = false
+			
 	elif dice_number <= 0:
 		last_tile = previous_tile
 		
@@ -188,125 +195,125 @@ func handle_what_tile_player_stepped_on():
 	actions_of_tiles = self.get_parent().get_node("ActionsOfTiles")
 	
 	stuck_until_dice_number = 0
-	
-	if actions_of_tiles.move_player.has(self.position):
-		print("move player works")
-		print(actions_of_tiles.move_player.get(self.position))
-		var tween = get_tree().create_tween()
-		tween.tween_property(self, "position", actions_of_tiles.move_player.get(self.position)[0], 0.5)
-		ventured_tiles.clear()
-		ventured_tiles.append(tilemap_node.local_to_map(actions_of_tiles.move_player.get(self.position)[1]))
-		last_tile = ventured_tiles[0]
-		
-	elif actions_of_tiles.stuck_player.has(self.position):
-		print("stuck player works")
-		print(actions_of_tiles.stuck_player.get(self.position))
-		stuck_until_dice_number = actions_of_tiles.stuck_player.get(self.position)
-	
-	#elif actions_of_tiles.crossroads.has(self.position):
-	#	print("crossroads work")
-	#	print(actions_of_tiles.crossroads.get(self.position))
-	
-	
-	elif actions_of_tiles.give_card.has(self.position):
-		print("give card works")
-		print(actions_of_tiles.give_card.get(self.position))
-		var card_data_path = actions_of_tiles.give_card.get(self.position)
-		var card = CARD_HAND_UI.instantiate()
-		var card_data : CardResource = load(card_data_path)
-		#card_data.holder = self
-		card.load_data(card_data, self)
-		#card.data.holder = self
-		#print(str(card.data.holder)+ " PLAYER")
-		stats.hand.add_card(card)
-	
-	elif actions_of_tiles.swamp.has(self.position):
-		print(actions_of_tiles.swamp.get(self.position))
-		if actions_of_tiles.swamp.get(self.position).size() == 2:
+	if stats.active_effect == stats.Effect.NONE:
+		if actions_of_tiles.move_player.has(self.position):
+			print("move player works")
+			print(actions_of_tiles.move_player.get(self.position))
 			var tween = get_tree().create_tween()
-			tween.tween_property(self, "position", actions_of_tiles.swamp.get(self.position)[0], 0.5)
+			tween.tween_property(self, "position", actions_of_tiles.move_player.get(self.position)[0], 0.5)
 			ventured_tiles.clear()
-			ventured_tiles.append(tilemap_node.local_to_map(actions_of_tiles.swamp.get(self.position)[1]))
+			ventured_tiles.append(tilemap_node.local_to_map(actions_of_tiles.move_player.get(self.position)[1]))
 			last_tile = ventured_tiles[0]
 			
-			
-		elif actions_of_tiles.swamp.get(self.position).size() == 1 and actions_of_tiles.swamp.get(self.position)[0] is int:
-			stuck_until_dice_number = actions_of_tiles.swamp.get(self.position)[0]
-			stats.active_effect = stats.Effect.STUCK
-	
-	if actions_of_tiles.specials.has(self.position):
-		print(actions_of_tiles.specials.get(self.position))
-		var action = actions_of_tiles.specials.get(self.position)
-		var action_name : String = action.name
-		var last_index : int = action_name.length()-1
-		while action_name[last_index].is_valid_int():
-			last_index -= 1
-		action_name = action_name.substr(0, last_index+1)
-		match action_name:
-			"PtakOhnivak":
-				var child_markers = action.get_children()
-				if swamp_route_swap == false:
-					var destination_pos = child_markers[2].global_position
-					var invalid_way_pos = child_markers[3].global_position
+		elif actions_of_tiles.stuck_player.has(self.position):
+			print("stuck player works")
+			print(actions_of_tiles.stuck_player.get(self.position))
+			stuck_until_dice_number = actions_of_tiles.stuck_player.get(self.position)
+		
+		#elif actions_of_tiles.crossroads.has(self.position):
+		#	print("crossroads work")
+		#	print(actions_of_tiles.crossroads.get(self.position))
+		
+		
+		elif actions_of_tiles.give_card.has(self.position):
+			print("give card works")
+			print(actions_of_tiles.give_card.get(self.position))
+			var card_data_path = actions_of_tiles.give_card.get(self.position)
+			var card = CARD_HAND_UI.instantiate()
+			var card_data : CardResource = load(card_data_path)
+			#card_data.holder = self
+			card.load_data(card_data, self)
+			#card.data.holder = self
+			#print(str(card.data.holder)+ " PLAYER")
+			stats.hand.add_card(card)
+		
+		elif actions_of_tiles.swamp.has(self.position):
+			print(actions_of_tiles.swamp.get(self.position))
+			if actions_of_tiles.swamp.get(self.position).size() == 2:
+				var tween = get_tree().create_tween()
+				tween.tween_property(self, "position", actions_of_tiles.swamp.get(self.position)[0], 0.5)
+				ventured_tiles.clear()
+				ventured_tiles.append(tilemap_node.local_to_map(actions_of_tiles.swamp.get(self.position)[1]))
+				last_tile = ventured_tiles[0]
+				
+				
+			elif actions_of_tiles.swamp.get(self.position).size() == 1 and actions_of_tiles.swamp.get(self.position)[0] is int:
+				stuck_until_dice_number = actions_of_tiles.swamp.get(self.position)[0]
+				stats.active_effect = stats.Effect.STUCK
+		
+		if actions_of_tiles.specials.has(self.position):
+			print(actions_of_tiles.specials.get(self.position))
+			var action = actions_of_tiles.specials.get(self.position)
+			var action_name : String = action.name
+			var last_index : int = action_name.length()-1
+			while action_name[last_index].is_valid_int():
+				last_index -= 1
+			action_name = action_name.substr(0, last_index+1)
+			match action_name:
+				"PtakOhnivak":
+					var child_markers = action.get_children()
+					if swamp_route_swap == false:
+						var destination_pos = child_markers[2].global_position
+						var invalid_way_pos = child_markers[3].global_position
+						var tween = get_tree().create_tween()
+						tween.tween_property(self, "position", destination_pos, 0.5)
+						ventured_tiles.clear()
+						ventured_tiles.append(tilemap_node.local_to_map(invalid_way_pos))
+						last_tile = ventured_tiles[0]
+						await get_tree().create_timer(0.6).timeout
+						handle_what_tile_player_stepped_on()
+					else:
+						var destination_pos = child_markers[4].global_position
+						var tween = get_tree().create_tween()
+						tween.tween_property(self, "position", destination_pos, 0.5)
+						ventured_tiles.clear()
+				"Jablicko":
+					var child_markers = action.get_children()
+					var destination_pos
+					var invalid_way_pos
+					destination_pos = child_markers[1].global_position
+					if swamp_route_swap == false:
+						invalid_way_pos = child_markers[2].global_position
+					else:
+						invalid_way_pos = child_markers[3].global_position
 					var tween = get_tree().create_tween()
 					tween.tween_property(self, "position", destination_pos, 0.5)
 					ventured_tiles.clear()
 					ventured_tiles.append(tilemap_node.local_to_map(invalid_way_pos))
 					last_tile = ventured_tiles[0]
-					await get_tree().create_timer(0.6).timeout
-					handle_what_tile_player_stepped_on()
-				else:
+				"ZabiKral":
+					standing_on_zabi_kral = true
+				"Tun":
+					swamp_route_swap = true
+					ventured_tiles.clear()
+				
+				"Obr":
+					var child_markers = action.get_children()
 					var destination_pos = child_markers[4].global_position
+					var invalid_way_pos = child_markers[5].global_position
 					var tween = get_tree().create_tween()
 					tween.tween_property(self, "position", destination_pos, 0.5)
 					ventured_tiles.clear()
-			"Jablicko":
-				var child_markers = action.get_children()
-				var destination_pos
-				var invalid_way_pos
-				destination_pos = child_markers[1].global_position
-				if swamp_route_swap == false:
-					invalid_way_pos = child_markers[2].global_position
-				else:
-					invalid_way_pos = child_markers[3].global_position
-				var tween = get_tree().create_tween()
-				tween.tween_property(self, "position", destination_pos, 0.5)
-				ventured_tiles.clear()
-				ventured_tiles.append(tilemap_node.local_to_map(invalid_way_pos))
-				last_tile = ventured_tiles[0]
-			"ZabiKral":
-				standing_on_zabi_kral = true
-			"Tun":
-				swamp_route_swap = true
-				ventured_tiles.clear()
-			
-			"Obr":
-				var child_markers = action.get_children()
-				var destination_pos = child_markers[4].global_position
-				var invalid_way_pos = child_markers[5].global_position
-				var tween = get_tree().create_tween()
-				tween.tween_property(self, "position", destination_pos, 0.5)
-				ventured_tiles.clear()
-				ventured_tiles.append(tilemap_node.local_to_map(invalid_way_pos))
-				last_tile = ventured_tiles[0]
-			
-			"Carodej":
-				print(action.name.substr(last_index+1, action.name.length()-1))
+					ventured_tiles.append(tilemap_node.local_to_map(invalid_way_pos))
+					last_tile = ventured_tiles[0]
 				
-				carodej_number = int(action.name.substr(last_index+1, action.name.length()-1))
-				
-				var child_markers = action.get_children()
-				var destination_pos = child_markers[1].global_position
-				var invalid_way_pos = child_markers[2].global_position
-				var tween = get_tree().create_tween()
-				tween.tween_property(self, "position", destination_pos, 0.5)
-				ventured_tiles.clear()
-				ventured_tiles.append(tilemap_node.local_to_map(invalid_way_pos))
-				last_tile = ventured_tiles[0]
-				
-			"Goals":
-				print("player erase")
-				stats.has_finished = true
+				"Carodej":
+					print(action.name.substr(last_index+1, action.name.length()-1))
+					
+					carodej_number = int(action.name.substr(last_index+1, action.name.length()-1))
+					
+					var child_markers = action.get_children()
+					var destination_pos = child_markers[1].global_position
+					var invalid_way_pos = child_markers[2].global_position
+					var tween = get_tree().create_tween()
+					tween.tween_property(self, "position", destination_pos, 0.5)
+					ventured_tiles.clear()
+					ventured_tiles.append(tilemap_node.local_to_map(invalid_way_pos))
+					last_tile = ventured_tiles[0]
+					
+				"Goals":
+					print("player erase")
+					stats.has_finished = true
 			
 @onready var click_detection = $ClickDetection
 @onready var select = $Select

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ObstacleData" load_steps=3 format=3 uid="uid://cpycd6lqqwrdg"]
+
+[ext_resource type="Script" path="res://obstacle_data.gd" id="1_n32ax"]
+[ext_resource type="Texture2D" uid="uid://cfajtxrkmvlrd" path="res://assets/obstacles/cerny_kun.png" id="1_t7iax"]
+
+[resource]
+script = ExtResource("1_n32ax")
+icon = ExtResource("1_t7iax")
+description = "Černý kůň - posílá hráče do pekla"
+flip_image = false

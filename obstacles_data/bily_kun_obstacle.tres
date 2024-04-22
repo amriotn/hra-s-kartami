@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ObstacleData" load_steps=3 format=3 uid="uid://caqqj28aoj0x4"]
+
+[ext_resource type="Texture2D" uid="uid://bd8q3q6t634yu" path="res://assets/obstacles/bily_kun.png" id="1_d46ln"]
+[ext_resource type="Script" path="res://obstacle_data.gd" id="1_p35rl"]
+
+[resource]
+script = ExtResource("1_p35rl")
+icon = ExtResource("1_d46ln")
+description = "Bílý kůň - posílá hráče na Zlatý vrch"
+flip_image = false
