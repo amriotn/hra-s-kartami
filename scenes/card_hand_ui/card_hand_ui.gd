@@ -14,6 +14,15 @@ signal reparent_requested(which_card_ui: CardHandUI)
 @onready var points_label : Label = $PointsLabel
 @onready var card_name_label = $CardNameLabel
 @onready var card_description_label = $CardDescriptionLabel
+@onready var card_visual : Sprite2D = $CardVisual
+
+@onready var border_details = $CardDetails/BorderDetails
+@onready var points_label_details = $CardDetails/BorderDetails/PointsLabelDetails
+@onready var card_name_label_details = $CardDetails/BorderDetails/CardNameLabelDetails
+@onready var card_description_label_details = $CardDetails/BorderDetails/CardDescriptionLabelDetails
+@onready var card_visual_details : Sprite2D = $CardDetails/BorderDetails/CardVisualDetails
+
+
 
 var data : CardResource = null
 
@@ -30,6 +39,30 @@ func _ready() -> void:
 	points_label.text =str(data.points)
 	card_name_label.text = data.card_name
 	card_description_label.text = data.description
+	
+	var GOAL_WIDTH = 128.0
+	var GOAL_HEIGHT = 128.0
+	
+	var GOAL_WIDTH_DETAILS = 333.0
+	var GOAL_HEIGHT_DETAILS = 333.0
+	
+	
+	card_visual.texture = data.icon
+	
+	card_visual.scale.x = (GOAL_WIDTH/ data.icon.get_width())
+	card_visual.scale.y = (GOAL_HEIGHT/ data.icon.get_height())
+	
+	border_details.color = data.Rarity_colors[data.rarity]
+	points_label_details.text =str(data.points)
+	card_name_label_details.text = data.card_name
+	card_description_label_details.text = data.description
+	card_visual_details.texture = data.icon
+	
+	card_visual_details.texture = data.icon
+	
+	card_visual_details.scale.x = (GOAL_WIDTH_DETAILS/ data.icon.get_width())
+	card_visual_details.scale.y = (GOAL_HEIGHT_DETAILS/ data.icon.get_height())
+	
 	if data.holder:
 		shine.modulate = data.holder.stats.player_color
 

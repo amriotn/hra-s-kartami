@@ -35,7 +35,6 @@ folder_colors={
 "res://assets/": "orange",
 "res://cards/": "green",
 "res://fonts/": "pink",
-"res://obstacles_data/": "purple",
 "res://scenes/": "blue"
 }
 

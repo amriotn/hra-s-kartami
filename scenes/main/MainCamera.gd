@@ -42,4 +42,3 @@ func movement_toggle():
 	can_move = not can_move
 	
 
-@onready var seamless_ground : Sprite2D = $"../SeamlessGround"

@@ -16,15 +16,15 @@ func load_stats(player_stats : PlayerStats) -> void:
 var points_sum = 0
 func on_stats_updated():
 	points_sum = 0
-	print("stats updated")
+	#print("stats updated")
 	for card in stats.hand.get_children():
 		points_sum += card.data.points
 	points.text = str(points_sum)
 	stats.points = points_sum
-	print(Global.player_stats_resources)
-	print(Global.player_stats_resources.find(stats))
+	#print(Global.player_stats_resources)
+	#print(Global.player_stats_resources.find(stats))
 	Global.player_stats_resources.sort_custom(custom_sort)
-	print(Global.player_stats_resources)
+	#print(Global.player_stats_resources)
 	
 	leaderboard_position.text = str(Global.player_stats_resources.find(stats)+1)
 	

@@ -1,6 +1,7 @@
-[gd_resource type="Resource" script_class="CardResource" load_steps=2 format=3 uid="uid://6sxoeevq1kl2"]
+[gd_resource type="Resource" script_class="CardResource" load_steps=3 format=3 uid="uid://6sxoeevq1kl2"]
 
 [ext_resource type="Script" path="res://card_resource.gd" id="1_4f83l"]
+[ext_resource type="Texture2D" uid="uid://dm0qbnn3xnb42" path="res://assets/environment/rocks/gold_pile.png" id="1_tbsdo"]
 
 [resource]
 script = ExtResource("1_4f83l")
@@ -10,5 +11,6 @@ effect = 0
 effect_data = 3
 effect_target = 0
 effect_target_data = 0
-card_name = "GIVE CARD"
-description = "Gives you 3 random cards"
+icon = ExtResource("1_tbsdo")
+card_name = "Groš dej"
+description = "Dá ti 3 náhodné karty"

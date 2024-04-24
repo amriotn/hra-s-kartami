@@ -1,6 +1,7 @@
-[gd_resource type="Resource" script_class="CardResource" load_steps=2 format=3 uid="uid://nx5vieo62ldv"]
+[gd_resource type="Resource" script_class="CardResource" load_steps=3 format=3 uid="uid://nx5vieo62ldv"]
 
 [ext_resource type="Script" path="res://card_resource.gd" id="1_f8745"]
+[ext_resource type="Texture2D" uid="uid://4mwdaqunx6y3" path="res://assets/obstacles/princezna.png" id="1_rejmg"]
 
 [resource]
 script = ExtResource("1_f8745")
@@ -10,5 +11,6 @@ effect = 1
 effect_data = 3
 effect_target = 0
 effect_target_data = 0
-card_name = "Imunita 3"
-description = "Dá hráči Imunitu na 3 kola"
+icon = ExtResource("1_rejmg")
+card_name = "Imunita"
+description = "Dá hráči Imunitu proti překážkám na 3 kola"

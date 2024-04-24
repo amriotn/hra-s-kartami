@@ -1,5 +1,6 @@
-[gd_resource type="Resource" script_class="CardResource" load_steps=2 format=3 uid="uid://bgtrvypyx88dt"]
+[gd_resource type="Resource" script_class="CardResource" load_steps=3 format=3 uid="uid://bgtrvypyx88dt"]
 
+[ext_resource type="Texture2D" uid="uid://bjdf4liwgcicu" path="res://assets/obstacles/jezibaba.png" id="1_gx81t"]
 [ext_resource type="Script" path="res://card_resource.gd" id="1_pfpj4"]
 
 [resource]
@@ -10,5 +11,6 @@ effect = 4
 effect_data = 0
 effect_target = 3
 effect_target_data = 0
-card_name = "Multiswap"
+icon = ExtResource("1_gx81t")
+card_name = "Kolo mlýnský"
 description = "Všichni hráči si vymění pozice"

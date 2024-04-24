@@ -39,7 +39,7 @@ func _on_dice_animated_sprite_send_dice_number(number):
 	dice_number = number
 	route_of_tiles.clear()
 	
-	var tilemap_node : TileMap = self.get_parent().get_node("TileMap")
+	tilemap_node = self.get_parent().get_node("TileMap")
 	
 	var reference_tile = tilemap_node.local_to_map(self.position)
 	
@@ -239,7 +239,7 @@ func handle_what_tile_player_stepped_on():
 				
 			elif actions_of_tiles.swamp.get(self.position).size() == 1 and actions_of_tiles.swamp.get(self.position)[0] is int:
 				stuck_until_dice_number = actions_of_tiles.swamp.get(self.position)[0]
-				stats.active_effect = stats.Effect.STUCK
+				#stats.active_effect = stats.Effect.STUCK
 		
 		if actions_of_tiles.specials.has(self.position):
 			print(actions_of_tiles.specials.get(self.position))
@@ -323,7 +323,7 @@ func player_chooser():
 	confirm_action_button.disabled = true
 
 
-func _on_click_detection_input_event(viewport, event, shape_idx):
+func _on_click_detection_input_event(event):
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		if Global.card_player_target != null:
 			Global.card_player_target.select.hide()

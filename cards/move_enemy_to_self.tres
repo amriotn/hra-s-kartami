@@ -1,6 +1,7 @@
-[gd_resource type="Resource" script_class="CardResource" load_steps=2 format=3 uid="uid://dx7iv0j4eh7eh"]
+[gd_resource type="Resource" script_class="CardResource" load_steps=3 format=3 uid="uid://dx7iv0j4eh7eh"]
 
 [ext_resource type="Script" path="res://card_resource.gd" id="1_36ce5"]
+[ext_resource type="Texture2D" uid="uid://fwtdbhocln6n" path="res://assets/obstacles/cerny_havran.png" id="1_mdqb8"]
 
 [resource]
 script = ExtResource("1_36ce5")
@@ -10,5 +11,6 @@ effect = 2
 effect_data = 0
 effect_target = 1
 effect_target_data = 0
+icon = ExtResource("1_mdqb8")
 card_name = "Přines nepřítele"
 description = "Přinese k tobě hráče, kterého určíš."

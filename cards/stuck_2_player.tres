@@ -1,6 +1,7 @@
-[gd_resource type="Resource" script_class="CardResource" load_steps=2 format=3 uid="uid://cj3anehx4ay3u"]
+[gd_resource type="Resource" script_class="CardResource" load_steps=3 format=3 uid="uid://cj3anehx4ay3u"]
 
 [ext_resource type="Script" path="res://card_resource.gd" id="1_5bvc3"]
+[ext_resource type="Texture2D" uid="uid://c4fwem88v8fjb" path="res://assets/obstacles/vodnik.png" id="1_efv3q"]
 
 [resource]
 script = ExtResource("1_5bvc3")
@@ -10,5 +11,6 @@ effect = 3
 effect_data = 2
 effect_target = 1
 effect_target_data = 0
+icon = ExtResource("1_efv3q")
 card_name = "Zmrzni!"
 description = "Zastaví jednoho hráče na 2 kola"

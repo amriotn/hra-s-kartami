@@ -21,6 +21,7 @@ var turn = 1
 
 
 func _ready():
+	DisplayServer.window_set_min_size(Vector2(800, 600))
 	#var dice_animated_sprite = $MainCamera/GUI/CenterContainer/DiceControl/DiceAnimatedSprite
 	Global.player_list = player_list
 	
@@ -129,8 +130,8 @@ func fix_players_on_tile(player_list):
 	#players_on_tile.append(self)
 	#print(players_on_tile)
 	if players_on_tile:
-		var first_pos_help = 200/players_on_tile.size()
-		var first_pos = first_pos_help/2
+		var first_pos_help = 200.0/float(players_on_tile.size())
+		var first_pos = first_pos_help/2.0
 		var i = 0
 		for player in players_on_tile:
 			player.position = tilemap_node.map_to_local(tilemap_node.local_to_map(player.position))

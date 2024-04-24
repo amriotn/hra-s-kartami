@@ -8,12 +8,12 @@
 [ext_resource type="Texture2D" uid="uid://cvt3fs8gasuwc" path="res://assets/171069355917953053 (2).png" id="4_m38ue"]
 
 [node name="PlayerDisplayUI" type="Control"]
-custom_minimum_size = Vector2(500, 98)
+custom_minimum_size = Vector2(290, 98)
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = -1420.0
+offset_right = -1630.0
 offset_bottom = -982.0
 grow_horizontal = 2
 grow_vertical = 2

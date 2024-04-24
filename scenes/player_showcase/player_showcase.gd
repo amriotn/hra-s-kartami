@@ -6,7 +6,6 @@ extends Control
 @onready var warning_label = $WarningLabel
 
 @onready var delete_button = $DeleteButton
-@onready var x_label = $XLabel
 
 @onready var icon : Sprite2D = $Icon
 var player_icon_index : int = 0

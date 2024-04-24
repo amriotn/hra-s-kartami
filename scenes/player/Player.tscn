@@ -205,7 +205,7 @@ texture = ExtResource("3_1ocul")
 
 [node name="DiceAnimatedSprite" type="AnimatedSprite2D" parent="."]
 visible = false
-z_index = 10
+z_index = 9
 position = Vector2(-3, -405)
 scale = Vector2(1.39209, 1.39209)
 sprite_frames = SubResource("SpriteFrames_1g6tu")

@@ -75,14 +75,14 @@ shape = SubResource("RectangleShape2D_eorai")
 layout_mode = 3
 anchors_preset = 0
 offset_top = 152.0
-offset_right = 508.0
+offset_right = 305.0
 offset_bottom = 767.0
 mouse_filter = 1
 
 [node name="PlayersScrollBar" type="ScrollContainer" parent="CollapsablePlayerList"]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 0
-offset_right = 508.0
+offset_right = 303.0
 offset_bottom = 615.0
 horizontal_scroll_mode = 0
 

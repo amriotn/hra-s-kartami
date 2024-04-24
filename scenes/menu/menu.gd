@@ -11,7 +11,8 @@ var player_count : int
 var player_list
 
 func _ready():
-	player_count = v_box_container.get_children().count(player_showcase)
+	DisplayServer.window_set_min_size(Vector2(800, 600))
+	player_count = v_box_container.get_children().count(PLAYER_SHOWCASE)
 	add_player_to_list()
 
 

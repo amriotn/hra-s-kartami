@@ -1,5 +1,7 @@
 extends CardState
 
+@onready var card_details = $"../../CardDetails"
+
 var hand_tween : Tween
 
 func enter() -> void:
@@ -10,6 +12,7 @@ func enter() -> void:
 	
 	
 	hand_container.update_hand()
+	card_details.hide()
 	
 	card_hand_ui.color_rect.color = Color.WEB_GREEN
 	card_hand_ui.state.text = "BASE"

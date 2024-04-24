@@ -1,7 +1,0 @@
-[gd_resource type="Resource" script_class="ObstacleData" load_steps=2 format=3 uid="uid://brhe6pkj1ha2q"]
-
-[ext_resource type="Script" path="res://obstacle_data.gd" id="1_uq1m5"]
-
-[resource]
-script = ExtResource("1_uq1m5")
-description = "Ježibaba - dostane-li se hráč hodem kostky přesně na políčko ježibaby, postupuje dále rovně. Ten hráč, který nepostoupí přesně na toto pole, postupuje při hodu lichého čísla vlevo pást koně, při sudém čísle vpravo pro živou vodu."

@@ -7,7 +7,7 @@ var current_state: CardState
 var states := {}
 
 
-func init(card: CardHandUI) -> void:	
+func init(card: CardHandUI) -> void:
 	for child in get_children():
 		if child is CardState:
 			states[child.state] = child

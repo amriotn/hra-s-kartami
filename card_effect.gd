@@ -6,7 +6,7 @@ const CARD_HAND_UI = preload("res://scenes/card_hand_ui/card_hand_ui.tscn")
 
 const effect_functions = ["give_card", "give_immunity", "move_player_to_player", "stuck_player", "swap_positions"]
 
-const CARDS = ["res://cards/everyone_2_stuck.tres", "res://cards/everyone_swap_pos.tres", "res://cards/give_3_cards.tres", "res://cards/give_3_immunity.tres", "res://cards/move_enemy_to_self.tres", "res://cards/move_to_random_player.tres", "res://cards/stuck_2_player.tres"]
+const CARDS = ["res://cards/everyone_2_stuck.tres", "res://cards/everyone_swap_pos.tres", "res://cards/give_3_immunity.tres", "res://cards/move_enemy_to_self.tres", "res://cards/move_to_random_player.tres", "res://cards/stuck_2_player.tres"]
 
 enum Target {SELF, SINGLE_ENEMY, ALL_ENEMIES, EVERYONE, AREA, ENVIRONMENT}
 
@@ -52,6 +52,7 @@ func move_player_to_player():
 			card_data.holder.last_tile = Vector2i(Global.player_list[roll_random].last_tile)
 			
 			
+			
 		Target.SINGLE_ENEMY:
 			for player in Global.player_list:
 				if player != card_data.holder:
@@ -62,6 +63,7 @@ func move_player_to_player():
 			
 			Global.card_player_target.global_position = Vector2(card_data.holder.global_position)
 			Global.card_player_target.last_tile = Vector2i(card_data.holder.last_tile)
+			Global.card_player_target.stuck_until_dice_number = 0
 			Global.card_player_target = null
 			
 			for player in Global.player_list:

@@ -1,5 +1,7 @@
 extends CardState
 
+@onready var card_details = $"../../CardDetails"
+
 var hand_tween : Tween
 
 func enter() -> void:
@@ -18,7 +20,7 @@ func on_gui_input(event: InputEvent) -> void:
 		#card_hand_ui.pivot_offset = card_hand_ui.get_global_mouse_position() - card_hand_ui.global_position
 		transition_requested.emit(self, CardState.State.DRAGGING)
 	if event.is_action_pressed("right_mouse"):
-		print("Show details")
+		card_details.show()
 
 
 func on_mouse_exited():

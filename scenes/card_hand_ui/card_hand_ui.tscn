@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://d04ldlkvtwluj"]
+[gd_scene load_steps=12 format=3 uid="uid://d04ldlkvtwluj"]
 
 [ext_resource type="Script" path="res://scenes/card_hand_ui/card_hand_ui.gd" id="1_fhmeo"]
 [ext_resource type="Script" path="res://scenes/card_hand_ui/card_state_machine.gd" id="2_6i30o"]
@@ -8,6 +8,7 @@
 [ext_resource type="Script" path="res://scenes/card_hand_ui/card_states/card_dragging_state.gd" id="5_gqy0u"]
 [ext_resource type="Script" path="res://scenes/card_hand_ui/card_states/card_released_state.gd" id="6_xltb0"]
 [ext_resource type="Theme" uid="uid://cxf28t24j2lk7" path="res://fonts/new_theme.tres" id="8_5lld8"]
+[ext_resource type="Texture2D" uid="uid://dj3jnv4dbicny" path="res://assets/icon.svg" id="8_8awrm"]
 [ext_resource type="Texture2D" uid="uid://bimte6tg60l18" path="res://assets/card.png" id="9_3e6pj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yfddo"]
@@ -20,7 +21,6 @@ anchors_preset = 0
 offset_right = 133.0
 offset_bottom = 200.0
 script = ExtResource("1_fhmeo")
-metadata/_edit_group_ = true
 
 [node name="Shine" type="Sprite2D" parent="."]
 visible = false
@@ -81,6 +81,11 @@ state = 2
 script = ExtResource("6_xltb0")
 state = 3
 
+[node name="CardVisual" type="Sprite2D" parent="."]
+position = Vector2(66.5, 60.5)
+scale = Vector2(1.02344, 0.898438)
+texture = ExtResource("8_8awrm")
+
 [node name="Card" type="Sprite2D" parent="."]
 position = Vector2(66.5, 100)
 scale = Vector2(0.665, 0.666667)
@@ -96,6 +101,7 @@ theme = ExtResource("8_5lld8")
 text = "0"
 
 [node name="CardNameLabel" type="Label" parent="."]
+layout_mode = 0
 offset_left = 33.0
 offset_top = 102.0
 offset_right = 104.0
@@ -105,12 +111,71 @@ theme_override_font_sizes/font_size = 15
 text = "Placeholder"
 
 [node name="CardDescriptionLabel" type="Label" parent="."]
+layout_mode = 0
 offset_left = 8.0
 offset_top = 126.0
 offset_right = 124.0
 offset_bottom = 197.0
 theme = ExtResource("8_5lld8")
 theme_override_font_sizes/font_size = 15
+text = "Lorem ipsum dolor sit amet"
+autowrap_mode = 3
+clip_text = true
+
+[node name="CardDetails" type="CanvasLayer" parent="."]
+
+[node name="BorderDetails" type="ColorRect" parent="CardDetails"]
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -369.0
+offset_top = -273.5
+offset_bottom = 273.5
+grow_horizontal = 0
+grow_vertical = 2
+size_flags_horizontal = 8
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="CardVisualDetails" type="Sprite2D" parent="CardDetails/BorderDetails"]
+position = Vector2(184.75, 172.013)
+scale = Vector2(2.67578, 2.34897)
+texture = ExtResource("8_8awrm")
+
+[node name="CardOverlayDetails" type="Sprite2D" parent="CardDetails/BorderDetails"]
+position = Vector2(184.875, 273.35)
+scale = Vector2(1.76125, 1.76567)
+texture = ExtResource("9_3e6pj")
+
+[node name="PointsLabelDetails" type="Label" parent="CardDetails/BorderDetails"]
+offset_left = 10.0
+offset_top = -0.5
+offset_right = 102.0
+offset_bottom = 144.5
+theme = ExtResource("8_5lld8")
+theme_override_font_sizes/font_size = 111
+text = "0"
+horizontal_alignment = 1
+
+[node name="CardNameLabelDetails" type="Label" parent="CardDetails/BorderDetails"]
+offset_left = 66.0
+offset_top = 272.5
+offset_right = 310.0
+offset_bottom = 334.5
+theme = ExtResource("8_5lld8")
+theme_override_font_sizes/font_size = 40
+text = "Placeholder"
+horizontal_alignment = 1
+
+[node name="CardDescriptionLabelDetails" type="Label" parent="CardDetails/BorderDetails"]
+offset_left = 23.0
+offset_top = 344.5
+offset_right = 342.0
+offset_bottom = 522.5
+theme = ExtResource("8_5lld8")
+theme_override_font_sizes/font_size = 30
 text = "Lorem ipsum dolor sit amet"
 autowrap_mode = 3
 clip_text = true

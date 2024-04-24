@@ -1,6 +1,7 @@
-[gd_resource type="Resource" script_class="CardResource" load_steps=2 format=3 uid="uid://cksydhuviyxm1"]
+[gd_resource type="Resource" script_class="CardResource" load_steps=3 format=3 uid="uid://cksydhuviyxm1"]
 
 [ext_resource type="Script" path="res://card_resource.gd" id="1_3nw81"]
+[ext_resource type="Texture2D" uid="uid://bifaksa0glorr" path="res://assets/obstacles/obr.png" id="1_240or"]
 
 [resource]
 script = ExtResource("1_3nw81")
@@ -10,5 +11,6 @@ effect = 3
 effect_data = 2
 effect_target = 3
 effect_target_data = 0
+icon = ExtResource("1_240or")
 card_name = "Ani hnout!"
 description = "2 kola se nikdo nepohne."
