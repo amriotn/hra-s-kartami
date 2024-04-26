@@ -64,50 +64,63 @@ func _ready():
 	
 	
 	
-	
+	var finished_players_sum : int
 	game = true
 	turn_of_player = 0
 	gui.timer_on = true
 	while game:
-		gui.end_turn_button.disabled = true
-		player_hands[turn_of_player].show()
-		
-		if Global.player_list[turn_of_player].swamp_route_swap:
-			actions_of_tiles.swamp = actions_of_tiles.bazina_way_back
-		else:
-			actions_of_tiles.swamp = actions_of_tiles.bazina_way_there
-		
-		main_camera.position = Global.player_list[turn_of_player].position
-		
-		Global.player_list[turn_of_player].roll_dice_button.disabled = false
-		
-		player_list_v_box.get_children()[turn_of_player].select_gradient.show()
-		
-		Global.player_list[turn_of_player].dice_animated_sprite.show()
-		Global.player_list[turn_of_player].dice_animated_sprite.connect("send_dice_number", Callable(Global.player_list[turn_of_player], "_on_dice_animated_sprite_send_dice_number"))
-		fix_players_on_tile(Global.player_list)
-		
-		
-		
-		await end_turn_button.pressed
-		player_hands[turn_of_player].hide()
-		Global.player_list[turn_of_player].dice_animated_sprite.disconnect("send_dice_number", Callable(Global.player_list[turn_of_player], "_on_dice_animated_sprite_send_dice_number"))
-		Global.player_list[turn_of_player].dice_animated_sprite.hide()
-		player_list_v_box.get_children()[turn_of_player].select_gradient.hide()
 		if Global.player_list[turn_of_player].stats.has_finished == false:
-			if Global.player_list.size() > 0:
-				if turn_of_player +1 >= Global.player_list.size():
-					turn_of_player = 0
-					turn += 1
-					gui.round_label.text = "Kolo " + str(turn)
-				else:
-					turn_of_player += 1
+			gui.end_turn_button.disabled = true
+			player_hands[turn_of_player].show()
+			
+			if Global.player_list[turn_of_player].swamp_route_swap:
+				actions_of_tiles.swamp = actions_of_tiles.bazina_way_back
 			else:
-				game = false
+				actions_of_tiles.swamp = actions_of_tiles.bazina_way_there
+			
+			main_camera.position = Global.player_list[turn_of_player].position
+			
+			Global.player_list[turn_of_player].roll_dice_button.disabled = false
+			
+			player_list_v_box.get_children()[turn_of_player].select_gradient.show()
+			
+			Global.player_list[turn_of_player].dice_animated_sprite.show()
+			Global.player_list[turn_of_player].dice_animated_sprite.connect("send_dice_number", Callable(Global.player_list[turn_of_player], "_on_dice_animated_sprite_send_dice_number"))
+			fix_players_on_tile(Global.player_list)
+			
+			
+			
+			await end_turn_button.pressed
+			player_hands[turn_of_player].hide()
+			Global.player_list[turn_of_player].dice_animated_sprite.disconnect("send_dice_number", Callable(Global.player_list[turn_of_player], "_on_dice_animated_sprite_send_dice_number"))
+			Global.player_list[turn_of_player].dice_animated_sprite.hide()
+			player_list_v_box.get_children()[turn_of_player].select_gradient.hide()
+			
+			
+			if Global.player_list[turn_of_player].stats.has_finished == false:
+				if Global.player_list.size() > 0:
+					if turn_of_player +1 >= Global.player_list.size():
+						turn_of_player = 0
+						turn += 1
+						gui.round_label.text = "Kolo " + str(turn)
+					else:
+						turn_of_player += 1
+				else:
+					game = false
+			else:
+				finished_players_sum += 1
+				if finished_players_sum == Global.player_list.size():
+					game = false
 		else:
-			Global.player_list.erase(Global.player_list[turn_of_player])
-			if Global.player_list.is_empty():
-				game = false
+			if Global.player_list.size() > 0:
+					if turn_of_player +1 >= Global.player_list.size():
+						turn_of_player = 0
+						turn += 1
+						gui.round_label.text = "Kolo " + str(turn)
+					else:
+						turn_of_player += 1
+			if finished_players_sum == Global.player_list.size():
+					game = false
 		
 	
 	gui.end_game_panel.show()

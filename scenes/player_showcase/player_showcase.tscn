@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scenes/player_showcase/player_showcase.gd" id="1_brk4k"]
 [ext_resource type="Theme" uid="uid://cxf28t24j2lk7" path="res://fonts/new_theme.tres" id="1_qkug1"]
 [ext_resource type="Texture2D" uid="uid://cpa2y17sspolm" path="res://assets/arrow_icon.png" id="3_8cl8q"]
-[ext_resource type="Texture2D" uid="uid://dqt60403c2qqf" path="res://assets/characters/KnightIcon.png" id="4_vmx43"]
+[ext_resource type="Texture2D" uid="uid://dqt60403c2qqf" path="res://assets/Characters/KnightIcon.png" id="4_vmx43"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e8s7x"]
 bg_color = Color(0.313726, 0, 0.00784314, 0.682353)
