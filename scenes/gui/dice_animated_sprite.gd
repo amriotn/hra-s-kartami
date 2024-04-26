@@ -6,6 +6,7 @@ signal send_dice_number(number)
 @onready var area_2d : Area2D = $Area2D
 @onready var fade_out : Sprite2D = $"../FadeOut"
 @onready var audio_stream_player_dice = $AudioStreamPlayerDice
+@onready var player_parent = $".."
 
 func _ready():
 	roll_dice_button.pressed.connect(_on_roll_dice_button_pressed)
@@ -17,6 +18,7 @@ func _ready():
 func _on_roll_dice_button_pressed():
 	area_2d.hide()
 	fade_out.hide()
+	player_parent.stats.hand.hide()
 	
 	var rng = RandomNumberGenerator.new()
 	var dice_number = rng.randi_range(1, 6)

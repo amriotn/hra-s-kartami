@@ -294,7 +294,7 @@ layer_1/tile_data = PackedInt32Array(14745640, 131076, 268435456, 14680105, 1310
 layer_2/name = "Action"
 layer_2/y_sort_enabled = true
 layer_2/z_index = 2
-layer_2/tile_data = PackedInt32Array(19857470, 131078, 0, 19726399, 262150, 0, 19791935, 262150, 0, 19595328, 262150, 0, 19660864, 262150, 0, 19529793, 131078, 0, 17825861, 131078, 0, 17891396, 131078, 0, 18415685, 131078, 0, 17891400, 131078, 0, 17432655, 196614, 0, 17498191, 196614, 0, 8716305, 131078, 0, 8650770, 131078, 0, 9175058, 131078, 0, 8323092, 131078, 0, 9764884, 131078, 0, 9830421, 131078, 0, 10027030, 196614, 0, 13893677, 131078, 0, 13697070, 131078, 0, 13434930, 196614, 536870912, 8323142, 196614, 0, 8388678, 131078, 0, 8978502, 131078, 0, 7667784, 262150, 0, 7733320, 262150, 0, 8716360, 196614, 0, 8781896, 131078, 0, 9109577, 131078, 0, 7405642, 262150, 0, 7471178, 262150, 0, 7667789, 131078, 0, 9633870, 196614, 536870912, 9502799, 65542, 0, 8781910, 131078, 0, 9240662, 196614, 536870912, 10092607, 196614, 0, 10420289, 131078, 0, 10485826, 131078, 0, 10551362, 131078, 0, 13828126, 131078, 0, 13500452, 131078, 0, 18153481, 196614, 0, 18612237, 131078, 0, 19005455, 262150, 0, 19070991, 262150, 0, 19136528, 262150, 0, 19202064, 262150, 0, 19267601, 262150, 0, 19267605, 196614, 536870912, 16908314, 196614, 805306368, 18481179, 65542, 0, 18350119, 196614, 0, 16842787, 196614, 536870912, 15859723, 131078, 0, 15597582, 131078, 0, 15073296, 131078, 0, 15990800, 131078, 0, 15663122, 131078, 0, 18219018, 6, 0, 18415627, 6, 0, 18546700, 6, 0, 19398676, 6, 0, 19333140, 6, 0, 16121873, 6, 0, 16187409, 6, 0, 16252946, 6, 0, 16056333, 6, 0, 15925259, 6, 0, 15466508, 6, 0, 15466509, 6, 0, 15466511, 6, 0, 15335439, 6, 0, 15204367, 6, 0, 15073298, 6, 0, 15138834, 6, 0, 15466516, 6, 0, 15925267, 6, 0, 19202104, 6, 0, 19595319, 6, 0, 19988536, 6, 0, 20119609, 6, 0, 20119612, 6, 0, 19398725, 6, 0, 19333187, 6, 0, 19529800, 6, 0, 19202121, 6, 0, 18874441, 6, 0, 18677831, 6, 0, 17825863, 6, 0, 17236042, 6, 0, 17367116, 6, 0, 17301581, 6, 0, 17760333, 6, 0, 13959199, 6, 0, 13697058, 6, 0, 13369377, 6, 0, 13303841, 6, 0, 9502739, 6, 0, 9043985, 6, 0, 8978449, 6, 0, 8454163, 6, 0, 8388628, 6, 0, 8126486, 6, 0, 14483498, 6, 0, 14155820, 6, 0, 14090284, 6, 0, 13631537, 6, 0, 13566001, 6, 0, 14549034, 6, 0, 14286891, 6, 0, 15990804, 196614, 0, 14221344, 196614, 0, 13893668, 196614, 0, 18612279, 196614, 805306368, 9437261, 131078, 0)
+layer_2/tile_data = PackedInt32Array(19857470, 131078, 0, 19726399, 262150, 0, 19791935, 262150, 0, 19595328, 262150, 0, 19660864, 262150, 0, 19529793, 131078, 0, 17825861, 131078, 0, 17891396, 131078, 0, 18415685, 131078, 0, 17891400, 131078, 0, 17432655, 196614, 0, 17498191, 196614, 0, 8716305, 131078, 0, 8650770, 131078, 0, 9175058, 131078, 0, 8323092, 131078, 0, 9764884, 131078, 0, 9830421, 131078, 0, 10027030, 196614, 0, 13893677, 131078, 0, 13697070, 131078, 0, 13434930, 196614, 536870912, 8323142, 196614, 0, 8388678, 131078, 0, 8978502, 131078, 0, 7667784, 262150, 0, 7733320, 262150, 0, 8716360, 196614, 0, 8781896, 131078, 0, 9109577, 131078, 0, 7405642, 262150, 0, 7471178, 262150, 0, 7667789, 131078, 0, 9633870, 196614, 536870912, 9502799, 65542, 0, 8781910, 131078, 0, 9240662, 196614, 536870912, 10092607, 196614, 0, 10420289, 131078, 0, 10485826, 131078, 0, 10551362, 131078, 0, 13828126, 131078, 0, 13500452, 131078, 0, 18153481, 196614, 0, 18612237, 131078, 0, 19005455, 262150, 0, 19070991, 262150, 0, 19136528, 262150, 0, 19202064, 262150, 0, 19267601, 262150, 0, 19267605, 196614, 536870912, 16908314, 196614, 805306368, 18481179, 65542, 0, 18350119, 196614, 0, 16842787, 196614, 536870912, 15859723, 131078, 0, 15597582, 131078, 0, 15073296, 131078, 0, 15990800, 131078, 0, 15663122, 131078, 0, 18219018, 6, 0, 18415627, 6, 0, 18546700, 6, 0, 19398676, 6, 0, 19333140, 6, 0, 16121873, 6, 0, 16187409, 6, 0, 16252946, 6, 0, 16056333, 6, 0, 15925259, 6, 0, 15466508, 6, 0, 15466509, 6, 0, 15466511, 6, 0, 15204367, 6, 0, 15073298, 6, 0, 15138834, 6, 0, 15466516, 6, 0, 15925267, 6, 0, 19202104, 6, 0, 19595319, 6, 0, 19988536, 6, 0, 20119609, 6, 0, 20119612, 6, 0, 19398725, 6, 0, 19333187, 6, 0, 19529800, 6, 0, 19202121, 6, 0, 18874441, 6, 0, 18677831, 6, 0, 17825863, 6, 0, 17236042, 6, 0, 17367116, 6, 0, 17301581, 6, 0, 17760333, 6, 0, 13959199, 6, 0, 13697058, 6, 0, 13369377, 6, 0, 13303841, 6, 0, 9502739, 6, 0, 9043985, 6, 0, 8978449, 6, 0, 8454163, 6, 0, 8388628, 6, 0, 8126486, 6, 0, 14483498, 6, 0, 14155820, 6, 0, 14090284, 6, 0, 13631537, 6, 0, 13566001, 6, 0, 14549034, 6, 0, 14286891, 6, 0, 15990804, 196614, 0, 14221344, 196614, 0, 13893668, 196614, 0, 18612279, 196614, 805306368, 9437261, 131078, 0)
 layer_3/name = "ZlatyVrch"
 layer_3/modulate = Color(0.682353, 0.654902, 0.74902, 1)
 layer_3/y_sort_enabled = true
@@ -324,6 +324,7 @@ position = Vector2(2724, 14586)
 script = ExtResource("11_knj1u")
 
 [node name="MovePlayer" type="Node2D" parent="ActionsOfTiles"]
+visible = false
 position = Vector2(117, 2)
 
 [node name="DivotvornyMec" type="Node2D" parent="ActionsOfTiles/MovePlayer"]
@@ -618,7 +619,7 @@ position = Vector2(-601, -390)
 [node name="move_enemy_to_self3" type="Marker2D" parent="ActionsOfTiles/GiveCard"]
 position = Vector2(887, 258)
 
-[node name="move_enemy_to_self5" type="Marker2D" parent="ActionsOfTiles/GiveCard"]
+[node name="give_3_cards" type="Marker2D" parent="ActionsOfTiles/GiveCard"]
 position = Vector2(980, 216)
 
 [node name="give_3_cards3" type="Marker2D" parent="ActionsOfTiles/GiveCard"]
@@ -633,20 +634,17 @@ position = Vector2(284, -2226)
 [node name="stuck_2_player1" type="Marker2D" parent="ActionsOfTiles/GiveCard"]
 position = Vector2(-426, -2279)
 
-[node name="move_to_random_player3" type="Marker2D" parent="ActionsOfTiles/GiveCard"]
+[node name="give_3_immunity9" type="Marker2D" parent="ActionsOfTiles/GiveCard"]
 position = Vector2(-799, -2390)
 
-[node name="everyone_2_stuck1" type="Marker2D" parent="ActionsOfTiles/GiveCard"]
+[node name="give_3_immunity" type="Marker2D" parent="ActionsOfTiles/GiveCard"]
 position = Vector2(-740, -2724)
 
-[node name="move_enemy_to_self13" type="Marker2D" parent="ActionsOfTiles/GiveCard"]
+[node name="everyone_swap_pos6" type="Marker2D" parent="ActionsOfTiles/GiveCard"]
 position = Vector2(-532, -2735)
 
 [node name="stuck_2_player2" type="Marker2D" parent="ActionsOfTiles/GiveCard"]
 position = Vector2(-113, -2735)
-
-[node name="move_to_random_player4" type="Marker2D" parent="ActionsOfTiles/GiveCard"]
-position = Vector2(-117, -2841)
 
 [node name="stuck_2_player3" type="Marker2D" parent="ActionsOfTiles/GiveCard"]
 position = Vector2(-115, -2932)
@@ -687,13 +685,13 @@ position = Vector2(10672, 261)
 [node name="give_3_cards6" type="Marker2D" parent="ActionsOfTiles/GiveCard"]
 position = Vector2(11306, 359)
 
-[node name="stuck_2_player6" type="Marker2D" parent="ActionsOfTiles/GiveCard"]
+[node name="give_3_cards11" type="Marker2D" parent="ActionsOfTiles/GiveCard"]
 position = Vector2(11591, 131)
 
 [node name="give_3_immunity6" type="Marker2D" parent="ActionsOfTiles/GiveCard"]
 position = Vector2(11485, -128)
 
-[node name="move_enemy_to_self2" type="Marker2D" parent="ActionsOfTiles/GiveCard"]
+[node name="give_3_cards12" type="Marker2D" parent="ActionsOfTiles/GiveCard"]
 position = Vector2(11198, -292)
 
 [node name="everyone_swap_pos" type="Marker2D" parent="ActionsOfTiles/GiveCard"]
@@ -753,10 +751,10 @@ position = Vector2(873, -8153)
 [node name="stuck_2_player9" type="Marker2D" parent="ActionsOfTiles/GiveCard"]
 position = Vector2(802, -8075)
 
-[node name="everyone_swap_pos5" type="Marker2D" parent="ActionsOfTiles/GiveCard"]
+[node name="give_3_cards13" type="Marker2D" parent="ActionsOfTiles/GiveCard"]
 position = Vector2(362, -7695)
 
-[node name="stuck_2_player10" type="Marker2D" parent="ActionsOfTiles/GiveCard"]
+[node name="give_3_cards14" type="Marker2D" parent="ActionsOfTiles/GiveCard"]
 position = Vector2(251, -7645)
 
 [node name="move_to_random_player10" type="Marker2D" parent="ActionsOfTiles/GiveCard"]
@@ -2630,6 +2628,8 @@ texture = ExtResource("14_7unmf")
 
 [node name="obstacles" type="Node2D" parent="."]
 z_index = 6
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
 
 [node name="Mec" type="TextureRect" parent="obstacles"]
 offset_left = 2824.0

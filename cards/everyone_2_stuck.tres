@@ -6,7 +6,7 @@
 [resource]
 script = ExtResource("1_3nw81")
 points = 5
-rarity = 3
+rarity = 0
 effect = 3
 effect_data = 2
 effect_target = 3

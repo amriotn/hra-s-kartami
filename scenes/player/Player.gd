@@ -36,6 +36,7 @@ func load_stats(player_stats : PlayerStats) -> void:
 
 
 func _on_dice_animated_sprite_send_dice_number(number):
+	#stats.hand.hide()
 	dice_number = number
 	route_of_tiles.clear()
 	
@@ -190,6 +191,7 @@ func _on_highlight_send_highlight_position(highlight_position):
 func handle_what_tile_player_stepped_on():
 	$AnimationPlayer.stop()
 	end_turn_button.disabled = false
+	stats.hand.show()
 	
 	tilemap_node = self.get_parent().get_node("TileMap")
 	actions_of_tiles = self.get_parent().get_node("ActionsOfTiles")

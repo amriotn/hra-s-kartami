@@ -6,7 +6,15 @@ const CARD_HAND_UI = preload("res://scenes/card_hand_ui/card_hand_ui.tscn")
 
 const effect_functions = ["give_card", "give_immunity", "move_player_to_player", "stuck_player", "swap_positions"]
 
-const CARDS = ["res://cards/everyone_2_stuck.tres", "res://cards/everyone_swap_pos.tres", "res://cards/give_3_immunity.tres", "res://cards/move_enemy_to_self.tres", "res://cards/move_to_random_player.tres", "res://cards/stuck_2_player.tres"]
+const CARDS = [
+	"res://cards/everyone_2_stuck.tres"
+, "res://cards/everyone_swap_pos.tres"
+, "res://cards/give_3_cards.tres"
+, "res://cards/give_3_immunity.tres"
+, "res://cards/move_enemy_to_self.tres"
+, "res://cards/move_to_random_player.tres"
+, "res://cards/stuck_2_player.tres"
+]
 
 enum Target {SELF, SINGLE_ENEMY, ALL_ENEMIES, EVERYONE, AREA, ENVIRONMENT}
 
@@ -25,6 +33,7 @@ func give_card():
 	match card_data.effect_target:
 		Target.SELF:
 			#print("give " + str(card_data.effect_data) + " card(s) to " + str(card_data.holder))
+				
 			for i in range(card_data.effect_data):
 				var card = CARD_HAND_UI.instantiate()
 				var rng = RandomNumberGenerator.new()

@@ -58,7 +58,7 @@ func _ready():
 	
 	var player_hands = []
 	for player in player_list:
-		gui.add_child(player.stats.hand)
+		gui.card_hands.add_child(player.stats.hand)
 		player_hands.append(player.stats.hand)
 		player.stats.hand.hide()
 	

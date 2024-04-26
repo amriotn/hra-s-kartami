@@ -5,8 +5,8 @@
 
 [resource]
 script = ExtResource("1_4f83l")
-points = 5
-rarity = 0
+points = 15
+rarity = 2
 effect = 0
 effect_data = 3
 effect_target = 0

@@ -53,6 +53,29 @@ theme = ExtResource("2_vnduq")
 disabled = true
 text = "Ukončit tah"
 
+[node name="CardHands" type="Control" parent="."]
+modulate = Color(0.454902, 0.454902, 0.454902, 1)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="HandBlock" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 285.0
+offset_top = -245.0
+offset_right = -285.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 8
+
 [node name="Hand" parent="." instance=ExtResource("3_ux0pl")]
 
 [node name="CardDropZone" type="Control" parent="."]
