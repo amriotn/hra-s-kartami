@@ -191,7 +191,7 @@ func _on_highlight_send_highlight_position(highlight_position):
 func handle_what_tile_player_stepped_on():
 	$AnimationPlayer.stop()
 	end_turn_button.disabled = false
-	stats.hand.show()
+	#stats.hand.show()
 	
 	tilemap_node = self.get_parent().get_node("TileMap")
 	actions_of_tiles = self.get_parent().get_node("ActionsOfTiles")
@@ -325,7 +325,7 @@ func player_chooser():
 	confirm_action_button.disabled = true
 
 
-func _on_click_detection_input_event(event):
+func _on_click_detection_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		if Global.card_player_target != null:
 			Global.card_player_target.select.hide()

@@ -150,6 +150,7 @@ scale = Vector2(1.76125, 1.76567)
 texture = ExtResource("9_3e6pj")
 
 [node name="PointsLabelDetails" type="Label" parent="CardDetails/BorderDetails"]
+layout_mode = 0
 offset_left = 10.0
 offset_top = -0.5
 offset_right = 102.0
@@ -160,6 +161,7 @@ text = "0"
 horizontal_alignment = 1
 
 [node name="CardNameLabelDetails" type="Label" parent="CardDetails/BorderDetails"]
+layout_mode = 0
 offset_left = 66.0
 offset_top = 272.5
 offset_right = 310.0
@@ -170,6 +172,7 @@ text = "Placeholder"
 horizontal_alignment = 1
 
 [node name="CardDescriptionLabelDetails" type="Label" parent="CardDetails/BorderDetails"]
+layout_mode = 0
 offset_left = 23.0
 offset_top = 344.5
 offset_right = 342.0

@@ -9,7 +9,6 @@ const effect_functions = ["give_card", "give_immunity", "move_player_to_player",
 const CARDS = [
 	"res://cards/everyone_2_stuck.tres"
 , "res://cards/everyone_swap_pos.tres"
-, "res://cards/give_3_cards.tres"
 , "res://cards/give_3_immunity.tres"
 , "res://cards/move_enemy_to_self.tres"
 , "res://cards/move_to_random_player.tres"
@@ -33,13 +32,14 @@ func give_card():
 	match card_data.effect_target:
 		Target.SELF:
 			#print("give " + str(card_data.effect_data) + " card(s) to " + str(card_data.holder))
-				
+			
 			for i in range(card_data.effect_data):
 				var card = CARD_HAND_UI.instantiate()
 				var rng = RandomNumberGenerator.new()
 				var random_card = rng.randi_range(0, CARDS.size()-1)
 				card.load_data(load(CARDS[random_card]), card_data.holder)
 				card_data.holder.stats.hand.add_card(card)
+			
 
 func give_immunity():
 	match card_data.effect_target:

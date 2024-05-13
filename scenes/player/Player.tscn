@@ -1,6 +1,6 @@
 [gd_scene load_steps=35 format=3 uid="uid://d1svj53fqwe7l"]
 
-[ext_resource type="Texture2D" uid="uid://qsbkdgx4lg11" path="res://assets/Characters/Knight.png" id="1_a6yq5"]
+[ext_resource type="Texture2D" uid="uid://qsbkdgx4lg11" path="res://assets/characters/Knight.png" id="1_a6yq5"]
 [ext_resource type="Script" path="res://scenes/player/Player.gd" id="2_akcfd"]
 [ext_resource type="Texture2D" uid="uid://d23qi7giy6f1" path="res://fade_out.png" id="3_1ocul"]
 [ext_resource type="Texture2D" uid="uid://bp3ts1rklur5c" path="res://assets/dice numbers white/dice_smaller1.png" id="3_s4xm1"]
@@ -222,6 +222,7 @@ shape = SubResource("RectangleShape2D_sbv3f")
 
 [node name="AudioStreamPlayerDice" type="AudioStreamPlayer" parent="DiceAnimatedSprite"]
 stream = ExtResource("12_ly3ed")
+volume_db = -20.0
 bus = &"SFX"
 
 [node name="Shadow" type="Sprite2D" parent="."]
@@ -239,6 +240,7 @@ shape = SubResource("RectangleShape2D_l32sn")
 
 [node name="ClickDetection" type="Area2D" parent="."]
 visible = false
+z_index = 20
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ClickDetection"]
 position = Vector2(11, -109.5)

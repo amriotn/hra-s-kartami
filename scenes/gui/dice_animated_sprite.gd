@@ -18,7 +18,7 @@ func _ready():
 func _on_roll_dice_button_pressed():
 	area_2d.hide()
 	fade_out.hide()
-	player_parent.stats.hand.hide()
+	#player_parent.stats.hand.hide()
 	
 	var rng = RandomNumberGenerator.new()
 	var dice_number = rng.randi_range(1, 6)
